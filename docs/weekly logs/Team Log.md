@@ -1,6 +1,6 @@
 Team 19
 
-Work Period: September 18th to 24th
+Work Period: September 26th to October 1st
 <ul>
 <li>Github Usernames:</li>
 <li>Prelude14 --> Brenner De Vos</li>
@@ -14,39 +14,33 @@ Milestone Goal Recap:<br>
 
 Which features were in the project plan for this milestone?
 <ul>
-<li>Use an English dictionary</li>
-<li>Searching dictionary for word chain words</li>
-<li>Randomly generate word chain words</li>
-<li>Avoid repeat responses</li>
-<li>Use scripted tests</li>
-<li>Use GitHub's project management tools to create and build on the program.</li>
+<li>Iron out the Teck Stack's details</li>
+<li>Get the same version of Unity setup on everyone's system</li>
+<li>Finish the Project Plan Document</li>
+<li>Work on the Card Game Rules</li>
+<li>Team and Individual Logs</li>
 </ul>
 
 Which tasks from the project board are associated with these features?
 <ul>
-<li>"Finding dictionary to use"</li>
-<li>"Searching dictionary for word chain words"</li>
-<li>"Randomly generate word chain words"</li>
-<li>"Looping the program"</li>
-<li>"Testing"</li>
-<li>"Individual logs"</li>
+<li>"Figure out the Teck Stack"</li>
+<li>"Set up Unity"</li>
+<li>"Project Plan Document"</li>
+<li>"Finish the Card Game Rules"</li>
 <li>"Team log"</li>
-<li>"Create GitHub Project"</li>
+<li>"Individual logs"</li>
 </ul>
 
 <br>Burnup Chart:<br><br>
-<img src = "../doc_rsc/burnup.png"/>
+<img src = "log_imgs/burnUpOCT1.PNG"/>
 
-<br>Table View of completed tasks on project board<br>
-<img src = "../doc_rsc/completed_tasks.PNG"/>
+<br>Table View of completed tasks on project board<br><br>
+<img src = "log_imgs/compTasksOCT1.PNG"/>
 
-<br>Table View of in progress tasks on project board<br>
-<img src = "../doc_rsc/inprogress_tasks.PNG"/>
- 
+<br>Table View of in progress tasks on project board<br><br>
+<img src = "log_imgs/inProgTasksOCT1.PNG"/>
 
-<br>Screen shot of Test Report
-<br><img src = "../testing_rsc/Testing_res.png"/><br>
-<br>Old Test Report<br>
-<br><img src = "../testing_rsc/manual_tests.png"/>
+<br>No Screen shot of Test Report, since there are no tests to run.
+
 OPTIONAL: Any context to explain why the log looks the way it does.
-<br><p>The burnup chart looks incomplete because we didn't have a project made until the last minute. It won't look like that in future. We used JUnit for testing, so our output doesn't have fancy output like the example, so we weren't sure what to screenshot. Also, we included what the older manual test's output looks like as a bonus.</p>
+<br><p>We didn't do any coding this week, since we were more concerned with finishing the project plan document and building our Teck Stack. This means there was nothing to write tests for, so there is no screenshot above. We did settle on a version of Unity that comes with some tutorials that we have started working through on our own, but they don't feel relevant to write tests for (and we would need serveral screenshots if we all did it ourselves, which would be the best way to actually use the tutorials, and several branches since we wouldn't be collaborating on them). </p>
