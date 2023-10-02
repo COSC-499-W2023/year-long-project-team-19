@@ -13,7 +13,6 @@ Worked on the Project Plan document, setting up Unity, learn unity tutorial and 
   <li>"Project Plan Document"</li>
   <li>"Set up Unity"</li>
   <li>"Individual Logs" </li>
-  <li>"learn unity tutorial"</li>
 </ol>
 
 ## Among these tasks, which have you completed/in progress in the last week?
