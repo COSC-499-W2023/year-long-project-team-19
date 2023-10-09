@@ -31,3 +31,36 @@ The logs are still in progress, but they will be done as I write this.
 #### Aditional Context:
 
 This week was more about finializing our project plan and teck stack, so we didn't do much actual coding. Since we have to learn Unity, we are going to work through some tutorials using each of our packages from our Teck Stack each week, So should we make seperate branches for everyone's progress to show evidence of this work? Let me know.
+
+# Date Range: 01-10-2023 to 08-10-2023
+
+<img src = "log_imgs/brenner's_log3.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Exploration, getting unity working on my other computer and completeing the weekly logs.
+
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Exploration: Brenner"</li>
+  <li>"Set up Unity"</li>
+  <li>"Team Log"</li>
+  <li>"Individual Logs" </li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed: 
+  
+I got a version of Unity working on my Laptop, so I could work on tutorials from anywhere. Last week I just got it running on my PC at home.
+  
+### In Progress:
+
+I started working through some tutorials and watching videos on Unity, its not completed though, and technically won't ever be.
+The logs are still in progress, but they will be done as I write this.
+
+#### Aditional Context:
+
+This week was about exploring Unity, so we didn't do much else. Check the Exploration Branch for our work. 
