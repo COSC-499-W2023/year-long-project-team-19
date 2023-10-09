@@ -15,7 +15,7 @@ Among these tasks, which have you completed/in progress in the last week?
 I was able to finish the project plan with the help of my team, All of the team members were able to set up unity on their respective machines and I have started watching tutorials to atleast get my basics right which is a task in progress.
 
 <h1>Date Range: 02-10-2023 to 08-10-2023</h1>
-![week_5_log](https://github.com/COSC-499-W2023/year-long-project-team-19/assets/77637090/553f5d18-5f8d-48a8-b8f6-b2f0197da218)
+![Screenshot 2023-10-08 at 8 05 59 PM](https://github.com/COSC-499-W2023/year-long-project-team-19/assets/77637090/55aa1dde-2033-4bba-8c97-ff55d5896448)
 
 <h2>Which features were yours in the project plan for this milestone?</h2>
 
