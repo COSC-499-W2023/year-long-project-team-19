@@ -1,4 +1,5 @@
-So for Week 6, (Oct 1st to Oct 8th), I spent about 4 hours trying to get the most up to date version of Unity running on my laptop. This reason it took so long, is because my laptop is quite old, and a mac, so trying to find software that is still supported on it can be quite the headache. Plus, each download attempt took a couple hours since my wifi was having issues. 
+So for Week 6 (Oct 1st to Oct 8th):
+I spent about 4 hours trying to get the most up to date version of Unity running on my laptop. This reason it took so long, is because my laptop is quite old, and a mac, so trying to find software that is still supported on it can be quite the headache. Plus, each download attempt took a couple hours since my wifi was having issues. 
 
 I ended up finally getting 2020.3.38f1 downloaded and installed properly. I then ran through the "Get started with the Unity Hub" Tutorial from Unity Learn. https://learn.unity.com/tutorial/get-started-with-the-unity-hub-1?uv=2019.4
 Check my folder for the "Essentials 3D project" it asked to create.
@@ -21,3 +22,9 @@ How to: Unity Online Multiplayer https://www.youtube.com/watch?v=stJ4SESQwJQ&t=4
 Most of:
 Make a LOGIN SYSTEM for your UNITY GAME | Full Stack Unity & ASP Tutorial https://www.youtube.com/watch?v=H_WDhi8oXpg&t=67s
 How to Create a Multiplayer Card Game in Unity 01: Setting up card database https://www.youtube.com/watch?v=QiKSVpyXRKI&t=138s
+
+
+
+Week 7 (Oct. 8th to 15th): 
+I wanted to get into some tutorials that are more on topic towards our mini presentation requirements, and Adrian is alread doing some of the card gameplay, so I wanted to do some on the user interface. I spent a bit hand crafting a moc up of a main menu in photoshop using some publilcy avaliable assests (just the buttons in this case), and then followed this tutorial to a tee more or less: https://www.youtube.com/watch?v=RsgiYqLID-U. Now I have a main menu scene in unity with clickable buttons, as well as the ability to launch the 2D platformer tutorial from said main menu's start button. I even added some animations of the buttons, so that they change their look when they are hovered over. In order to launch the 2D platformer tutorial with the buttons, I had to do a small amount of scripting in order to get the game scene to change will will be quite useful for the rest of the project.
+
