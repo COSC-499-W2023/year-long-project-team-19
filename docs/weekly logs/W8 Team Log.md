@@ -46,6 +46,6 @@ Which tasks from the project board are associated with these features?
 
 OPTIONAL: Any context to explain why the log looks the way it does.
 <br><p>We still don't have any assingments/documentation to do this week (apart from the logs), so we just did more tutorials as part of our
-exploration into Unity, and tried to get Unity set up with GitHub on everyone's computers. We now have a separate repo set up that we successfully can all access and import each other's projects from found at this link:</p>
+exploration into Unity, and tried to get Unity set up with GitHub on everyone's computers. We now have a separate repo set up that we successfully can all access and import each other's projects from, found at the link below. We have a UI set up, and we can run our games in local web browser. Also, we have a draft of our card shuffling system built.</p>
 
 #### https://github.com/Prelude14/499UnityGameT19
