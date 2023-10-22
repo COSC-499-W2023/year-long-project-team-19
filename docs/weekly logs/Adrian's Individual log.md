@@ -57,6 +57,9 @@
 
 <p>This week was another week for exploration. This time I started to explore more on the game mechanics side of development. I developed a way to create a deck of cards and shuffle it. I've also managed to work on the more visual aspects of Unity related to UI. </p>
 
+<h2>Progress: </h2>
+<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/exploration/docs/weekly%20logs/log_imgs/Adrian_2023-10-22_UnityScreen.png"/>
+
 <h2> Which tasks from the project board are associated with these features? </h2>
 
 <ol>
