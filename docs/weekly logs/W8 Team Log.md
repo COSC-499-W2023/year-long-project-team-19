@@ -29,8 +29,8 @@ Which tasks from the project board are associated with these features?
 <li>"Exploration: Leo"</li>
 <li>"Set up Unity"</li>
 <li>"Finish the Card Game Rules"</li>
-<li>"Team log"</li>
-<li>"Individual logs"</li>
+<li>"W7 Team log"</li>
+<li>"W7 Individual logs"</li>
 </ul>
 
 <br>Burnup Chart:<br><br>
@@ -46,7 +46,6 @@ Which tasks from the project board are associated with these features?
 
 OPTIONAL: Any context to explain why the log looks the way it does.
 <br><p>We still don't have any assingments/documentation to do this week (apart from the logs), so we just did more tutorials as part of our
-exploration into Unity. Check the exploration branch to see what we have added. Each of us have our own folder on it, that contains a README going over what we did that week, 
-with youtube tutorial links as well as images/videos to show our actual code. We aimed to do tutorials on topics that were more specific to what our game is actually going to use this week, since we need 
-a very basic working prototype for our presentations in two weeks. Some of us are still trying to integrate GitHub into Unity to allow us all to work on the same project. For example, we don't even know if 
-Leo has Unity working at all, no mind with Github yet, otherwise it would probably be a closed feature this week.</p>
+exploration into Unity, and tried to get Unity set up with GitHub on everyone's computers. We now have a separate repo set up that we successfully can all access and import each other's projects from found at this link:</p>
+
+#### https://github.com/Prelude14/499UnityGameT19
