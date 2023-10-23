@@ -1,6 +1,6 @@
 Team 19
 
-Work Period: September 26th to October 1st
+Work Period: October 1st to October 8th
 <ul>
 <li>Github Usernames:</li>
 <li>Prelude14 --> Brenner De Vos</li>
@@ -14,16 +14,19 @@ Milestone Goal Recap:<br>
 
 Which features were in the project plan for this milestone?
 <ul>
-<li>Iron out the Teck Stack's details</li>
+<li>Exploration</li>
 <li>Get the same version of Unity setup on everyone's system</li>
-<li>Finish the Project Plan Document</li>
 <li>Work on the Card Game Rules</li>
 <li>Team and Individual Logs</li>
 </ul>
 
 Which tasks from the project board are associated with these features?
 <ul>
-<li>"Figure out the Teck Stack"</li>
+<li>"Exploration: Brenner"</li>
+<li>"Exploration: Adrian"</li>
+<li>"Exploration: Aditya"</li>
+<li>"Exploration: Henry"</li>
+<li>"Exploration: Leo"</li>
 <li>"Set up Unity"</li>
 <li>"Project Plan Document"</li>
 <li>"Finish the Card Game Rules"</li>
@@ -32,15 +35,17 @@ Which tasks from the project board are associated with these features?
 </ul>
 
 <br>Burnup Chart:<br><br>
-<img src = "log_imgs/burnUpOCT1.PNG"/>
+<img src = "log_imgs/burnUpOCT8.PNG"/>
 
 <br>Table View of completed tasks on project board<br><br>
-<img src = "log_imgs/compTasksOCT1.PNG"/>
+<img src = "log_imgs/compTasksOCT8.PNG"/>
 
 <br>Table View of in progress tasks on project board<br><br>
-<img src = "log_imgs/inProgTasksOCT1.PNG"/>
+<img src = "log_imgs/inProgTasksOCT8.PNG"/>
 
 <br>No Screen shot of Test Report, since there are no tests to run.
 
 OPTIONAL: Any context to explain why the log looks the way it does.
-<br><p>We didn't do any coding this week, since we were more concerned with finishing the project plan document and building our Teck Stack. This means there was nothing to write tests for, so there is no screenshot above. We did settle on a version of Unity that comes with some tutorials that we have started working through on our own, but they don't feel relevant to write tests for (and we would need serveral screenshots if we all did it ourselves, which would be the best way to actually use the tutorials, and several branches since we wouldn't be collaborating on them). </p>
+<br><p>We didn't have any assingments/documentation to do this week (apart from the logs), but we all started tutorials as part of our
+exploration into Unity, since none of us have used it before. Check the exploration branch to see what we have done so far. It should be
+actual programs and the readme might have lists of videos we have watched on it, and interesting notes we have taken.</p>
