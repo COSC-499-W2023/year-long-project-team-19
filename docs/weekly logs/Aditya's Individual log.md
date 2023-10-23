@@ -14,9 +14,9 @@ The tasks associated from the project board are:
 Among these tasks, which have you completed/in progress in the last week? 
 I was able to finish the project plan with the help of my team, All of the team members were able to set up unity on their respective machines and I have started watching tutorials to atleast get my basics right which is a task in progress.
 
-Date Range: 08-10-2023 to 22-10-2023
+<h2>Date Range: 08-10-2023 to 22-10-2023</h2>
 
-![Log Photo](/Users/adityatripathi/Desktop/year-long-project-team-19/docs/weekly logs/log_imgs/Aditya - 22:10:23.png)
+<img src = "log_imgs/Aditya_W7.PNG?raw=true"/>
 
 Which features were yours in the project plan for this milestone? 
 
