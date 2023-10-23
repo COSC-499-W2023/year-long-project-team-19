@@ -49,3 +49,29 @@
   
 <h3>In Progress:</h3>
 <p> Developing a very shallow prototype of the game to try out and for discovery purposes. </p>
+
+<h1>Date Range: 09-10-2023 to 22-10-2023</h1>
+<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/exploration/docs/weekly%20logs/log_imgs/Adrian_2023-10-22.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>This week was another week for exploration. This time I started to explore more on the game mechanics side of development. I developed a way to create a deck of cards and shuffle it. I've also managed to work on the more visual aspects of Unity related to UI. </p>
+
+<h2>Progress: </h2>
+<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/exploration/docs/weekly%20logs/log_imgs/Adrian_2023-10-22_UnityScreen.png"/>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+
+<ol>
+  <li>"Exploration: Adrian"</li>
+  <li>"Team Log"</li>
+  <li>"Individual Logs" </li>
+</ol>
+
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed: </h3> 
+  <p>Still working through exploration until I finish the mock sample of the game.</p>
+  
+<h3>In Progress:</h3>
+<p> Developing a very shallow prototype of the game to try out and for discovery purposes. </p>
