@@ -57,3 +57,38 @@ So now using the same main menu scene in unity with clickable buttons, as well a
 <img src= "img_resources/unityUITutorialGIF2.gif">
 
 Note: I haven't figured out the scripting for checking if a user is logged in or not yet (we don't even have a login system built yet), so the two different menus wont display in the GIF. I also will need to script how the back button works to take the userback to the proper main menu, since currently, they all just return to the default guest main menu.
+
+# Week 8 (Oct. 22nd to Oct. 29th): 
+So the UI I have built so far is quite close to what we need for the presentation this week, but it was missing some scripting here and there to help drive home exactly how the menus will work. To be specific, the log in buttons, reset password buttons, and the account's information all didn't actually do anything. Also, since the login buttons didn't have any effect, there was no way to display the "logged in user" version of the main menu at runtime unless I started it as the defualt active gameObject. So I aimed my exploration this week at solving these problems.
+
+Unity Input field and active gameobject tutorials: 
+#### https://www.youtube.com/watch?v=guelZvubWFY
+#### https://www.youtube.com/watch?v=vZU51tbgMXk
+#### https://www.youtube.com/watch?v=Ky-bzQFxV2U
+My Exlporation Repository: 
+#### https://github.com/Prelude14/499UnityGameT19
+
+So now, through scripting, the game tracks if you have clicked any of the login buttons, and will switch to show the proper main menu everytime you go back to it from the other menus. I didn't need to implement the full login system for this presentation, so I just have the login buttons change a boolean variable that the other menus can see when its clicked. There is no check on if you entered valid usernames or passwords for this reason, but the game can track the user's input now. Also, I spent quite a bit of time trying to get the "Account" page to actually display the user's entered email (from the login page), but I could never get the scripts quite working. I think they need to share variables accross the scripts, and I haven't yet figured out the proper syntax. The "reset password" and "forgot password" buttons now take you to a new page which will display their email on file and have a button to send their email the password reset token (but for now it will just output "token sent").
+
+#### There is no GIF of the menu in action, but there is some photos:
+
+*Starting with just the default guest menu*
+<img src= "img_resources/guestmenu1.PNG">
+
+*Clicking the login button produces output shown in the bottm left, and leads to the next picture's contents.*
+
+<img src= "img_resources/logclick2.PNG">
+
+*Logged in user main menu. The difference is the ability to see your account's information and will have access to the "stats page" that guests do not have. Instead they have the option to login or create an account in its place.*
+
+<img src= "img_resources/userdefault3.PNG">
+
+*Account information page. The difference is the ability to see your account's information and will have access to the "stats page" that guests do not have. Instead they have the option to login or create an account in its place.*
+
+<img src= "img_resources/accountinfo4.PNG">
+
+*NEW page for sending a password reset token to a user that has either forgotten their password (in the login menu), or want to change it (from the Account page).*
+
+<img src= "img_resources/resetpassPage5.PNG">
+
+
