@@ -75,3 +75,30 @@
   
 <h3>In Progress:</h3>
 <p> Developing a very shallow prototype of the game to try out and for discovery purposes. </p>
+
+<h1>Date Range: 23-10-2023 to 29-10-2023</h1>
+<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/exploration/docs/weekly%20logs/log_imgs/Adrian_2023-10-29.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>This week was developing the demo for the presentation. I worked on the demo, created the prefabs and the visual representation for the deck, as well as the drawing mechanic. </p>
+
+<h2>Progress: </h2>
+<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/exploration/docs/weekly%20logs/log_imgs/Adrian_2023-10-29_UnityScreen.png"/>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+
+<ol>
+  <li>"Exploration: Adrian"</li>
+  <li>"Game Demo"</li>
+  <li>"Team Log"</li>
+  <li>"Individual Logs" </li>
+</ol>
+
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed: </h3> 
+  <p>Game demo is close to being finished, just need a little bit of a big fix and demo should be ready on my end.</p>
+  
+<h3>In Progress:</h3>
+<p> Developing code to play the cards and turn systems. </p>

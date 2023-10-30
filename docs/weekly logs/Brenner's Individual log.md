@@ -148,3 +148,48 @@ So we still didn't have any asignments or class this week apart from the logs, s
 ***Also, this week and next week's peer evaluations got merged into one, so they will share the same screenshot.
 
 <!--====================================================================================================================               W8-->
+# Date Range: 22-10-2023 to 29-10-2023
+
+<img src = "log_imgs/brenner's_logW8.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Starting the Mini Presentation Slides, Figuring out what will be in the demo, More Exploration, and completing the weekly logs.
+
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Website draft that hosts our game (for mini presentation)"</li>
+  <li>"Main Menu draft (for mini presentation)"</li>
+  <li>"Mini Presentation Demo"</li>
+  <li>"Mini Presentation Slides"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"W8 Team Log"</li>
+  <li>"W8 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed: 
+<ol>
+  <li>"W8 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"Website draft that hosts our game (for mini presentation): It is technically working fine, but we are still making changes to it."</li>
+  <li>"Main Menu draft (for mini presentation): Just making final touches."</li>
+  <li>"Mini Presentation Demo: We are still fine tuning exactly what we want to include for the demo, but we have enough working parts to use what we have right now, just might still add some stuff before Thursday."</li>
+  <li>"Mini Presentation Slides: We are still making changes to it."</li>
+  <li>"Exploration: I further improved my UI main menu system, but it is not quite at the point I want it at for Thursday."</li>
+  <li>"W8 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+Our main focus this week was to start building our mini presentation thats in 4 days, and to do tutorials that are more related to what we actually need for our presentation. I got the slides started, and tried to nail down which features we need and don't need for the demo. For exploration, I continued my work into UI design by improving on the Menu I built previously. Here is the link to the repo where we have been storing our demo project:
+
+#### https://github.com/Prelude14/499UnityGameT19
+
+<!--====================================================================================================================               W9-->

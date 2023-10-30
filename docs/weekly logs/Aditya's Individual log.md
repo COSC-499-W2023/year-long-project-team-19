@@ -16,7 +16,7 @@ I was able to finish the project plan with the help of my team, All of the team 
 
 <h2>Date Range: 08-10-2023 to 22-10-2023</h2>
 
-<img src = "log_imgs/Aditya_W7.PNG?raw=true"/>
+<img src = "log_imgs/Aditya_W7.png?raw=true"/>
 
 Which features were yours in the project plan for this milestone? 
 
@@ -56,3 +56,21 @@ among the tasks above I am still in the process to learn other features such as 
   
 <h3>In Progress:</h3>
 <p>Resolving the issue with WebGl and researching on further tutorials to learn the actual process of creating a card game.</p>
+
+<h2>Date Range: 23-10-2023 to 29-10-2023</h2>
+
+<img src = "log_imgs/Aditya_week_8.png?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+This week I explored and learned more features required for the game for our group presentation on thursday. I learned how to implement the draw and turn feature from a sample game.
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Exploration: Aditya"</li>
+  <li>"W8 Team Log"</li>
+  <li>"W8 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+As a group, we still have to decide our theme for the game and divide the work for the presentation as well. We also have to collectively build the demo and confirm if all the features work accordingly. We completed the landing page and efatures for the game such as different cards, generating a deck from those cards, and how to shuffle the deck before distributing the cards. We also have started working on our mini presentation.
