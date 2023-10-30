@@ -16,7 +16,7 @@ I was able to finish the project plan with the help of my team, All of the team 
 
 <h2>Date Range: 08-10-2023 to 22-10-2023</h2>
 
-<img src = "log_imgs/Aditya_W7.PNG?raw=true"/>
+<img src = "log_imgs/Aditya_W7.png?raw=true"/>
 
 Which features were yours in the project plan for this milestone? 
 
@@ -59,7 +59,7 @@ among the tasks above I am still in the process to learn other features such as 
 
 <h2>Date Range: 23-10-2023 to 29-10-2023</h2>
 
-<img src = "/Users/adityatripathi/Desktop/year-long-project-team-19/docs/weekly logs/log_imgs/Aditya_week_8.png?raw=true"/>
+<img src = "log_imgs/Aditya_week_8.png?raw=true"/>
 
 ## Which features were yours in the project plan for this milestone?
 This week I explored and learned more features required for the game for our group presentation on thursday. I learned how to implement the draw and turn feature from a sample game.
