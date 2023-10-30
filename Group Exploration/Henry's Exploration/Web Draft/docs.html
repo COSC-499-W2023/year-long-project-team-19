@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Card game demo</title>
+  <link rel="icon" href="logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-docs">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <img src="logo.png" alt="Logo" class="navbar-brand" style="width: 50px; height: auto; margin: 0;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Play</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="docs.html">Docs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:example@example.com">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="cards">
+
+    <figure class="card card--normal">
+      <div class="card__image-container">
+        <img src="logo.png" alt="Eevee" class="card__image">
+      </div>
+
+      <figcaption class="card__caption">
+        <h1 class="card__name">Eevee</h1>
+
+        <h3 class="card__type">
+          normal
+        </h3>
+
+        <table class="card__stats">
+          <tbody>
+            <tr>
+              <th>HP</th>
+              <td>55</td>
+            </tr>
+            <tr>
+              <th>Attack</th>
+              <td>55</td>
+            </tr>
+
+            <tr>
+              <th>Defense</th>
+              <td>50</td>
+            </tr>
+
+            <tr>
+              <th>Special Attack</th>
+              <td>45</td>
+            </tr>
+            <tr>
+              <th>Special Defense</th>
+              <td>65</td>
+            </tr>
+            <tr>
+              <th>Speed</th>
+              <td>55</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="card__abilities">
+          <h4 class="card__ability">
+            <span class="card__label">Ability</span>
+            Run Away
+          </h4>
+          <h4 class="card__ability">
+            <span class="card__label">Hidden Ability</span>
+            Anticipation
+          </h4>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="card card--water">
+      <div class="card__image-container">
+        <img src="logo.png" alt="Vaporeon" class="card__image">
+      </div>
+
+      <figcaption class="card__caption">
+        <h1 class="card__name">Vaporeon</h1>
+
+        <h3 class="card__type">
+          water
+        </h3>
+
+        <table class="card__stats">
+          <tbody>
+            <tr>
+              <th>HP</th>
+              <td>130</td>
+            </tr>
+            <tr>
+              <th>Attack</th>
+              <td>65</td>
+            </tr>
+
+            <tr>
+              <th>Defense</th>
+              <td>60</td>
+            </tr>
+
+            <tr>
+              <th>Special Attack</th>
+              <td>110</td>
+            </tr>
+            <tr>
+              <th>Special Defense</th>
+              <td>95</td>
+            </tr>
+            <tr>
+              <th>Speed</th>
+              <td>65</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="card__abilities">
+          <h4 class="card__ability">
+            <span class="card__label">Ability</span>
+            Absorb
+          </h4>
+          <h4 class="card__ability">
+            <span class="card__label">Hidden Ability</span>
+            Hydration
+          </h4>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+
+
+  <script id="card-template" type="text/x-handlebars-template">
+  <figure class="card card--{{type}}">
+    <div class="card__image-container">
+      <img src="{{imageAddress}}" alt="{{name}}" class="card__image">   
+    </div>
+    
+    <figcaption class="card__caption">
+      <h1 class="card__name">{{name}}</h1>
+  
+      <h3 class="card__type">e
+        {{type}}
+      </h3>
+  
+      <table class="card__stats">
+        <tr>
+          <th>HP</th>
+          <td>{{hp}}</td>
+        </tr>
+        <tr>
+          <th>Attack</th>
+          <td>{{attack}}</td>
+        </tr>
+        
+        <tr>
+          <th>Defense</th>
+          <td>{{defense}}</td>
+        </tr>
+  
+        <tr>
+          <th>Special Attack</th>
+          <td>{{spAttack}}</td>
+        </tr>
+        <tr>
+          <th>Special Defense</th>
+          <td>{{spDefense}}</td>
+        </tr>
+        <tr>
+          <th>Speed</th>  
+          <td>{{speed}}</td>
+        </tr>
+      </table>
+      
+      <div class="card__abilities">
+        <h4 class="card__ability">
+          <span class="card__label">Ability</span>
+          {{ability1}}
+        </h4>
+        <h4 class="card__ability">
+          <span class="card__label">Hidden Ability</span>
+          {{ability2}}
+        </h4>
+      </div>
+    </figcaption>
+  </figure>
+  </script>
+
+
+</body>
+
+</html>
