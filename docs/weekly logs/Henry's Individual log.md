@@ -70,4 +70,24 @@ Worked on the Project Plan document, setting up Unity, learn unity tutorial and 
   1. Update the UI on the website draft.
   2. Figure out the technical stack for the website. (still not sure if I should use regular HTML or React.js because the website should be dynamic and interactive).
 
+# Date Range: 23-10-2023 to 29-10-2023
+
+![henrylog5](log_imgs/henry_log5.png)
+
+## Which features were yours in the project plan for this milestone?
+
+ Website Draft, and completing the weekly logs.
+
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Website Draft"</li>
+  <li>"mini presentation slides"</li>
+</ol>
+
+### Completed: 
+  1. make presentation slides"
+  2. Restyling the web for mini presentation.
 
