@@ -114,82 +114,45 @@ h1, h2, h3, h4, h5 {
   flex: 1 0;
 }
 
-.card--normal {
-  background: linear-gradient(110deg, #fdbb2d 0%, #3a1c71 100%);
+.card--black {
+  background: linear-gradient(110deg, #555 0%, #1e064b 100%);
   box-shadow: 0px 5px 20px -10px #3a1c71;
 }
 
-.card--normal .card__type {
-  background-color: #c08a53;
+.card--black .card__type {
+  background-color: #555;
 }
 
-.card--water {
-  background: linear-gradient(120deg, #1cb5e0 0%, #000851 100%);
-  box-shadow: 0px 5px 20px -10px #000851;
+.card--red {
+  background: linear-gradient(120deg, #ff0000 0%, #800000 100%);
+  box-shadow: 0px 5px 20px -10px #800000;
 }
 
-.card--water .card__type {
-  background-color: #1cb5e0;
+.card--red .card__type {
+  background-color: #ff0000;
 }
 
-.card--electric {
-  background: linear-gradient(90deg, rgba(255, 222, 0, 1) 34%, rgba(232, 255, 153, 1) 83%);
+.card--green {
+  background: linear-gradient(140deg, #00ff00 0%, #006400 100%);
+  box-shadow: 0px 5px 20px -10px #006400;
 }
 
-.card--electric .card__type {
-  background-color: #000;
+.card--green .card__type {
+  background-color: #00ff00;
 }
 
-.card--fire {
-  background: linear-gradient(0deg, rgba(199, 24, 0, 1) 10%, rgba(252, 194, 69, 1) 100%);
+.card--dark-white {
+  background: linear-gradient(180deg, #dcdcdc 0%, #aaaaaa 100%);
+  box-shadow: 0px 5px 20px -10px #888;
 }
 
-.card--fire .card__type {
-  background-color: rgba(199, 24, 0, 1);
+.card--dark-white .card__type {
+  background-color: #999;
 }
 
-.card--psychic {
-  background: linear-gradient(140deg, rgba(255, 167, 249, 1) 0%, rgba(255, 44, 195, 1) 39%, rgba(255, 227, 167, 1) 100%);
-}
-
-.card--psychic .card__type {
-  background: #ff2cc3;
-}
-
-.card--dark {
-  background: linear-gradient(20deg, rgba(25, 25, 25, 1) 0%, rgba(16, 11, 50, 1) 33%, rgba(92, 2, 73, 1) 100%);
-}
-
-.card--dark .card__type {
-  background: #5c0249;
-}
-
-.card--grass {
-  background: linear-gradient(140deg, rgba(196, 218, 61, 1) 0%, rgba(110, 127, 14, 1) 69%, rgba(39, 80, 9, 1) 100%);
-}
-
-.card--grass .card__type {
-  background: #6e7f0e;
-}
-
-.card--ice {
-  background: linear-gradient(230deg, rgba(202, 234, 246, 1) 0%, rgba(160, 234, 241, 1) 46%, rgba(111, 184, 235, 1) 100%);
-}
-
-.card--ice .card__type {
-  background: #6fb8eb;
-}
-
-.card--fairy {
-  background: linear-gradient(45deg, rgba(255, 230, 240, 1) 0%, rgba(255, 197, 224, 1) 34%, rgba(255, 166, 185, 1) 71%, rgba(255, 138, 149, 1) 100%);
-}
-
-.card--fairy .card__type {
-  background: #ff8a95;
-}
 
 .card:nth-child(1) {
-  transform: translateY(0px) rotate(0deg);
+  transform: translateY(0px) rotate(2deg);
 }
 
 .card:nth-child(2) {
