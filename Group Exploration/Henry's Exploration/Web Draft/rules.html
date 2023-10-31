@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Card game demo</title>
+    <link rel="icon" href="logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="bg">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <img src="logo.png" alt="Logo" class="navbar-brand" style="width: 50px; height: auto; margin: 0;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Play</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Rules</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cards.html">Cards</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="rules-container">
+      <section class="rule-section">
+        <h2>Pre-game Preparation and Determination of Turn Order</h2>
+        <p>
+          Before the game begins there are <strong>4</strong> decks players can choose from. These decks have their own identities and play differently from one another.
+          More information about their identities and unique interactions can be found in the Deck Identity section of this document.
+          One player will be chosen randomly to choose one of the four decks they would like to include in this round of the game.
+          After that player chooses a deck to include, the other person chooses the next deck to include.
+          Then both cards are shuffled into one deck.
+        </p>
+      </section>
+
+      <section class="rule-section">
+        <h2>Start of game</h2>
+        <p>
+          After choosing decks, the game starts. 
+          Each player draws 7 cards at the start of the game. 
+          They can choose to redraw or keep their current hand (this is often called a mulligan in card games). 
+          After both players are done with their mulligan the game officially begins.
+          <br/>
+          Each player begins with 30 health. The goal of the game is to get your opponent to 0 health
+        </p>
+      </section>
+
+      <section class="rule-section">
+        <h2>Turn Advantage and Balancing</h2>
+        <p>
+          Turn wise, the person who chose a deck and color identity <strong>SECOND</strong> goes <strong>FIRST</strong>. 
+          This is for balancing purposes. 
+          The ability to choose your preferred color identity and deck is a considerable enough advantage to warrant first turns being handed to the other player.
+        </p>
+      </section>
+
+      <section class="rule-section">
+        <h2>Alternate win condition</h2>
+        <p>
+          In the case that players want to win by strategies other than dealing damage, players can also <strong>lose the game if they have to draw from an empty deck.</strong>
+          This is colloquially known as a mill strategy. 
+          Some cards may also provide winning strategies, fulfilling these conditions allows you to win the game as well.
+        </p>
+      </section>
+    </div>
+
+  </body>
+</html>
