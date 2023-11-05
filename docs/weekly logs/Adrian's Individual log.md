@@ -102,3 +102,31 @@
   
 <h3>In Progress:</h3>
 <p> Developing code to play the cards and turn systems. </p>
+
+<h1>Date Range: 30-10-2023 to 05-11-2023</h1>
+<img src ="https://github.com/COSC-499-W2023/year-long-project-team-19/blob/exploration/docs/weekly%20logs/log_imgs/Adrian_2023-11-05.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p> This week our team focused a lot more on the presentation. On top of that we were mostly working to fix bugs and develop the demo so it would be functional for the demo. I also worked on learning Unity's built in testing feature. </p>
+
+<h2>Progress: </h2>
+<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/exploration/docs/weekly%20logs/log_imgs/Adrian_2023-11-05_UnityScreen.png"/>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+
+<ol>
+  <li>"Exploration: Adrian"</li>
+  <li>"Game Demo"</li>
+  <li>"Testing"</li>
+  <li>"Team Log"</li>
+  <li>"Individual Logs" </li>
+</ol>
+
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed: </h3> 
+  <p>Game demo is finished.</p>
+  
+<h3>In Progress:</h3>
+<p>Testing, game rules, and further development now in progress. Next feature to work on include draw, drag and play. Further UI development would be nice too. </p>
