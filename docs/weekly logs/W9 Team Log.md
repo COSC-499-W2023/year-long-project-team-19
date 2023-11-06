@@ -55,5 +55,4 @@ system in the My project (4) project folder of our 499UnityGameT19 repo, found a
 
 #### https://github.com/Prelude14/499UnityGameT19/tree/a260bfb034df2fbbed7a8ab87866c737e8dc1352/My%20project%20(4)
 
-<p>We were also able to get some testing done, thanks to Adrian writing them for his card shuffling code. We didn't have much time for other features this week, since we spent half of it preparing and practising
-for our presentation.</p>
+<p>We were also able to get some testing done, thanks to Adrian writing them for his card shuffling code. We didn't have much time for other features this week, since we spent half of it preparing and practising for our presentation. We have finished the general rules of our game, but since we still need to make more cards, and each card could introduce a new rule, we haven't closed the task yet.</p>
