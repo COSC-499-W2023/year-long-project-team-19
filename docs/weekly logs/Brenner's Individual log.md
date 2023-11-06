@@ -193,3 +193,50 @@ Our main focus this week was to start building our mini presentation thats in 4 
 #### https://github.com/Prelude14/499UnityGameT19
 
 <!--====================================================================================================================               W9-->
+# Date Range: 29-10-2023 to 05-11-2023
+
+<img src = "log_imgs/brenner's_logW9.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Completing the Mini Presentation Slides, finalizing the demo, more Exploration, and completing the weekly logs.
+
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Website draft that hosts our game (for mini presentation)"</li>
+  <li>"Main Menu draft (for mini presentation)"</li>
+  <li>"Mini Presentation Demo"</li>
+  <li>"Mini Presentation Slides"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"W9 Team Log"</li>
+  <li>"W9 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed: 
+<ol>
+  <li>"Website draft that hosts our game (for mini presentation)"</li>
+  <li>"Main Menu draft (for mini presentation)"</li>
+  <li>"Mini Presentation Demo"</li>
+  <li>"Mini Presentation Slides"</li>
+  <li>"W9 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"Exploration: I'm still learning stuff, but didn't do alot this week."</li>
+  <li>"W9 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+Our main focus this week was finish and practice our presentation slides in time for Thursday Nov. 2nd. We also had to put together our final version of our demo for the slides, which we managed to do on this link to the repo where we have been storing our demo project:
+
+#### https://github.com/Prelude14/499UnityGameT19/tree/a260bfb034df2fbbed7a8ab87866c737e8dc1352/My%20project%20(4)
+
+Henry showed me and Adrian how to publish our Unity project as a WebGL package, but he was the one who built the website for our actual demo. I just helped with the choices he made (if we wanted to make a complete site ourselves or upload to another website, and what pages to include (the cards and rules page). 
+
+<!--====================================================================================================================               W10-->
