@@ -91,3 +91,27 @@ Worked on the Project Plan document, setting up Unity, learn unity tutorial and 
   1. make presentation slides"
   2. Restyling the web for mini presentation.
 
+-----
+-----
+# Date Range: 29-10-2023 to 5-11-2023
+
+![henrylog5](log_imgs/henry_log9.png)
+
+## Which features were yours in the project plan for this milestone?
+
+ Website Draft, and completing the weekly logs.
+
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Website Draft"</li>
+  <li>"mini presentation slides"</li>
+</ol>
+
+### Completed: 
+  1. Present the mini presentation.
+  2. Finished the website draft.
+  3. Deploy the website to Vercel.
+

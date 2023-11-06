@@ -61,5 +61,28 @@ Completed: W6 Team Log and Individual Logs. Have created a test Unity project on
 
 In Progress: "Followed tutorials on getting started with Unity, exploring basic class structure, and hosting a Unity project locally. Currently doing rsearch on building multiplayer games; creating a server with Photon and connecting it with Unity projects. I've also looked into setting up a database and how we would create and store playing cards, and creating a login system in Unity using PHP and MySQL. My goal for following week is to create a simple mockup game that will run on a local server. 
 
+# Date Range: 29-10-2023 to 05-11-2023
 
+<img src = "log_imgs/Leo_log_Week9.png?raw=true"/>
 
+## Which features were yours in the project plan for this milestone?
+
+Completing the Mini Presentation Slides and working on exploration with unity.
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Mini Presentation Slides"</li>
+  <li>"Exploration: Leo"</li>
+  <li>"W9 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+<li>"Mini Presentation Slides"</li>
+<li>"W9 Individual Logs"</li>
+
+### In Progress:
+
+Focused mostly on the presentation for this week, but I am still working on learning Unity. 
