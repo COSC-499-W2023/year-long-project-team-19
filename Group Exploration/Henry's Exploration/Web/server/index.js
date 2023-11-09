@@ -17,8 +17,16 @@ mongoose.connect(MONGO_URI, {
   console.log(err);
 });
 
+const loginRouter = require('./routes/loginRoutes');
+const rulesRouter = require('./routes/rulesRoutes');
+const cardsRouter = require('./routes/cardsRoutes');
+
+app.use('/login', loginRouter);
+app.use('/rules', rulesRouter);
+app.use('/cards', cardsRouter);
+
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
 });
 
-
+module.exports = app;
