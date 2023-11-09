@@ -64,3 +64,7 @@ Thumbs.db.meta
 
 #DS STORE
 .DS_Store
+
+# For Web
+/.env
+node_modules/
