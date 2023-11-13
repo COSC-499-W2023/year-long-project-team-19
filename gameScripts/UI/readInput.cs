@@ -3,14 +3,54 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
 public class readInput : MonoBehaviour
-{   
+{
 
     //Need public string to store the user's input when it is entered into the login page
-    public Text username;
-    public Text password;
+    public InputField username_email;
+    public InputField user_pass;
 
-    //LOGIN INPUTS
+    public Button loginButton;
+
+
+    public void CallLogin()
+    {
+        StartCoroutine(Login());
+    }
+
+    IEnumerator Login()
+    {
+        //make Form to take the user's input
+        WWWForm form = new WWWForm();
+        form.AddField("username", username_email.text);
+        form.AddField("password", user_pass.text);
+
+        //connect to url of our database's php file, PASS FORM TO URL
+        WWW www = new WWW("http://localhost/sqlconnect/login.php", form);
+        yield return www; //tell Unity to yield running the rest of the game till it gets this info from the url
+
+        //Error check what our PHP file returned
+        if (www.text == "0")
+        {
+            Debug.Log("User logged in successfully.");
+
+        }
+        else 
+        {
+            Debug.Log("User logged FAILED. Error Code: " + www.text);
+        }
+    }
+
+    public void VerifyInputs()
+    {
+        loginButton.interactable = (username_email.text.Length >= 10 && user_pass.text.Length >= 10);
+    }
+
+
+
+
+   /* //LOGIN INPUTS
     public void ReadStringUsernameL(string usernameInputString)
     {
         username.text = usernameInputString; //store the entered text as the user's username
@@ -44,6 +84,6 @@ public class readInput : MonoBehaviour
     {
         passwordCA_2.text = passwordInputStringCA2; //store the entered text as the "confirm password" password
         Debug.Log(passwordCA_2);
-    }
+    }*/
 
 }
