@@ -115,3 +115,28 @@ Worked on the Project Plan document, setting up Unity, learn unity tutorial and 
   2. Finished the website draft.
   3. Deploy the website to Vercel.
 
+# Date Range: 6-11-2023 to 12-11-2023
+
+![henrylog5](log_imgs/henry_log10.png)
+
+## Which features were yours in the project plan for this milestone?
+
+ Admin system website, setup mongodb.
+
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Admin System Website"</li>
+  <li>"Setup MongoDB"</li>
+</ol>
+
+### Completed: 
+  1. Created mock REST API for to ensure that it connects to mongoDB
+  2. Setup NodeJs server (router and db connection)
+  3. Deploy ndoejs server to vercel.
+
+Next week, I will still be focusing on the nodeJs for admin sys web.
+
+

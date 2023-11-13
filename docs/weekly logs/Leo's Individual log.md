@@ -86,3 +86,27 @@ Completing the Mini Presentation Slides and working on exploration with unity.
 ### In Progress:
 
 Focused mostly on the presentation for this week, but I am still working on learning Unity. 
+
+# Date Range: 05-11-2023 to 12-11-2023
+
+<img src = "log_imgs/Leo_log_Week9.png?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Working on testing for the login system. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Password Encryption"</li>
+  <li>"Password reset system"</li>
+  <li>"Login Database testing"</li>
+  <li>"Login format testing"</li>
+  <li>""</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### In Progress:
+
+Still working on writing tests for the login system to check password and user formats. Once the login database is setup, I can start writing test for that and start working on password encryption with Brenner. 
