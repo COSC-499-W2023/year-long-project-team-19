@@ -1,4 +1,5 @@
 <!--====================================================================================================================               W4-->
+
 # Date Range: 26-09-2023 to 1-10-2023
 
 <img src = "log_imgs/brenner's_log2.PNG?raw=true"/>
@@ -6,7 +7,6 @@
 ## Which features were yours in the project plan for this milestone?
 
 Figuring out the Teck Stack, working on the Project Plan document, setting up Unity on my computer, and completing the weekly logs.
-
 
 ## Which tasks from the project board are associated with these features?
 
@@ -20,10 +20,10 @@ Figuring out the Teck Stack, working on the Project Plan document, setting up Un
 
 ## Among these tasks, which have you completed/in progress in the last week?
 
-### Completed: 
-  
+### Completed:
+
 Me and Adrian finalized our Teck Stack to the best of our abilities, which allowed us to complete the Project Plan Document.
-  
+
 ### In Progress:
 
 I have Unity running on my system, and I've started working through a tutorial, but since I dont have it interacting with our whole teck stack, I don't count this as completed.
@@ -43,7 +43,6 @@ This week was more about finializing our project plan and teck stack, so we didn
 
 Exploration, getting unity working on my other computer and completeing the weekly logs.
 
-
 ## Which tasks from the project board are associated with these features?
 
 <ol>
@@ -55,10 +54,10 @@ Exploration, getting unity working on my other computer and completeing the week
 
 ## Among these tasks, which have you completed/in progress in the last week?
 
-### Completed: 
-  
+### Completed:
+
 I got a version of Unity working on my Laptop, so I could work on tutorials from anywhere. Last week I just got it running on my PC at home.
-  
+
 ### In Progress:
 
 I started working through some tutorials and watching videos on Unity, its not completed though, and technically won't ever be.
@@ -66,7 +65,7 @@ The logs are still in progress, but they will be done as I write this.
 
 #### Aditional Context:
 
-This week was about exploring Unity, so we didn't do much else. Check the Exploration Branch for our work. 
+This week was about exploring Unity, so we didn't do much else. Check the Exploration Branch for our work.
 
 <!--====================================================================================================================               W6-->
 
@@ -89,7 +88,8 @@ Exploration, Setting up Unity on my computer, and completing the weekly logs.
 
 ## Among these tasks, which have you completed/in progress in the last week?
 
-### Completed: 
+### Completed:
+
 <ol>
   <li>"W6 Team Log"</li>
 </ol>
@@ -103,7 +103,7 @@ Exploration, Setting up Unity on my computer, and completing the weekly logs.
 
 #### Aditional Context:
 
-So we didn't have any asignments this week apart from the logs, and we all need to learn Unity, so our main focus this week (and probably next week) is to get our hands dirty with some more tutorials. The goal is to do tutorials that are more related to what we actually need for our presentation in 3 weeks. I aimed for main menu and UI design, while other members aimed at designing actual card objects that the game will use, and others on running our unity game in a web browser. I made a video and then GIF of the UI I built in action, which you can find on my Exploration's Readme. Also, I have Unity set up on both of my computers now, but we want to get GitHub working with it, so that the whole group will be able to work on the same project for our presentation. Thats the goal for next week. ***Also, this week and next week's peer evaluations got merged into one, so they will share the same screenshot.
+So we didn't have any asignments this week apart from the logs, and we all need to learn Unity, so our main focus this week (and probably next week) is to get our hands dirty with some more tutorials. The goal is to do tutorials that are more related to what we actually need for our presentation in 3 weeks. I aimed for main menu and UI design, while other members aimed at designing actual card objects that the game will use, and others on running our unity game in a web browser. I made a video and then GIF of the UI I built in action, which you can find on my Exploration's Readme. Also, I have Unity set up on both of my computers now, but we want to get GitHub working with it, so that the whole group will be able to work on the same project for our presentation. Thats the goal for next week. \*\*\*Also, this week and next week's peer evaluations got merged into one, so they will share the same screenshot.
 
 <!--====================================================================================================================               W7-->
 
@@ -114,7 +114,6 @@ So we didn't have any asignments this week apart from the logs, and we all need 
 ## Which features were yours in the project plan for this milestone?
 
 More Exploration, Setting up Unity with GitHub, and completing the weekly logs.
-
 
 ## Which tasks from the project board are associated with these features?
 
@@ -127,7 +126,8 @@ More Exploration, Setting up Unity with GitHub, and completing the weekly logs.
 
 ## Among these tasks, which have you completed/in progress in the last week?
 
-### Completed: 
+### Completed:
+
 <ol>
   <li>"Set up Unity: I created a new repository that my group can upload our Unity projects to in order to share each others work. (See link below)"</li>
   <li>"W7 Team Log"</li>
@@ -145,9 +145,10 @@ So we still didn't have any asignments or class this week apart from the logs, s
 
 #### https://github.com/Prelude14/499UnityGameT19
 
-***Also, this week and next week's peer evaluations got merged into one, so they will share the same screenshot.
+\*\*\*Also, this week and next week's peer evaluations got merged into one, so they will share the same screenshot.
 
 <!--====================================================================================================================               W8-->
+
 # Date Range: 22-10-2023 to 29-10-2023
 
 <img src = "log_imgs/brenner's_logW8.PNG?raw=true"/>
@@ -155,7 +156,6 @@ So we still didn't have any asignments or class this week apart from the logs, s
 ## Which features were yours in the project plan for this milestone?
 
 Starting the Mini Presentation Slides, Figuring out what will be in the demo, More Exploration, and completing the weekly logs.
-
 
 ## Which tasks from the project board are associated with these features?
 
@@ -171,7 +171,8 @@ Starting the Mini Presentation Slides, Figuring out what will be in the demo, Mo
 
 ## Among these tasks, which have you completed/in progress in the last week?
 
-### Completed: 
+### Completed:
+
 <ol>
   <li>"W8 Team Log"</li>
 </ol>
@@ -193,6 +194,7 @@ Our main focus this week was to start building our mini presentation thats in 4 
 #### https://github.com/Prelude14/499UnityGameT19
 
 <!--====================================================================================================================               W9-->
+
 # Date Range: 29-10-2023 to 05-11-2023
 
 <img src = "log_imgs/brenner's_logW9.PNG?raw=true"/>
@@ -200,7 +202,6 @@ Our main focus this week was to start building our mini presentation thats in 4 
 ## Which features were yours in the project plan for this milestone?
 
 Completing the Mini Presentation Slides, finalizing the demo, more Exploration, and completing the weekly logs.
-
 
 ## Which tasks from the project board are associated with these features?
 
@@ -216,7 +217,8 @@ Completing the Mini Presentation Slides, finalizing the demo, more Exploration, 
 
 ## Among these tasks, which have you completed/in progress in the last week?
 
-### Completed: 
+### Completed:
+
 <ol>
   <li>"Website draft that hosts our game (for mini presentation)"</li>
   <li>"Main Menu draft (for mini presentation)"</li>
@@ -237,6 +239,50 @@ Our main focus this week was finish and practice our presentation slides in time
 
 #### https://github.com/Prelude14/499UnityGameT19/tree/a260bfb034df2fbbed7a8ab87866c737e8dc1352/My%20project%20(4)
 
-Henry showed me and Adrian how to publish our Unity project as a WebGL package, but he was the one who built the website for our actual demo. I just helped with the choices he made (if we wanted to make a complete site ourselves or upload to another website, and what pages to include (the cards and rules page). 
+Henry showed me and Adrian how to publish our Unity project as a WebGL package, but he was the one who built the website for our actual demo. I just helped with the choices he made (if we wanted to make a complete site ourselves or upload to another website, and what pages to include (the cards and rules page).
 
 <!--====================================================================================================================               W10-->
+
+# Date Range: 05-11-2023 to 12-11-2023
+
+<img src = "log_imgs/brenner's_logW10.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Starting the login system, start the create account system, more Exploration, and completing the weekly logs.
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Login System Draft"</li>
+  <li>"Create Account System Draft"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"W10 Team Log"</li>
+  <li>"W10 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"W10 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"Exploration: I'm still learning stuff, for example this week I learned how to get Unity to interact with MySQLphp using php."</li>
+  <li>"Login System Draft: I have it currently set up to take a username and password, and check if the username exists in the database, and then if the password matches the username. Not a lot of tests yet, and I just hard coded an account into the database to check for now."</li>
+  <li>"Create Account System Draft: Technically this system will use a lot of what the login system is made of, so technically its started at least, but nothing to crazy yet."</li>
+  <li>"W9 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+Since we started focussing on actual features instead of more exploration, there is a ton of new tasks opened and things to do, but I feel like I made solid progress into the login system for this week. Getting a local server running was a bit tricky since I'm a bit out of practice, and the week was very busy for me. We are planning to take advantage of the week off for reading break to really flush out some of the features further. I want to add lots of tests for my login system and maybe a password encryptor for when Unity checks the user's entered data with the php file. Also we still have that other repo open for the main game project found here:
+
+#### https://github.com/Prelude14/499UnityGameT19/tree/a260bfb034df2fbbed7a8ab87866c737e8dc1352/My%20project%20(4)
+
+<p>but I didn't code anything on it this week, I just worked on my own code.</p>
+
+<!--====================================================================================================================               W11-->
