@@ -5,7 +5,6 @@
 
 <p>For this week's project plan I did a lot of research and development for the game itself. I helped write out sections of the project plan. I also finalized the rules and potential interactions/mechanics for the game itself.</p>
 
-
 <h2> Which tasks from the project board are associated with these features? </h2>
 
 <ol>
@@ -31,7 +30,6 @@
 <h2>Which features were yours in the project plan for this milestone?</h2>
 
 <p>This week was all about exploration. I explored the basics of Unity and learnt how to use stage and the game. I also learnt how to work with assets, I also made a mock version of our game. It's unfinished but in good progress, at about the same pace as I expected. I also learnt about scripting and scriptable objects using C#. </p>
-
 
 <h2> Which tasks from the project board are associated with these features? </h2>
 

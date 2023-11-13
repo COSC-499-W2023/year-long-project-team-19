@@ -6,7 +6,6 @@
 
 Worked on the Project Plan document, setting up Unity, learn unity tutorial and completeing the weekly logs.
 
-
 ## Which tasks from the project board are associated with these features?
 
 <ol>
@@ -17,6 +16,6 @@ Worked on the Project Plan document, setting up Unity, learn unity tutorial and 
 
 ## Among these tasks, which have you completed/in progress in the last week?
 
-### Completed: 
-  I have successfully install unity and learn the tutorial regarding the unity also contribute to the project plan documentation
+### Completed:
 
+I have successfully install unity and learn the tutorial regarding the unity also contribute to the project plan documentation
