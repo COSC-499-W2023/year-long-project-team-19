@@ -5,7 +5,6 @@
 
 <p>For this week's project plan I did a lot of research and development for the game itself. I helped write out sections of the project plan. I also finalized the rules and potential interactions/mechanics for the game itself.</p>
 
-
 <h2> Which tasks from the project board are associated with these features? </h2>
 
 <ol>
@@ -31,7 +30,6 @@
 <h2>Which features were yours in the project plan for this milestone?</h2>
 
 <p>This week was all about exploration. I explored the basics of Unity and learnt how to use stage and the game. I also learnt how to work with assets, I also made a mock version of our game. It's unfinished but in good progress, at about the same pace as I expected. I also learnt about scripting and scriptable objects using C#. </p>
-
 
 <h2> Which tasks from the project board are associated with these features? </h2>
 
@@ -130,3 +128,57 @@
   
 <h3>In Progress:</h3>
 <p>Testing, game rules, and further development now in progress. Next feature to work on include draw, drag and play. Further UI development would be nice too. </p>
+<h1>Date Range: 30-10-2023 to 05-11-2023</h1>
+<img src ="https://github.com/COSC-499-W2023/year-long-project-team-19/blob/exploration/docs/weekly%20logs/log_imgs/Adrian_2023-11-05.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p> This week our team focused a lot more on the presentation. On top of that we were mostly working to fix bugs and develop the demo so it would be functional for the demo. I also worked on learning Unity's built in testing feature. </p>
+
+<h2>Progress: </h2>
+<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/exploration/docs/weekly%20logs/log_imgs/Adrian_2023-11-05_UnityScreen.png"/>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+
+<ol>
+  <li>"Exploration: Adrian"</li>
+  <li>"Game Demo"</li>
+  <li>"Testing"</li>
+  <li>"Team Log"</li>
+  <li>"Individual Logs" </li>
+</ol>
+
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed: </h3> 
+  <p>Game demo is finished.</p>
+  
+<h3>In Progress:</h3>
+<p>Testing, game rules, and further development now in progress. Next feature to work on include draw, drag and play. Further UI development would be nice too. </p>
+
+<h1>Date Range: 06-11-2023 to 12-11-2023</h1>
+<img src ="https://github.com/COSC-499-W2023/year-long-project-team-19/blob/development/docs/weekly%20logs/log_imgs/Adrian_2023-11-12.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>This week I created the scripts for the turns players will take. I also opted to create the resource system. In development we're just referring to it as "mana" but plans change. Other than that I also designed several UI options on paper for how cards will appear. I tried restructuring our prefabs for the cards to imitate one of the designs, it's currently still a work in progress. This time around, testing was offloaded to Aditya, we'll see how effective this new system will work out.</p>
+
+<h2>Progress: </h2>
+<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/development/docs/weekly%20logs/log_imgs/Adrian_2023-11-12_Unity.png"/>
+<p>This was the aforementioned restructuring for card prefabs and the turn based system being implemented. Also seen on the bottom right, is the resource system. Overall decent progress but more should come in the following week.</p>
+<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/development/docs/weekly%20logs/log_imgs/designCardSample.jpeg"/>
+<p>These are some of the designs I'm going to pitch to the team. There are several options for how we're going to design our cards so players will have an easy time identifying certain features. </p>
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <li>"Unity Turn System": This is the turn system for players and opponents. Each turn players gain one resource and after playing out their turn, they can end their turn. Ending a turn begins the other players turn.</li>
+  <li>"Unity match related UI": This week I worked on the cards UI elements. Trying to designate changes to certain elements to make it look aethetically nicer and from a UX perspective make it easier to look at.</li>
+  <li>"Exploration: Adrian" & "Unity drag and play": This week and for the week after I will look at resources to help me learn how to drag objects and how objects can interact with one another. Currently watching <a href = "https://www.youtube.com/watch?v=BGr-7GZJNXg">this</a> video as one of my resources.</li>
+</ol>
+
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed: </h3> 
+  <p>"Unity Turn System" has been completed but only the backend portion of it. The frontend portion is still a WIP.</p>
+  
+<h3>In Progress:</h3>
+<p>Card designs will be pitched next meeting and in the next cycle I'll work on our UI and the drag and drop feature. Still learning drag and drop using the aforementioned link.</p>
