@@ -18,11 +18,11 @@ mongoose.connect(MONGO_URI, {
 });
 
 const userRouter = require('./routes/loginRoutes');
-// const rulesRouter = require('./routes/rulesRoutes');
+const rulesRouter = require('./routes/rulesRoutes');
 // const cardsRouter = require('./routes/cardsRoutes');
 
 app.use('/api/user', userRouter);
-// app.use('/api/rules', rulesRouter);
+app.use('/api/rules', rulesRouter);
 // app.use('/api/cards', cardsRouter);
 
 app.listen(process.env.PORT, () => {
