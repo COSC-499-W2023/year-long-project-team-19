@@ -40,7 +40,7 @@ const addRules = async (req, res) => {
   if (!order || !context || !title) {
     return res.status(400).json({ message: 'Missing required fields' });
   }
-  
+
   try {
     const newRule = new Rules({order, context, title});
     await newRule.save();
@@ -50,8 +50,26 @@ const addRules = async (req, res) => {
     return res.status(500).json({ message: 'Server error'});
   }
 };
+
+const deleteRules = async (req, res) => {
+  const { _id } = req.body;
+
+  if(!_id) {
+    return res.status(400).json({ message: 'Missing required fields' });
+  }
+
+  try {
+    const rule = await Rules.findOne({ _id });
+    
+    await rule.deleteOne();
+    return res.status(200).json({ message: 'Rule deleted'});
+  } catch (error) {
+    res.status(500).json({ message: 'Server error'});
+  }
+};
 module.exports = {
   showRules,
   editRules,
   addRules,
+  deleteRules,
 };
