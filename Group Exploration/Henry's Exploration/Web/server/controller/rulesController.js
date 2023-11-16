@@ -34,7 +34,24 @@ const editRules = async (req, res) => {
  }
 };
 
+const addRules = async (req, res) => {
+  const { order, context, title } = req.body;
+
+  if (!order || !context || !title) {
+    return res.status(400).json({ message: 'Missing required fields' });
+  }
+  
+  try {
+    const newRule = new Rules({order, context, title});
+    await newRule.save();
+    
+    return res.status(200).json({ message: 'Rule added', rules: newRule });
+  } catch (error) {
+    return res.status(500).json({ message: 'Server error'});
+  }
+};
 module.exports = {
   showRules,
   editRules,
+  addRules,
 };
