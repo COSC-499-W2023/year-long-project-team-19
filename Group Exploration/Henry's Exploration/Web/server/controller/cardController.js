@@ -19,6 +19,10 @@ const addCard = async (req, res) => {
   }
 
   try {
+    const card = await Cards.findOne({ name });
+    if(card){
+      return res.status(400).json({ message: 'Card already exists'});
+    }
     const newCard = new Cards({ name, type, hp, attack, defense, ability });
     await newCard.save();
 
