@@ -6,13 +6,12 @@ using TMPro;
 
 public class readInput : MonoBehaviour
 {
-
-    //Need public string to store the user's input when it is entered into the login page
+    //======================================================================================================  LOGIN INPUT  =====================================================================================================
+    //Need public string to store the user's input when it is entered into the login page's input fields
     public InputField username_email;
     public InputField user_pass;
 
     public Button loginButton;
-
 
     public void CallLogin()
     {
@@ -21,7 +20,7 @@ public class readInput : MonoBehaviour
 
     IEnumerator Login()
     {
-        //make Form to take the user's input
+        //make Form to take the user's input 
         WWWForm form = new WWWForm();
         form.AddField("username", username_email.text);
         form.AddField("password", user_pass.text);
@@ -42,48 +41,86 @@ public class readInput : MonoBehaviour
         }
     }
 
-    public void VerifyInputs()
+    public void VerifyInputsL() //login button won't even be clickable until all three input fields have at least 10 characters in each
     {
         loginButton.interactable = (username_email.text.Length >= 10 && user_pass.text.Length >= 10);
     }
 
+    //======================================================================================================  CREATE INPUT  =====================================================================================================
+    public InputField c_username_email;
+    public InputField c_user_pass;
+    public InputField c_user_pass2;//confirm pass input field from create page
 
+    public Button createButton; //create page button
 
-
-   /* //LOGIN INPUTS
-    public void ReadStringUsernameL(string usernameInputString)
+    public void CallCreate()
     {
-        username.text = usernameInputString; //store the entered text as the user's username
-        //PlayerPrefs.SetString("uname", username.text);
-        Debug.Log(username);
-    }
-    public void ReadStringPasswordL(string passwordInputString)
-    {
-        password.text = passwordInputString; //store the entered text as the user's password
-        //PlayerPrefs.SetString("upass", password.text);
-        Debug.Log(password);
+        StartCoroutine(Create());
     }
 
-    //Need public string to store the user's input when it is entered into the Create Account page
-    public Text usernameCA;
-    public Text passwordCA_1;
-    public Text passwordCA_2;
+    IEnumerator Create()
+    {
+        //make Form to take the user's input 
+        WWWForm formC = new WWWForm();
+        formC.AddField("username", c_username_email.text);
+        formC.AddField("password", c_user_pass.text);
+        formC.AddField("password2", c_user_pass2.text); //get second pass from second pass field
 
-    //CREATE ACCOUNTS INPUTS
-    public void ReadStringUsernameCA(string usernameInputStringCA)
-    {
-        usernameCA.text = usernameInputStringCA; //store the entered text as the user's username
-        Debug.Log(usernameCA);
+        //connect to url of our database's php file, PASS FORM TO URL
+        WWW wwwC = new WWW("http://localhost/sqlconnect/create.php", formC);
+        yield return wwwC; //tell Unity to yield running the rest of the game till it gets this info from the url
+
+        //Error check what our PHP file returned
+        if (wwwC.text == "0")
+        {
+            Debug.Log("User created successfully.");
+
+        }
+        else
+        {
+            Debug.Log("User create FAILED. Error Code: " + wwwC.text);
+        }
     }
-    public void ReadStringPasswordCA_1(string passwordInputStringCA1)
+    public void VerifyInputsC() //create button won't even be clickable until all three input fields have at least 10 characters in each
     {
-        passwordCA_1.text = passwordInputStringCA1; //store the entered text as the user's password they want to use
-        Debug.Log(passwordCA_1);
+        createButton.interactable = (c_username_email.text.Length >= 10 && c_user_pass.text.Length >= 10 && c_user_pass2.text.Length >= 10);
     }
-    public void ReadStringPasswordCA_2(string passwordInputStringCA2)
-    {
-        passwordCA_2.text = passwordInputStringCA2; //store the entered text as the "confirm password" password
-        Debug.Log(passwordCA_2);
-    }*/
+
+
+    /* //LOGIN INPUTS
+     public void ReadStringUsernameL(string usernameInputString)
+     {
+         username.text = usernameInputString; //store the entered text as the user's username
+         //PlayerPrefs.SetString("uname", username.text);
+         Debug.Log(username);
+     }
+     public void ReadStringPasswordL(string passwordInputString)
+     {
+         password.text = passwordInputString; //store the entered text as the user's password
+         //PlayerPrefs.SetString("upass", password.text);
+         Debug.Log(password);
+     }
+
+     //Need public string to store the user's input when it is entered into the Create Account page
+     public Text usernameCA;
+     public Text passwordCA_1;
+     public Text passwordCA_2;
+
+     //CREATE ACCOUNTS INPUTS
+     public void ReadStringUsernameCA(string usernameInputStringCA)
+     {
+         usernameCA.text = usernameInputStringCA; //store the entered text as the user's username
+         Debug.Log(usernameCA);
+     }
+     public void ReadStringPasswordCA_1(string passwordInputStringCA1)
+     {
+         passwordCA_1.text = passwordInputStringCA1; //store the entered text as the user's password they want to use
+         Debug.Log(passwordCA_1);
+     }
+     public void ReadStringPasswordCA_2(string passwordInputStringCA2)
+     {
+         passwordCA_2.text = passwordInputStringCA2; //store the entered text as the "confirm password" password
+         Debug.Log(passwordCA_2);
+     }*/
 
 }
