@@ -1,7 +1,7 @@
 <?php 
 
 
-	$con = mysqli_connect("localhost", "root2", "Cosc499Team19DuelTimejkwndjfifi", "c499game");
+	$con = mysqli_connect("localhost", "root2", "Cosc499Team19DuelTimejkwndjfifi", "cosc499");
 
 	//check connection
 	if (mysqli_connect_errno()) 
