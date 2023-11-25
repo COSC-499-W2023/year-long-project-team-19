@@ -15,32 +15,36 @@
 	$password = $_POST["password"];
 
 
-	//Query to check database for that USERNAME ==============================================
-	$namequery = "SELECT useremail FROM useracc WHERE useremail ='" .$username. "';";
-
+	//Query to check database for that USERNAME, then its password and other info ==============================================
+	$namequery = "SELECT useremail, hash, salt, datecreated, gamesplayed, gameswon, wlratio FROM useracc WHERE useremail ='" .$username. "';";
+    //win loss ratio might need to be caluclated (not stored in table?)
 
 	//Run the Query 
 	$usernameCheck = mysqli_query($con, $namequery) or die("2: Name Check failed."); //error 2 for name check query failed
 
-	if (mysqli_num_rows($usernameCheck) > 0)
+	//if there is NO account matching that username, OR there is MORE THAN 1, then something is wrong and we want to quit
+	if (mysqli_num_rows($usernameCheck) != 1) //specifically counts ROWS
 	{
-		echo "This user exists!";
+		echo "5: 0 or more than 1 user was found with that username."; //error code 5, there is either no account with that name, or there is more than one matching somehow
+		exit();
+	}
+	//Need to check salt and hash with supplied PASSWORD to check if correct ==============================================
+	$useraccInfo = mysqli_fetch_assoc($usernameCheck); //get query info as associative array 
+	$salt = $useraccInfo["salt"]; //get salt from DB
+	$hash = $useraccInfo["hash"]; //get hash from DB
 
-		//Query to check database for that PASSWORD ==============================================
-		$passquery = "SELECT userpass FROM useracc WHERE useremail ='" .$username. "';";
+	//check supplied password combined with DB's salt 
+	$loginhash = crypt($password, $salt)
 
-
-		//Run the Query 
-		$userPassCheck = mysqli_query($con, $passquery) or die("3: Pass Check failed."); //error 3 for pass check query failed
-
-		if (mysqli_num_rows($userPassCheck) > 0){
-			echo "This user's password exists!";
-
-			echo("0");
-		}
+	//now check this supplied salt pass against DB's hash
+	if ($hash != $loginhash) 
+	{
+		echo "6: Incorrect password"; //error code 6, the supplied password combined with the salt in the DB does not equal the hash in the DB, so it is incorrect
+		exit();
 	}
 
-
-
+	//if we get here, then the user logged in perfectly, so we need to echo a message supplying Unity all the user info (readInput.cs)
+	echo "0\t" . $useraccInfo["datecreated"] . $useraccInfo["gamesplayed"] . $useraccInfo["gameswon"] . $useraccInfo["wlratio"];
+	//win loss ratio might need to be caluclated (not stored in table?)
 
 ?>
