@@ -1,10 +1,49 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
 import logo from "../images/logo.png";
+import { isLoggedIn } from "../auth.js";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
 
 const Cards = () => {
   const [cards, setCards] = React.useState([]);
+  const [reload, setReload] = React.useState(false);
+  // Modal for adding cards
+  const [show, setShow] = useState(false);
+  const handleClose = () => {
+    setShow(false);
+    setCardInfo({
+      name: '',
+      type: '',
+      hp: 0,
+      attack: 0,
+      defense: 0,
+      ability: '',
+    });
+  };
+  const handleShow = () => setShow(true);
+  const [cardInfo, setCardInfo] = useState({
+    name: '',
+    type: '',
+    hp: 0,
+    attack: 0,
+    defense: 0,
+    ability: '',
+  });
+  const handleChange = async (e) => {
+    const { name, value } = e.target;
+    setCardInfo((prevInfo) => ({
+      ...prevInfo,
+      [name]: name === 'hp' || name === 'attack' || name === 'defense' ? parseInt(value) : value,
+    }));
+  };
+  const handleSaveChanges = async () => {
+    
+  };
+  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -17,11 +56,18 @@ const Cards = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [reload]);
 
   return (
     <>
       <Navbar />
+      {isLoggedIn() ? (
+        <div>
+          <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '10px' }}>
+            <Button variant="success" onClick={handleShow}>Add Card </Button>
+          </div>
+        </div>
+      ) : null}
       <div className="bg-docs" style={{marginTop: '10px'}}>
         <div id="cards">
           {cards.map((card) => (
@@ -67,6 +113,90 @@ const Cards = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal */}
+      <Modal show={show} onHide={handleClose} centered>
+      <Modal.Header closeButton>
+        <Modal.Title>Add New Card</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <Form>
+          <Form.Group controlId="formCardName">
+            <Form.Label>Name</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter name"
+              name="name"
+              value={cardInfo.name}
+              onChange={handleChange}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="formCardType">
+            <Form.Label>Type</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter type"
+              name="type"
+              value={cardInfo.type}
+              onChange={handleChange}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="formCardHp">
+            <Form.Label>HP</Form.Label>
+            <Form.Control
+              type="number"
+              placeholder="Enter HP"
+              name="hp"
+              value={cardInfo.hp}
+              onChange={handleChange}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="formCardAttack">
+            <Form.Label>Attack</Form.Label>
+            <Form.Control
+              type="number"
+              placeholder="Enter attack"
+              name="attack"
+              value={cardInfo.attack}
+              onChange={handleChange}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="formCardDefense">
+            <Form.Label>Defense</Form.Label>
+            <Form.Control
+              type="number"
+              placeholder="Enter defense"
+              name="defense"
+              value={cardInfo.defense}
+              onChange={handleChange}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="formCardAbility">
+            <Form.Label>Ability</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter ability"
+              name="ability"
+              value={cardInfo.ability}
+              onChange={handleChange}
+            />
+          </Form.Group>
+        </Form>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button variant="secondary" onClick={handleClose}>
+          Close
+        </Button>
+        <Button variant="primary" onClick={handleSaveChanges}>
+          Save Changes
+        </Button>
+      </Modal.Footer>
+    </Modal>
     </>
   );
 };
