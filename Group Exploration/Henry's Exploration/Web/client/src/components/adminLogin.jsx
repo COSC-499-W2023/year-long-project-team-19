@@ -11,11 +11,9 @@ const AdminLogin = () => {
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = async (event) => {
+    event.preventDefault();
     const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
+    
     try {
       await axios.post(
         "https://nodeserver-two.vercel.app/api/user/login",
