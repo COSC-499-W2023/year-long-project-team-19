@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
@@ -8,12 +9,13 @@ import Card from "react-bootstrap/Card";
 import Navbar from "./Navbar";
 
 const AdminLogin = () => {
+  const navigate = useNavigate();
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-    
+  
     try {
       await axios.post(
         "https://nodeserver-two.vercel.app/api/user/login",
@@ -22,12 +24,13 @@ const AdminLogin = () => {
           password: form.elements.formBasicPassword.value,
         }
       );
+      navigate("/rules");
     } catch (error) {
       console.log(error);
     }
     setValidated(true);
   };
-
+  
   return (
     <>
       <Navbar />
