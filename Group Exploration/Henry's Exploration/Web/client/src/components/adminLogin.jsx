@@ -17,14 +17,17 @@ const AdminLogin = () => {
     const form = event.currentTarget;
   
     try {
-      await axios.post(
+      const result = await axios.post(
         "https://nodeserver-two.vercel.app/api/user/login",
         {
           username: form.elements.formBasicUsername.value,
           password: form.elements.formBasicPassword.value,
         }
       );
-      navigate("/rules");
+      if(result.data.message === "Loggin successful") {
+        localStorage.setItem("isLoggedIn", "true");
+        navigate("/rules");
+      };
     } catch (error) {
       console.log(error);
     }
