@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -9,13 +10,23 @@ import Navbar from "./Navbar";
 const AdminLogin = () => {
   const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
-
+    try {
+      await axios.post(
+        "https://nodeserver-two.vercel.app/api/user/login",
+        {
+          username: form.elements.formBasicUsername.value,
+          password: form.elements.formBasicPassword.value,
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
     setValidated(true);
   };
 
