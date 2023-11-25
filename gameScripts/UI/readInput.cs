@@ -29,11 +29,22 @@ public class readInput : MonoBehaviour
         WWW www = new WWW("http://localhost/sqlconnect/login.php", form);
         yield return www; //tell Unity to yield running the rest of the game till it gets this info from the url
 
-        //Error check what our PHP file returned
-        if (www.text == "0")
+        //Error check what our PHP file returned, index 0 should be the first character, 0 means everything worked perfectly
+        if (www.text[0] == "0")
         {
             Debug.Log("User logged in successfully.");
 
+            //Store user info in DBManager so Unity can display all the user info
+            DBManager.username = username_email.text;
+            //get datecreated from second index of output from login.php (decremented by tabs)
+            DBManager.datecreated = www.text.Split('\t')[1]; 
+             //get gamesplayed int from forms output (which is decremented by tabs) index 2, and need to convert from string to int so we can change it later
+            DBManager.gamesplayed = int.Parse(www.text.Split('\t')[2]); 
+            DBManager.gameswon = int.Parse(www.text.Split('\t')[3]); //same for others
+            DBManager.wlratio = int.Parse(www.text.Split('\t')[4]); //win loss ratio might need to be caluclated (not stored in table?)
+
+
+            //NEED to add something to change menu display back to main menu when they log in******************
         }
         else 
         {
@@ -71,9 +82,19 @@ public class readInput : MonoBehaviour
         yield return wwwC; //tell Unity to yield running the rest of the game till it gets this info from the url
 
         //Error check what our PHP file returned
-        if (wwwC.text == "0")
+        if (wwwC.text[0] == "0")
         {
-            Debug.Log("User created successfully.");
+            Debug.Log("User created and logged in successfully.");
+
+            //Store user info in DBManager so Unity can display all the user info
+            DBManager.username = c_username_email.text;
+            //get datecreated from second index of output from login.php (decremented by tabs)
+            DBManager.datecreated = wwwC.text.Split('\t')[1]; 
+             //get gamesplayed int from forms output (which is decremented by tabs) index 2, and need to convert from string to int so we can change it later
+            DBManager.gamesplayed = int.Parse(wwwC.text.Split('\t')[2]); 
+            DBManager.gameswon = int.Parse(wwwC.text.Split('\t')[3]); //same for others
+            DBManager.wlratio = int.Parse(wwwC.text.Split('\t')[4]); //win loss ratio might need to be caluclated (not stored in table?)
+            //NEED to add something to change menu display back to main menu when they log in******************
 
         }
         else
@@ -124,3 +145,4 @@ public class readInput : MonoBehaviour
      }*/
 
 }
+
