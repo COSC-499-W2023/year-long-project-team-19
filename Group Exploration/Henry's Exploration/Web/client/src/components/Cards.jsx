@@ -22,7 +22,7 @@ const Cards = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-docs">
+      <div className="bg-docs" style={{marginTop: '10px'}}>
         <div id="cards">
           {cards.map((card) => (
             <figure
