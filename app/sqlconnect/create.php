@@ -16,13 +16,13 @@
 
 
 	//Query to CHECK database for that USERNAME ==============================================
-	$namequery = "SELECT useremail FROM useracc WHERE useremail ='" .$username. "';";
+	$namequery = "SELECT useremail, hash, salt, datecreated, gamesplayed, gameswon, wlratio FROM useracc WHERE useremail ='" .$username. "';";
 
 	//RUN the Query 
 	$usernameCheck = mysqli_query($con, $namequery) or die("2: Name Check failed."); //error 2 for name check query failed
 
 	//If a user with that username already exists, we can't create the new account, so exit
-	if (mysqli_num_rows($usernameCheck) > 0)
+	if (mysqli_num_rows($usernameCheck) > 0) //counts ROWS specifically
 	{
 		echo "3: This user ALREADY exists!";
 		exit();
@@ -45,8 +45,9 @@
 	//RUN the INSERT Query 
 	mysqli_query($con, $insertuserquery) or die("4: Insert user query failed."); //error 4 for insert user query failed
 
-	echo("0"); //FULL SUCCESS, user created
-
+	//if we get here, then the user WAS CREATED SUCCESSFULLY, so we need to echo a message supplying Unity all the user info (readInput.cs) to achieve LOGGED IN
+	echo "0\t" . $TODAYSDATE . "0\t0\t0\t";
+	//send todays date (not sure how to calculate this in php), then send 0 for gamesplayed, 0 for games won, and 0 for win loss ratio ALL SEPERATED BY TABS
 
 
 ?>
