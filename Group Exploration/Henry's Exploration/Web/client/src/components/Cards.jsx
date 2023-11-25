@@ -40,7 +40,38 @@ const Cards = () => {
     }));
   };
   const handleSaveChanges = async () => {
+    let isValid = true;
+    for (const key in cardInfo) {
+      if (cardInfo[key] === '' || cardInfo[key] === 0) {
+        isValid = false;
+        break;
+      }
+    }
+    if (!isValid) {
+      alert('Please fill out all fields');
+      return;
+    }
     
+    try {
+      await axios.post(
+        "https://nodeserver-two.vercel.app/api/cards/addCard",
+        {
+          name: cardInfo.name,
+          type: cardInfo.type,
+          hp: cardInfo.hp,
+          attack: cardInfo.attack,
+          defense: cardInfo.defense,
+          ability: cardInfo.ability,
+        }
+      );
+      setReload(!reload);
+    } catch (error) {
+      console.log(error);
+    }
+    console.log(cardInfo);
+  
+    // Close the modal
+    handleClose();
   };
   
 
