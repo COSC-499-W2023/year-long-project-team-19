@@ -25,8 +25,8 @@ const AdminLogin = () => {
         }
       );
       if(result.data.message === "Loggin successful") {
-        localStorage.setItem("isLoggedIn", "true");
-        navigate("/rules");
+        sessionStorage.setItem("isLoggedIn", "true");
+        navigate("/cards");
       };
     } catch (error) {
       console.log(error);
