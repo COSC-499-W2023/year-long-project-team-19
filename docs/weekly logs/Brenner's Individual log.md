@@ -284,3 +284,95 @@ Since we started focussing on actual features instead of more exploration, there
 <p>but I didn't code anything on it this week, I just worked on my own code.</p>
 
 <!--====================================================================================================================               W11-->
+
+# Date Range: 12-11-2023 to 19-11-2023
+
+<img src = "log_imgs/brenner's_logW11.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Continue flushing out the login system, the create account system, more Exploration, figure out how to upload Unity project assets to this repo, and completing the weekly logs.
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Login System Draft"</li>
+  <li>"Create Account System Draft"</li>
+  <li>"Password encryption"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"W11 Team Log"</li>
+  <li>"W11 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"Password encryption"</li>
+  <li>"W11 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"Login System Draft: It now properly checks if the user is logged in using the salt and hash password system I set up for the create account system. "</li>
+  <li>"Create Account System Draft: I actually made a seperate php file for this and changed the database to now store a salt and hash for each user instead of a plain text password, to be more secure. It successfully creates a user account in our database, and the login system can log into the created account after without issue."</li>
+  <li>"Exploration: I'm still learning stuff, for example this week I learned how to set up a simple salt and hash encryption system for the user's password in our database."</li>
+  <li>"W11 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+So this week was reading week, and I didn't end up making much commits to our branches during it, but I did actually write up the code and stuff during the week for the login and create account system on my other computer, I just didn't get around to uploading it to Github properly till W12. Also, we came up with a solution to show the commits to the game project on the main repo now, instead of only the other additional repo we were using before. Now for every feature we are working on, we are making a new branch, and then merging it to "development" and then from there to "master" when each milestone is due, and the game scripts and scenes are being uploaded to these branches as well now (before they were mostly on the other repo and they weren't always getting seen). Now we just need to figure out the conflict issues with the development branch (the merge issues were still busted as of W11). 
+We still have that other repo open, just because its a way better way to collaborate on a Unity Project (You don't have to manually set up the scripts and scenes everytime theres a change), which is found here:
+
+#### https://github.com/Prelude14/499UnityGameT19/tree/e136d8e4a04bdb892bc840779f9aed82d66f1f07/My%20project%20(4)
+
+
+<!--====================================================================================================================               W12-->
+
+# Date Range: 19-11-2023 to 26-11-2023
+
+<img src = "log_imgs/brenner's_logW12.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Continue flushing out the login system, the create account system, set up the Account info system, more Exploration, figure out how the development branch merge conflict issues, and completing the weekly logs.
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Login System Draft"</li>
+  <li>"Create Account System Draft"</li>
+  <li>"Account stats system"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"W12 Team Log"</li>
+  <li>"W12 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"W12 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"Login System Draft: It now returns the user's information to a script that I can use to set up the Account info page as well as the user stats page. I also updated the UI a bit so that the user can't see their password as they type (its replaced by stars), and added a "tabBetween.cs" script so that users can now tab between the input fields. Still need to add a log out button, and for some reason the code I have written to take the user back to the main menu upon successfully isn't yet working right. Also looking at preventing SQL injection."</li>
+  <li>"Create Account System Draft: I altered the database to store user info like the date it was created or the number of games they've played etc. They default to 0 and whatever date it was when the account is created upon the user successfully creating a new account. The php also sends said information to the same script that I will use to send the Account and stats page the user's stats. The same UI changes for the login apply here (hidden password and tab between script). The code to take the user back to the main menu upon successfully logging in is suppoed to work here as well, but its still not working yet."</li>
+  <li>"Account Stats System: Now that the login and create account systems return a logged in user's information ("readInput.cs" takes info and sends it to new "DBMnager.cs" script), I was able to change the account info menu and stats menu to actually display the logged in user's information properly which is cool. Currently there is no system to actually change the values (because the card game isn't yet playable, but it should be easy enough to add as the game gets further developed."</li>
+  <li>"Exploration: I'm still learning stuff, for example this week I learned how to get my php files to send its query contents to a Unity script and have Unity actually do things with that info. "</li>
+  <li>"W12 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+I uploaded my commits of the php files and new scripts on the "userAccountSystem" branch I created for the login, create and account info systems. Check the "app/sqlconnect" folder for php files, and the     "gameScripts" and "gameScripts/UI" for the Mainmenu.cs, ReadInput.cs, DBManager.cs, and tabBetween.cs files.
+
+So this week is the last checkpoint before our design video and design document milestone is due, so I was focussing on flsuhing out enough features to meet our milestone requirements we set up for ourselves in the project plan back in October. I still need to work on the UI design for that milestone (the doc wants diagrams and stuff), but I'm pretty happy with where these features are now other than that. I am a litle worried about the tests for the account system overall, since I haven't written any automated tests yet, but we have a week to get some of these things done at least. Me and Henry ended up just "Rebasing" the development branch in order to solve the conflict issues, since there was nothing on the development branch that needed to be saved, and we hadn't really been pushing to it oftern till that point, and now it seems fixed. The plan is to use a new and different branch for each feature, and then push them all to development for each milestone, and then just do the one merge to master, so we will find out if it worked without issues by tonight. 
+We still have that other repo open, just because its a way better way to collaborate on a Unity Project (You don't have to manually set up the scripts and scenes everytime theres a change), which is found here:
+
+#### https://github.com/Prelude14/499UnityGameT19/tree/e136d8e4a04bdb892bc840779f9aed82d66f1f07/My%20project%20(4)
+<!--====================================================================================================================               W13-->
