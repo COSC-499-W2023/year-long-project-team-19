@@ -20,3 +20,123 @@ Worked on the Project Plan document, setting up Unity, learn unity tutorial and 
 ### Completed: 
   I have successfully install unity and learn the tutorial regarding the unity also contribute to the project plan documentation
 
+-----
+-----
+
+# Date Range: 2-10-2023 to 7-10-2023
+
+![henrylog3](log_imgs/henry_log3.png)
+
+## Which features were yours in the project plan for this milestone?
+
+  Create simple "flappy bird" game in unity and troubleshoot the problem with vscode regarding auto completion code.
+
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Exploration"</li>
+  <li>"Individual Logs" </li>
+</ol>
+
+### Completed: 
+  I have successfully created simple flappy bird game with auto spawner script and also response to the keyboard button being pressed and figure out how to fix the vscode auto completion problem.
+
+-----
+-----
+
+# Date Range: 8-10-2023 to 22-10-2023
+
+![henrylog3](log_imgs/henry_log4.png)
+
+## Which features were yours in the project plan for this milestone?
+
+ Exploration, Website Draft, and completing the weekly logs.
+
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Exploration"</li>
+  <li>"Individual Logs" </li>
+</ol>
+
+### Completed: 
+  1. Successfully implemented a drag-and-drop feature using Unity 
+  2. Deployed the Unity project to WebGL.
+  3. Embedded the WebGL game into the website.
+
+### In Progress:
+  1. Update the UI on the website draft.
+  2. Figure out the technical stack for the website. (still not sure if I should use regular HTML or React.js because the website should be dynamic and interactive).
+
+# Date Range: 23-10-2023 to 29-10-2023
+
+![henrylog5](log_imgs/henry_log5.png)
+
+## Which features were yours in the project plan for this milestone?
+
+ Website Draft, and completing the weekly logs.
+
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Website Draft"</li>
+  <li>"mini presentation slides"</li>
+</ol>
+
+### Completed: 
+  1. make presentation slides"
+  2. Restyling the web for mini presentation.
+
+-----
+-----
+# Date Range: 29-10-2023 to 5-11-2023
+
+![henrylog5](log_imgs/henry_log9.png)
+
+## Which features were yours in the project plan for this milestone?
+
+ Website Draft, and completing the weekly logs.
+
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Website Draft"</li>
+  <li>"mini presentation slides"</li>
+</ol>
+
+### Completed: 
+  1. Present the mini presentation.
+  2. Finished the website draft.
+  3. Deploy the website to Vercel.
+
+# Date Range: 6-11-2023 to 12-11-2023
+
+![henrylog5](log_imgs/henry_log10.png)
+
+## Which features were yours in the project plan for this milestone?
+
+ Admin system website, setup mongodb.
+
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Admin System Website"</li>
+  <li>"Setup MongoDB"</li>
+</ol>
+
+### Completed: 
+  1. Created mock REST API for to ensure that it connects to mongoDB
+  2. Setup NodeJs server (router and db connection)
+  3. Deploy ndoejs server to vercel.
+
+Next week, I will still be focusing on the nodeJs for admin sys web.
+
+
