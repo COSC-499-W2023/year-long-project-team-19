@@ -61,7 +61,7 @@ Which tasks from the project board are associated with these features?
 <img src = "log_imgs/testingProofNOV5.PNG"/>
 
 <br>Screenshot of the test runner results<br>
-<img src = "log_imgs/Test_runner_results.PNG"/>
+<img src = "log_imgs/Test_runner_results.png"/>
 
 OPTIONAL: Any context to explain why the log looks the way it does.
 <br><p>So this week was our last checkpoint before our Design Doc and Design Video milestone is due. We continued to improve the login system, as well as the card game itself and the website. 
