@@ -26,11 +26,10 @@ Which features were in the project plan for this milestone?
 
 Which tasks from the project board are associated with these features?
 <ul>
-<li>Login System Draft</li>
-<li>Create Account System Draft</li>
-<li>Password Encryption</li>
+<li>"Login System Draft"</li>
+<li>"Create Account System Draft"</li>
+<li>"Password Encryption"</li>
 <li>"admin system (WEBSITE NOT UNITY) draft"</li>
-<li>"set up MongoDB for admin web"</li>
 <li>"Unity Turn System"</li>
 <li>"Unity drag and play"</li>
 <li>"Look at Testing portion of the project board(theres a lot to mention)"</li>
@@ -62,8 +61,7 @@ Which tasks from the project board are associated with these features?
 <img src = "log_imgs/testingProofNOV5.PNG"/>
 
 OPTIONAL: Any context to explain why the log looks the way it does.
-<br><p>So this week was reading week, so not much has changed since W10. We further flushed out the login system, as well as the card game itself and the website. Trying to just get some features finished enough
-for the design document and video milestone due in W13.
+<br><p>So this week was reading week, so not much has changed since W10. We further flushed out the login system, as well as the card game itself and the website. Trying to just get some features finished enough for the design document and video milestone due in W13.
 We still have the mini presentation demo project in a seperate Github repo found at the link below, but we now are uploading the game scripts and scenes to the main repo so that our commits will 
 show up on this repo as well.</p>
 
