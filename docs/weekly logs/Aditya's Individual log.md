@@ -65,7 +65,6 @@ among the tasks above I am still in the process to learn other features such as 
 <img src = "log_imgs/Aditya_week_8.png?raw=true"/>
 
 ## Which features were yours in the project plan for this milestone?
-
 This week I explored and learned more features required for the game for our group presentation on thursday. I learned how to implement the draw and turn feature from a sample game.
 
 ## Which tasks from the project board are associated with these features?
@@ -77,7 +76,6 @@ This week I explored and learned more features required for the game for our gro
 </ol>
 
 ## Among these tasks, which have you completed/in progress in the last week?
-
 As a group, we still have to decide our theme for the game and divide the work for the presentation as well. We also have to collectively build the demo and confirm if all the features work accordingly. We completed the landing page and efatures for the game such as different cards, generating a deck from those cards, and how to shuffle the deck before distributing the cards. We also have started working on our mini presentation.
 
 <h1>Date Range: 30-10-2023 to 05-11-2023</h1>
@@ -98,15 +96,13 @@ This week, we finalised our demo product for the first milestone along with our 
 </ol>
 
 ## Among these tasks, which have you completed/in progress in the last week?
-
 So far, all the tasks for the first milestone have been completed. We will meet again this week to decide the steps we will take for the next milestone and discuss further details for our project. We have completed and uploaded our group presentation on canvas and GitHub. We also have completed our individual and team logs. I will keep continuing to explore and learn to implement more features into our game
 
-<h1>Date Range: 06-11-2023 to 12-11-2023</h1
+<h1>Date Range: 06-11-2023 to 12-11-2023</h1>
 
 <img src = "log_imgs/Aditya_w10.png?raw=true"/>
 
 ## Which features were yours in the project plan for this milestone?
-
 Since this week we just decided what we will do for the reading break my contribution to the project will be shown next week in which I will develop test methods to test the features of the game and I will show my created design for the cards
 
 ## Which tasks from the project board are associated with these features?
@@ -117,5 +113,24 @@ Since this week we just decided what we will do for the reading break my contrib
 </ol>
 
 ## Among these tasks, which have you completed/in progress in the last week?
-
 This week we divided our tasks for which we will work on during the reading break, my task is to write testing methods for the features of the game and adding UI features to the game such as a health bar, card counter, art style for the cards. I will continue to work on these features and implement them by the next week so that you can see my code and design contribution for the project
+
+
+<h1>Date Range: 20-11-2023 to 26-11-2023</h1>
+
+<img src = "log_imgs/Aditya_w12.png?raw=true"/>
+
+
+## Which features were yours in the project plan for this milestone?
+This week I worked on writing the test code to test various scipts and functionalities which we haev implemented so far
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"W12 Team Log"</li>
+  <li>"W12 Individual Logs"</li>
+  <li>"numberTest.cs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+I wrote 4 test methods, out of which one of them is failing to pass in the given moment. So i just have to fix that one test and keep writing more tests as more functionality is being added to the game. I will also work on some of the design features for the game this week.

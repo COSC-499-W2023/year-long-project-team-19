@@ -16,7 +16,7 @@
 
 
 	//Query to check database for that USERNAME, then its password and other info ==============================================
-	$namequery = "SELECT useremail, hash, salt, datecreated, gamesplayed, gameswon, wlratio FROM useracc WHERE useremail ='" .$username. "';";
+	$namequery = "SELECT useremail, hash, salt, datecreated, gamesplayed, gameswon, damagedealt FROM useracc WHERE useremail ='" .$username. "';";
     //win loss ratio might need to be caluclated (not stored in table?)
 
 	//Run the Query 
@@ -34,7 +34,7 @@
 	$hash = $useraccInfo["hash"]; //get hash from DB
 
 	//check supplied password combined with DB's salt 
-	$loginhash = crypt($password, $salt)
+	$loginhash = crypt($password, $salt);
 
 	//now check this supplied salt pass against DB's hash
 	if ($hash != $loginhash) 
@@ -44,7 +44,7 @@
 	}
 
 	//if we get here, then the user logged in perfectly, so we need to echo a message supplying Unity all the user info (readInput.cs)
-	echo "0\t" . $useraccInfo["datecreated"] . $useraccInfo["gamesplayed"] . $useraccInfo["gameswon"] . $useraccInfo["wlratio"];
+	echo "0\t" . $useraccInfo["datecreated"] . "\t" . $useraccInfo["gamesplayed"] . "\t" . $useraccInfo["gameswon"] . "\t" . $useraccInfo["damagedealt"];
 	//win loss ratio might need to be caluclated (not stored in table?)
 
 ?>
