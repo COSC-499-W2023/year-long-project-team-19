@@ -28,5 +28,4 @@ public static class DBManager
         username = null;
     }
 
-    
 }
