@@ -60,7 +60,8 @@ Which tasks from the project board are associated with these features?
 <br>Screenshot of Card Shuffling Test Report.<br>Left over from W9:<br>
 <img src = "log_imgs/testingProofNOV5.PNG"/>
 
-(********************************Aditya is going to add a pic here************************)
+<br>Screenshot of the test runner results<br>
+<img src = "log_imgs/Test_runner_results.PNG"/>
 
 OPTIONAL: Any context to explain why the log looks the way it does.
 <br><p>So this week was our last checkpoint before our Design Doc and Design Video milestone is due. We continued to improve the login system, as well as the card game itself and the website. 
