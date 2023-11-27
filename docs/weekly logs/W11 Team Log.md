@@ -49,7 +49,7 @@ Which tasks from the project board are associated with these features?
 
 <br>Table View of completed tasks on project board<br><br>
 <img src = "log_imgs/compTasksNOV19_P1-17.PNG"/>
-<img src = "log_imgs/compTasksNOV19_P2-17-28.PNG"/>
+<img src = "log_imgs/compTasksNOV19_P2-17-26.PNG"/>
 
 <br>Table View of in progress tasks on project board<br><br>
 <img src = "log_imgs/inProgTasksNOV19.PNG"/>
