@@ -140,3 +140,39 @@ Worked on the Project Plan document, setting up Unity, learn unity tutorial and 
 Next week, I will still be focusing on the nodeJs for admin sys web.
 
 
+
+# Date Range: 13-11-2023 to 26-11-2023
+
+![henrylog12](log_imgs/henry_log12.png)
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Website Draft"</li>
+  <li>"Setup MongoDB for admin web"</li>
+  <li>"Admin sys for Web"</li>
+</ol>
+
+### Completed
+1. Migrate web draft from HTML to React.js
+2. Created APIs for admin use
+    - Show rules
+    - Add rules
+    - Edit rules
+    - Delete rules
+    - Admin login
+    - Show cards
+    - Add cards
+![](log_imgs/henry_rulepostman.png)
+![](log_imgs/henry_vercelpostman.png)
+3. Created admin login page
+4. Implemented add card features for admin
+5. Added react hook for card page
+6. Stored auth cookie after successful admin login
+
+### To do
+1. Implement the rest of the features in the admin system
+2. add API for edit and delet cards
+3. UI testing
+4. unit testing for backend
