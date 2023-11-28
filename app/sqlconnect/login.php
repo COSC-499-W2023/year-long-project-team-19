@@ -10,12 +10,11 @@
 		exit();
 	}
 
-	//grab unity's values that it sent, and store in local variable to be queried in our database
 	$username = mysqli_real_escape_string($con, $_POST["username"]); //real escape string is built in sql injection checker, will strip any sql commands out
 	//going to create a second username variable to further filter the user's inputted username to avoid sql injection
-	$usernameClean = filter_var($username, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH);
-	//filter flag strip will take out any characters from the username that aren't just the standard ASCII text characters (values 0-32 is special--the low strip takes these out, and any above 128 is 
-	//special as well, so the strip high takes care of these)
+	$usernameClean = filter_var($username, FILTER_SANITIZE_EMAIL); //remove all illegal characters from the email address (filter_var() is built in php function)
+	//was using filter sanitize string, with filter flag strip low and high to take out any characters from the username that aren't just the standard ASCII text characters (values 0-32 is special--the 
+	//low strip takes these out, and any above 128 is special as well, so the strip high takes care of these) before, but filter_sanitize_email seems better
 	
 	//CHECK IF USERNAME CLEAN MATCHES USERNAME TO RETURN ERROR CODE
 	if ($username != $usernameClean) {
@@ -26,6 +25,7 @@
 	//CKECK IF USERNAME CLEAN IS A VALID EMAIL
 	if (!filter_var($usernameClean, FILTER_VALIDATE_EMAIL)) { //The easiest and safest way to check whether an email address is well-formed 
   		echo "3: Invalid email format, the inputted username is not a valid email address."; //error 3, username clean isn't a valid email address, could be missing the @, or maybe a .com etc.
+		exit();
 	}
 
 	//don't technically need to check against sql inject on the password, since it is never used in a query, just in a crypt function to be compare to the user's hash.
