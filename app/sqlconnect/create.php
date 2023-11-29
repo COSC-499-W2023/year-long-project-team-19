@@ -32,8 +32,12 @@
 	//TODO *****************************************
 	//NEED TO CHECK IF 2nd password matches 1st password, and then maybe check if it contains enough special characters or enough security? Could update a text game object in the scene to tell the user?
 	$password = $_POST["password"];
-	//$password2 = $_POST["password2"];
-
+	$password2 = $_POST["password2"];
+	if ($password != $password2) //should be same character value and string value, so shouldn't need to do a string compare or anything like that.
+	{
+		echo "8: The two supllied passwords do not match. Please try again."; //error code 8, the supplied password and the second supplied password do not match either.
+		exit();
+	}
 
 	//Query to CHECK database for that USERNAME USING THE CLEAN VERSION to avoid sql injection ==============================================
 	$namequery = "SELECT useremail, hash, salt, datecreated, gamesplayed, gameswon, damagedealt FROM useracc WHERE useremail ='" .$usernameClean. "';";
