@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
 import axios from "axios";
 import Navbar from "./Navbar";
 import logo from "../images/logo.png";
@@ -8,6 +9,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 
 const Cards = () => {
+  const { color } = useParams(); //get color from url (/cards/:color)
   const [cards, setCards] = React.useState([]);
   const [reload, setReload] = React.useState(false);
   // Modal for adding cards
@@ -81,13 +83,16 @@ const Cards = () => {
         const result = await axios(
           "https://nodeserver-two.vercel.app/api/cards/showCards" //exposing the api link is okay since there's no sensitive data (?)
         );
-        setCards(result.data.cards);
+        const filteredCards = result.data.cards.filter(
+          (card) => card.type.toLowerCase() === color.toLowerCase()
+        );
+        setCards(filteredCards);
       } catch (error) {
         console.log(error);
       }
     };
     fetchData();
-  }, [reload]);
+  }, [reload, color]);
 
   return (
     <>
