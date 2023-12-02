@@ -17,6 +17,16 @@ describe('Show Rules', () => {
     expect(res.status).toBe(200);
     expect(res.body.rules).toEqual(rules);
   });
+
+  it('should return 404 if HTTP req other than GET', async () => {
+    const res = await request(app).post('/api/rules/showRules');
+    const res2 = await request(app).put('/api/rules/showRules');
+    const res3 = await request(app).delete('/api/rules/showRules');
+
+    expect(res.status).toBe(404);
+    expect(res2.status).toBe(404);
+    expect(res3.status).toBe(404);
+  });
 });
 
 afterAll(done => {
