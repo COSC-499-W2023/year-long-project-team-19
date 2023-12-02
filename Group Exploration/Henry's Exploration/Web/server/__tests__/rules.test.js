@@ -27,6 +27,17 @@ describe('Show Rules', () => {
     expect(res2.status).toBe(404);
     expect(res3.status).toBe(404);
   });
+
+  it('should return a 500 status code if an error occurs while fetching rules', async () => {
+    jest.spyOn(Rules, 'find').mockImplementationOnce(() => {
+      throw new Error('Mocked error');
+    });
+    const res = await request(app).get('/api/rules/showRules');
+  
+    expect(res.status).toBe(500);
+    expect(res.body.message).toBe('Server error');
+  });
+  
 });
 
 afterAll(done => {
