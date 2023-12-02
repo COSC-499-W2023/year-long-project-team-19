@@ -18,5 +18,8 @@
     "mongodb": "^6.2.0",
     "mongoose": "^8.0.0",
     "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "supertest": "^6.3.3"
   }
 }
