@@ -64,6 +64,12 @@ ALTER TABLE `useracc`
 --
 -- AUTO_INCREMENT for table `useracc`
 --
+
+ALTER TABLE `useracc`
+  ADD `reset_token_hash` VARCHAR(64) NULL DEFAULT NULL,
+  ADD `reset_token_expires_at` DATETIME NULL DEFAULT NULL,
+  ADD UNIQUE (`reset_token_hash`);
+
 ALTER TABLE `useracc`
   MODIFY `uid` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Primary key id used to identify each user. It auto increments when the account is created.', AUTO_INCREMENT=3;
 COMMIT;
