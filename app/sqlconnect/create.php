@@ -27,6 +27,11 @@
   		echo "3: Invalid email format, the inputted username is not a valid email address."; //error 3, username clean isn't a valid email address, could be missing the @, or maybe a .com etc.
 		exit();
 	}
+	if (strlen($usernameClean) < 10 || strlen($usernameClean) > 30) //checking the length of the username, AFTER CONFIRMING ITS A VALID EMAIL
+	{
+		echo "10: The supplied username is not at least 10 characters in length, or it is more than 30."; //error code 10, the supplied username isn't long enough OR ITS TOO LONG
+		exit();
+	}
 
 	//don't technically need to check against sql inject on the password, since it is never used in a query, just in a crypt function to be compare to the user's hash.
 	//TODO *****************************************
@@ -35,7 +40,13 @@
 	$password2 = $_POST["password2"];
 	if ($password != $password2) //should be same character value and string value, so shouldn't need to do a string compare or anything like that.
 	{
-		echo "8: The two supllied passwords do not match. Please try again."; //error code 8, the supplied password and the second supplied password do not match either.
+		echo "8: The two supplied passwords do not match. Please try again."; //error code 8, the supplied password and the second supplied password do not match either.
+		exit();
+	}
+
+	if (strlen($password) < 10 || strlen($password) > 30) //checking the length of the password, AFTER CONFIRMING THE TWO PASSES MATCH
+	{
+		echo "9: The supplied passwords are not at least 10 characters in length, or they are more than 30."; //error code 9, the supplied password isn't long enough OR ITS TOO LONG
 		exit();
 	}
 
@@ -66,7 +77,7 @@
 	$insertuserquery = "INSERT INTO useracc (useremail, hash, salt) VALUES ('" .$usernameClean. "', '" .$hash. "', '" .$salt. "');";
 
 	//RUN the INSERT Query 
-	mysqli_query($con, $insertuserquery) or die("8: Insert user query failed."); //error 8 for insert user query failed. (error code 6 is taken by login.php)
+	mysqli_query($con, $insertuserquery) or die("11: Insert user query failed."); //error 11 for insert user query failed. 
 
 	//if we get here, then the user WAS CREATED SUCCESSFULLY, so we need to echo a message supplying Unity all the user info (readInput.cs) to achieve LOGGED IN
 	echo "0\t" . date("Y/m/d") . "\t0\t0\t0\t";
