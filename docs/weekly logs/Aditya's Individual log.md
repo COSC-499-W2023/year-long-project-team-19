@@ -101,7 +101,7 @@ This week, we finalised our demo product for the first milestone along with our 
 
 So far, all the tasks for the first milestone have been completed. We will meet again this week to decide the steps we will take for the next milestone and discuss further details for our project. We have completed and uploaded our group presentation on canvas and GitHub. We also have completed our individual and team logs. I will keep continuing to explore and learn to implement more features into our game
 
-<h1>Date Range: 06-11-2023 to 12-11-2023</h1
+<h1>Date Range: 06-11-2023 to 12-11-2023/h1
 
 <img src = "log_imgs/Aditya_w10.png?raw=true"/>
 
@@ -146,3 +146,16 @@ I wrote 4 test methods, out of which one of them is failing to pass in the given
 
 ## Which features were yours in the project plan for this milestone?
 This week I fixed all my tests and worked on the design document, the design video and finalising the art style for the cards which will be used for the game. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"W13 Team Log"</li>
+  <li>"W13 Individual Logs"</li>
+  <li>"numberTest.cs"</li>
+  <li>"Design Document"</li>
+  <li>"Design video"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+I wrote 5 test methods now, and all of them successfully pass and test the assigned feature accordingly. I finished the turn feature of the game and the script which defines it, I will make some chnages to the turn system such as shuffle and end opponent turn will be turned to a proper aspect of the game. I finished my part in writing the design document and the video which showcases our progress with the project so far in the semester.
