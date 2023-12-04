@@ -176,3 +176,28 @@ Next week, I will still be focusing on the nodeJs for admin sys web.
 2. add API for edit and delet cards
 3. UI testing
 4. unit testing for backend
+
+# Date Range: 27-11-2023 to 3-12-2023
+
+![henrylog13](log_imgs/henry_log13.png)
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Unit Testing - rules"</li>
+  <li>"Admin Website"</li>
+</ol>
+
+### Completed
+1. Created and tested unit test for show rules API endpoint
+![](log_imgs/henry_rulestesting.png)
+2. Implemented Card Menu Page to filter cards by type/color
+![](log_imgs/henry_cardmenu.png)
+![](log_imgs/henry_cardfiltered.png)
+3. Class report for design document
+4. Video demo for design document
+
+### In progress
+1. unit testing for edit, delete, and add rules API endpoint.
+2. implement edit and delete card features in admin system.
