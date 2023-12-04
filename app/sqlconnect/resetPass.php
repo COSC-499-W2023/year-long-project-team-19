@@ -48,31 +48,4 @@
 	$stmt->bind_param("sss", $token_hash, $expiry, $email);
 
 	$stmt->execute();
-
-	// if ($mysqli->affected_rows) {
-
-	// 	$mail->setFrom("noreply@example.com");
-	// 	$mail->addAddress($email);
-	// 	$mail->Subject = "Password Reset";
-	// 	$mail->Body = <<<END
-
-	// 	Click <a href="http://example.com/reset-password.php?token=$token">here</a> 
-	// 	to reset your password.
-
-	// 	END;
-
-	// 	try {
-
-	// 		$mail->send();
-
-	// 	} catch (Exception $e) {
-
-	// 		echo "Message could not be sent. Mailer error: {$mail->ErrorInfo}";
-
-	// 	}
-
-	// }
-
-	// echo "Message sent, please check your inbox.";
-
 ?>
