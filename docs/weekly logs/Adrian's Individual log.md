@@ -206,3 +206,27 @@
   
 <h3>In Progress:</h3>
 <p>This week I'm going back to the drag and drop portion of our game and if I have time I will work on a system where cards can affect players health points.</p>
+
+<h1>Date Range: 27-11-2023 to 03-12-2023</h1>
+<img src ="https://github.com/COSC-499-W2023/year-long-project-team-19/blob/gameDevelopment/docs/weekly%20logs/log_imgs/Adrian_wk13.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>This week I worked on testing for the Health Point System and I finished the Drag and Drop portion of the game.</p>
+
+<h2>Progress: </h2>
+<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/gameDevelopment/docs/weekly%20logs/log_imgs/Screenshot%202023-12-03%20Drag%20and%20Drop.png"/>
+<p>I made the drag and drop system for the cards. It uses physics and collision and event systems. It determines where cards can be dropped by collision, if the card is dropped in a non-designated position, the drop will fail and send the card back to the hand panel.</p>
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <li>"Player Health Script Testing": I finished creating a proper test for three scenarios. One where the player health drops between 0-30. Another where player health is decreased below 0. Lastly, a test to see if overhealing happens and breaks the game. It passes all these tests.</li>
+  <li>"Unity Drag and Play": Using event systems for dragging and dropping as well as box colliders and RigidBody I was able to create a drag and drop system. Players can only drop cards onto designated play zones and if they do otherwise cards are bounced back to the hand panel.</li>
+</ol>
+
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed: </h3> 
+  <p>Unity drag and play is done. Cards are now playable from the hand. The health script testing is also done.</p>
+  
+<h3>In Progress:</h3>
+<p>Currently, we are finishing up on the design documents. Next steps would be to further design the game and solidify UI elements before moving onto further multiplayer elements.</p>
