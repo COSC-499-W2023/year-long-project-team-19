@@ -80,6 +80,7 @@ Completing the Mini Presentation Slides and working on exploration with unity.
 ## Among these tasks, which have you completed/in progress in the last week?
 
 ### Completed:
+
 <li>"Mini Presentation Slides"</li>
 <li>"W9 Individual Logs"</li>
 
