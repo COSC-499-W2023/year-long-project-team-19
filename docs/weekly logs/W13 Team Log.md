@@ -75,10 +75,10 @@ Which tasks from the project board are associated with these features?
 <img src = "log_imgs/testingProof_createAndLoginTests_DEC3.PNG"/>
 
 <br>Screenshot of the card game tests for the health bar:<br>
-<img src = "log_imgs/testingProof_healthbarTests_DEC3.PNG"/>
+<img src = "log_imgs/testingProof_healthbarTests_DEC3.PNG.png"/>
 
 <br>Screenshot of the website's API testing for show rules:<br>
-<img src = "log_imgs/testingProof_APItestingforshowrules_DEC3.PNG"/>
+<img src = "log_imgs/testingProof_APItestingforshowrules_DEC3.PNG.png"/>
 
 OPTIONAL: Any context to explain why the log looks the way it does.
 <br><p>So this week our design video and design document milestone is due, so we were focused on flushing out enough features for said document and video. We got a lot of our back log at least started, and set up automated testing for a couple of the big features that really needed them. The theme of the main menu ended up getting a makeover as well as the card game scene itself, after we came up with a title and some ideas for the game's theming and we felt inspired. We still have that other repo open, just because its a way better way to collaborate on a Unity Project (You don't have to manually set up the scripts and scenes everytime theres a change), but we made a new branch to show off the new theming and figure out some things. It can be found here:</p>
