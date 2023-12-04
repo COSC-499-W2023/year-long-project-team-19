@@ -1,4 +1,5 @@
 <!--====================================================================================================================               W4-->
+
 # Date Range: 26-09-2023 to 1-10-2023
 
 <img src = "log_imgs/brenner's_log2.PNG?raw=true"/>
@@ -193,6 +194,7 @@ Our main focus this week was to start building our mini presentation thats in 4 
 #### https://github.com/Prelude14/499UnityGameT19
 
 <!--====================================================================================================================               W9-->
+
 # Date Range: 29-10-2023 to 05-11-2023
 
 <img src = "log_imgs/brenner's_logW9.PNG?raw=true"/>
@@ -376,3 +378,58 @@ We still have that other repo open, just because its a way better way to collabo
 
 #### https://github.com/Prelude14/499UnityGameT19/tree/e136d8e4a04bdb892bc840779f9aed82d66f1f07/My%20project%20(4)
 <!--====================================================================================================================               W13-->
+# Date Range: 19-11-2023 to 26-11-2023
+
+<img src = "log_imgs/brenner's_logW13.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Setting Up Automated Testing for the Login and Create Account Systems, update the main menu UI, work on the Design Documentation and Video, continue flushing out the login system, the create account system, set up the Account info system, more Exploration, completing the weekly logs.
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Login format testing"</li>
+  <li>"Create user Testing"</li>
+  <li>"Update main menu UI for Design Milestone"</li>
+  <li>"Design Documentation (November Milestone)"</li>
+  <li>"Design Video (November Milestone)"</li>
+  <li>"Login System Draft"</li>
+  <li>"Create Account System Draft"</li>
+  <li>"Account stats system"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"W13 Team Log"</li>
+  <li>"W13 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"Update main menu UI for Design Milestone"</li>
+  <li>"W12 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"Login format testing: I wrote "loginTests.cs", which is a Unity editMode test script that tests 7 different combos of valid and invalid usernames and passwords on the "readInput.cs" script that 
+  my login system uses to log in to accounts using the login.php file. I made it before I finished the createTests.cs script, which is way more extensive than only 7 tests, so it should be relatively easy to implement similar tests from the createTests into this script and I think necessary. Doesn't test if username or password is long enough because the login.php is behind the create.php.</li>
+  <li>"Create user Testing: I wrote "createTests.cs", which is a Unity editMode test script that tests different combos of 4 different usernames and 6 different combinations of 2 passwords on the "readInput.cs" script that my create account system uses to create and log in to accounts using the create.php file. I need to add support for one more variation of username and clean up the readablilty og the code (its 650+ lines of code long, but could probably be condensed to around 2-300 if I used method calls for similar password combos.</li>
+  <li>"Design Documentation (November Milestone): Still filling it out, but its almost done."</li>
+  <li>"Design Video (November Milestone): Just need to put each member's videos together."</li>
+  <li>"Login System Draft: Its still a work in progress, and I changed a bit of its look when I redesigned the UI of the main menus. I added the logout function and it display the proper menus perfectly, but for some reason the code I have written to take the user back to the main menu upon successfully still isn't working right. Oh and I have't yet set up the ability to press enter and login, or to clear the input fields whenever the user leaves the page. Also added some logic to the login.php to help prevent SQL injection."</li>
+  <li>"Create Account System Draft: Its still a work in progress, and I changed a bit of its look when I redesigned the UI of the main menus. I also added some more error codes in the create.php that check the username and password's length now. The code to take the user back to the main menu upon successfully logging in is supposed to work here as well, but its still not working yet."</li>
+  <li>"Account Stats System: Its still a work in progress, and I changed a bit of its look when I redesigned the UI of the main menus."</li>
+  <li>"Exploration: I'm still learning stuff, for example this week I learned how to actually implement automated testing into my code specifically. "</li>
+  <li>"W13 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+I uploaded my commits of the php files and new scripts on the "userAccountSystem" branch I created for the login, create and account info systems. Check the "app/sqlconnect" folder for php files, and the     "gameScripts" and "gameScripts/UI" for the Mainmenu.cs, ReadInput.cs, DBManager.cs, and tabBetween.cs files.
+
+So this week our design video and design document milestone is due, so I was focussing on flushing out my useraccount system and implementing unit tests since Leo never got around to it in time, and I was also focused on our Design Doc and Video. I ended up resdesigning the theme of the main menu as well after we came up with a title and some ideas for the game's theming which was cool. 
+We still have that other repo open, just because its a way better way to collaborate on a Unity Project (You don't have to manually set up the scripts and scenes everytime theres a change), but I made a new branch to show off the new theming and figure out some things. It can be found here:
+
+#### https://github.com/Prelude14/499UnityGameT19/tree/07c1423884475e30bf0b521064815c14a5ade605/My%20project%20(4)

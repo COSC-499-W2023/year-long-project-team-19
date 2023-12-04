@@ -61,19 +61,14 @@ public class playerDeck : MonoBehaviour
         { // number of starting hand
             yield return new WaitForSeconds(1);
             //each second it draws a card
-            //spawns new object using instantiate duplicating it as a clone of cardInHand
-            GameObject card = Instantiate(cardInHand, new Vector2(0, 0), Quaternion.identity);
-
+            //spawns new object using instantiate duplicating it as a clone
+            Instantiate(cardInHand, transform.position, transform.rotation);
         }
 
     }
 
     public void changeSize()
     {
-        switch (deckSize)
-        {
-
-        }
         if (deckSize < 20)
         {
             cardInDeck6.SetActive(false);
@@ -123,15 +118,12 @@ public class playerDeck : MonoBehaviour
             {
                 //slow down code so we don't draw too fast
                 yield return new WaitForSeconds(.25F);
-                //Instantiate(cardInHand, transform.position, transform.rotation);
-                GameObject card = Instantiate(cardInHand, new Vector2(0, 0), Quaternion.identity);
+                Instantiate(cardInHand, transform.position, transform.rotation);
             }
         }
         else
         {
             //lose game
-            //TODO: Add a lose game
-
         }
     }
     public void populateDeck()

@@ -57,11 +57,6 @@ ALTER TABLE `useracc`
   ADD PRIMARY KEY (`uid`),
   ADD UNIQUE KEY `useremail` (`useremail`);
 
-ALTER TABLE useracc
-  ADD reset_token_hash VARCHAR(64) NULL DEFAULT NULL,
-  ADD reset_token_expires_at DATETIME NULL DEFAULT NULL,
-  ADD UNIQUE (reset_token_hash);
-
 --
 -- AUTO_INCREMENT for dumped tables
 --
