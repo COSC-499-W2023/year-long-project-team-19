@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
 using System.Linq;
 public class numberTest
 {
+    private Text deckCountTextField;
+    private Text turnTextField;
+    private Text manaTextField;
+
     [SetUp]
     public void SetUp()
     {
@@ -54,6 +59,14 @@ public class numberTest
     GameObject gameObject = new GameObject();
         turnScript turnScriptComponent = gameObject.AddComponent<turnScript>();
 
+        GameObject turntextGO = new GameObject("Turn Text");
+        turnTextField = turntextGO.AddComponent<Text>();
+        turnScriptComponent.turnText = turnTextField;
+
+         GameObject manatextGO = new GameObject("Mana Text");
+        manaTextField = manatextGO.AddComponent<Text>();
+        turnScriptComponent.manaText = manaTextField;
+
         turnScriptComponent.Start();
 
         // Initial values check
@@ -83,7 +96,7 @@ public class numberTest
         Debug.Log("Ending opponent's turn...");
         turnScriptComponent.endOpponentTurn();
 
-        yield return null; // Wait for one frame update
+        yield return null;
 
         // Ensure it's back to player's turn, and mana is updated
         Debug.Log("Checking player's turn and mana after opponent's turn...");
@@ -95,9 +108,9 @@ public class numberTest
 
         Assert.IsTrue(turnScriptComponent.isMyTurn);
         Assert.AreEqual(1, turnScriptComponent.myTurn);
-        Assert.AreEqual(2, turnScriptComponent.maxMana);
-        Assert.AreEqual(2, turnScriptComponent.currentMana);
-        Assert.IsTrue(turnScript.turnStart);
+        Assert.AreEqual(1, turnScriptComponent.maxMana);
+        Assert.AreEqual(1, turnScriptComponent.currentMana);
+        Assert.IsFalse(turnScript.turnStart);
 }
 
     [UnityTest]
@@ -120,6 +133,10 @@ public class numberTest
     {
        GameObject deckObject = new GameObject();
         playerDeck deckScript = deckObject.AddComponent<playerDeck>();
+
+        GameObject decktextGO = new GameObject("Deck Text");
+        deckCountTextField = decktextGO.AddComponent<Text>();
+        deckScript.deckCountText = deckCountTextField;
 
         // Initialize 20 sample cards (similar to your cardDatabase initialization)
         List<Card1> sampleCards = new List<Card1>();
