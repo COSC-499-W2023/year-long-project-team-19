@@ -200,4 +200,4 @@ Next week, I will still be focusing on the nodeJs for admin sys web.
 
 ### In progress
 1. unit testing for edit, delete, and add rules API endpoint.
-2. implement edit and delete card features in admin system.
+2. implement edit and delete card features in admin system..
