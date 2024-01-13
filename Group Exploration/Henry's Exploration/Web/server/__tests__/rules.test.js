@@ -40,6 +40,49 @@ describe('Show Rules', () => {
   
 });
 
+describe('Edit Rules', () => {
+  const mockId_true = '6553fcd8adcb4e7629dd495c';
+  const mockId_false = new mongoose.Types.ObjectId(); 
+
+  it('should return 404 if rules not found', async () => {
+
+    const data = {
+      _id: mockId_false,
+      order: 1,
+      context: 'test',
+      title: 'test'
+    };
+
+    const res = await request(app).post('/api/rules/editRules').send(data);
+    expect(res.status).toBe(404);
+  });
+
+  it('should return 200 if rule is updated ', async () => {
+    //save current rule state first
+    const originalRule = await Rules.findOne({ _id: mockId_true });
+
+    const data = {
+      _id: mockId_true,
+      order: 1,
+      context: 'test',
+      title: 'test'
+    };
+
+    const res = await request(app).post('/api/rules/editRules').send(data);
+    expect(res.status).toBe(200);
+
+    const originalData = {
+      _id: mockId_true,
+      order: originalRule.order,
+      context: originalRule.context,
+      title: originalRule.title
+    };
+    const revertResponse = await request(app).post('/api/rules/editRules').send(originalData);
+    expect(revertResponse.status).toBe(200);
+  });
+  
+});
+
 afterAll(done => {
   // Closing the DB connection allows Jest to exit successfully.
   mongoose.connection.close();
