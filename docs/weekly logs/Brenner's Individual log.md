@@ -433,3 +433,50 @@ So this week our design video and design document milestone is due, so I was foc
 We still have that other repo open, just because its a way better way to collaborate on a Unity Project (You don't have to manually set up the scripts and scenes everytime theres a change), but I made a new branch to show off the new theming and figure out some things. It can be found here:
 
 #### https://github.com/Prelude14/499UnityGameT19/tree/07c1423884475e30bf0b521064815c14a5ade605/My%20project%20(4)
+<!--====================================================================================================================               TERM 2 ************ W1-->
+# TERM 2 - Date Range: 08-01-2023 to 14-01-2023 - W1
+
+<img src = "log_imgs/brenner's_logT2W1.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Help Adrian with flushing out each card's effects in each deck, Exploration into how we are going to set up multiplayer, and completing the weekly logs. The login system can always be improved as well.
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Finish Card Game Rules"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"T2 W1 Team Log"</li>
+  <li>"T2 W1 Individual Logs"</li>
+  <li>"Login System Draft"</li>
+  <li>"Create Account System Draft"</li>
+  <li>"Account stats system"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"T2 W1 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"Finish Card Game Rules: We now have a complete set of four unique decks each with 20 cards, but we need to play test the crap out of them before we can say we are finished with them."</li>
+  <li>"Exploration: Brenner: I followed a youtube tutorial on how to use netcode for game objects in Unity to understand how we are going to implement matchmaking into our game. It doesn't translate one to one with our game yet, since our card playing system isn't quite at the right stage and since the tutorial doesn't fit a card game perfectly, but the development environment and other tools from it are going to be very useful once our game begins shaping up in the next couple weeks. See the GIF below for details."</li>
+  <li>"T2 W1 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+This was the first week of the second semester, so we decided to try to prioritize work on the more important features we have left to implement into our MVP. For me this meant getting to work on understanding how we can begin to implement some form of matchmaking into our current game. Since none of us have used Unity before this class, and we haven't begun to set up hosting or servers for actually playing against an opponent yet, we needed to start with exploration into it as soon as possible. I ended up following along with this tutorial on youtube: "https://www.youtube.com/watch?v=stJ4SESQwJQ". While it doesn't translate perfectly to our game, it should prove to be instrumental in our implementation of networking into our game further down the line. It demonstrates examples of how to run two different games to test simultaneously, how to have two different games display the same objects, how to run each game as a client, host, or a server (and how each of these have different authority over who can change certain objects). Our game is technically going to look different for each player (each player should be able to see their opponenet's cards for example), but they will need to mirror certain cards/effects being played. I made a GIF below that shows what I mean.
+
+#### I made a GIF of the menu in action: 
+<img src= "log_imgs/unityTutorialGIFJAN14.gif">
+
+Since I mostly worked on exploration this week, I didn't change much on either repo. 
+We still have another repo open from the design demo at the end of the first semester, and you can find it here:
+
+#### https://github.com/Prelude14/499UnityGameT19/tree/07c1423884475e30bf0b521064815c14a5ade605/My%20project%20(4)
