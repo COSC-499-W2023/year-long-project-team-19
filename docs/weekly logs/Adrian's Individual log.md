@@ -182,3 +182,21 @@
   
 <h3>In Progress:</h3>
 <p>Card designs will be pitched next meeting and in the next cycle I'll work on our UI and the drag and drop feature. Still learning drag and drop using the aforementioned link.</p>
+
+<h1>Date Range: 08-01-2024 to 14-01-2024</h1>
+<img src ="https://github.com/COSC-499-W2023/year-long-project-team-19/blob/master/docs/weekly%20logs/log_imgs/adrian_t2_wk1.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>This week we were just doing more design, planning, and set up more than development. We solidified new meeting times and discussed the projects requirements further. This week I created the card design documents. I designed the cards and decided on the themes of the game with Brenner. </p>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <lI>Finish Card Game Rules: This week I finalized the rules and some of the cards themselves. After this we're going to focus more on coding cards for the game.</lI>
+</ol>
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed: </h3> 
+<p>Finish Card Game Rules was finished this week. We've also set a meeting time every Tuesday.</p>  
+<h3>In Progress:</h3>
+<p>This time around we're focusing on how to program effects onto the cards using the scripts. Furthermore, we're looking into ways we can mirror and set up matchmaking.</p>
