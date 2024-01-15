@@ -140,3 +140,83 @@ Worked on the Project Plan document, setting up Unity, learn unity tutorial and 
 Next week, I will still be focusing on the nodeJs for admin sys web.
 
 
+
+# Date Range: 13-11-2023 to 26-11-2023
+
+![henrylog12](log_imgs/henry_log12.png)
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Website Draft"</li>
+  <li>"Setup MongoDB for admin web"</li>
+  <li>"Admin sys for Web"</li>
+</ol>
+
+### Completed
+1. Migrate web draft from HTML to React.js
+2. Created APIs for admin use
+    - Show rules
+    - Add rules
+    - Edit rules
+    - Delete rules
+    - Admin login
+    - Show cards
+    - Add cards
+![](log_imgs/henry_rulepostman.png)
+![](log_imgs/henry_vercelpostman.png)
+3. Created admin login page
+4. Implemented add card features for admin
+5. Added react hook for card page
+6. Stored auth cookie after successful admin login
+
+### To do
+1. Implement the rest of the features in the admin system
+2. add API for edit and delet cards
+3. UI testing
+4. unit testing for backend
+
+# Date Range: 27-11-2023 to 3-12-2023
+
+![henrylog13](log_imgs/henry_log13.png)
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Unit Testing - rules"</li>
+  <li>"Admin Website"</li>
+</ol>
+
+### Completed
+1. Created and tested unit test for show rules API endpoint
+![](log_imgs/henry_rulestesting.png)
+2. Implemented Card Menu Page to filter cards by type/color
+![](log_imgs/henry_cardmenu.png)
+![](log_imgs/henry_cardfiltered.png)
+3. Class report for design document
+4. Video demo for design document
+
+### In progress
+1. unit testing for edit, delete, and add rules API endpoint.
+2. implement edit and delete card features in admin system..
+
+# Date Range: 08-01-2024 to 14-01-2024
+
+![henrylog13](log_imgs/henry_t2_log1.png)
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Unit Testing - rules"</li>
+</ol>
+
+### Completed
+1. Created and tested unit test for edit rules API endpoint
+![](log_imgs/henry_test_editRule.png)
+
+### In progress
+1. unit testing for delete, and add rules API endpoint.
+2. implement edit and delete card features in admin system.

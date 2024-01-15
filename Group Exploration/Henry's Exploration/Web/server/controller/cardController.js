@@ -32,6 +32,9 @@ const addCard = async (req, res) => {
   }
 };
 
+//add delete card function
+//add edit card function
+
 
 module.exports = {
   showCards,
