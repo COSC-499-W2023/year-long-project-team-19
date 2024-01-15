@@ -201,3 +201,22 @@ Next week, I will still be focusing on the nodeJs for admin sys web.
 ### In progress
 1. unit testing for edit, delete, and add rules API endpoint.
 2. implement edit and delete card features in admin system..
+
+# Date Range: 08-01-2024 to 14-01-2024
+
+![henrylog13](log_imgs/henry_t2_log1.png)
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Unit Testing - rules"</li>
+</ol>
+
+### Completed
+1. Created and tested unit test for edit rules API endpoint
+![](log_imgs/henry_test_editRule.png)
+
+### In progress
+1. unit testing for delete, and add rules API endpoint.
+2. implement edit and delete card features in admin system.
