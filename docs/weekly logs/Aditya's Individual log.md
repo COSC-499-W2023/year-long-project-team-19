@@ -155,4 +155,12 @@ This week I fixed all my tests and worked on the design document, the design vid
 ## Among these tasks, which have you completed/in progress in the last week?
 I wrote 5 test methods now, and all of them successfully pass and test the assigned feature accordingly. I finished the turn feature of the game and the script which defines it, I will make some chnages to the turn system such as shuffle and end opponent turn will be turned to a proper aspect of the game. I finished my part in writing the design document and the video which showcases our progress with the project so far in the semester.
 
+<h1>Date Range: 09-01-2024 to 14-01-2024</h1>
 
+<img src = "log_imgs/Aditya_T2_Week1.png?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+This being the first week after winter vacations we took the time to recap our project and decide on task priorities. We decided on weekly meeting times and the work to be done from now on till the end of the term. 
+
+## Among these tasks, which have you completed/in progress in the last week?
+This week, was our first meeting in term 2 and we just had a discussion with the other team who are doing a similar project to us and amongst our team we decided on whats to be done till the first milestone and we discussed about team coordination for the  remainder of the term.
