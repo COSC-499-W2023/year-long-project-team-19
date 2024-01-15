@@ -182,7 +182,29 @@
   
 <h3>In Progress:</h3>
 <p>Card designs will be pitched next meeting and in the next cycle I'll work on our UI and the drag and drop feature. Still learning drag and drop using the aforementioned link.</p>
+<h1>Date Range: 13-11-2023 to 26-11-2023</h1>
+<img src ="https://github.com/COSC-499-W2023/year-long-project-team-19/blob/gameDevelopment/docs/weekly%20logs/log_imgs/Adrian_2023-11-26.png"/>
 
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>The past two weeks I was working on two main things. I was supposed to do the drag and drop and I was supposed to work with Aditya to finish testing. I decided to swap out drag and drop for next week in favor of making a health bar as testing proved to take up more time than expected. So this week I finished making the health bar and all associated scripts. I also helped Aditya with some Unity Play Mode Tests. I only helped him initially and left him to finish the testing.</p>
+
+<h2>Progress: </h2>
+<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/gameDevelopment/docs/weekly%20logs/log_imgs/Adrian_2023-10-01_healthImg.png"/>
+<img src= "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/gameDevelopment/docs/weekly%20logs/log_imgs/Adrian_2023-10-01_healthRedImg.png"/>
+<p>This is the game object I made that uses a several images and a text object to create the overall healthbar. The script written takes in the maximum health points and current health points as floats and generates a fill amount based on those two variables.</p>
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <li>"Unity Health Points": This was the feature I worked on the most this week. I used inspiration from <a href = "https://www.youtube.com/watch?v=ZzkIn41DFFo">this video</a>.</li>
+</ol>
+
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed: </h3> 
+  <p>Unity Health Points are done. I also reviewed a bit of code, running other people's code on my system making sure things work fine.</p>
+  
+<h3>In Progress:</h3>
+<p>This week I'm going back to the drag and drop portion of our game and if I have time I will work on a system where cards can affect players health points.</p>
 <h1>Date Range: 08-01-2024 to 14-01-2024</h1>
 <img src ="https://github.com/COSC-499-W2023/year-long-project-team-19/blob/master/docs/weekly%20logs/log_imgs/adrian_t2_wk1.png"/>
 
