@@ -32,11 +32,32 @@ const addCard = async (req, res) => {
   }
 };
 
-//add delete card function
+const deleteCard = async (req, res) => {
+  try {
+    const { name } = req.body;
+
+    if (!name) {
+      return res.status(400).json({ message: 'Missing required fields' });
+    }
+
+    const deletedCard = await Cards.findOneAndDelete({ name });
+
+    if (!deletedCard) {
+      return res.status(404).json({ message: 'Card not found' });
+    }
+
+    return res.status(200).json({ message: 'Card deleted', deletedCard });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
 //add edit card function
 
 
 module.exports = {
   showCards,
   addCard,
+  deleteCard,
 };
