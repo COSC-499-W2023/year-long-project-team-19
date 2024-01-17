@@ -102,6 +102,12 @@ const Cards = () => {
       alert('Please fill out all fields');
       return;
     }
+
+    try {
+      // implement update card api here.
+    } catch (error) {
+      console.log(error);
+    }
   };
   
   
@@ -180,13 +186,18 @@ const Cards = () => {
                   <h4 className="card__ability">
                     <span className="card__label">Ability</span>
                     {card.ability}
-                  </h4>
+                  </h4>s
                 </div>
               </figcaption>
               {isLoggedIn() ? (
-                <Button variant="success" onClick={() => handleShowEdit(card)}>
-                  Edit
-                </Button>
+                 <div style={{ display: 'flex', marginTop: '10px' }}>
+                  <Button variant="info" style={{ width: '50%' }} onClick={() => handleShowEdit(card)}>
+                    Edit
+                  </Button>
+                  <Button variant="danger" style={{ width: '50%' }}>
+                    Delete
+                  </Button>
+               </div>
               ) : (
                 null
               )}
@@ -304,6 +315,50 @@ const Cards = () => {
                 placeholder="Enter type"
                 name="type"
                 value={cardInfo.type}
+                onChange={handleChange}
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formCardHpEdit">
+              <Form.Label>HP</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter HP"
+                name="hp"
+                value={cardInfo.hp}
+                onChange={handleChange}
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formCardAttackEdit">
+              <Form.Label>Attack</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter attack"
+                name="attack"
+                value={cardInfo.attack}
+                onChange={handleChange}
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formCardDefenseEdit">
+              <Form.Label>Defense</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter defense"
+                name="defense"
+                value={cardInfo.defense}
+                onChange={handleChange}
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formCardAbilityEdit">
+              <Form.Label>Ability</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter ability"
+                name="ability"
+                value={cardInfo.ability}
                 onChange={handleChange}
               />
             </Form.Group>
