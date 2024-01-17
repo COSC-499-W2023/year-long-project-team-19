@@ -75,6 +75,36 @@ const Cards = () => {
     // Close the modal
     handleClose();
   };
+
+  //Modal for editing cards
+  const [showEdit, setShowEdit] = useState(false);
+  const handleCloseEdit = () => setShowEdit(false);
+  const handleShowEdit = (card) => {
+    setCardInfo({
+      name: card.name,
+      type: card.type,
+      hp: card.hp,
+      attack: card.attack,
+      defense: card.defense,
+      ability: card.ability,
+    });
+    setShowEdit(true);
+  };
+  const handleSaveChangesEdit = async () => {
+    let isValid = true;
+    for (const key in cardInfo) {
+      if (cardInfo[key] === '' || cardInfo[key] === 0) {
+        isValid = false;
+        break;
+      }
+    }
+    if (!isValid) {
+      alert('Please fill out all fields');
+      return;
+    }
+  };
+  
+  
   
 
   useEffect(() => {
@@ -99,12 +129,20 @@ const Cards = () => {
       <Navbar />
       {isLoggedIn() ? (
         <div>
-          <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '10px' }}>
-            <Button variant="success" onClick={handleShow}>Add Card </Button>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+              margin: "10px",
+            }}
+          >
+            <Button variant="success" onClick={handleShow}>
+              Add Card{" "}
+            </Button>
           </div>
         </div>
       ) : null}
-      <div className="bg-docs" style={{marginTop: '10px'}}>
+      <div className="bg-docs" style={{ marginTop: "10px" }}>
         <div id="cards">
           {cards.map((card) => (
             <figure
@@ -145,6 +183,13 @@ const Cards = () => {
                   </h4>
                 </div>
               </figcaption>
+              {isLoggedIn() ? (
+                <Button variant="success" onClick={() => handleShowEdit(card)}>
+                  Edit
+                </Button>
+              ) : (
+                null
+              )}
             </figure>
           ))}
         </div>
@@ -152,79 +197,79 @@ const Cards = () => {
 
       {/* Modal */}
       <Modal show={show} onHide={handleClose} centered>
-      <Modal.Header closeButton>
-        <Modal.Title>Add New Card</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <Form>
-          <Form.Group controlId="formCardName">
-            <Form.Label>Name</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter name"
-              name="name"
-              value={cardInfo.name}
-              onChange={handleChange}
-            />
-          </Form.Group>
+        <Modal.Header closeButton>
+          <Modal.Title>Add New Card</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group controlId="formCardName">
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter name"
+                name="name"
+                value={cardInfo.name}
+                onChange={handleChange}
+              />
+            </Form.Group>
 
-          <Form.Group controlId="formCardType">
-            <Form.Label>Type</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter type"
-              name="type"
-              value={cardInfo.type}
-              onChange={handleChange}
-            />
-          </Form.Group>
+            <Form.Group controlId="formCardType">
+              <Form.Label>Type</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter type"
+                name="type"
+                value={cardInfo.type}
+                onChange={handleChange}
+              />
+            </Form.Group>
 
-          <Form.Group controlId="formCardHp">
-            <Form.Label>HP</Form.Label>
-            <Form.Control
-              type="number"
-              placeholder="Enter HP"
-              name="hp"
-              value={cardInfo.hp}
-              onChange={handleChange}
-            />
-          </Form.Group>
+            <Form.Group controlId="formCardHp">
+              <Form.Label>HP</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter HP"
+                name="hp"
+                value={cardInfo.hp}
+                onChange={handleChange}
+              />
+            </Form.Group>
 
-          <Form.Group controlId="formCardAttack">
-            <Form.Label>Attack</Form.Label>
-            <Form.Control
-              type="number"
-              placeholder="Enter attack"
-              name="attack"
-              value={cardInfo.attack}
-              onChange={handleChange}
-            />
-          </Form.Group>
+            <Form.Group controlId="formCardAttack">
+              <Form.Label>Attack</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter attack"
+                name="attack"
+                value={cardInfo.attack}
+                onChange={handleChange}
+              />
+            </Form.Group>
 
-          <Form.Group controlId="formCardDefense">
-            <Form.Label>Defense</Form.Label>
-            <Form.Control
-              type="number"
-              placeholder="Enter defense"
-              name="defense"
-              value={cardInfo.defense}
-              onChange={handleChange}
-            />
-          </Form.Group>
+            <Form.Group controlId="formCardDefense">
+              <Form.Label>Defense</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter defense"
+                name="defense"
+                value={cardInfo.defense}
+                onChange={handleChange}
+              />
+            </Form.Group>
 
-          <Form.Group controlId="formCardAbility">
-            <Form.Label>Ability</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter ability"
-              name="ability"
-              value={cardInfo.ability}
-              onChange={handleChange}
-            />
-          </Form.Group>
-        </Form>
-      </Modal.Body>
-      <Modal.Footer>
+            <Form.Group controlId="formCardAbility">
+              <Form.Label>Ability</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter ability"
+                name="ability"
+                value={cardInfo.ability}
+                onChange={handleChange}
+              />
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
         <Button variant="secondary" onClick={handleClose}>
           Close
         </Button>
@@ -233,6 +278,46 @@ const Cards = () => {
         </Button>
       </Modal.Footer>
     </Modal>
+
+      {/* Modal for editing cards */}
+      <Modal show={showEdit} onHide={handleCloseEdit} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Edit Card</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group controlId="formCardNameEdit">
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter name"
+                name="name"
+                value={cardInfo.name}
+                onChange={handleChange}
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formCardTypeEdit">
+              <Form.Label>Type</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter type"
+                name="type"
+                value={cardInfo.type}
+                onChange={handleChange}
+              />
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => handleCloseEdit()}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={() => handleSaveChangesEdit()}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };
