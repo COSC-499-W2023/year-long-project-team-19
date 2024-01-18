@@ -200,7 +200,7 @@ const Cards = () => {
                   <h4 className="card__ability">
                     <span className="card__label">Ability</span>
                     {card.ability}
-                  </h4>s
+                  </h4>
                 </div>
               </figcaption>
               {/* Only Displayed after logging in as admin. */}
