@@ -110,7 +110,21 @@ const Cards = () => {
     }
   };
   
-  
+  // Delete Card 
+  const handleDelete = async (cardName) => {
+    try {
+      console.log(cardName);
+      await axios.delete(
+        "https://nodeserver-two.vercel.app/api/cards/deleteCard",
+        {
+          data: {name: cardName}
+        }
+      );
+      setReload(!reload); //reload cards
+    } catch (error) {
+      console.log(error);
+    }
+  };
   
 
   useEffect(() => {
@@ -189,12 +203,13 @@ const Cards = () => {
                   </h4>s
                 </div>
               </figcaption>
+              {/* Only Displayed after logging in as admin. */}
               {isLoggedIn() ? (
                  <div style={{ display: 'flex', marginTop: '10px' }}>
                   <Button variant="info" style={{ width: '50%' }} onClick={() => handleShowEdit(card)}>
                     Edit
                   </Button>
-                  <Button variant="danger" style={{ width: '50%' }}>
+                  <Button variant="danger" style={{ width: '50%' }} onClick={() => handleDelete(card.name) }>
                     Delete
                   </Button>
                </div>
