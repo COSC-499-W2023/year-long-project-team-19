@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../index'); 
+const { app, server } = require('../index'); 
 const Rules = require('../models/Rules');
 const mongoose = require('mongoose');
 
@@ -83,8 +83,17 @@ describe('Edit Rules', () => {
   
 });
 
+//TODO:
+//add rules
+//delete rules
+
 afterAll(done => {
   // Closing the DB connection allows Jest to exit successfully.
   mongoose.connection.close();
+  if (server && server.close) {
+    server.close(done);
+  } else {
+    done();
+  }
   done();
 });
