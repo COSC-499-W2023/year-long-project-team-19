@@ -41,6 +41,8 @@ Which tasks from the project board are associated with these features?
 <li>"admin system (WEBSITE NOT UNITY) draft"</li>
 <li>"Look at Testing portion of the project board(theres a lot to mention)"</li>
 <li>"Unity Match related UI elements"</li>
+<li>"Attack Feature"</li>
+<li>"Match cost of card to resource"</li>
 <li>"T2 W1 Team log"</li>
 <li>"T2 W1 Individual logs"</li>
 </ul>
