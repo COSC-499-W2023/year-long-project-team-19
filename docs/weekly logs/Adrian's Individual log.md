@@ -225,7 +225,7 @@
 <p>This time around we're focusing on how to program effects onto the cards using the scripts. Furthermore, we're looking into ways we can mirror and set up matchmaking.</p>
 
 <h1>Date Range: 15-01-2024 to 21-01-2024</h1>
-<img src ="https://raw.githubusercontent.com/COSC-499-W2023/year-long-project-team-19/70a116908c2061fdd4cf53f81b70e20da7d8faf6/docs/weekly%20logs/log_imgs/adrian_t2_wk2.png?token=AZ6NRAOOPQQTTGRNZFKWHILFVWPYC"/>
+<img src ="https://github.com/COSC-499-W2023/year-long-project-team-19/blob/master/docs/weekly%20logs/log_imgs/adrian_t2_wk2.png"/>
 
 <h2>Which features were yours in the project plan for this milestone?</h2>
 
