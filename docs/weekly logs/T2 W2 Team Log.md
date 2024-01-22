@@ -15,36 +15,36 @@ Milestone Goal Recap:<br>
 
 Which features were in the project plan for this milestone?
 <ul>
-<li>Work on the Card Game Rules</li>
-<li>More Exploration</li>
 <li>Work on implementing Mulitplayer</li>
-<li>Continue Flushing out the Login System</li>
-<li>Website admin system draft</li>
 <li>Continue Flushing out the card game system in game</li>
 <li>Testing for Card system system</li>
+<li>More Exploration</li>
+<li>Website admin system draft</li>
+<li>Work on the Card Game Rules</li>
+<li>Continue Flushing out the Login System</li>
 <li>Continue flushing out UI across all elements</li>
 <li>Team and Individual Logs</li>
 </ul>
 
 Which tasks from the project board are associated with these features?
 <ul>
-<li>"Finish the Card Game Rules"</li>
+<li>"matchmaking draft"</li>  
 <li>"Exploration: Brenner"</li>
+<li>"Attack Feature"</li>
+<li>"Match cost of card to resource"</li>
+<li>"admin system (WEBSITE NOT UNITY) draft"</li>
+<li>"Login System Draft"</li>
+<li>"Create Account System Draft"</li>
+<li>"Account stats system"</li>
+<li>"Look at Testing portion of the project board(theres a lot to mention)"</li>
+<li>"Unity Match related UI elements"</li>
+<li>"Finish the Card Game Rules"</li>
+<li>"T2 W2 Team log"</li>
+<li>"T2 W2 Individual logs"</li>
 <li>"Exploration: Adrian"</li>
 <li>"Exploration: Aditya"</li>
 <li>"Exploration: Henry"</li>
 <li>"Exploration: Leo"</li>
-<li>"matchmaking draft"</li>  
-<li>"Login System Draft"</li>
-<li>"Create Account System Draft"</li>
-<li>"Account stats system"</li>
-<li>"admin system (WEBSITE NOT UNITY) draft"</li>
-<li>"Look at Testing portion of the project board(theres a lot to mention)"</li>
-<li>"Unity Match related UI elements"</li>
-<li>"Attack Feature"</li>
-<li>"Match cost of card to resource"</li>
-<li>"T2 W2 Team log"</li>
-<li>"T2 W2 Individual logs"</li>
 </ul>
 
 <br>Burnup Chart:<br><br>
