@@ -43,8 +43,8 @@ Which tasks from the project board are associated with these features?
 <li>"Unity Match related UI elements"</li>
 <li>"Attack Feature"</li>
 <li>"Match cost of card to resource"</li>
-<li>"T2 W1 Team log"</li>
-<li>"T2 W1 Individual logs"</li>
+<li>"T2 W2 Team log"</li>
+<li>"T2 W2 Individual logs"</li>
 </ul>
 
 <br>Burnup Chart:<br><br>
