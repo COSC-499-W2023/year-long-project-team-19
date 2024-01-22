@@ -220,3 +220,24 @@ Next week, I will still be focusing on the nodeJs for admin sys web.
 ### In progress
 1. unit testing for delete, and add rules API endpoint.
 2. implement edit and delete card features in admin system.
+
+# Date Range: 14-01-2024 to 21-01-2024
+
+![henrylog13](log_imgs/henry_t2_log2.png)
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Unit Testing - card"</li>
+  <li>"Admin system website"</li>
+</ol>
+
+### Completed
+1. Created and tested unit test for show cards API endpoint
+![](log_imgs/henry_test_showcard.png)
+2. Implemented delete card features in admin system
+3. Implemented UI for edit card features in admin system (need to implement the axios request the later)
+
+-----
+This week, a significant amount of time was taken to implement the unit tests. I encountered a challenge with running two test suites simultaneously. Initially, the test lead to errors as both suites attempted to start the server on the same port. To resolve this issue, I need to do some research and code refatoring, which involved exporting the Express app and server creation logic from the index.js file. This modification enabled the test suites to run simultaneously and avoiding port conflict.
