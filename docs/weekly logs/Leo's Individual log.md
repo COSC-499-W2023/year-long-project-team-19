@@ -154,7 +154,7 @@ Working on settings to user database settings so that they are saved when the us
 
 # Date Range: 15-01-2024 to 21-01-2024
 
-<img src = "log_imgs/Leo_log_W14.png?raw=true"/>
+<img src = "log_imgs/Leo_log_T2W2.png?raw=true"/>
 
 ## Which features were yours in the project plan for this milestone?
 
