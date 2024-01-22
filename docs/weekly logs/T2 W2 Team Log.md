@@ -48,7 +48,7 @@ Which tasks from the project board are associated with these features?
 </ul>
 
 <br>Burnup Chart:<br><br>
-<img src = "log_imgs/burnUpJAN21.PNG"/>
+<img src = "log_imgs/burnUpJAN21.png"/>
 
 <br>Table View of completed tasks on project board<br><br>
 <img src = "log_imgs/compTasksJAN14_P1-1-17.PNG"/>
@@ -56,9 +56,9 @@ Which tasks from the project board are associated with these features?
 <img src = "log_imgs/compTasksJAN14_P3-33-46.PNG"/>
 
 <br>Table View of in progress tasks on project board<br><br>
-<img src = "log_imgs/inProgTasksJAN21.PNG"/>
+<img src = "log_imgs/inProgTasksJAN21.png"/>
 
 <br>Table View of in progress TESTING tasks on project board<br><br>
-<img src = "log_imgs/inProgTESTING_JAN21.PNG"/>
+<img src = "log_imgs/inProgTESTING_JAN21.png"/>
 
 #### https://github.com/Prelude14/499UnityGameT19/tree/07c1423884475e30bf0b521064815c14a5ade605/My%20project%20(4)
