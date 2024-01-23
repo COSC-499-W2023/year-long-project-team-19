@@ -78,7 +78,17 @@ const Cards = () => {
 
   //Modal for editing cards
   const [showEdit, setShowEdit] = useState(false);
-  const handleCloseEdit = () => setShowEdit(false);
+  const handleCloseEdit = () => {
+    setShowEdit(false);
+    setCardInfo({
+      name: '',
+      type: '',
+      hp: 0,
+      attack: 0,
+      defense: 0,
+      ability: '',
+    });
+  };
   const handleShowEdit = (card) => {
     setCardInfo({
       name: card.name,
