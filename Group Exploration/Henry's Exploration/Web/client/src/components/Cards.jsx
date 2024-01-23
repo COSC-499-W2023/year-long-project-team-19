@@ -93,7 +93,7 @@ const Cards = () => {
   const handleSaveChangesEdit = async () => {
     let isValid = true;
     for (const key in cardInfo) {
-      if (cardInfo[key] === '' || cardInfo[key] === 0) {
+      if (cardInfo[key] === '' || cardInfo[key] === 0 || isNaN(cardInfo[2]) || isNaN(cardInfo[3]) || isNaN(cardInfo[4])){ 
         isValid = false;
         break;
       }
@@ -104,7 +104,7 @@ const Cards = () => {
     }
 
     try {
-      // implement update card api here.
+      // await axios.
     } catch (error) {
       console.log(error);
     }
