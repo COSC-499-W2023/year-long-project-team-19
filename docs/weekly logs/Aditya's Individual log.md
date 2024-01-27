@@ -164,3 +164,13 @@ This being the first week after winter vacations we took the time to recap our p
 
 ## Among these tasks, which have you completed/in progress in the last week?
 This week, was our first meeting in term 2 and we just had a discussion with the other team who are doing a similar project to us and amongst our team we decided on whats to be done till the first milestone and we discussed about team coordination for the  remainder of the term.
+
+<h1>Date Range: 15-01-2024 to 21-01-2024</h1>
+
+<img src = "log_imgs/Aditya_T2_Week2.png?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+For this milestone I will be working on mirroring the functionality of the game for the opponent as well such as the opponent player will also get cards for their hand and the players cant see each other's hand. I will also be working on making multiple decks and shuffling the two chosen by both the players for the game
+
+## Among these tasks, which have you completed/in progress in the last week?
+This is the second week of the term and I am continuing to work on the tasks mentioned previously and aim to finish them by the third week so that the game is ready for peer to peer testing

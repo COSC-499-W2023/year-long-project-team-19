@@ -205,6 +205,7 @@
   
 <h3>In Progress:</h3>
 <p>This week I'm going back to the drag and drop portion of our game and if I have time I will work on a system where cards can affect players health points.</p>
+
 <h1>Date Range: 08-01-2024 to 14-01-2024</h1>
 <img src ="https://github.com/COSC-499-W2023/year-long-project-team-19/blob/master/docs/weekly%20logs/log_imgs/adrian_t2_wk1.png"/>
 
@@ -222,3 +223,25 @@
 <p>Finish Card Game Rules was finished this week. We've also set a meeting time every Tuesday.</p>  
 <h3>In Progress:</h3>
 <p>This time around we're focusing on how to program effects onto the cards using the scripts. Furthermore, we're looking into ways we can mirror and set up matchmaking.</p>
+
+<h1>Date Range: 15-01-2024 to 21-01-2024</h1>
+<img src ="https://github.com/COSC-499-W2023/year-long-project-team-19/blob/master/docs/weekly%20logs/log_imgs/adrian_t2_wk2.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>
+  This week I worked on matching the resource system to the cards. This means cards can only be played if they are equal to or less than the players resource. The second feature, is the attacking feature. This is my biggest feature for this coding session. It's finished but there are still a few bugs that are preventing us from shipping it into the main branch. Right now the changes are in GameDev branch.
+</p>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <lI>Attack feature: This week I added targetting for the cards. The cards can now target enemies and have their health reduced.</lI>
+  <li>Match Cost of Cards: Cards are now only playable if you have enough resources.</li>
+</ol>
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed: </h3> 
+<p>Matching the cost of cards are fully completed. </p> 
+
+<h3>In Progress:</h3>
+<p>There is a bug where cards played are treated as they aren't and this prevents cards from attacking players so that is a bug we need to fix. Next week we're trying to fix bugs that prevent the live build from working and testing the game.</p>

@@ -433,3 +433,88 @@ So this week our design video and design document milestone is due, so I was foc
 We still have that other repo open, just because its a way better way to collaborate on a Unity Project (You don't have to manually set up the scripts and scenes everytime theres a change), but I made a new branch to show off the new theming and figure out some things. It can be found here:
 
 #### https://github.com/Prelude14/499UnityGameT19/tree/07c1423884475e30bf0b521064815c14a5ade605/My%20project%20(4)
+<!--====================================================================================================================               TERM 2 ************ W1-->
+# TERM 2 - Date Range: 08-01-2023 to 14-01-2023 - W1
+
+<img src = "log_imgs/brenner's_logT2W1.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Help Adrian with flushing out each card's effects in each deck, Exploration into how we are going to set up multiplayer, and completing the weekly logs. The login system can always be improved as well.
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Finish Card Game Rules"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"T2 W1 Team Log"</li>
+  <li>"T2 W1 Individual Logs"</li>
+  <li>"Login System Draft"</li>
+  <li>"Create Account System Draft"</li>
+  <li>"Account stats system"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"T2 W1 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"Finish Card Game Rules: We now have a complete set of four unique decks each with 20 cards, but we need to play test the crap out of them before we can say we are finished with them."</li>
+  <li>"Exploration: Brenner: I followed a youtube tutorial on how to use netcode for game objects in Unity to understand how we are going to implement matchmaking into our game. It doesn't translate one to one with our game yet, since our card playing system isn't quite at the right stage and since the tutorial doesn't fit a card game perfectly, but the development environment and other tools from it are going to be very useful once our game begins shaping up in the next couple weeks. See the GIF below for details."</li>
+  <li>"T2 W1 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+This was the first week of the second semester, so we decided to try to prioritize work on the more important features we have left to implement into our MVP. For me this meant getting to work on understanding how we can begin to implement some form of matchmaking into our current game. Since none of us have used Unity before this class, and we haven't begun to set up hosting or servers for actually playing against an opponent yet, we needed to start with exploration into it as soon as possible. I ended up following along with this tutorial on youtube: "https://www.youtube.com/watch?v=stJ4SESQwJQ". While it doesn't translate perfectly to our game, it should prove to be instrumental in our implementation of networking into our game further down the line. It demonstrates examples of how to run two different games to test simultaneously, how to have two different games display the same objects, how to run each game as a client, host, or a server (and how each of these have different authority over who can change certain objects). Our game is technically going to look different for each player (each player should be able to see their opponenet's cards for example), but they will need to mirror certain cards/effects being played. I made a GIF below that shows what I mean.
+
+#### I made a GIF of the menu in action: 
+<img src= "log_imgs/unityTutorialGIFJAN14.gif">
+
+Since I mostly worked on exploration this week, I didn't change much on either repo. 
+We still have another repo open from the design demo at the end of the first semester, and you can find it here:
+
+#### https://github.com/Prelude14/499UnityGameT19/tree/07c1423884475e30bf0b521064815c14a5ade605/My%20project%20(4)
+<!--====================================================================================================================               TERM 2 ************ W2-->
+# TERM 2 - Date Range: 14-01-2023 to 21-01-2023 - W2
+
+<img src = "log_imgs/brenner's_logT2W2.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Trying to figure out multiplayer (how to set up a server, do we want dedicated servers, how does that work with unity, etc.), and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"matchmaking draft"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"T2 W2 Team Log"</li>
+  <li>"T2 W2 Individual Logs"</li>
+  <li>"Finish Card Game Rules"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"T2 W2 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"Exploration: Brenner: I watched hours of different tutorials trying to figure out how best to implement a server for our game, but honeslty didn't yield great results. I think a server will have to host a individual "server build" of our game for every 2 players wishing to play, but I can't quite figure out the logistics of that yet. Every video just glosses over how the server actually works or tells you to read the documentation which is not helpful for me. We are going to talk to the professor and TA about it in our next meeting. For the forst peer testing milestone, we are just going to have each machine run both games on a local server simultaneously (which is fundamentally the same coding wise, apart from needing to do all the server infrastructure backend)."</li>
+  <li>"matchmaking draft: I am going to be following along with a new tutorial to convert our game's card objects into network objects that netcode can use to display different things between the client and server sides of our game this week. The link to the playlist of videos can be found here: https://youtube.com/playlist?list=PLCbP9KGntfcFTL19eDZsWSkVMfXANF7-U&si=I_NVzdA6X_DBcT4V"</li>
+  <li>"T2 W2 Individual Logs: I'm finishing this as I write this out."</li>
+  <li>"Finish Card Game Rules: We still need to play test the crap out of the cards before we can say we are finished with them."</li>
+</ol>
+
+#### Aditional Context:
+
+So as the peer testing #1 milestone looms closer, I really tried to get into how to set up the back end infastructure of a multiplayer system for our game. Problem is, I've never done anything quite like it before, and despite watching at least 8 hours of different tutorials and videos this week, I still don't know exactly what to do. Most videos/guides completely gloss over how exactly to set up a server and just focus on how to develop the game with the client and sever in mind, which is helpful for what we are going to be doing, but not at actually telling me what I am looking for. I think for the first deliverable, it should be fine to just run 2 builds locally having one act as a host and the other a client, since that should still illustrate exactly how the game will work in the field if we actually deploy dedicated servers, while cutting out actually setting up a game server, since that feels honeslty like its outside the scope of the course. We are going to talk to the TA and the professor about it next class though. This week I'm going to shift my focus to turning our current game's objects and system into a new version that will work with the client and server builds of the game following along to this playlist's videos (https://youtube.com/playlist?list=PLCbP9KGntfcFTL19eDZsWSkVMfXANF7-U&si=I_NVzdA6X_DBcT4V), so that we will have the two different versions of the game ot test for the milestone date. 

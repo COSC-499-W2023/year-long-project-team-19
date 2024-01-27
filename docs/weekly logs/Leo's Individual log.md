@@ -111,3 +111,66 @@ Working on testing for the login system.
 ### In Progress:
 
 Still working on writing tests for the login system to check password and user formats. Once the login database is setup, I can start writing test for that and start working on password encryption with Brenner.
+
+# Date Range: 27-11-2023 to 3-12-2023
+
+<img src = "log_imgs/Leo_log_W13.png?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Working on on password reset system and on adding a settings menu
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>Password reset system</li>
+  <li>settings menu</li>
+  <li>Team log</li>
+  <li>Individual log</li>
+</ol>
+
+### Completed
+
+Added an audio settings menu with volume control and toggles for volume and sound effects. I added game music that can be controlled in audio settings. As well as the UI for Video settings with a brightness slider that will be implemented to change brightness level in game. 
+
+Added two password reset interfaces. One for guest which has an input field for an email and one for logged in user which just takes their email and sends it to a php script which checks that the email is found and then creates a reset token which is saved in the database. The end of the script sends an email to the user with their reset token.
+
+Ive also added the UI for the user to type in their reset token and their new password. But I still need to finish the script to check the input token and update the password.  
+
+### In progress
+
+Working on settings to user database settings so that they are saved when the user logs in. 
+
+<img src = "log_imgs/leo_log_img5.png?raw=true"/>
+
+<img src = "log_imgs/leo_log_img1.png?raw=true"/>
+
+<img src = "log_imgs/leo_log_img2.png?raw=true"/>
+
+<img src = "log_imgs/leo_log_img3.png?raw=true"/>
+
+<img src = "log_imgs/leo_log_img4.png?raw=true"/>
+
+
+# Date Range: 15-01-2024 to 21-01-2024
+
+<img src = "log_imgs/Leo_log_T2W2.png?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Working on populating the game decks based on players' selection.
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>Populate card decks</li>
+</ol>
+
+### Completed
+
+Added feature which lets the player select one of four decks of cards based on its colour. Wrote a script that passes the right cards based on our card design  document so that the chosen decks are delt out to each player at the start of the game.
+
+### In progress
+
+The script is hardcoded for each group of cards as our card database is not yet setup. The goal is to change it to pull the cards from the database. I a also am still working on writing automated tests for this feature. 
+
