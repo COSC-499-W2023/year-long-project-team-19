@@ -102,7 +102,7 @@ const Cards = () => {
   const handleSaveChangesEdit = async () => {
     let isValid = true;
     for (const key in cardInfo) {
-      if (cardInfo[key] === '' || cardInfo[key] === 0 ){  
+      if (cardInfo[key] === '' || cardInfo[key] === 0 || isNaN(cardInfo.attack) || isNaN(cardInfo.defense) || isNaN(cardInfo.hp)) { 
         isValid = false;
         break;
       }
