@@ -15,7 +15,7 @@ public class playerDeck : MonoBehaviour
     public GameObject cardInDeck1;
     public GameObject cardInDeck2;
     public GameObject cardInDeck3;
-
+    public int burnDamage = 1;
     public GameObject cardInDeck4;
     public GameObject cardInDeck5;
     public GameObject cardInDeck6;
@@ -128,8 +128,10 @@ public class playerDeck : MonoBehaviour
         else
         {
             //lose game
-            //TODO: Add a lose game
+            //TODO: Add a lose health
 
+            playerHealth.HPStatic -= burnDamage;
+            burnDamage++;
         }
     }
     public void populateDeck()
