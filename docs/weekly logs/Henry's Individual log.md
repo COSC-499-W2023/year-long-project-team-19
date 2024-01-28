@@ -241,3 +241,25 @@ Next week, I will still be focusing on the nodeJs for admin sys web.
 
 -----
 This week, a significant amount of time was taken to implement the unit tests. I encountered a challenge with running two test suites simultaneously. Initially, the test lead to errors as both suites attempted to start the server on the same port. To resolve this issue, I need to do some research and code refatoring, which involved exporting the Express app and server creation logic from the index.js file. This modification enabled the test suites to run simultaneously and avoiding port conflict.
+
+# Date Range: 22-01-2024 to 28-01-2024
+
+![henrylog13](log_imgs/henry_t2_log3.png)
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Unit Testing - card"</li>
+  <li>"Admin system website"</li>
+</ol>
+
+### Completed
+1. Created and tested unit test for edit cards API endpoint
+![](log_imgs/henry_test_editcard.png)
+2. Implemented axios request for edit card.
+3. Fix validation bug in edit card modal.
+4. Made changes in the UI for edit card modal, the modal will now reset the input field after the user click the submit or close button.
+
+-----
+This week, I have successfully implemented the edit card feature in the admin system. I have also found and fixed a bug in the edit card modal, where the validation will not submit the form if the user does not change the input field. It appears that there's a validation logic preventing the form from being submitted. To fix this, I maade some improvement on the checks which now allows the form to be submitted even when users don't make changes to the input field by using dot notation instead of index.
