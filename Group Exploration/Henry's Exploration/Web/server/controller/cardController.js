@@ -54,10 +54,38 @@ const deleteCard = async (req, res) => {
 };
 
 //add edit card function
+const editCard = async (req, res) => {
+  try {
+    const { name, type, hp, attack, defense, ability } = req.body;
+    if(!name || !type || !hp || !attack || !defense || !ability) {
+      return res.status(400).json({ message: 'All fields are required'});
+    }
+
+    const markedCard = await Cards.findOne({ name });
+    if(!markedCard){
+      return res.status(400).json({ message: 'Card does not exist'});
+    }
+    markedCard.name = name;
+    markedCard.type = type;
+    markedCard.hp = hp;
+    markedCard.attack = attack;
+    markedCard.defense = defense;
+    markedCard.ability = ability;
+
+    markedCard.markModified('card');
+    markedCard.save();
+    
+    res.status(200).json({ message: 'Card edited', card: markedCard});
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
 
 
 module.exports = {
   showCards,
   addCard,
   deleteCard,
+  editCard,
 };

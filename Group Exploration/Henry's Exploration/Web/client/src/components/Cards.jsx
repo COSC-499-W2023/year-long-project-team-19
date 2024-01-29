@@ -70,7 +70,6 @@ const Cards = () => {
     } catch (error) {
       console.log(error);
     }
-    console.log(cardInfo);
   
     // Close the modal
     handleClose();
@@ -78,7 +77,17 @@ const Cards = () => {
 
   //Modal for editing cards
   const [showEdit, setShowEdit] = useState(false);
-  const handleCloseEdit = () => setShowEdit(false);
+  const handleCloseEdit = () => {
+    setShowEdit(false);
+    setCardInfo({
+      name: '',
+      type: '',
+      hp: 0,
+      attack: 0,
+      defense: 0,
+      ability: '',
+    });
+  };
   const handleShowEdit = (card) => {
     setCardInfo({
       name: card.name,
@@ -93,7 +102,7 @@ const Cards = () => {
   const handleSaveChangesEdit = async () => {
     let isValid = true;
     for (const key in cardInfo) {
-      if (cardInfo[key] === '' || cardInfo[key] === 0) {
+      if (cardInfo[key] === '' || cardInfo[key] === 0 || isNaN(cardInfo.attack) || isNaN(cardInfo.defense) || isNaN(cardInfo.hp)) { 
         isValid = false;
         break;
       }
@@ -104,7 +113,28 @@ const Cards = () => {
     }
 
     try {
-      // implement update card api here.
+      await axios.put(
+        "https://nodeserver-two.vercel.app/api/cards/editCard",
+        {
+          name: cardInfo.name,
+          type: cardInfo.type,
+          hp: cardInfo.hp,
+          attack: cardInfo.attack,
+          defense: cardInfo.defense,
+          ability: cardInfo.ability,
+        }
+      )
+      setReload(!reload);
+      setCardInfo({
+        name: '',
+        type: '',
+        hp: 0,
+        attack: 0,
+        defense: 0,
+        ability: '',
+      });
+
+      setShowEdit(false);
     } catch (error) {
       console.log(error);
     }
@@ -113,7 +143,6 @@ const Cards = () => {
   // Delete Card 
   const handleDelete = async (cardName) => {
     try {
-      console.log(cardName);
       await axios.delete(
         "https://nodeserver-two.vercel.app/api/cards/deleteCard",
         {
@@ -340,7 +369,7 @@ const Cards = () => {
                 type="number"
                 placeholder="Enter HP"
                 name="hp"
-                value={cardInfo.hp}
+                value={parseInt(cardInfo.hp)}
                 onChange={handleChange}
               />
             </Form.Group>
@@ -351,7 +380,7 @@ const Cards = () => {
                 type="number"
                 placeholder="Enter attack"
                 name="attack"
-                value={cardInfo.attack}
+                value={parseInt(cardInfo.attack)}
                 onChange={handleChange}
               />
             </Form.Group>
@@ -362,7 +391,7 @@ const Cards = () => {
                 type="number"
                 placeholder="Enter defense"
                 name="defense"
-                value={cardInfo.defense}
+                value={parseInt(cardInfo.defense)}
                 onChange={handleChange}
               />
             </Form.Group>
