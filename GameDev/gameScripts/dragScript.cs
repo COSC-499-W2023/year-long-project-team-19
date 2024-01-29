@@ -12,7 +12,8 @@ public class dragScript : MonoBehaviour
   private Vector2 startPos;
   private bool isOverDropZone = false;
   private bool isDragging = false;
-  private bool isDraggable = true;
+  public static bool isDraggable = true;
+  public GameObject placeholder = null;
   void Start()
   {
     Canvas = GameObject.Find("Canvas");
@@ -21,19 +22,21 @@ public class dragScript : MonoBehaviour
 
   private void OnCollisionEnter2D(Collision2D collision)
   {
+
     Debug.Log("Colliding");
     isOverDropZone = true;
     dropZone = collision.gameObject;
-
   }
   private void OnCollisionExit2D(Collision2D collision)
   {
+
     Debug.Log("Not colliding");
     isOverDropZone = false;
     dropZone = null;
   }
   public void StartDrag()
   {
+
     if (!isDraggable)
     {
       return;
@@ -41,34 +44,44 @@ public class dragScript : MonoBehaviour
     startParent = transform.parent.gameObject; //find the parent of this transform and find that game object so it should be hand
     startPos = transform.position;
     isDragging = true;
+    Debug.Log("DRAGGING!");
   }
   public void EndDrag()
   {
-    if (!isDraggable)
-    {
-      return;
-    }
+
+
     isDragging = false;
     if (isOverDropZone)
     {
       transform.SetParent(dropZone.transform, false);
       isDraggable = false;
+
     }
     else
     {
+      if (startParent == null)
+      {
+        transform.position = startPos;
+        startParent = transform.parent.gameObject;
+        return;
+      }
       transform.position = startPos;
       transform.SetParent(startParent.transform, false);
-
     }
+
   }
 
   // Update is called once per frame
   void Update()
   {
+
+
     if (isDragging)
     {
       transform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
       transform.SetParent(Canvas.transform, true);
     }
   }
+
+
 }
