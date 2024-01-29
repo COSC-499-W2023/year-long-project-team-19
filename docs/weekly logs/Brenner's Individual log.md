@@ -518,3 +518,50 @@ Trying to figure out multiplayer (how to set up a server, do we want dedicated s
 #### Aditional Context:
 
 So as the peer testing #1 milestone looms closer, I really tried to get into how to set up the back end infastructure of a multiplayer system for our game. Problem is, I've never done anything quite like it before, and despite watching at least 8 hours of different tutorials and videos this week, I still don't know exactly what to do. Most videos/guides completely gloss over how exactly to set up a server and just focus on how to develop the game with the client and sever in mind, which is helpful for what we are going to be doing, but not at actually telling me what I am looking for. I think for the first deliverable, it should be fine to just run 2 builds locally having one act as a host and the other a client, since that should still illustrate exactly how the game will work in the field if we actually deploy dedicated servers, while cutting out actually setting up a game server, since that feels honeslty like its outside the scope of the course. We are going to talk to the TA and the professor about it next class though. This week I'm going to shift my focus to turning our current game's objects and system into a new version that will work with the client and server builds of the game following along to this playlist's videos (https://youtube.com/playlist?list=PLCbP9KGntfcFTL19eDZsWSkVMfXANF7-U&si=I_NVzdA6X_DBcT4V), so that we will have the two different versions of the game ot test for the milestone date. 
+
+<!--====================================================================================================================               TERM 2 ************ W3-->
+# TERM 2 - Date Range: 21-01-2023 to 28-01-2023 - W3
+
+<img src = "log_imgs/brenner's_logT2W3.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Trying to figure out multiplayer (how to set up a server, do we want dedicated servers, how does that work with unity, etc.), implementing server and client logic to control the game, and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"matchmaking draft"</li>
+  <li>"Game Mirroring"</li>
+  <li>"Implement Card Decks"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"T2 W3 Team Log"</li>
+  <li>"T2 W3 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"T2 W3 Team Log"</li>
+  <li>"Implement Card Decks: mostly completed, but not quite. All the cards from the google doc are now in a script, including their names, stats and colours, but since the server and client logic isn't quite done yet, the cards aren't fully implmented since the way the logic works is going to have to change. "</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"matchmaking draft: So I started following along with the tutorial from last week to convert our game's card dealing system to work over a server. The link to the playlist of videos can be found here: https://youtube.com/playlist?list=PLCbP9KGntfcFTL19eDZsWSkVMfXANF7-U&si=I_NVzdA6X_DBcT4V I got pretty far in after hours of work, but I ran into lots of issues with GitHub and Unity Packages, so it isn't working the way I want it to currently. I almost have the server dealing the cards out to each client at the start of the game, but Mirror broke, and I can't run a host and client in parallel to test anymore. This is a top of the agenda issue for the next few days."</li>
+  <li>"Exploration: Brenner: I am still trying to figure out all the aspects of how multiplayer is going to work. I ended up switching our project from using netcode for game objects to using a package called mirror in order to follow a tutorial better, and I learned a lot about writing client commands and server rpcs, but mirror ended up breaking and I've had to do a ton of research while troubleshooting."</li>
+  <li>"T2 W3 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+So the peer testing milestone is in 4 days, and the only thing we need still is some form of a multiplayer implementation--not to mention the list of tasks and stuff we want people to test, but we're going to fill it out at our meeting on Tuesday). The multiplayer has proven to be a massive time-sink for me, and while it has been absolutely brutal, I think I should be able to have the server deal cards to the players by Thursday. Once I figure out how to have the server not break after a client joins, the rest of the features should be easy (the problem is getting the clients to communicate what colour deck they chose to server when they join, and have the server begin the game when it receives the info from two clients). It felt like I was right on the cusp of figuring out how to re-word the client side logic when Mirror seemingly broke for no reason, so if I can successfully revert the project to a working version and slowly introduce some of my changes, the fix might just be a couple lines of code away. All of my work and commits were pushed to the other repo we use to actually work on our project, since this repo isn't made for Unity projects, so I'll link it here, and add an image of the commit history so you can see I made progress. I honestly spent about 40 hours on this project this week, and wrapping my head around client commands, rpcs, unity packages and networking documentation has not been easy, in fact it's driven me a little bit insane.
+
+Project (4) in repo (newest branch I'm working on): https://github.com/Prelude14/499UnityGameT19/tree/0a775dfd5538db865c24c984cf52e7c550704472/My%20project%20(4)
+
+Network graph of repo:
+<img src = "log_imgs/brenner's_logT2W3Part2.PNG?raw=true"/>
+
+
