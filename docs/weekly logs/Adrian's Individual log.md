@@ -245,3 +245,25 @@
 
 <h3>In Progress:</h3>
 <p>There is a bug where cards played are treated as they aren't and this prevents cards from attacking players so that is a bug we need to fix. Next week we're trying to fix bugs that prevent the live build from working and testing the game.</p>
+
+<h1>Date Range: 16-01-2024 to 28-01-2024</h1>
+<img src ="https://github.com/COSC-499-W2023/year-long-project-team-19/blob/master/docs/weekly%20logs/log_imgs/Adrian_t2_wk3.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>
+  This week I worked on the game's quality of life features. Making sure the game is understandable to players. We're showing which cards can attack and which cards are playable. Furthermore, this week was used to fix all the bugs mentioned last week.
+</p>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <lI>Attack feature: Bug fix, script no longer clashes with drag script.</lI>
+  <li>QOL Attack Border, QOL: Playable and Unplayable Borders: Added script and "glow" effect to cards.</li>
+</ol>
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed: </h3> 
+<p>All features worked on are complete. </p> 
+
+<h3>In Progress:</h3>
+<p>This week and next we should be moving towards working on the multiplayer.</p>
