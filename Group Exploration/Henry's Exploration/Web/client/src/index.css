@@ -15,7 +15,7 @@ body{
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700');
 
 .bg-docs{
-  background-color: blanchedalmond;
+  background-color: #CCCCCC;
   font-family: "Open Sans", Helvetica, sans-serif;
   text-align: center;
   flex: 1;
