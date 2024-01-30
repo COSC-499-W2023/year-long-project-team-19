@@ -1,4 +1,6 @@
 <?php 
+
+
 	$con = mysqli_connect("localhost", "root2", "Cosc499Team19DuelTimejkwndjfifi", "cosc499");
 
 	//check connection
@@ -7,9 +9,6 @@
 		echo "1:Connection failed."; //connection failed
 		exit();
 	}
-
-	//grab unity's values that it sent, and store in local variable to be queried in our database
-	$username = $_POST["username"];
 
 	$username = mysqli_real_escape_string($con, $_POST["username"]); //real escape string is built in sql injection checker, will strip any sql commands out
 	//going to create a second username variable to further filter the user's inputted username to avoid sql injection
@@ -23,45 +22,34 @@
 		//so we exit before the sql query, as to avoid sql injection
 		exit();
 	}
-	//CKECK IF USERNAME CLEAN IS A VALID EMAIL
-	if (!filter_var($usernameClean, FILTER_VALIDATE_EMAIL)) { //The easiest and safest way to check whether an email address is well-formed 
-  		echo "3: Invalid email format, the inputted username is not a valid email address."; //error 3, username clean isn't a valid email address, could be missing the @, or maybe a .com etc.
-		exit();
-	}
 
-	debug.log($username);
+	// // CKECK IF USERNAME CLEAN IS A VALID EMAIL
+	// if (!filter_var($usernameclean, FILTER_VALIDATE_EMAIL)) { //The easiest and safest way to check whether an email address is well-formed 
+  	// 	echo "3: Invalid email format, the inputted username is not a valid email address."; //error 3, username clean isn't a valid email address, could be missing the @, or maybe a .com etc.
+	// 	exit();
+	// }
 
-	//Query to check database for that USERNAME,
-	$namequery = "SELECT useremail FROM useracc WHERE useremail ='" .$username. "';";
+	//Query to check database for that USERNAME, then its password and other info ==============================================
+	$namequery = "SELECT useremail, reset_token_hash FROM useracc WHERE useremail ='" .$usernameClean. "';";
+    //win loss ratio might need to be caluclated (not stored in table?)
 
 	//Run the Query 
-	$usernameCheck = mysqli_query($con, $namequery) or die("2: Name Check failed."); //error 2 for name check query failed
+	$usernameCheck = mysqli_query($con, $namequery) or die("4: Name Check failed."); //error 4 for name check query failed
 
-	//if there is NO account matching that username, OR there is MORE THAN 1, then something is wrong and we want to quit
-	if (mysqli_num_rows($usernameCheck) != 1) //specifically counts ROWS
-	{
-		echo "5: 0 or more than 1 user was found with that username."; //error code 5, there is either no account with that name, or there is more than one matching somehow
-		exit();
-	}
+	// // if there is NO account matching that username, OR there is MORE THAN 1, then something is wrong and we want to quit
+	// if (mysqli_num_rows($usernameCheck) != 1) //specifically counts ROWS
+	// {
+	// 	echo "5: 0 or more than 1 user was found with that username."; //error code 5, there is either no account with that name, or there is more than one matching somehow
+	// 	exit();
+	// }
 
-    // $token = bin2hex(random_bytes(16));
+	$token = bin2hex(random_bytes(4));
 
-    // $token_hash = hash("sha256", $token);
+    $token_hash = hash("sha256", $token);
 
-    // $expiry = date("Y-m-d H:i:s", time() + 60 * 30);
+	$insertTokenQuery = "UPDATE useracc SET reset_token_hash='" .$token_hash. "' WHERE useremail ='" .$usernameClean. "';";
 
-    // $sql = "UPDATE useracc
-    //         SET reset_token_hash = ?,
-    //             reset_token_expires_at = ?
-    //         WHERE username = ?";
+	mysqli_query($con, $insertTokenQuery) or die("11: Insert user query failed.");
 
-    // $stmt = $mysqli->prepare($sql);
-
-    // $stmt->bind_param("sss", $token_hash, $expiry, $username);
-
-    // $stmt->execute();
-
-	// $stmt->bind_param("sss", $token_hash, $expiry, $email);
-
-	// $stmt->execute();
+	echo "0\t";
 ?>
