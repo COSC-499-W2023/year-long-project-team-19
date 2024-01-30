@@ -140,13 +140,13 @@ h1, h2, h3, h4, h5 {
   background-color: #ff0000;
 }
 
-.card--green {
-  background: linear-gradient(140deg, #00ff00 0%, #006400 100%);
+.card--blue {
+  background: linear-gradient(140deg, #5e84d5 0%, #013e6c 100%);
   box-shadow: 0px 5px 20px -10px #006400;
 }
 
-.card--green .card__type {
-  background-color: #00ff00;
+.card--blue .card__type {
+  background-color: #013e6c;
 }
 
 .card--dark-white {
@@ -266,7 +266,7 @@ p {
 
 .red-team-button,
 .black-team-button,
-.green-team-button,
+.blue-team-button,
 .white-team-button {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -284,8 +284,8 @@ p {
   color: white;
 }
 
-.green-team-button {
-  background-color: #008000;
+.blue-team-button {
+  background-color: #002980;
   color: white;
 }
 
