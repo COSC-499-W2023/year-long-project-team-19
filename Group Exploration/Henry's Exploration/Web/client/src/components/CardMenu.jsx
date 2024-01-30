@@ -10,8 +10,8 @@ const CardMenu = () => {
   const handleBlackTeam = () => {
     navigate("/cards/black");
   };
-  const handleGreenTeam = () => {
-    navigate("/cards/green");
+  const handleBlueTeam = () => {
+    navigate("/cards/blue");
   };
   const handleWhiteTeam = () => {
     navigate("/cards/white");
@@ -30,8 +30,8 @@ const CardMenu = () => {
             <button className="black-team-button" onClick={handleBlackTeam}>
               BLACK
             </button>
-            <button className="green-team-button" onClick={handleGreenTeam}>
-              GREEN
+            <button className="blue-team-button" onClick={handleBlueTeam}>
+              BLUE
             </button>
             <button className="white-team-button" onClick={handleWhiteTeam}>
               WHITE
