@@ -15,7 +15,7 @@ public class playerDeck : MonoBehaviour
     public GameObject cardInDeck1;
     public GameObject cardInDeck2;
     public GameObject cardInDeck3;
-
+    public int burnDamage = 1;
     public GameObject cardInDeck4;
     public GameObject cardInDeck5;
     public GameObject cardInDeck6;
@@ -28,6 +28,7 @@ public class playerDeck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         x = 0;
         deckSize = 20;
         //populate card list
@@ -57,13 +58,15 @@ public class playerDeck : MonoBehaviour
     {
         //coroutine: way to count down
         //initial draw
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 2; i++)
         { // number of starting hand
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(.15f);
             //each second it draws a card
-            //spawns new object using instantiate duplicating it as a clone
-            Instantiate(cardInHand, transform.position, transform.rotation);
+            //spawns new object using instantiate duplicating it as a clone of cardInHand
+            GameObject card = Instantiate(cardInHand, new Vector2(0, 0), Quaternion.identity);
+
         }
+        Debug.Log(turnScript.currentMana);
 
     }
 
@@ -117,13 +120,18 @@ public class playerDeck : MonoBehaviour
             for (int x = 0; x < drawSize; x++)
             {
                 //slow down code so we don't draw too fast
-                yield return new WaitForSeconds(.25F);
-                Instantiate(cardInHand, transform.position, transform.rotation);
+                yield return new WaitForSeconds(.15F);
+                //Instantiate(cardInHand, transform.position, transform.rotation);
+                GameObject card = Instantiate(cardInHand, new Vector2(0, 0), Quaternion.identity);
             }
         }
         else
         {
             //lose game
+            //TODO: Add a lose health
+
+            playerHealth.HPStatic -= burnDamage;
+            burnDamage++;
         }
     }
     public void populateDeck()
