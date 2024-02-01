@@ -364,14 +364,20 @@ const Cards = () => {
             </Form.Group>
 
             <Form.Group controlId="formCardTypeEdit">
-              <Form.Label>Type</Form.Label>
+            <Form.Label>Color</Form.Label>
               <Form.Control
-                type="text"
-                placeholder="Enter type"
+                as="select"  // for dropdown
                 name="type"
                 value={cardInfo.type}
                 onChange={handleChange}
-              />
+              >
+                <option value="">Select Color</option>
+                {colorOptions.map((color, index) => (
+                  <option key={index} value={color}>
+                    {color}
+                  </option>
+                ))}
+              </Form.Control>
             </Form.Group>
 
             <Form.Group controlId="formCardHpEdit">
