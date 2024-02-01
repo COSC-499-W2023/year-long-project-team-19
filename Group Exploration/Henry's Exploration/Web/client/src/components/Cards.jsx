@@ -21,7 +21,7 @@ const Cards = () => {
       type: '',
       hp: 0,
       attack: 0,
-      defense: 0,
+      cost: 0,
       ability: '',
     });
   };
@@ -31,14 +31,14 @@ const Cards = () => {
     type: '',
     hp: 0,
     attack: 0,
-    defense: 0,
+    cost: 0,
     ability: '',
   });
   const handleChange = async (e) => {
     const { name, value } = e.target;
     setCardInfo((prevInfo) => ({
       ...prevInfo,
-      [name]: name === 'hp' || name === 'attack' || name === 'defense' ? parseInt(value) : value,
+      [name]: name === 'hp' || name === 'attack' || name === 'cost' ? parseInt(value) : value,
     }));
   };
   const handleSaveChanges = async () => {
@@ -62,7 +62,7 @@ const Cards = () => {
           type: cardInfo.type,
           hp: cardInfo.hp,
           attack: cardInfo.attack,
-          defense: cardInfo.defense,
+          cost: cardInfo.cost,
           ability: cardInfo.ability,
         }
       );
@@ -84,7 +84,7 @@ const Cards = () => {
       type: '',
       hp: 0,
       attack: 0,
-      defense: 0,
+      cost: 0,
       ability: '',
     });
   };
@@ -94,15 +94,16 @@ const Cards = () => {
       type: card.type,
       hp: card.hp,
       attack: card.attack,
-      defense: card.defense,
+      cost: card.cost,
       ability: card.ability,
     });
     setShowEdit(true);
   };
   const handleSaveChangesEdit = async () => {
     let isValid = true;
+    console.log(cardInfo);
     for (const key in cardInfo) {
-      if (cardInfo[key] === '' || cardInfo[key] === 0 || isNaN(cardInfo.attack) || isNaN(cardInfo.defense) || isNaN(cardInfo.hp)) { 
+      if (cardInfo[key] === '' || cardInfo[key] === 0 || isNaN(cardInfo.attack) || isNaN(cardInfo.cost) || isNaN(cardInfo.hp)) { 
         isValid = false;
         break;
       }
@@ -120,7 +121,7 @@ const Cards = () => {
           type: cardInfo.type,
           hp: cardInfo.hp,
           attack: cardInfo.attack,
-          defense: cardInfo.defense,
+          cost: cardInfo.cost,
           ability: cardInfo.ability,
         }
       )
@@ -130,7 +131,7 @@ const Cards = () => {
         type: '',
         hp: 0,
         attack: 0,
-        defense: 0,
+        cost: 0,
         ability: '',
       });
 
@@ -220,7 +221,7 @@ const Cards = () => {
 
                     <tr>
                       <th>Cost</th>
-                      <td>{card.defense}</td>
+                      <td>{card.cost}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -302,12 +303,12 @@ const Cards = () => {
             </Form.Group>
 
             <Form.Group controlId="formCardDefense">
-              <Form.Label>Defense</Form.Label>
+              <Form.Label>Cost</Form.Label>
               <Form.Control
                 type="number"
                 placeholder="Enter cost"
                 name="cost"
-                value={cardInfo.defense}
+                value={cardInfo.cost}
                 onChange={handleChange}
               />
             </Form.Group>
@@ -386,12 +387,12 @@ const Cards = () => {
             </Form.Group>
 
             <Form.Group controlId="formCardDefenseEdit">
-              <Form.Label>Defense</Form.Label>
+              <Form.Label>Cost</Form.Label>
               <Form.Control
                 type="number"
-                placeholder="Enter defense"
-                name="defense"
-                value={parseInt(cardInfo.defense)}
+                placeholder="Enter cost"
+                name="cost"
+                value={parseInt(cardInfo.cost)}
                 onChange={handleChange}
               />
             </Form.Group>

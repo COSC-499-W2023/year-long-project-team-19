@@ -13,8 +13,8 @@ const showCards = async (req, res) => {
 
 
 const addCard = async (req, res) => {
-  const { name, type, hp, attack, defense, ability } = req.body;
-  if(!name || !type || !hp || !attack || !defense || !ability) {
+  const { name, type, hp, attack, cost, ability } = req.body;
+  if(!name || !type || !hp || !attack || !cost || !ability) {
     return res.status(400).json({ message: 'All fields are required'});
   }
 
@@ -23,7 +23,7 @@ const addCard = async (req, res) => {
     if(card){
       return res.status(400).json({ message: 'Card already exists'});
     }
-    const newCard = new Cards({ name, type, hp, attack, defense, ability });
+    const newCard = new Cards({ name, type, hp, attack, cost, ability });
     await newCard.save();
 
     return res.status(200).json({ message: 'Card added', card: newCard });
@@ -56,8 +56,8 @@ const deleteCard = async (req, res) => {
 //add edit card function
 const editCard = async (req, res) => {
   try {
-    const { name, type, hp, attack, defense, ability } = req.body;
-    if(!name || !type || !hp || !attack || !defense || !ability) {
+    const { name, type, hp, attack, cost, ability } = req.body;
+    if(!name || !type || !hp || !attack || !cost || !ability) {
       return res.status(400).json({ message: 'All fields are required'});
     }
 
@@ -69,7 +69,7 @@ const editCard = async (req, res) => {
     markedCard.type = type;
     markedCard.hp = hp;
     markedCard.attack = attack;
-    markedCard.defense = defense;
+    markedCard.cost = cost;
     markedCard.ability = ability;
 
     markedCard.markModified('card');
