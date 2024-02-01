@@ -219,7 +219,7 @@ const Cards = () => {
                     </tr>
 
                     <tr>
-                      <th>Defense</th>
+                      <th>Cost</th>
                       <td>{card.defense}</td>
                     </tr>
                   </tbody>
@@ -305,8 +305,8 @@ const Cards = () => {
               <Form.Label>Defense</Form.Label>
               <Form.Control
                 type="number"
-                placeholder="Enter defense"
-                name="defense"
+                placeholder="Enter cost"
+                name="cost"
                 value={cardInfo.defense}
                 onChange={handleChange}
               />

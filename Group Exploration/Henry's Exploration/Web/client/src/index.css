@@ -17,6 +17,7 @@ body{
 
 .bg-docs{
   background-color: #CCCCCC;
+  background-image: url(../src/images/bg.png);
   font-family: "Open Sans", Helvetica, sans-serif;
   text-align: center;
   flex: 1;
