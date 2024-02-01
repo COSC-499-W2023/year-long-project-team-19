@@ -78,6 +78,7 @@ const Cards = () => {
 
   //Modal for editing cards
   const [showEdit, setShowEdit] = useState(false);
+  const [originalCardName, setOriginalCardName] = useState("");
   const handleCloseEdit = () => {
     setShowEdit(false);
     setCardInfo({
@@ -90,6 +91,7 @@ const Cards = () => {
     });
   };
   const handleShowEdit = (card) => {
+    setOriginalCardName(card.name);
     setCardInfo({
       name: card.name,
       type: card.type,
@@ -102,7 +104,6 @@ const Cards = () => {
   };
   const handleSaveChangesEdit = async () => {
     let isValid = true;
-    console.log(cardInfo);
     for (const key in cardInfo) {
       if (cardInfo[key] === '' || cardInfo[key] === 0 || isNaN(cardInfo.attack) || isNaN(cardInfo.cost) || isNaN(cardInfo.hp)) { 
         isValid = false;
@@ -118,6 +119,7 @@ const Cards = () => {
       await axios.put(
         "https://nodeserver-two.vercel.app/api/cards/editCard",
         {
+          originalName: originalCardName,
           name: cardInfo.name,
           type: cardInfo.type,
           hp: cardInfo.hp,
@@ -357,6 +359,7 @@ const Cards = () => {
                 name="name"
                 value={cardInfo.name}
                 onChange={handleChange}
+                // 
               />
             </Form.Group>
 

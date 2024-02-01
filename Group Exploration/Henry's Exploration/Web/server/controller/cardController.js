@@ -59,12 +59,12 @@ const deleteCard = async (req, res) => {
 //add edit card function
 const editCard = async (req, res) => {
   try {
-    const { name, type, hp, attack, cost, ability } = req.body;
+    const { originalName, name, type, hp, attack, cost, ability } = req.body;
     if(!name || !type || !hp || !attack || !cost || !ability) {
       return res.status(400).json({ message: 'All fields are required'});
     }
 
-    const markedCard = await Cards.findOne({ name });
+    const markedCard = await Cards.findOne({ originalName });
     if(!markedCard){
       return res.status(400).json({ message: 'Card does not exist'});
     }
