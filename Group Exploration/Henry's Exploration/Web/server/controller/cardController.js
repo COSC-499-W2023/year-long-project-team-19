@@ -64,7 +64,7 @@ const editCard = async (req, res) => {
       return res.status(400).json({ message: 'All fields are required'});
     }
 
-    const markedCard = await Cards.findOne({ originalName });
+    const markedCard = await Cards.findOne({ name: originalName });
     if(!markedCard){
       return res.status(400).json({ message: 'Card does not exist'});
     }
