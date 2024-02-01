@@ -19,10 +19,13 @@ const addCard = async (req, res) => {
   }
 
   try {
-    const card = await Cards.findOne({ name });
-    if(card){
-      return res.status(400).json({ message: 'Card already exists'});
-    }
+
+    // commented out because neutral cards are allowed to have the same name
+
+    // const card = await Cards.findOne({ name });
+    // if(card){
+    //   return res.status(400).json({ message: 'Card already exists'});
+    // }
     const newCard = new Cards({ name, type, hp, attack, cost, ability });
     await newCard.save();
 
