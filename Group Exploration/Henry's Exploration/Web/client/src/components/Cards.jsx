@@ -14,6 +14,7 @@ const Cards = () => {
   const [reload, setReload] = React.useState(false);
   // Modal for adding cards
   const [show, setShow] = useState(false);
+  const colorOptions = ['red', 'black', 'blue', 'white'];
   const handleClose = () => {
     setShow(false);
     setCardInfo({
@@ -251,7 +252,7 @@ const Cards = () => {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Modal Add Card */}
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
           <Modal.Title>Add New Card</Modal.Title>
@@ -270,14 +271,20 @@ const Cards = () => {
             </Form.Group>
 
             <Form.Group controlId="formCardType">
-              <Form.Label>Type</Form.Label>
+              <Form.Label>Color</Form.Label>
               <Form.Control
-                type="text"
-                placeholder="Enter type"
+                as="select"  // for dropdown
                 name="type"
                 value={cardInfo.type}
                 onChange={handleChange}
-              />
+              >
+                <option value="">Select Color</option>
+                {colorOptions.map((color, index) => (
+                  <option key={index} value={color}>
+                    {color}
+                  </option>
+                ))}
+              </Form.Control>
             </Form.Group>
 
             <Form.Group controlId="formCardHp">
