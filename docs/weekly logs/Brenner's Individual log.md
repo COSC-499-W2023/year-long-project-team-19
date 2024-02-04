@@ -586,7 +586,7 @@ Figure out the multiplayer issues from last week (logic is figured out, but Mirr
 ### Completed:
 
 <ol>
-  <li>"T2 W3 Team Log"</li>
+  <li>"T2 W4 Team Log"</li>
   <li>"Peer Testing #1 Heuristic Eval Doc: The Team and I figured this doc out by our Thursday class. I did spend quite a bit of time getting the right build of the game ready for this and fixing new issues I encountered when we tried to deploy it for testing however, and if I hadn't, our machines might not have been ready to run the game properly for testing (ex. When we test the login system, we use a locally hosted database, and it works completely fine in the Untiy editor, but when we went to use it when the game is actually running in a web browser, it couldn't connect to the same server at all. We didn't find this issue until late Wednesday when we finalized the build, but I was able to figure out a fix on my machine that night. Problem was that when we went to apply the same fix to the two machines that we were going to be testing with in class, it didn't fix it, and both machines actually ended up with completely different issues, that I also ended up fixing right before class. The final version of our game shouldn't use a local host server however, so this shouldn't be a problem by then hopefully."</li>
 </ol>
   
