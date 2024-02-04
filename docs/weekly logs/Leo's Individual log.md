@@ -174,3 +174,25 @@ Added feature which lets the player select one of four decks of cards based on i
 
 The script is hardcoded for each group of cards as our card database is not yet setup. The goal is to change it to pull the cards from the database. I a also am still working on writing automated tests for this feature. 
 
+# Date Range: 22-01-2024 to 28-01-2024
+
+<img src = "log_imgs/Leo_log_T2W3.png?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Working on populating the game decks based on players' selection and on fixing and improving the login system.
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>Populate card decks</li>
+  <li>Login system</li>
+</ol>
+
+### Completed
+
+Merged the deck select scene with the latest game updates using Brenner's update of the card database and fixed errors with card counts and outputted cards. Seems like Brenner pulled my work from last week into the DesignVideoDemo branch and we sort of worked on the same thing for the card output so I have not made a PR for that. My commits would be on the deckSelectScene for last week and deckSelectUI for this week. Then I worked on the login system, I updated the readInput script so that the page redirects to the main menu affter the user is logged in. I also added a error message for when incorrect login information is submitted. This is on the login-system PR. (on the game dev repository: https://github.com/Prelude14/499UnityGameT19)
+
+### In progress
+
+I am working on updating the reset password feature so that we can test sending a reset token and update the account password on the database. 

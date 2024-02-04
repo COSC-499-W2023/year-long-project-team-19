@@ -561,7 +561,49 @@ So the peer testing milestone is in 4 days, and the only thing we need still is 
 
 Project (4) in repo (newest branch I'm working on): https://github.com/Prelude14/499UnityGameT19/tree/0a775dfd5538db865c24c984cf52e7c550704472/My%20project%20(4)
 
+<!--====================================================================================================================               TERM 2 ************ W4-->
+# TERM 2 - Date Range: 28-01-2023 to 04-03-2023 - W4
+
+<img src = "log_imgs/brenner's_logT2W4.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Figure out the multiplayer issues from last week (logic is figured out, but Mirror wasn't working last week), setting up our Peer Testing #1 tasks (and getting a working version of the game in order to complete the tasks), and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"matchmaking draft"</li>
+  <li>"Game Mirroring"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"Peer Testing #1 Heuristic Eval Doc"</li>
+  <li>"T2 W4 Team Log"</li>
+  <li>"T2 W4 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"T2 W3 Team Log"</li>
+  <li>"Peer Testing #1 Heuristic Eval Doc: The Team and I figured this doc out by our Thursday class. I did spend quite a bit of time getting the right build of the game ready for this and fixing new issues I encountered when we tried to deploy it for testing however, and if I hadn't, our machines might not have been ready to run the game properly for testing (ex. When we test the login system, we use a locally hosted database, and it works completely fine in the Untiy editor, but when we went to use it when the game is actually running in a web browser, it couldn't connect to the same server at all. We didn't find this issue until late Wednesday when we finalized the build, but I was able to figure out a fix on my machine that night. Problem was that when we went to apply the same fix to the two machines that we were going to be testing with in class, it didn't fix it, and both machines actually ended up with completely different issues, that I also ended up fixing right before class. The final version of our game shouldn't use a local host server however, so this shouldn't be a problem by then hopefully."</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"matchmaking draft: So last week I was really struggling with Mirror and getting the sever to deal the cards to the players. It was especially tough because the way it was breaking wasn't very debuggable (it seemed like I didn't change anything to cause it, and since it froze immediately every time, I could never get any error messages to print to the debug log). Good news is that I now have it sort of fixed to where I can see the messages and its no longer freezing, but the bad news is that I don't know how to fix the actual problem that I was trying to fix the whole time. I need the client to tell the server what colour deck the player chose at the beginning of the game, and then once the server recieves 2 colours, it is supposed to build the game deck and deal the cards out (I  do this through a Sync Var String that the server adds the colours to when it recieves the Command from the clients). Through debugging, I know that both clients send their colour successfully, and the server recieves both fine, but when the 2nd client sends their colour, when the server goes to add that client's colour to the shared string, it thinks the shared string is empty again instead of what it's supposed to be (It should have the first client's string inside, and I know this because the I have a RPC method that tells the clients what the updated string is after a client has added their colour, but instead the 2nd client always overwrites the string resulting in a invalid combo of colours, which will never start the game despite their being two valid players with valid colours choosen. So something is wrong with how I understand Sync Vars or Server variables (it seems like the server's version of the shared string isn't updating properly), but I have yet to figure out what. I have talked to the team, and while we had to drop fixing it in time for the peer testing, we are all going to be focussing on this for the next couple weeks since its such an important feature. I did work on it all the way through until wednesday mind you though. You can see my commits thoughout the week in the image at the bottom (They are on the other repo). I'm also going to be talking to the T.A. in this week's meeting to see if they can help, since the Team and I are kind of at a loss right now."</li>
+  <li>"Exploration: Brenner: I still had to do a ton of research while troubleshooting Mirror and the errors with the client to server communication."</li>
+  <li>"T2 W4 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+So the peer testing milestone was this week, and we were feeling pretty ready for it, except for getting the multiplayer system working before the test. I grinded really hard until Wednesday trying to get it working (another ~15 or so hours since Sunday), and I involved the team as well, but unfortunately it just wasn't meant to be done in time for the peer testing, so we had to shift focus and get our build ready for testing. Luckily, we had enough features implemented without multiplayer to fufill the heuristic evaluations requirements. It was a little stressful getting everyone's parts together, but we got it set up well enough that testing went pretty smoothly. I know that we were supposed to have a certain amount of features done by this milestone, and multiplayer was one of them, but we--or at least I--definitely under estimated just how time consuming and complex setting it up for our game was going to be. I take comfort in knowing that I'm really trying to get it working, and that once we solve the logic issue I'm having with starting the game, the rest of the game communications between the sever and client should be relatively easier, since they should work a bit differently and won't need to be as complicated. You can see the new repo branch I used to fix the multiplayer at the link below, and you can see all of my commits on the repo in the image (the red circles) below that. The build that we used for testing is found on the designVideoDemo branch of the same repo.
+
+Project (4) in repo (newest branch I'm working on): https://github.com/Prelude14/499UnityGameT19/tree/multiplayertroubleshooting
+
 Network graph of repo:
-<img src = "log_imgs/brenner's_logT2W3Part2.PNG?raw=true"/>
+<img src = "log_imgs/brenner's_logT2W4Part2.PNG?raw=true"/>
 
 
