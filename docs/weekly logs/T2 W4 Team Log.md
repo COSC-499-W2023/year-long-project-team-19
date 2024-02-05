@@ -53,20 +53,20 @@ Which tasks from the project board are associated with these features?
 </ul>
 
 <br>Burnup Chart:<br><br>
-<img src = "log_imgs/burnUpFEB04.png"/>
+<img src = "log_imgs/burnUpFEB04.PNG"/>
 
 <br>Table View of completed tasks on project board<br><br>
-<img src = "log_imgs/compTasksFEB04_P1-1-14.PNG"/>
-<img src = "log_imgs/compTasksFEB04_P2-14-27.PNG"/>
-<img src = "log_imgs/compTasksFEB04_P3-27-40.PNG"/>
-<img src = "log_imgs/compTasksFEB04_P4-40-51.PNG"/>
+<img src = "log_imgs/compTasksFEB04_P1-1-17.PNG"/>
+<img src = "log_imgs/compTasksFEB04_P2-17-33.PNG"/>
+<img src = "log_imgs/compTasksFEB04_P3-33-49.PNG"/>
+<img src = "log_imgs/compTasksFEB04_P4-49-54.PNG"/>
 
 <br>Table View of in progress tasks on project board<br><br>
-<img src = "log_imgs/inProgTasksFEB04_P1-60-73.PNG"/>
-<img src = "log_imgs/inProgTasksFEB04_P2-73-79.PNG"/>
+<img src = "log_imgs/inProgTasksFEB04_P1-63-79.PNG"/>
+<img src = "log_imgs/inProgTasksFEB04_P2-79-82.PNG"/>
 
 <br>Table View of in progress TESTING tasks on project board<br><br>
-<img src = "log_imgs/inProgTESTING_FEB04.png"/>
+<img src = "log_imgs/inProgTESTING_FEB04.PNG"/>
 
 OPTIONAL: Any context to explain why the log looks the way it does.
 <br><p>While we had some break throughs with some game features (health and resource system, attacking etc.), and the website has 
