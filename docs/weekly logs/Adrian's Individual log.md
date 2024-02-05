@@ -267,3 +267,26 @@
 
 <h3>In Progress:</h3>
 <p>This week and next we should be moving towards working on the multiplayer.</p>
+
+<h1>Date Range: 28-01-2024 to 04-02-2024</h1>
+<img src ="https://github.com/COSC-499-W2023/year-long-project-team-19/blob/master/docs/weekly%20logs/log_imgs/Adrian_t2_wk4.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>
+  This week we focused a lot more on bug fixing in preparation for the heuristics evaluation. For my portion I added the cards to the website and helped bugfix the login system for local use. Furthermore, after the heuristic evaluation recommmendations I added some of the recommendations.
+</p>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <lI>
+"UI Recommendations: Glowing rings and arrows": The recommendation was to add a glowing effect to distinguish what objects are interactable and arrows to show where cards should go. I scripted and added the game objects to our current build. 
+  </lI>
+</ol>
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed: </h3> 
+<p>All features worked on are completed.</p> 
+
+<h3>In Progress:</h3>
+<p>Next week we should be improving our game further by focusing on heuristic comments. We also should be focusing more on the server issues to round out our mvp.</p>
