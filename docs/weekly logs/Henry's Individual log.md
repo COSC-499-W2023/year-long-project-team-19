@@ -263,3 +263,28 @@ This week, a significant amount of time was taken to implement the unit tests. I
 
 -----
 This week, I have successfully implemented the edit card feature in the admin system. I have also found and fixed a bug in the edit card modal, where the validation will not submit the form if the user does not change the input field. It appears that there's a validation logic preventing the form from being submitted. To fix this, I maade some improvement on the checks which now allows the form to be submitted even when users don't make changes to the input field by using dot notation instead of index.
+
+
+# Date Range: 28-01-2024 to 04-02-2024
+
+![henrylog13](log_imgs/henry_t2_log4.png)
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Admin system website"</li>
+  <li>"peer testing"</li>
+</ol>
+
+### Completed
+1. rerun the unit test for the admin system due to the changes in the main code.
+![](log_imgs/henry_test_gen.png)
+2. Reworked the UI for website (background, css, and layout)
+3. Add dropdown feature in add & edit card modal to minimize user error.
+4. Refactored some of the code to match variable name in the Unity project.
+5. Fix the bug in admin website where user can't edit the card name.
+
+-----
+
+This week, I mostly worked on improving the UI and fix logic error in the website for the peer review that was held on this week. I also rerun the unit test for the admin system due to the changes in the main code. I also do project demo for peer testing. 
