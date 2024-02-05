@@ -8,7 +8,8 @@ public class dbDisplay : MonoBehaviour
 {
     public List<Card1> displayList = new List<Card1>();
     public int displayId;
-
+    public static bool attackDragging;
+    public int colour; //for each card's colour
     public int id;
     public int hp;
     public int pow;
@@ -29,6 +30,7 @@ public class dbDisplay : MonoBehaviour
     public bool cardBack;
     public static bool staticCardBack;
 
+    public GameObject cardInHand;
     public GameObject hand;
     public GameObject playZone;
     public GameObject currentZone;
@@ -52,7 +54,7 @@ public class dbDisplay : MonoBehaviour
     public bool currentlyDraggable;
     public bool attackBorder;
     public static bool staticAttackBorder;
-
+    public GameObject Image;
     public GameObject playableBorder;
     public GameObject unplayableBorder;
     public static GameObject currentLoc;
@@ -62,7 +64,7 @@ public class dbDisplay : MonoBehaviour
     void Start()
     {
         deckCount = playerDeck.deckSize;
-        displayList[0] = cardDatabase.cardList[displayId];
+        displayList[0] = cardDatabase.neutralCardList[displayId];
         this.id = displayList[0].id;
 
         isSummoned = false;
@@ -87,6 +89,7 @@ public class dbDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         staticAttackBorder = false;
         staticCost = cost;
         staticSummoned = isSummoned;
@@ -209,8 +212,10 @@ public class dbDisplay : MonoBehaviour
     {
         if (canAttack == true && isSummoned)
         {
+
             if (Target != null)
             {
+
                 if (Target == Enemy)
                 {
                     enemyHealth.HPStatic -= pow;
@@ -243,10 +248,19 @@ public class dbDisplay : MonoBehaviour
     public void StartAttack()
     {
         staticTargeting = true;
+        if (currentZone == playZone)
+        {
+            attackDragging = true;
+        }
     }
     public void StopAttack()
     {
         staticTargeting = false;
+        if (currentZone == playZone)
+        {
+            attackDragging = false;
+        }
+
     }
     public void OneCardAttack()
     {
@@ -260,6 +274,7 @@ public class dbDisplay : MonoBehaviour
     {
 
         this.cardName = displayList[0].cardName;
+        this.colour = displayList[0].colour;//new
         this.pow = displayList[0].pow;
         this.hp = displayList[0].hp;
         this.txt = displayList[0].txt;
@@ -270,6 +285,10 @@ public class dbDisplay : MonoBehaviour
         costText.text = " " + this.cost.ToString();
         powText.text = " " + this.pow.ToString();
         hpText.text = " " + this.hp.ToString();
+
+        //trying to get the border of the card drwan to change colour to match the card's colour int
+        Color border = renderCardColour(colour);//get what colour the border should be
+        Image.GetComponent<Image>().color = border; //then render the correct colour
 
     }
     private void cloneDraw()
@@ -286,4 +305,32 @@ public class dbDisplay : MonoBehaviour
             this.tag = "Untagged";
         }
     }
+
+    public Color renderCardColour(int cardColour)
+    {
+        //need to check card1's colour int to see what colour to make the border of the card
+        if (cardColour == 1)          // 1 == BLACK DECK
+        {
+            return Color.black;
+        }
+        else if (cardColour == 2)          // 2 == RED DECK
+        {
+            return Color.red;
+        }
+        else if (cardColour == 3)          // 3 == WHITE DECK
+        {
+            return Color.white;
+        }
+        else if (cardColour == 4)          // 4 == BLUE DECK
+        {
+            return Color.blue;
+        }
+        else
+        {
+            return Color.yellow;
+        }
+    }
+
+
+
 }
