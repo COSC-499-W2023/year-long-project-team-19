@@ -6,7 +6,8 @@
 }
 
 body{
-  background-color: blanchedalmond !important;
+  background-color: #CCCCCC !important;
+  background-image: url(../src/images/bg.png);
   height: 100vh;
 }
 
@@ -15,7 +16,8 @@ body{
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700');
 
 .bg-docs{
-  background-color: blanchedalmond;
+  background-color: #CCCCCC;
+  background-image: url(../src/images/bg.png);
   font-family: "Open Sans", Helvetica, sans-serif;
   text-align: center;
   flex: 1;
@@ -132,7 +134,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .card--red {
-  background: linear-gradient(120deg, #ff0000 0%, #800000 100%);
+  background: linear-gradient(120deg, #f23a3a 0%, #360101 100%);
   box-shadow: 0px 5px 20px -10px #800000;
 }
 
@@ -140,13 +142,13 @@ h1, h2, h3, h4, h5 {
   background-color: #ff0000;
 }
 
-.card--green {
-  background: linear-gradient(140deg, #00ff00 0%, #006400 100%);
+.card--blue {
+  background: linear-gradient(140deg, #5e84d5 0%, #013e6c 100%);
   box-shadow: 0px 5px 20px -10px #006400;
 }
 
-.card--green .card__type {
-  background-color: #00ff00;
+.card--blue .card__type {
+  background-color: #013e6c;
 }
 
 .card--dark-white {
@@ -240,14 +242,18 @@ p {
 }
 
 .menu-box {
-  background-color: #f2e6cb; /* Adjusted background color */
+  background-color: #666666;
   padding: 2rem;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); 
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.menu-box:hover {
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.3); 
 }
 
 .title {
@@ -266,7 +272,7 @@ p {
 
 .red-team-button,
 .black-team-button,
-.green-team-button,
+.blue-team-button,
 .white-team-button {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -284,8 +290,8 @@ p {
   color: white;
 }
 
-.green-team-button {
-  background-color: #008000;
+.blue-team-button {
+  background-color: #002980;
   color: white;
 }
 

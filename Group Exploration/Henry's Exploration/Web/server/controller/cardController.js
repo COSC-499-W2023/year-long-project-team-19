@@ -13,17 +13,20 @@ const showCards = async (req, res) => {
 
 
 const addCard = async (req, res) => {
-  const { name, type, hp, attack, defense, ability } = req.body;
-  if(!name || !type || !hp || !attack || !defense || !ability) {
+  const { name, type, hp, attack, cost, ability } = req.body;
+  if(!name || !type || !hp || !attack || !cost || !ability) {
     return res.status(400).json({ message: 'All fields are required'});
   }
 
   try {
-    const card = await Cards.findOne({ name });
-    if(card){
-      return res.status(400).json({ message: 'Card already exists'});
-    }
-    const newCard = new Cards({ name, type, hp, attack, defense, ability });
+
+    // commented out because neutral cards are allowed to have the same name
+
+    // const card = await Cards.findOne({ name });
+    // if(card){
+    //   return res.status(400).json({ message: 'Card already exists'});
+    // }
+    const newCard = new Cards({ name, type, hp, attack, cost, ability });
     await newCard.save();
 
     return res.status(200).json({ message: 'Card added', card: newCard });
@@ -56,12 +59,12 @@ const deleteCard = async (req, res) => {
 //add edit card function
 const editCard = async (req, res) => {
   try {
-    const { name, type, hp, attack, defense, ability } = req.body;
-    if(!name || !type || !hp || !attack || !defense || !ability) {
+    const { originalName, name, type, hp, attack, cost, ability } = req.body;
+    if(!name || !type || !hp || !attack || !cost || !ability) {
       return res.status(400).json({ message: 'All fields are required'});
     }
 
-    const markedCard = await Cards.findOne({ name });
+    const markedCard = await Cards.findOne({ name: originalName });
     if(!markedCard){
       return res.status(400).json({ message: 'Card does not exist'});
     }
@@ -69,7 +72,7 @@ const editCard = async (req, res) => {
     markedCard.type = type;
     markedCard.hp = hp;
     markedCard.attack = attack;
-    markedCard.defense = defense;
+    markedCard.cost = cost;
     markedCard.ability = ability;
 
     markedCard.markModified('card');
