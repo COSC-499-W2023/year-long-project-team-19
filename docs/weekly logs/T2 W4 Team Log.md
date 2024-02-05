@@ -52,6 +52,9 @@ Which tasks from the project board are associated with these features?
 <li>"Exploration: Leo"</li>
 </ul>
 
+<br>We also added a new task for a bug that was found during the peer testing process:<br>
+<img src = "log_imgs/peerTestingBUG1.PNG"/>
+
 <br>Burnup Chart:<br><br>
 <img src = "log_imgs/burnUpFEB04.PNG"/>
 
