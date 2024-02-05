@@ -174,3 +174,13 @@ For this milestone I will be working on mirroring the functionality of the game 
 
 ## Among these tasks, which have you completed/in progress in the last week?
 This is the second week of the term and I am continuing to work on the tasks mentioned previously and aim to finish them by the third week so that the game is ready for peer to peer testing
+
+<h1>Date Range: 28-01-2024 to 04-02-2024</h1>
+
+<img src = "log_imgs/Aditya_T2_Week4.png?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+This week being peer to peer testing we focused on fixing the game to have a playable build. Our multiplayer is still not working as the Mirror package in unity is not user-friendly and we still are learning our way through it. I helped in resolving server communication issues for login and creating account in the game. My task of creating a shuffled deck is delayed as we first have to get the multiplayer set up on every machine.
+
+## Among these tasks, which have you completed/in progress in the last week?
+This week onwards we are focusing on setting up multiplayer and establish a server where players are able to connect and play. This week I also worked in peer to peer testing where I tested other teams' projects 

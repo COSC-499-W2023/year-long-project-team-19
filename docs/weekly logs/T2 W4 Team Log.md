@@ -69,14 +69,8 @@ Which tasks from the project board are associated with these features?
 <img src = "log_imgs/inProgTESTING_FEB04.PNG"/>
 
 OPTIONAL: Any context to explain why the log looks the way it does.
-<br><p>While we had some break throughs with some game features (health and resource system, attacking etc.), and the website has 
-come along nicely, implementing multiplayer has been quite the process for us. Just getting the right packages set up on everyone's
-machines has been abnoxious, and we have had to change packages as well in the process, which just further adds to the headache. Then, 
-trying to get the right packages and work uploaded to GitHub so that the other members of the group can use it as well is just as annoying,
-so it is taking forever to get it done. We are meeting Tuesday to set up what is going to be tested in class for the milestone, and its not 
-the absolute end of the world if the multiplayer isn't somewhat functioning by then, but it would be great if it was.
+<br><p>This week our main goal was to get multiplayer set up and running for peer to peer testing but Mirror is not so user-friendly to use and we are have been running into issues quite a lot. Knowing this issue we focused on bug fixing some issues and adding features which make our game more accessible and playable. We added highlights which show the player playable cards and playable drop zone. We added music to the game and the main menu scene which is adjustable. We fixed the communication problem with Xampp data server which we use to login and create account. Our focus from next week is to get the Mirror package runnnig and setup with functioning multiplayer.
 
-We still have that other repo open, and the branch that we have linked is the version of the card game we used for the peer testing class, and it can be found below. You can find the most up to date 
-multiplayer system on the "multiplayertroubleshooting" branch of the same repo.</p>
+We still have that other repo open, and the branch that we have linked is the version of the card game we used for the peer testing class, and it can be found below. You can find the most up to date multiplayer system on the "multiplayertroubleshooting" branch of the same repo.</p>
 
 #### https://github.com/Prelude14/499UnityGameT19/tree/963c9c89c8726b88428bc5cedf2e4f6d790450f9/My%20project%20(4)
