@@ -174,7 +174,7 @@ Added feature which lets the player select one of four decks of cards based on i
 
 The script is hardcoded for each group of cards as our card database is not yet setup. The goal is to change it to pull the cards from the database. I a also am still working on writing automated tests for this feature. 
 
-# Date Range: 22-01-2024 to 28-01-2024
+# Date Range: 22-01-2024 to 28-01-2024 - W3
 
 <img src = "log_imgs/Leo_log_T2W3.png?raw=true"/>
 
@@ -196,3 +196,33 @@ Merged the deck select scene with the latest game updates using Brenner's update
 ### In progress
 
 I am working on updating the reset password feature so that we can test sending a reset token and update the account password on the database. 
+
+# Date Range: 28-01-2023 to 04-03-2023 - W4
+
+<img src = "log_imgs/Leo_log_T2W4.png?raw=true"/>
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>Login System</li>
+  <li>Password reset</li>
+  <li>Peer Testing Heurestic evluation</li>
+  <li>Populate card decks</li>
+  <li>"T2 W4 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+I worked on on the reset password reset system at the start of the week and was able to send and retrieve a hashed token to the database but struggled for quite a while tyring to get the mailer function to work. I moved on as this is a feature we had planned for the next peer testing session.
+
+There was a bug in the login system which didn't show the users info right away after logging in. I added a confirm button which lets the user know that they have logged in successfully and fixes the login bug. I did the same for the create account function, added error message aswell and fixed some of the input errors. 
+
+<img src = "log_imgs/Leo_T2W4_s2.png?raw=true"/>
+
+There also had a bug with displaying the users stats which was quite tought to firgure out. I added descriptions of the card decks on the deck select page.
+
+<img src = "log_imgs/Leo_T2W4_s1.png?raw=true"/>
+
+Worked on the Heureustic evaluation task list and questionnaire. While going through all the tasks, there ended being a few bugs that we had to fix. There was some problems with the audio settings, login input, some text coloring, highlighting of the cards and a few issues with merging everyone features together. 
+
+When we built the final version of the game on Wenesday night we realized that we wern't able to get a database connection from the web browser like we did in Unity. It took quite a a long time trying to figure this out, luckily Brenner found a solution later that night.  
