@@ -288,3 +288,24 @@ This week, I have successfully implemented the edit card feature in the admin sy
 -----
 
 This week, I mostly worked on improving the UI and fix logic error in the website for the peer review that was held on this week. I also rerun the unit test for the admin system due to the changes in the main code. I also do project demo for peer testing. 
+
+# Date Range: 04-02-2024 to 11-02-2024
+
+![henrylog13](log_imgs/henry_t2_log5.png)
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Individual Logs" </li>
+  <li>"Peer Testing 1's Admin LOGIN BUG"</li>
+  <li>"unit testing - cards (add,delete,show,edit)"</li>
+</ol>
+
+### Completed
+1. created the unit test for card API endpoint (add, delete, show, edit)
+![](log_imgs/henry_test_all_cards.png)
+2. fix the bug in the admin login page where success display message shows even when the user input wrong credentials.
+
+-----
+
+This week, I only managed to complete the unit test for the card API endpoint. I also fix the bug in the admin login page where success display message shows even when the user input wrong credentials due to midterms in other courses.
