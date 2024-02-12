@@ -68,6 +68,6 @@ Which tasks from the project board are associated with these features?
 <img src = "log_imgs/inProgTESTING_FEB11.PNG"/>
 
 OPTIONAL: Any context to explain why the log looks the way it does.
-<br><p>This week brenner did get the multiplayer communication between client and seerver running. Both the players choose their colored deck and the server receives the input and combines the decks creating 40 cards and that's what we have working so far. The goal of this week is to make it fully functional so that an actual game can be started between the host and the client. Adrian changed the ui icons to make the cards readable and we have done other small bug fixes.</p>
+<br><p>This week henry fixed the bug we found during our peer to peer testing session. Brenner did get the multiplayer communication between client and seerver running. Both the players choose their colored deck and the server receives the input and combines the decks creating 40 cards and that's what we have working so far. The goal of this week is to make it fully functional so that an actual game can be started between the host and the client. Adrian changed the ui icons to make the cards readable and we have done other small bug fixes.</p>
 
 #### https://github.com/Prelude14/499UnityGameT19/tree/963c9c89c8726b88428bc5cedf2e4f6d790450f9/My%20project%20(4)
