@@ -290,3 +290,26 @@
 
 <h3>In Progress:</h3>
 <p>Next week we should be improving our game further by focusing on heuristic comments. We also should be focusing more on the server issues to round out our mvp.</p>
+
+<h1>Date Range: 05-01-2024 to 11-02-2024</h1>
+<img src ="https://github.com/COSC-499-W2023/year-long-project-team-19/blob/master/docs/weekly%20logs/log_imgs/Adrian_t2_wk5.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>
+  This week I only worked on drafting a new design to streamline our cards. Based on comments from our heuristics eval.
+</p>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <lI>
+"UI Recommendations: Card UI Changes": After listening to recommendations we need to make it clear that cards have a cost that needs to be associated with other aspects of the game. 
+  </lI>
+</ol>
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed: </h3> 
+<p>This update hasn't been completed. I still need to discuss changes with the team and figure out what they think. I've been sick the past week and have been unable to join meetings.</p>
+
+<h3>In Progress:</h3>
+<p>Depending on multiplayer development the next development cycle will depend. But we are working on finishing the multiplayer and focusing on the card effects. We might also streamline more UI.</p>
