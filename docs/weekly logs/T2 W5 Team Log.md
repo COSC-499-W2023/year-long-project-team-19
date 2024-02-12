@@ -68,8 +68,6 @@ Which tasks from the project board are associated with these features?
 <img src = "log_imgs/inProgTESTING_FEB11.PNG"/>
 
 OPTIONAL: Any context to explain why the log looks the way it does.
-<br><p>This week our main goal was to get multiplayer set up and running for peer to peer testing but Mirror is not so user-friendly to use and we are have been running into issues quite a lot. Knowing this issue we focused on bug fixing some issues and adding features which make our game more accessible and playable. We added highlights which show the player playable cards and playable drop zone. We added music to the game and the main menu scene which is adjustable. We fixed the communication problem with Xampp data server which we use to login and create account. Our focus from next week is to get the Mirror package runnnig and setup with functioning multiplayer.
-
-We still have that other repo open, and the branch that we have linked is the version of the card game we used for the peer testing class, and it can be found below. You can find the most up to date multiplayer system on the "multiplayertroubleshooting" branch of the same repo.</p>
+<br><p>This week brenner did get the multiplayer communication between client and seerver running. Both the players choose their colored deck and the server receives the input and combines the decks creating 40 cards and that's what we have working so far. The goal of this week is to make it fully functional so that an actual game can be started between the host and the client. Adrian changed the ui icons to make the cards readable and we have done other small bug fixes.</p>
 
 #### https://github.com/Prelude14/499UnityGameT19/tree/963c9c89c8726b88428bc5cedf2e4f6d790450f9/My%20project%20(4)
