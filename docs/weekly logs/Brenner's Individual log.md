@@ -562,7 +562,7 @@ So the peer testing milestone is in 4 days, and the only thing we need still is 
 Project (4) in repo (newest branch I'm working on): https://github.com/Prelude14/499UnityGameT19/tree/0a775dfd5538db865c24c984cf52e7c550704472/My%20project%20(4)
 
 <!--====================================================================================================================               TERM 2 ************ W4-->
-# TERM 2 - Date Range: 28-01-2023 to 04-03-2023 - W4
+# TERM 2 - Date Range: 28-01-2023 to 04-02-2023 - W4
 
 <img src = "log_imgs/brenner's_logT2W4.PNG?raw=true"/>
 
@@ -606,4 +606,45 @@ Project (4) in repo (newest branch I'm working on): https://github.com/Prelude14
 Network graph of repo:
 <img src = "log_imgs/brenner's_logT2W4Part2.PNG?raw=true"/>
 
+<!--====================================================================================================================               TERM 2 ************ W5-->
+# TERM 2 - Date Range: 04-02-2023 to 11-02-2023 - W5
 
+<img src = "log_imgs/brenner's_logT2W5.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Figure out the multiplayer issues from last week (logic is figured out, but Mirror wasn't working last week), and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"matchmaking draft"</li>
+  <li>"Game Mirroring"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"T2 W5 Team Log"</li>
+  <li>"T2 W5 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"T2 W5 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"matchmaking draft: So this week I talked to the TA in order to see about getting some help with the multiplayer stuff, since I wasn't getting anywhere since the peer testing issues. I didn't hear back from them yet, but I didn't want to have nothing to show for this week, so I ended up getting back into attempting a fix. AND IT FINALLY GAVE!!!!!!!!!!!! Clients now can connect to the server without issue, and can successfully send their chosen colour to the server properly! The issue was that I was using a sync variable in the playermanager script thinking it would be synchronized across all the instances of that variable in the project, but in reality, because the network manager spawns a unique instance of the playermanager object for each client, the clients would only ever see one colour in the string. Now, both clients update a sync var list of strings that is part of a different game object called SharedVarManager, and that game object actually creates the game's deck of cards and is supposed to deal them out as well. I added a gif of this functioning somewhat below, the deck is made fine, but the cards aren't yet dealt perfectly. Still, the hardest part is done now, and I'm soooooo glad I finally figured it out. "</li>
+  <li>"Exploration: Brenner: I still had to do a bit of research while troubleshooting Mirror and the errors with the client to server communication."</li>
+  <li>"T2 W5 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+So I was still quite stuck all week trying to fix the multiplayer issue, but I was also quite sick during the actual week, so I wasn't able to get much done until the weekend after telling the TA all about the issue I was having in class Thrusday. Luckily, I ended up having a major breakthrough on Sunday with the multiplayer, but it still took a lot of effort, and isn't exactly perfect yet. I cannot express just how relieving it is to have it semi working now though, and it has got me excited for the future of the project again. You can see the repo branch I used to fix the multiplayer at the link below, and the build that we used for testing is found on the designVideoDemo branch of the same repo.
+
+Project (4) in repo (newest branch I've been working on): https://github.com/Prelude14/499UnityGameT19/tree/b010c44db88ae12dd2bb38ca7d6b8cde3be8bd76/My%20project%20(4)
+
+#### I made a GIF of the server starting the game in action: 
+<img src= "log_imgs/unityTutorialGIFFEB11.gif">
