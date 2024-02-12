@@ -607,7 +607,7 @@ Network graph of repo:
 <img src = "log_imgs/brenner's_logT2W4Part2.PNG?raw=true"/>
 
 <!--====================================================================================================================               TERM 2 ************ W5-->
-# TERM 2 - Date Range: 04-02-2023 to 11-02-2023 - W4
+# TERM 2 - Date Range: 04-02-2023 to 11-02-2023 - W5
 
 <img src = "log_imgs/brenner's_logT2W5.PNG?raw=true"/>
 
