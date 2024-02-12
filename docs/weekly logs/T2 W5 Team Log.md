@@ -43,8 +43,8 @@ Which tasks from the project board are associated with these features?
 <li>"Look at Testing portion of the project board(theres a lot to mention)"</li>
 <li>"Unity Match related UI elements"</li>
 <li>"Finish the Card Game Rules"</li>
-<li>"T2 W4 Team log"</li>
-<li>"T2 W4 Individual logs"</li>
+<li>"T2 W5 Team log"</li>
+<li>"T2 W5 Individual logs"</li>
 <li>"Exploration: Adrian"</li>
 <li>"Exploration: Aditya"</li>
 <li>"Exploration: Henry"</li>
@@ -58,11 +58,11 @@ Which tasks from the project board are associated with these features?
 <img src = "log_imgs/compTasksFEB11_P1-1-17.PNG"/>
 <img src = "log_imgs/compTasksFEB11_P2-17-33.PNG"/>
 <img src = "log_imgs/compTasksFEB11_P3-33-49.PNG"/>
-<img src = "log_imgs/compTasksFEB11_P4-49-54.PNG"/>
+<img src = "log_imgs/compTasksFEB11_P4-49-60.PNG"/>
 
 <br>Table View of in progress tasks on project board<br><br>
-<img src = "log_imgs/inProgTasksFEB11_P1-63-79.PNG"/>
-<img src = "log_imgs/inProgTasksFEB11_P2-79-82.PNG"/>
+<img src = "log_imgs/inProgTasksFEB11_P1-67-83.PNG"/>
+<img src = "log_imgs/inProgTasksFEB11_P2-83-86.PNG"/>
 
 <br>Table View of in progress TESTING tasks on project board<br><br>
 <img src = "log_imgs/inProgTESTING_FEB11.PNG"/>
