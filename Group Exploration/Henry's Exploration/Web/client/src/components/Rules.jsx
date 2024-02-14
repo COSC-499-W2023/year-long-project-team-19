@@ -90,6 +90,17 @@ const Rules = () => {
               <section key={index} className="rule-section">
                 <h2>{title}</h2>
                 <p>{contexts[index]}</p>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    margin: "10px",
+                  }}
+                >
+                  <Button variant="primary">
+                    Edit{" "}
+                  </Button>
+                </div>
               </section>
             ))}
           </>
