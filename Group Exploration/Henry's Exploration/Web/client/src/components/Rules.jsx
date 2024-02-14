@@ -6,6 +6,7 @@ import AddRuleModal from "./modals/AddRuleModal";
 import Button from 'react-bootstrap/Button';
 
 const Rules = () => {
+  const [reload, setReload] = React.useState(false);
   const [titles, setTitles] = React.useState([]);
   const [contexts, setContexts] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
@@ -43,7 +44,7 @@ const Rules = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [reload]);
 
   const handleSaveChanges = async () => {
     try {
@@ -55,6 +56,7 @@ const Rules = () => {
           context: ruleInfo.context
         }
       );
+      setReload(!reload);
       setShow(false);
     } catch (error) {
       console.log(error);
