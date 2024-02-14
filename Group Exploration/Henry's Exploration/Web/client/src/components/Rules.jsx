@@ -94,7 +94,13 @@ const Rules = () => {
         )}
       </div>
 
-      
+      <AddRuleModal
+        show={show}
+        handleClose={handleClose}
+        handleSaveChanges={handleSaveChanges}
+        setRuleInfo={setRuleInfo}
+        ruleInfo={ruleInfo}
+      />
     </>
   );
 };
