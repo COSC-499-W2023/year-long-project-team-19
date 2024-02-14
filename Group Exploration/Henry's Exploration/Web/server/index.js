@@ -25,8 +25,9 @@ app.use('/api/user', userRouter);
 app.use('/api/rules', rulesRouter);
 app.use('/api/cards', cardsRouter);
 
-const server = app.listen(process.env.PORT, () => {
+// you need to comment the code below (app.listen) to run the test
+app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
 });
 
-module.exports = {app, server};
+module.exports = app;

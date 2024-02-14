@@ -1,5 +1,7 @@
 const request = require('supertest');
-const { app, server } = require('../index'); 
+// const { app, server } = require('../index');
+const app = require('../index'); 
+// const server = require('../index').listen(3000);
 const mongoose = require('mongoose');
 const Cards = require('../models/Cards');
 
@@ -73,15 +75,4 @@ describe('Delete Card', () => {
     const res2 = await request(app).delete(`/api/cards/deleteCard`).send({ name: 'rambo' });
     expect(res2.status).toBe(200);
   });
-});
-
-afterAll(done => {
-  // Closing the DB connection allows Jest to exit successfully.
-  mongoose.connection.close();
-  if (server && server.close) {
-    server.close(done);
-  } else {
-    done();
-  }
-  done();
 });
