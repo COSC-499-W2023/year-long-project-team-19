@@ -42,7 +42,18 @@ const addRules = async (req, res) => {
   }
 
   try {
-    const newRule = new Rules({order, context, title});
+    let newOrder = order;
+    let rulesToUpdate = await Rules.find({ order: { $gte: order } }).sort({ order: -1 }); 
+
+    // if rule's order already exists, increment the order of the existing rules
+    if (rulesToUpdate.length > 0) {
+      rulesToUpdate.forEach(async (rule) => {
+        rule.order = (parseInt(rule.order) + 1);
+        await rule.save();
+      });
+    }
+
+    const newRule = new Rules({ order: newOrder, context, title });
     await newRule.save();
     
     return res.status(200).json({ message: 'Rule added', rules: newRule });
