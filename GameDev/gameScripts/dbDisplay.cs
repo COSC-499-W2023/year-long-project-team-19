@@ -149,6 +149,7 @@ public class dbDisplay : MonoBehaviour
                 return;
             }
             isSummoned = true;
+            turnScript.totalSummons++;
             Debug.Log(cardName + " Summoned sucess | Cost: " + this.cost + " | Current zone: " + currentZone + " | play zone: " + playZone + " | Is summoned? " + isSummoned);
             //disable script component when summoned
             GetComponent<dragScript>().enabled = false;
@@ -289,6 +290,7 @@ public class dbDisplay : MonoBehaviour
         //trying to get the border of the card drwan to change colour to match the card's colour int
         Color border = renderCardColour(colour);//get what colour the border should be
         Image.GetComponent<Image>().color = border; //then render the correct colour
+
 
     }
     private void cloneDraw()
