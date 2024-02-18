@@ -241,7 +241,7 @@
 <h2> Among these tasks, which have you completed/in progress in the last week? </h2>
 
 <h3>Completed: </h3> 
-<p>Matching the cost of cards are fully completed. </p> 
+<p>Matching the cost of cards are fully completed. </p>
 
 <h3>In Progress:</h3>
 <p>There is a bug where cards played are treated as they aren't and this prevents cards from attacking players so that is a bug we need to fix. Next week we're trying to fix bugs that prevent the live build from working and testing the game.</p>
@@ -263,7 +263,7 @@
 <h2> Among these tasks, which have you completed/in progress in the last week? </h2>
 
 <h3>Completed: </h3> 
-<p>All features worked on are complete. </p> 
+<p>All features worked on are complete. </p>
 
 <h3>In Progress:</h3>
 <p>This week and next we should be moving towards working on the multiplayer.</p>
@@ -286,7 +286,7 @@
 <h2> Among these tasks, which have you completed/in progress in the last week? </h2>
 
 <h3>Completed: </h3> 
-<p>All features worked on are completed.</p> 
+<p>All features worked on are completed.</p>
 
 <h3>In Progress:</h3>
 <p>Next week we should be improving our game further by focusing on heuristic comments. We also should be focusing more on the server issues to round out our mvp.</p>
@@ -313,3 +313,32 @@
 
 <h3>In Progress:</h3>
 <p>Depending on multiplayer development the next development cycle will depend. But we are working on finishing the multiplayer and focusing on the card effects. We might also streamline more UI.</p>
+
+<h1>Date Range: 12-02-2024 to 18-02-2024</h1>
+<img src ="https://github.com/COSC-499-W2023/year-long-project-team-19/blob/master/docs/weekly%20logs/log_imgs/Adrian_t2_wk6.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>
+  This week I did bug fixing, streamlining features, and workshopping new features.
+</p>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <lI>
+"Game Scaling Issue": For a while our game had a scaling issue where it would scale up when we built and ran it. I fixed this issue by working on the scene and changing several options. Mainly it was figuring out the fit to size toggles. 
+  </lI>
+<li>
+"UI Recommendations: Glowing rings and arrows": After discussing with Brenner we both agreed that the arrow that shows players where to attack should only appear after players played a card. I added this change. I also added a few in game reminders to tell players what can and cant be played.
+</li>
+<li>
+"Action points workshopping": During our team meeting we discussed the possibility of adding an action point system to limit players to certain game actions per turn. I thought this was a good idea and workshopped this potential design direction. I workshopped this change and is now a pending change, the plan is to merge it into the game development branch once everyone was on board with this design change.  At the end of the day its a prototype or proof of concept, we will see if this feature will be cut.
+</li>
+</ol>
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed: </h3> 
+<p>All the changes made this week on my end were completed. Its just a matter of discussing whether or not the changes will be viable in the grand scheme of things.</p>
+
+<h3>In Progress:</h3>
+<p>For the break and the week after there were talks of working on card design and how we're going to implement sprites for the cards. We're also moving towards shifting things to work with the server. I'm also thinking of reworking some cards to fit into our scope, we did realize some of the game parts seemed a little too difficult and scope creep did seem to play a part there.</p>
