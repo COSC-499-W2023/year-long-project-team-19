@@ -19,7 +19,7 @@ All tasks were completed this week.
 
 <h1>Date Range: 8-10-2023 to 15-10-2023</h1>
 
-<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/development/docs/weekly%20logs/log_imgs/Leo_log_Week6.png"/>
+`<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/development/docs/weekly%20logs/log_imgs/Leo_log_Week6.png"/>`
 
 ## Which features were yours in the project plan for this milestone?
 
@@ -41,7 +41,7 @@ In progress: I am still working on setting up a Unity project in github.
 
 <h1>Date Range: 15-10-2023 to 22-10-2023</h1>
 
-<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/development/docs/weekly%20logs/log_imgs/Leo_log_Week7.png"/>
+`<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/development/docs/weekly%20logs/log_imgs/Leo_log_Week7.png"/>`
 
 ## Which features were yours in the project plan for this milestone?
 
@@ -63,7 +63,7 @@ In Progress: "Followed tutorials on getting started with Unity, exploring basic 
 
 # Date Range: 29-10-2023 to 05-11-2023
 
-<img src = "log_imgs/Leo_log_Week9.png?raw=true"/>
+`<img src = "log_imgs/Leo_log_Week9.png?raw=true"/>`
 
 ## Which features were yours in the project plan for this milestone?
 
@@ -90,7 +90,7 @@ Focused mostly on the presentation for this week, but I am still working on lear
 
 # Date Range: 05-11-2023 to 12-11-2023
 
-<img src = "log_imgs/Leo_log_Week9.png?raw=true"/>
+`<img src = "log_imgs/Leo_log_Week9.png?raw=true"/>`
 
 ## Which features were yours in the project plan for this milestone?
 
@@ -114,7 +114,7 @@ Still working on writing tests for the login system to check password and user f
 
 # Date Range: 27-11-2023 to 3-12-2023
 
-<img src = "log_imgs/Leo_log_W13.png?raw=true"/>
+`<img src = "log_imgs/Leo_log_W13.png?raw=true"/>`
 
 ## Which features were yours in the project plan for this milestone?
 
@@ -131,30 +131,29 @@ Working on on password reset system and on adding a settings menu
 
 ### Completed
 
-Added an audio settings menu with volume control and toggles for volume and sound effects. I added game music that can be controlled in audio settings. As well as the UI for Video settings with a brightness slider that will be implemented to change brightness level in game. 
+Added an audio settings menu with volume control and toggles for volume and sound effects. I added game music that can be controlled in audio settings. As well as the UI for Video settings with a brightness slider that will be implemented to change brightness level in game.
 
 Added two password reset interfaces. One for guest which has an input field for an email and one for logged in user which just takes their email and sends it to a php script which checks that the email is found and then creates a reset token which is saved in the database. The end of the script sends an email to the user with their reset token.
 
-Ive also added the UI for the user to type in their reset token and their new password. But I still need to finish the script to check the input token and update the password.  
+Ive also added the UI for the user to type in their reset token and their new password. But I still need to finish the script to check the input token and update the password.
 
 ### In progress
 
-Working on settings to user database settings so that they are saved when the user logs in. 
+Working on settings to user database settings so that they are saved when the user logs in.
 
-<img src = "log_imgs/leo_log_img5.png?raw=true"/>
+`<img src = "log_imgs/leo_log_img5.png?raw=true"/>`
 
-<img src = "log_imgs/leo_log_img1.png?raw=true"/>
+`<img src = "log_imgs/leo_log_img1.png?raw=true"/>`
 
-<img src = "log_imgs/leo_log_img2.png?raw=true"/>
+`<img src = "log_imgs/leo_log_img2.png?raw=true"/>`
 
-<img src = "log_imgs/leo_log_img3.png?raw=true"/>
+`<img src = "log_imgs/leo_log_img3.png?raw=true"/>`
 
-<img src = "log_imgs/leo_log_img4.png?raw=true"/>
-
+`<img src = "log_imgs/leo_log_img4.png?raw=true"/>`
 
 # Date Range: 15-01-2024 to 21-01-2024
 
-<img src = "log_imgs/Leo_log_T2W2.png?raw=true"/>
+`<img src = "log_imgs/Leo_log_T2W2.png?raw=true"/>`
 
 ## Which features were yours in the project plan for this milestone?
 
@@ -172,11 +171,11 @@ Added feature which lets the player select one of four decks of cards based on i
 
 ### In progress
 
-The script is hardcoded for each group of cards as our card database is not yet setup. The goal is to change it to pull the cards from the database. I a also am still working on writing automated tests for this feature. 
+The script is hardcoded for each group of cards as our card database is not yet setup. The goal is to change it to pull the cards from the database. I a also am still working on writing automated tests for this feature.
 
 # Date Range: 22-01-2024 to 28-01-2024 - W3
 
-<img src = "log_imgs/Leo_log_T2W3.png?raw=true"/>
+`<img src = "log_imgs/Leo_log_T2W3.png?raw=true"/>`
 
 ## Which features were yours in the project plan for this milestone?
 
@@ -195,11 +194,11 @@ Merged the deck select scene with the latest game updates using Brenner's update
 
 ### In progress
 
-I am working on updating the reset password feature so that we can test sending a reset token and update the account password on the database. 
+I am working on updating the reset password feature so that we can test sending a reset token and update the account password on the database.
 
 # Date Range: 28-01-2023 to 04-03-2023 - W4
 
-<img src = "log_imgs/Leo_log_T2W4.png?raw=true"/>
+`<img src = "log_imgs/Leo_log_T2W4.png?raw=true"/>`
 
 ## Which tasks from the project board are associated with these features?
 
@@ -215,21 +214,19 @@ I am working on updating the reset password feature so that we can test sending 
 
 I worked on on the reset password reset system at the start of the week and was able to send and retrieve a hashed token to the database but struggled for quite a while tyring to get the mailer function to work. I moved on as this is a feature we had planned for the next peer testing session.
 
-There was a bug in the login system which didn't show the users info right away after logging in. I added a confirm button which lets the user know that they have logged in successfully and fixes the login bug. I did the same for the create account function, added error message aswell and fixed some of the input errors. 
+There was a bug in the login system which didn't show the users info right away after logging in. I added a confirm button which lets the user know that they have logged in successfully and fixes the login bug. I did the same for the create account function, added error message aswell and fixed some of the input errors.
 
-<img src = "log_imgs/Leo_T2W4_s2.png?raw=true"/>
+`<img src = "log_imgs/Leo_T2W4_s2.png?raw=true"/>`
 
 There also had a bug with displaying the users stats which was quite tought to firgure out. I added descriptions of the card decks on the deck select page.
 
-<img src = "log_imgs/Leo_T2W4_s1.png?raw=true"/>
+`<img src = "log_imgs/Leo_T2W4_s1.png?raw=true"/>`
 
-Worked on the Heureustic evaluation task list and questionnaire. While going through all the tasks, there ended being a few bugs that we had to fix. There was some problems with the audio settings, login input, some text coloring, highlighting of the cards and a few issues with merging everyone features together. 
-
-When we built the final version of the game on Wenesday night we realized that we wern't able to get a database connection from the web browser like we did in Unity. It took quite a a long time trying to figure this out, luckily Brenner found a solution later that night.  
+Worked on the Heureustic evaluation task list and questionnaire. While going through all the tasks, there ended being a few bugs that we had to fix. There was some problems with the audio settings, login input, some text coloring, highlighting of the cards and a few issues with merging everyone features together.
 
 # Date Range: 11-02-2023 to 18-02-2023 - W6
 
-<img src = "log_imgs/Leo_log_T2W6.png?raw=true"/>
+`<img src = "log_imgs/Leo_log_T2W6.png?raw=true"/>`
 
 ## Which tasks from the project board are associated with these features?
 
@@ -240,12 +237,12 @@ When we built the final version of the game on Wenesday night we realized that w
 
 ## Among these tasks, which have you completed/in progress in the last week?
 
-In the last week Ive added some updates to the login system based on feedback from the peer testing to make it more straightforward for the user. I changed the required password lenght to 8 characters and added a message and red text when the user the account creation or login fails so that the user doesn't have to back to main menu everytime. 
+In the last week Ive added some updates to the login system based on feedback from the peer testing to make it more straightforward for the user. I changed the required password lenght to 8 characters and added a message and red text when the user the account creation or login fails so that the user doesn't have to back to main menu everytime.
 
-<img src = "log_imgs/Leo_T2W6_s2.png?raw=true"/>
+`<img src = "log_imgs/Leo_T2W6_s2.png?raw=true"/>`
 
-<img src = "log_imgs/Leo_T2W6_s1.png?raw=true"/>
+`<img src = "log_imgs/Leo_T2W6_s1.png?raw=true"/>`
 
-In progress : Our database connection uses a WWW request, which causes unity to output a warning saying "WWW is obselete, use UnitywebRequest". We believe some of our server issues have come from this. I have been looking into fixing this issue and replacing our current script with UnityWebRequest, however I have had some troubles getting that to work and still need to do some more research on this issue. 
+In progress : Our database connection uses a WWW request, which causes unity to output a warning saying "WWW is obselete, use UnitywebRequest". We believe some of our server issues have come from this. I have been looking into fixing this issue and replacing our current script with UnityWebRequest, however I have had some troubles getting that to work and still need to do some more research on this issue.
 
-I also am still working on getting the password reset feature to be fully operational and test it an email output. Getting the mailer class working anf fixing the token input script has also caused me some issues, so I will try to get that working through the reading break. 
+I also am still working on getting the password reset feature to be fully operational and test it an email output. Getting the mailer class working anf fixing the token input script has also caused me some issues, so I will try to get that working through the reading break.
