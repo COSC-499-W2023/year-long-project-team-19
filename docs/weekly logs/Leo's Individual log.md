@@ -19,7 +19,7 @@ All tasks were completed this week.
 
 <h1>Date Range: 8-10-2023 to 15-10-2023</h1>
 
-`<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/development/docs/weekly%20logs/log_imgs/Leo_log_Week6.png"/>`
+<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/development/docs/weekly%20logs/log_imgs/Leo_log_Week6.png"/>
 
 ## Which features were yours in the project plan for this milestone?
 
@@ -41,7 +41,7 @@ In progress: I am still working on setting up a Unity project in github.
 
 <h1>Date Range: 15-10-2023 to 22-10-2023</h1>
 
-`<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/development/docs/weekly%20logs/log_imgs/Leo_log_Week7.png"/>`
+<img src = "https://github.com/COSC-499-W2023/year-long-project-team-19/blob/development/docs/weekly%20logs/log_imgs/Leo_log_Week7.png"/>
 
 ## Which features were yours in the project plan for this milestone?
 
@@ -63,7 +63,7 @@ In Progress: "Followed tutorials on getting started with Unity, exploring basic 
 
 # Date Range: 29-10-2023 to 05-11-2023
 
-`<img src = "log_imgs/Leo_log_Week9.png?raw=true"/>`
+<img src = "log_imgs/Leo_log_Week9.png?raw=true"/>
 
 ## Which features were yours in the project plan for this milestone?
 
@@ -90,7 +90,7 @@ Focused mostly on the presentation for this week, but I am still working on lear
 
 # Date Range: 05-11-2023 to 12-11-2023
 
-`<img src = "log_imgs/Leo_log_Week9.png?raw=true"/>`
+<img src = "log_imgs/Leo_log_Week9.png?raw=true"/>
 
 ## Which features were yours in the project plan for this milestone?
 
@@ -114,7 +114,7 @@ Still working on writing tests for the login system to check password and user f
 
 # Date Range: 27-11-2023 to 3-12-2023
 
-`<img src = "log_imgs/Leo_log_W13.png?raw=true"/>`
+<img src = "log_imgs/Leo_log_W13.png?raw=true"/>
 
 ## Which features were yours in the project plan for this milestone?
 
@@ -141,19 +141,19 @@ Ive also added the UI for the user to type in their reset token and their new pa
 
 Working on settings to user database settings so that they are saved when the user logs in.
 
-`<img src = "log_imgs/leo_log_img5.png?raw=true"/>`
+<img src = "log_imgs/leo_log_img5.png?raw=true"/>
 
-`<img src = "log_imgs/leo_log_img1.png?raw=true"/>`
+<img src = "log_imgs/leo_log_img1.png?raw=true"/>
 
-`<img src = "log_imgs/leo_log_img2.png?raw=true"/>`
+<img src = "log_imgs/leo_log_img2.png?raw=true"/>
 
-`<img src = "log_imgs/leo_log_img3.png?raw=true"/>`
+<img src = "log_imgs/leo_log_img3.png?raw=true"/>
 
-`<img src = "log_imgs/leo_log_img4.png?raw=true"/>`
+<img src = "log_imgs/leo_log_img4.png?raw=true"/>
 
 # Date Range: 15-01-2024 to 21-01-2024
 
-`<img src = "log_imgs/Leo_log_T2W2.png?raw=true"/>`
+<img src = "log_imgs/Leo_log_T2W2.png?raw=true"/>
 
 ## Which features were yours in the project plan for this milestone?
 
@@ -175,7 +175,7 @@ The script is hardcoded for each group of cards as our card database is not yet 
 
 # Date Range: 22-01-2024 to 28-01-2024 - W3
 
-`<img src = "log_imgs/Leo_log_T2W3.png?raw=true"/>`
+<img src = "log_imgs/Leo_log_T2W3.png?raw=true"/>
 
 ## Which features were yours in the project plan for this milestone?
 
@@ -198,7 +198,7 @@ I am working on updating the reset password feature so that we can test sending 
 
 # Date Range: 28-01-2023 to 04-03-2023 - W4
 
-`<img src = "log_imgs/Leo_log_T2W4.png?raw=true"/>`
+<img src = "log_imgs/Leo_log_T2W4.png?raw=true"/>
 
 ## Which tasks from the project board are associated with these features?
 
@@ -216,17 +216,17 @@ I worked on on the reset password reset system at the start of the week and was 
 
 There was a bug in the login system which didn't show the users info right away after logging in. I added a confirm button which lets the user know that they have logged in successfully and fixes the login bug. I did the same for the create account function, added error message aswell and fixed some of the input errors.
 
-`<img src = "log_imgs/Leo_T2W4_s2.png?raw=true"/>`
+<img src = "log_imgs/Leo_T2W4_s2.png?raw=true"/>
 
 There also had a bug with displaying the users stats which was quite tought to firgure out. I added descriptions of the card decks on the deck select page.
 
-`<img src = "log_imgs/Leo_T2W4_s1.png?raw=true"/>`
+<img src = "log_imgs/Leo_T2W4_s1.png?raw=true"/>
 
 Worked on the Heureustic evaluation task list and questionnaire. While going through all the tasks, there ended being a few bugs that we had to fix. There was some problems with the audio settings, login input, some text coloring, highlighting of the cards and a few issues with merging everyone features together.
 
 # Date Range: 11-02-2023 to 18-02-2023 - W6
 
-`<img src = "log_imgs/Leo_log_T2W6.png?raw=true"/>`
+<img src = "log_imgs/Leo_log_T2W6.png?raw=true"/>
 
 ## Which tasks from the project board are associated with these features?
 
@@ -239,9 +239,9 @@ Worked on the Heureustic evaluation task list and questionnaire. While going thr
 
 In the last week Ive added some updates to the login system based on feedback from the peer testing to make it more straightforward for the user. I changed the required password lenght to 8 characters and added a message and red text when the user the account creation or login fails so that the user doesn't have to back to main menu everytime.
 
-`<img src = "log_imgs/Leo_T2W6_s2.png?raw=true"/>`
+<img src = "log_imgs/Leo_T2W6_s2.png?raw=true"/>
 
-`<img src = "log_imgs/Leo_T2W6_s1.png?raw=true"/>`
+<img src = "log_imgs/Leo_T2W6_s1.png?raw=true"/>
 
 In progress : Our database connection uses a WWW request, which causes unity to output a warning saying "WWW is obselete, use UnitywebRequest". We believe some of our server issues have come from this. I have been looking into fixing this issue and replacing our current script with UnityWebRequest, however I have had some troubles getting that to work and still need to do some more research on this issue.
 
