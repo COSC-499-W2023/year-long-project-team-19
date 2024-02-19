@@ -226,3 +226,26 @@ There also had a bug with displaying the users stats which was quite tought to f
 Worked on the Heureustic evaluation task list and questionnaire. While going through all the tasks, there ended being a few bugs that we had to fix. There was some problems with the audio settings, login input, some text coloring, highlighting of the cards and a few issues with merging everyone features together. 
 
 When we built the final version of the game on Wenesday night we realized that we wern't able to get a database connection from the web browser like we did in Unity. It took quite a a long time trying to figure this out, luckily Brenner found a solution later that night.  
+
+# Date Range: 11-02-2023 to 18-02-2023 - W6
+
+<img src = "log_imgs/Leo_log_T2W6.png?raw=true"/>
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>Login System</li>
+  <li>Password reset</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+In the last week Ive added some updates to the login system based on feedback from the peer testing to make it more straightforward for the user. I changed the required password lenght to 8 characters and added a message and red text when the user the account creation or login fails so that the user doesn't have to back to main menu everytime. 
+
+<img src = "log_imgs/Leo_T2W6_s2.png?raw=true"/>
+
+<img src = "log_imgs/Leo_T2W6_s1.png?raw=true"/>
+
+In progress : Our database connection uses a WWW request, which causes unity to output a warning saying "WWW is obselete, use UnitywebRequest". We believe some of our server issues have come from this. I have been looking into fixing this issue and replacing our current script with UnityWebRequest, however I have had some troubles getting that to work and still need to do some more research on this issue. 
+
+I also am still working on getting the password reset feature to be fully operational and test it an email output. Getting the mailer class working anf fixing the token input script has also caused me some issues, so I will try to get that working through the reading break. 
