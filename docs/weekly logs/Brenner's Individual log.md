@@ -648,3 +648,50 @@ Project (4) in repo (newest branch I've been working on): https://github.com/Pre
 
 #### I made a GIF of the server starting the game in action: 
 <img src= "log_imgs/unityTutorialGIFFEB11.gif">
+
+<!--====================================================================================================================               TERM 2 ************ W6-->
+# TERM 2 - Date Range: 11-02-2023 to 18-02-2023 - W6
+
+<img src = "log_imgs/brenner's_logT2W6.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Get the multiplayer to deal cards properly (the deck create feature worked lasy week, but the deal wasn't working yet), and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"matchmaking draft"</li>
+  <li>"Game Mirroring"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"T2 W6 Team Log"</li>
+  <li>"T2 W6 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"T2 W6 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"matchmaking draft: So I needed to get the draw command, which is what actually deals each player their cards, working properly over the server and client this week. I made solid progress, but it was
+    surprsingly difficult to get functioning, due to how complex the amount of scripts and game objects has become. Currently the host will deal the cards to the right places properly, and the client will spawn the correct matching cards on its end, but the client isn't spawning the cards in the right places quite yet. Something is up with the authority of each card, but I haven't been able to figure it out yet (its weird since the host's client uses the exact same logic and works fine, while the other client's inspector knows which cards it has ownership over, yet still the logic seems to fail anyways. Should be able to get into it in the next few days with help from the team, especially since I've narrowed it down a bit. I added Images to show each build's view to the bottom of the page."</li>
+  <li>"Exploration: Brenner: I still had to do a bit of research while troubleshooting the client to server communication and authority."</li>
+  <li>"T2 W6 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+So this was the week before reading break, and life got a bit busy since my other classes had a couple of deadlines to get in before the break. I also went home early (as in travelled back home to Trail) on Friday, because of a family emergency, so I wasn't able to get much done on the weekend. That being said I was still able to clock in around 15 hours trying to understand what I needed to do in order to get the deal feature working right (~5 during the week, ~10 on Sunday). I think I should be able to get it fully functioning sometime in the next couple days, and I don't want to be working on it anytime past Wednesday, since the rest of the group really needs it to be done before reading break is over. 
+
+You can see the repo branch I used to fix the multiplayer at the link below, and the build that we used for the peer testing is found on the designVideoDemo branch of the same repo.
+
+Project (4) in repo (newest branch I've been working on): https://github.com/Prelude14/499UnityGameT19/tree/b010c44db88ae12dd2bb38ca7d6b8cde3be8bd76/My%20project%20(4)
+
+#### Here is the screenshots of the server dealing the cards in action (Host View is on the top, Client after ***Only deals 1 card to make debugging easier): 
+<img src= "log_imgs/serverDealWorking.PNG">
+<img src= "log_imgs/serverDealWorking2.PNG">
