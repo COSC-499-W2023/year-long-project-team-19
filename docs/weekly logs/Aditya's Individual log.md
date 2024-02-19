@@ -194,3 +194,14 @@ I haven't been able to work on the game that much this week as I have midterms a
 
 ## Among these tasks, which have you completed/in progress in the last week?
 From next week onwards, now that the multiplayer using Mirror seems to be functioning I will get back on my task to create a combined deck after both the players have selected a colored deck and implement it in the game. I will also be writing some automated testing for the features we have recently added and updated.
+
+<h1>Date Range: 12-02-2024 to 18-02-2024</h1>
+
+<img src = "log_imgs/Aditya_T2_Week6.png?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+This week I added the zoom in on card functionality. Currently the functionality has been partially implemented and I am trying to implement it with its full functionality as soon as possible. I worked on the team log and individual logs. I did some code review as well. 
+
+## Among these tasks, which have you completed/in progress in the last week?
+I am still writing automated tests code for some features to check if they have been implemented and are functioning successfully. That is under progress and I am debugging the card zoom feature as we speak.
+
