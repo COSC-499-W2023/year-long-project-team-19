@@ -10,7 +10,6 @@ const EditRuleModal = ({ show, handleClose, handleEditChanges, ruleInfo, setRule
       ...prev,
       [name]: value,
     }));
-    // console.log(ruleInfo);
   };
 
   return (
@@ -20,6 +19,16 @@ const EditRuleModal = ({ show, handleClose, handleEditChanges, ruleInfo, setRule
       </Modal.Header>
       <Modal.Body>
         <Form>
+        <Form.Group controlId="editRuleOrder">
+            <Form.Label>Order</Form.Label>
+            <Form.Control
+              type="text"
+              name="order"
+              value={ruleInfo.order}
+              onChange={handleChange}
+              placeholder="Enter order"
+            />
+          </Form.Group>
           <Form.Group controlId="editRuleTitle">
             <Form.Label>Title</Form.Label>
             <Form.Control
