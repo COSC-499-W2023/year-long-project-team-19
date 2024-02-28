@@ -57,7 +57,17 @@ const Rules = () => {
     context: "",
   });
 
-  
+  const handleEditChanges = async () => {
+    try {
+      console.log(ruleInfoEdit);
+      //api call here
+      setReload(!reload);
+      setShowEdit(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
