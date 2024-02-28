@@ -38,7 +38,7 @@ const Rules = () => {
       title: "",
       context: "",
     });
-    setShow(false);
+    setShowEdit(false);
   };
   const handleShowEdit = () => setShowEdit(true);
   const [ruleInfoEdit, setRuleInfoEdit] = useState({
