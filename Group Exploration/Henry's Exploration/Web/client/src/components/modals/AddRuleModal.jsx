@@ -3,7 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-const AddRuleModal = ({ show, handleClose, handleSaveChanges, setRuleInfo, ruleInfo }) => {
+const AddRuleModal = ({ show, handleClose, handleSaveChanges, setRuleInfo, ruleInfo, maxOrder }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setRuleInfo((prevInfo) => ({
@@ -22,11 +22,11 @@ const AddRuleModal = ({ show, handleClose, handleSaveChanges, setRuleInfo, ruleI
           <Form.Group controlId="formRuleOrder">
             <Form.Label>Order</Form.Label>
             <Form.Control
-              type="number"
               placeholder="Enter order"
               name="order"
-              value={ruleInfo.order}
-              onChange={handleChange}
+              value={maxOrder}
+              style={{ backgroundColor: '#f5f5f5', cursor: 'not-allowed' }}
+              readOnly
             />
           </Form.Group>
 
