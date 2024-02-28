@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 
 const Rules = () => {
   const [reload, setReload] = React.useState(false);
+  const [id, setId] = React.useState([]);
   const [titles, setTitles] = React.useState([]);
   const [contexts, setContexts] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
@@ -40,15 +41,23 @@ const Rules = () => {
     });
     setShowEdit(false);
   };
-  const handleShowEdit = () => setShowEdit(true);
+  const handleShowEdit = (id, title, context) => {
+    setRuleInfoEdit({
+      _id: id,
+      title,
+      context,
+    });
+    setShowEdit(true);
+  };
+  
   const [ruleInfoEdit, setRuleInfoEdit] = useState({
     _id: "",
     order: "",
     title: "",
     context: "",
   });
-  
 
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -58,6 +67,7 @@ const Rules = () => {
         );
         const { rules } = result.data;
         setTitles(rules.map((item) => item.title));
+        setId(rules.map((item) => item._id));
         setContexts(rules.map((item) => item.context));
         setLoading(false);
       } catch (error) {
@@ -118,9 +128,9 @@ const Rules = () => {
                     margin: "10px",
                   }}
                 >
-                  <Button variant="primary" onClick={handleShowEdit}>
-                    Edit{" "}
-                  </Button>
+                <Button variant="primary" onClick={() => handleShowEdit(id[index], title, contexts[index])}>
+                  Edit
+                </Button>
                 </div>
               </section>
             ))}
