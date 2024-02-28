@@ -13,6 +13,7 @@ const Rules = () => {
   const [contexts, setContexts] = React.useState([]);
   const [order, setOrder] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
+  const [maxOrder, setMaxOrder] = React.useState(0);
 
   //add rule modal
   const [show, setShow] = useState(false);
@@ -61,7 +62,7 @@ const Rules = () => {
 
   const handleEditChanges = async () => {
     try {
-      console.log(ruleInfoEdit); //order not showing
+      
       //api call here
       setReload(!reload);
       setShowEdit(false);
@@ -82,6 +83,7 @@ const Rules = () => {
         setId(rules.map((item) => item._id));
         setContexts(rules.map((item) => item.context));
         setOrder(rules.map((item) => item.order));
+        setMaxOrder(Math.max(...rules.map((item) => item.order)));
         setLoading(false);
       } catch (error) {
         console.log(error);
@@ -153,6 +155,7 @@ const Rules = () => {
 
       <AddRuleModal
         show={show}
+        maxOrder={maxOrder+1}
         handleClose={handleClose}
         handleSaveChanges={handleSaveChanges}
         setRuleInfo={setRuleInfo}
