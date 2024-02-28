@@ -62,8 +62,15 @@ const Rules = () => {
 
   const handleEditChanges = async () => {
     try {
-      
-      //api call here
+      await axios.post(
+        "https://nodeserver-two.vercel.app/api/rules/editRules",
+        {
+          _id: ruleInfoEdit._id,
+          order: ruleInfoEdit.order,
+          title: ruleInfoEdit.title,
+          context: ruleInfoEdit.context,
+        }
+      );
       setReload(!reload);
       setShowEdit(false);
     } catch (error) {
