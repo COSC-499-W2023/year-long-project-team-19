@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import axios from "axios";
 import { isLoggedIn } from "../auth.js";
 import AddRuleModal from "./modals/AddRuleModal";
+import EditRuleModal from "./modals/EditRuleModal";
 import Button from 'react-bootstrap/Button';
 
 const Rules = () => {
@@ -27,6 +28,26 @@ const Rules = () => {
     title: "",
     context: "",
   });
+
+  //edit rule modal
+  const [showEdit, setShowEdit] = useState(false);
+  const handleCloseEdit = () => {
+    setRuleInfoEdit({
+      _id: "",
+      order: "",
+      title: "",
+      context: "",
+    });
+    setShow(false);
+  };
+  const handleShowEdit = () => setShowEdit(true);
+  const [ruleInfoEdit, setRuleInfoEdit] = useState({
+    _id: "",
+    order: "",
+    title: "",
+    context: "",
+  });
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -97,7 +118,7 @@ const Rules = () => {
                     margin: "10px",
                   }}
                 >
-                  <Button variant="primary">
+                  <Button variant="primary" onClick={handleShowEdit}>
                     Edit{" "}
                   </Button>
                 </div>
@@ -113,6 +134,14 @@ const Rules = () => {
         handleSaveChanges={handleSaveChanges}
         setRuleInfo={setRuleInfo}
         ruleInfo={ruleInfo}
+      />
+
+      <EditRuleModal
+        show={showEdit}
+        handleClose={handleCloseEdit}
+        handleEditChanges={handleEditChanges}
+        setRuleInfo={setRuleInfoEdit}
+        ruleInfo={ruleInfoEdit}
       />
     </>
   );
