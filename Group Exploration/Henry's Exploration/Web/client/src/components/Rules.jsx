@@ -11,6 +11,7 @@ const Rules = () => {
   const [id, setId] = React.useState([]);
   const [titles, setTitles] = React.useState([]);
   const [contexts, setContexts] = React.useState([]);
+  const [order, setOrder] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
 
   //add rule modal
@@ -41,11 +42,12 @@ const Rules = () => {
     });
     setShowEdit(false);
   };
-  const handleShowEdit = (id, title, context) => {
+  const handleShowEdit = (id, title, context, order) => {
     setRuleInfoEdit({
       _id: id,
       title,
       context,
+      order,
     });
     setShowEdit(true);
   };
@@ -59,7 +61,7 @@ const Rules = () => {
 
   const handleEditChanges = async () => {
     try {
-      console.log(ruleInfoEdit);
+      console.log(ruleInfoEdit); //order not showing
       //api call here
       setReload(!reload);
       setShowEdit(false);
@@ -79,6 +81,7 @@ const Rules = () => {
         setTitles(rules.map((item) => item.title));
         setId(rules.map((item) => item._id));
         setContexts(rules.map((item) => item.context));
+        setOrder(rules.map((item) => item.order));
         setLoading(false);
       } catch (error) {
         console.log(error);
@@ -138,7 +141,7 @@ const Rules = () => {
                     margin: "10px",
                   }}
                 >
-                <Button variant="primary" onClick={() => handleShowEdit(id[index], title, contexts[index])}>
+                <Button variant="primary" onClick={() => handleShowEdit(id[index], title, contexts[index], order[index])}>
                   Edit
                 </Button>
                 </div>
