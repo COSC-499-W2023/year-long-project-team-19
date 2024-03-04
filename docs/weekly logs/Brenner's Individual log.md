@@ -738,7 +738,7 @@ So since I was still having issues with the multiplayer, we decided to focus on 
 
 You can see the repo branch I used to fix the multiplayer at the link below, and the build that we are going to use for the peer testing is found on the designVideoDemo branch of the same repo.
 
-Project (4) in repo (newest branch I've been working on): https://github.com/Prelude14/499UnityGameT19/tree/b010c44db88ae12dd2bb38ca7d6b8cde3be8bd76/My%20project%20(4)
+Project (4) in repo (most up to date multiplayer): https://github.com/Prelude14/499UnityGameT19/tree/c59802f0a0f35516ff2e184c441da4565c7c7e53/My%20project%20(4)
 
 #### I made a GIF of the current version of the multiplayer in action: 
 <img src= "log_imgs/peerTest2W8GIF.gif">
