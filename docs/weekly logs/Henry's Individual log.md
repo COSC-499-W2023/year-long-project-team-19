@@ -309,3 +309,19 @@ This week, I mostly worked on improving the UI and fix logic error in the websit
 -----
 
 This week, I only managed to complete the unit test for the card API endpoint. I also fix the bug in the admin login page where success display message shows even when the user input wrong credentials due to midterms in other courses.
+
+# Date Range: 26-02-2024 to 03-03-2024
+
+![henrylog13](log_imgs/henry_t2_log8.png)
+
+
+### Completed
+1. created the unit test for Rule API endpoint (add Rule)
+![](log_imgs/henry_test_addRule.png)
+2. Implemented UI for edit Rule
+3. Implemented API call for edit Rule when changing/saving
+4. Implemented React hook after successful API call on edit rule
+5. Pass original data to the edit modal when clicking edit button
+
+-----
+I only have a couple of features left to work on which is input validation for edit rule modal, delete rule implementation, and couple of test. I think I can finish it all before the peer testing (excluding tests)

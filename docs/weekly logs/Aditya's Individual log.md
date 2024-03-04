@@ -174,3 +174,34 @@ For this milestone I will be working on mirroring the functionality of the game 
 
 ## Among these tasks, which have you completed/in progress in the last week?
 This is the second week of the term and I am continuing to work on the tasks mentioned previously and aim to finish them by the third week so that the game is ready for peer to peer testing
+
+<h1>Date Range: 28-01-2024 to 04-02-2024</h1>
+
+<img src = "log_imgs/Aditya_T2_Week4.png?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+This week being peer to peer testing we focused on fixing the game to have a playable build. Our multiplayer is still not working as the Mirror package in unity is not user-friendly and we still are learning our way through it. I helped in resolving server communication issues for login and creating account in the game. My task of creating a shuffled deck is delayed as we first have to get the multiplayer set up on every machine.
+
+## Among these tasks, which have you completed/in progress in the last week?
+This week onwards we are focusing on setting up multiplayer and establish a server where players are able to connect and play. This week I also worked in peer to peer testing where I tested other teams' projects 
+
+<h1>Date Range: 04-02-2024 to 11-02-2024</h1>
+
+<img src = "log_imgs/Aditya_T2_Week5.png?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+I haven't been able to work on the game that much this week as I have midterms and other project deadlines due and have not been focusing on this project for the past week. Brenner fixed the multiplayer on his own which i will be looking at right now with him and understand it's functionality and how to implement it with my system and get it working. 
+
+## Among these tasks, which have you completed/in progress in the last week?
+From next week onwards, now that the multiplayer using Mirror seems to be functioning I will get back on my task to create a combined deck after both the players have selected a colored deck and implement it in the game. I will also be writing some automated testing for the features we have recently added and updated.
+
+<h1>Date Range: 12-02-2024 to 18-02-2024</h1>
+
+<img src = "log_imgs/Aditya_T2_Week6.png?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+This week I added the zoom in on card functionality. Currently the functionality has been partially implemented and I am trying to implement it with its full functionality as soon as possible. I worked on the team log and individual logs. I did some code review as well. 
+
+## Among these tasks, which have you completed/in progress in the last week?
+I am still writing automated tests code for some features to check if they have been implemented and are functioning successfully. That is under progress and I am debugging the card zoom feature as we speak.
+

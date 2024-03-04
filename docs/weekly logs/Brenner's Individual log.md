@@ -434,7 +434,7 @@ We still have that other repo open, just because its a way better way to collabo
 
 #### https://github.com/Prelude14/499UnityGameT19/tree/07c1423884475e30bf0b521064815c14a5ade605/My%20project%20(4)
 <!--====================================================================================================================               TERM 2 ************ W1-->
-# TERM 2 - Date Range: 08-01-2023 to 14-01-2023 - W1
+# TERM 2 - Date Range: 08-01-2024 to 14-01-2024 - W1
 
 <img src = "log_imgs/brenner's_logT2W1.PNG?raw=true"/>
 
@@ -481,7 +481,7 @@ We still have another repo open from the design demo at the end of the first sem
 
 #### https://github.com/Prelude14/499UnityGameT19/tree/07c1423884475e30bf0b521064815c14a5ade605/My%20project%20(4)
 <!--====================================================================================================================               TERM 2 ************ W2-->
-# TERM 2 - Date Range: 14-01-2023 to 21-01-2023 - W2
+# TERM 2 - Date Range: 14-01-2024 to 21-01-2024 - W2
 
 <img src = "log_imgs/brenner's_logT2W2.PNG?raw=true"/>
 
@@ -520,7 +520,7 @@ Trying to figure out multiplayer (how to set up a server, do we want dedicated s
 So as the peer testing #1 milestone looms closer, I really tried to get into how to set up the back end infastructure of a multiplayer system for our game. Problem is, I've never done anything quite like it before, and despite watching at least 8 hours of different tutorials and videos this week, I still don't know exactly what to do. Most videos/guides completely gloss over how exactly to set up a server and just focus on how to develop the game with the client and sever in mind, which is helpful for what we are going to be doing, but not at actually telling me what I am looking for. I think for the first deliverable, it should be fine to just run 2 builds locally having one act as a host and the other a client, since that should still illustrate exactly how the game will work in the field if we actually deploy dedicated servers, while cutting out actually setting up a game server, since that feels honeslty like its outside the scope of the course. We are going to talk to the TA and the professor about it next class though. This week I'm going to shift my focus to turning our current game's objects and system into a new version that will work with the client and server builds of the game following along to this playlist's videos (https://youtube.com/playlist?list=PLCbP9KGntfcFTL19eDZsWSkVMfXANF7-U&si=I_NVzdA6X_DBcT4V), so that we will have the two different versions of the game ot test for the milestone date. 
 
 <!--====================================================================================================================               TERM 2 ************ W3-->
-# TERM 2 - Date Range: 21-01-2023 to 28-01-2023 - W3
+# TERM 2 - Date Range: 21-01-2024 to 28-01-2024 - W3
 
 <img src = "log_imgs/brenner's_logT2W3.PNG?raw=true"/>
 
@@ -561,7 +561,185 @@ So the peer testing milestone is in 4 days, and the only thing we need still is 
 
 Project (4) in repo (newest branch I'm working on): https://github.com/Prelude14/499UnityGameT19/tree/0a775dfd5538db865c24c984cf52e7c550704472/My%20project%20(4)
 
-Network graph of repo:
-<img src = "log_imgs/brenner's_logT2W3Part2.PNG?raw=true"/>
+<!--====================================================================================================================               TERM 2 ************ W4-->
+# TERM 2 - Date Range: 28-01-2024 to 04-02-2024 - W4
 
+<img src = "log_imgs/brenner's_logT2W4.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Figure out the multiplayer issues from last week (logic is figured out, but Mirror wasn't working last week), setting up our Peer Testing #1 tasks (and getting a working version of the game in order to complete the tasks), and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"matchmaking draft"</li>
+  <li>"Game Mirroring"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"Peer Testing #1 Heuristic Eval Doc"</li>
+  <li>"T2 W4 Team Log"</li>
+  <li>"T2 W4 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"T2 W4 Team Log"</li>
+  <li>"Peer Testing #1 Heuristic Eval Doc: The Team and I figured this doc out by our Thursday class. I did spend quite a bit of time getting the right build of the game ready for this and fixing new issues I encountered when we tried to deploy it for testing however, and if I hadn't, our machines might not have been ready to run the game properly for testing (ex. When we test the login system, we use a locally hosted database, and it works completely fine in the Untiy editor, but when we went to use it when the game is actually running in a web browser, it couldn't connect to the same server at all. We didn't find this issue until late Wednesday when we finalized the build, but I was able to figure out a fix on my machine that night. Problem was that when we went to apply the same fix to the two machines that we were going to be testing with in class, it didn't fix it, and both machines actually ended up with completely different issues, that I also ended up fixing right before class. The final version of our game shouldn't use a local host server however, so this shouldn't be a problem by then hopefully."</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"matchmaking draft: So last week I was really struggling with Mirror and getting the sever to deal the cards to the players. It was especially tough because the way it was breaking wasn't very debuggable (it seemed like I didn't change anything to cause it, and since it froze immediately every time, I could never get any error messages to print to the debug log). Good news is that I now have it sort of fixed to where I can see the messages and its no longer freezing, but the bad news is that I don't know how to fix the actual problem that I was trying to fix the whole time. I need the client to tell the server what colour deck the player chose at the beginning of the game, and then once the server recieves 2 colours, it is supposed to build the game deck and deal the cards out (I  do this through a Sync Var String that the server adds the colours to when it recieves the Command from the clients). Through debugging, I know that both clients send their colour successfully, and the server recieves both fine, but when the 2nd client sends their colour, when the server goes to add that client's colour to the shared string, it thinks the shared string is empty again instead of what it's supposed to be (It should have the first client's string inside, and I know this because the I have a RPC method that tells the clients what the updated string is after a client has added their colour, but instead the 2nd client always overwrites the string resulting in a invalid combo of colours, which will never start the game despite their being two valid players with valid colours choosen. So something is wrong with how I understand Sync Vars or Server variables (it seems like the server's version of the shared string isn't updating properly), but I have yet to figure out what. I have talked to the team, and while we had to drop fixing it in time for the peer testing, we are all going to be focussing on this for the next couple weeks since its such an important feature. I did work on it all the way through until wednesday mind you though. You can see my commits thoughout the week in the image at the bottom (They are on the other repo). I'm also going to be talking to the T.A. in this week's meeting to see if they can help, since the Team and I are kind of at a loss right now."</li>
+  <li>"Exploration: Brenner: I still had to do a ton of research while troubleshooting Mirror and the errors with the client to server communication."</li>
+  <li>"T2 W4 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+So the peer testing milestone was this week, and we were feeling pretty ready for it, except for getting the multiplayer system working before the test. I grinded really hard until Wednesday trying to get it working (another ~15 or so hours since Sunday), and I involved the team as well, but unfortunately it just wasn't meant to be done in time for the peer testing, so we had to shift focus and get our build ready for testing. Luckily, we had enough features implemented without multiplayer to fufill the heuristic evaluations requirements. It was a little stressful getting everyone's parts together, but we got it set up well enough that testing went pretty smoothly. I know that we were supposed to have a certain amount of features done by this milestone, and multiplayer was one of them, but we--or at least I--definitely under estimated just how time consuming and complex setting it up for our game was going to be. I take comfort in knowing that I'm really trying to get it working, and that once we solve the logic issue I'm having with starting the game, the rest of the game communications between the sever and client should be relatively easier, since they should work a bit differently and won't need to be as complicated. You can see the new repo branch I used to fix the multiplayer at the link below, and you can see all of my commits on the repo in the image (the red circles) below that. The build that we used for testing is found on the designVideoDemo branch of the same repo.
+
+Project (4) in repo (newest branch I'm working on): https://github.com/Prelude14/499UnityGameT19/tree/multiplayertroubleshooting
+
+Network graph of repo:
+<img src = "log_imgs/brenner's_logT2W4Part2.PNG?raw=true"/>
+
+<!--====================================================================================================================               TERM 2 ************ W5-->
+# TERM 2 - Date Range: 04-02-2024 to 11-02-2024 - W5
+
+<img src = "log_imgs/brenner's_logT2W5.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Figure out the multiplayer issues from last week (logic is figured out, but Mirror wasn't working last week), and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"matchmaking draft"</li>
+  <li>"Game Mirroring"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"T2 W5 Team Log"</li>
+  <li>"T2 W5 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"T2 W5 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"matchmaking draft: So this week I talked to the TA in order to see about getting some help with the multiplayer stuff, since I wasn't getting anywhere since the peer testing issues. I didn't hear back from them yet, but I didn't want to have nothing to show for this week, so I ended up getting back into attempting a fix. AND IT FINALLY GAVE!!!!!!!!!!!! Clients now can connect to the server without issue, and can successfully send their chosen colour to the server properly! The issue was that I was using a sync variable in the playermanager script thinking it would be synchronized across all the instances of that variable in the project, but in reality, because the network manager spawns a unique instance of the playermanager object for each client, the clients would only ever see one colour in the string. Now, both clients update a sync var list of strings that is part of a different game object called SharedVarManager, and that game object actually creates the game's deck of cards and is supposed to deal them out as well. I added a gif of this functioning somewhat below, the deck is made fine, but the cards aren't yet dealt perfectly. Still, the hardest part is done now, and I'm soooooo glad I finally figured it out. "</li>
+  <li>"Exploration: Brenner: I still had to do a bit of research while troubleshooting Mirror and the errors with the client to server communication."</li>
+  <li>"T2 W5 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+So I was still quite stuck all week trying to fix the multiplayer issue, but I was also quite sick during the actual week, so I wasn't able to get much done until the weekend after telling the TA all about the issue I was having in class Thrusday. Luckily, I ended up having a major breakthrough on Sunday with the multiplayer, but it still took a lot of effort, and isn't exactly perfect yet. I cannot express just how relieving it is to have it semi working now though, and it has got me excited for the future of the project again. You can see the repo branch I used to fix the multiplayer at the link below, and the build that we used for testing is found on the designVideoDemo branch of the same repo.
+
+Project (4) in repo (newest branch I've been working on): https://github.com/Prelude14/499UnityGameT19/tree/b010c44db88ae12dd2bb38ca7d6b8cde3be8bd76/My%20project%20(4)
+
+#### I made a GIF of the server starting the game in action: 
+<img src= "log_imgs/unityTutorialGIFFEB11.gif">
+
+<!--====================================================================================================================               TERM 2 ************ W6-->
+# TERM 2 - Date Range: 11-02-2024 to 18-02-2024 - W6
+
+<img src = "log_imgs/brenner's_logT2W6.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Get the multiplayer to deal cards properly (the deck create feature worked lasy week, but the deal wasn't working yet), and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"matchmaking draft"</li>
+  <li>"Game Mirroring"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"T2 W6 Team Log"</li>
+  <li>"T2 W6 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"T2 W6 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"matchmaking draft: So I needed to get the draw command, which is what actually deals each player their cards, working properly over the server and client this week. I made solid progress, but it was
+    surprsingly difficult to get functioning, due to how complex the amount of scripts and game objects has become. Currently the host will deal the cards to the right places properly, and the client will spawn the correct matching cards on its end, but the client isn't spawning the cards in the right places quite yet. Something is up with the authority of each card, but I haven't been able to figure it out yet (its weird since the host's client uses the exact same logic and works fine, while the other client's inspector knows which cards it has ownership over, yet still the logic seems to fail anyways. Should be able to get into it in the next few days with help from the team, especially since I've narrowed it down a bit. I added Images to show each build's view to the bottom of the page."</li>
+  <li>"Exploration: Brenner: I still had to do a bit of research while troubleshooting the client to server communication and authority."</li>
+  <li>"T2 W6 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+
+So this was the week before reading break, and life got a bit busy since my other classes had a couple of deadlines to get in before the break. I also went home early (as in travelled back home to Trail) on Friday, because of a family emergency, so I wasn't able to get much done on the weekend. That being said I was still able to clock in around 15 hours trying to understand what I needed to do in order to get the deal feature working right (~5 during the week, ~10 on Sunday). I think I should be able to get it fully functioning sometime in the next couple days, and I don't want to be working on it anytime past Wednesday, since the rest of the group really needs it to be done before reading break is over. 
+
+You can see the repo branch I used to fix the multiplayer at the link below, and the build that we used for the peer testing is found on the designVideoDemo branch of the same repo.
+
+Project (4) in repo (newest branch I've been working on): https://github.com/Prelude14/499UnityGameT19/tree/b010c44db88ae12dd2bb38ca7d6b8cde3be8bd76/My%20project%20(4)
+
+#### Here is the screenshots of the server dealing the cards in action (Host View is on the top, Client after ***Only deals 1 card to make debugging easier): 
+<img src= "log_imgs/serverDealWorking.PNG">
+<img src= "log_imgs/serverDealWorking2.PNG">
+
+<!--====================================================================================================================               TERM 2 ************ W8-->
+# TERM 2 - Date Range: 18-02-2024 to 03-03-2024 - W6 to W8
+
+<img src = "log_imgs/brenner's_logT2W8.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Resolve the card deal displaying issue, get ready for peer test #2, and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"matchmaking draft"</li>
+  <li>"Game Mirroring"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"T2 W7&8 Team Log"</li>
+  <li>"T2 W7&8 Individual Logs"</li>
+  <li>"PeerTest #2 Heuristic Eval Doc"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"PeerTest #2 Heuristic Eval Doc: (It is quite similar to the last eval, since we have somethings to test that we changed as a result of the first eval)"</li>
+  <li>"T2 W7&8 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"matchmaking draft: So the cards finally deal properly on both player's version of the game!!!!! The opponent's hand will even show the back of the cards instead of the front. Adrian helped me finally figure out what was causing the issue from last log, and this means we can finally start putting the rest of the game's features together for the final product. I got my branch (which is linked below) up to date with the rest of the repo as best as I could, and this meant the cards change colour when they can be played or attack the opponent properly, and the guide messages show up as well which is great. I then started figuring solving a bunch of smaller fixes for the peer testing build of the game (I changed some images as well as created a script to handle muting an audio source, which was cool). "</li>
+  <li>"Game Mirroring: We just need to get the play and attack features to work over the network now, and the game will be more or less fully functional over a multiplayer connection!"</li>
+  <li>"Exploration: Brenner: I had to do a bit of research while troubleshooting the audiosource muting feature since Leo set it up before the last peer testing and I hadn't gotten around to understanding how it worked yet."</li>
+  <li>"T2 W7&8 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+So since I was still having issues with the multiplayer, we decided to focus on trying to get our build that's going to be tested this week done, and my branch took a bit of a back seat this week because of that. That being said however, I did do a bunch of admin stuff trying to get the multiplayertroubleshooting branch up to date with the current game branch, and it was quite the task. Because the multiplayer features required a bunch of script changes (and a bit of experimentation), I didn't want to merge anything until I was sure what we were doing, so the branch has been quite separate for a couple weeks now, and it was not super straight forward to merge by this point as a result. The scripts came easy, but because the scenes on each branch had so many different changes I wasn't able to get it working after trying to just resolve each conflict in vs code, I had to basically rebuild the features using the scripts inside the Unity editor from scratch. That's why in the gif below you'll see the game isn't quite scaling properly in the display, but now that the branch is up (and functional), it should be fixed pretty soon (probably just after peer testing week).
+
+You can see the repo branch I used to fix the multiplayer at the link below, and the build that we are going to use for the peer testing is found on the designVideoDemo branch of the same repo.
+
+Project (4) in repo (most up to date multiplayer): https://github.com/Prelude14/499UnityGameT19/tree/c59802f0a0f35516ff2e184c441da4565c7c7e53/My%20project%20(4)
+
+#### I made a GIF of the current version of the multiplayer in action: 
+<img src= "log_imgs/peerTest2W8GIF.gif">
 

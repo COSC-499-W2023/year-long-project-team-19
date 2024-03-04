@@ -8,7 +8,8 @@ public class dbDisplay : MonoBehaviour
 {
     public List<Card1> displayList = new List<Card1>();
     public int displayId;
-
+    public static bool attackDragging;
+    public int colour; //for each card's colour
     public int id;
     public int hp;
     public int pow;
@@ -29,6 +30,7 @@ public class dbDisplay : MonoBehaviour
     public bool cardBack;
     public static bool staticCardBack;
 
+    public GameObject cardInHand;
     public GameObject hand;
     public GameObject playZone;
     public GameObject currentZone;
@@ -52,17 +54,18 @@ public class dbDisplay : MonoBehaviour
     public bool currentlyDraggable;
     public bool attackBorder;
     public static bool staticAttackBorder;
-
+    public GameObject Image;
     public GameObject playableBorder;
     public GameObject unplayableBorder;
     public static GameObject currentLoc;
     public static GameObject pz;
-
+    public static int staticID;
+    public static int staticCardColor;
     // Start is called before the first frame update
     void Start()
     {
         deckCount = playerDeck.deckSize;
-        displayList[0] = cardDatabase.cardList[displayId];
+        displayList[0] = cardDatabase.neutralCardList[displayId];
         this.id = displayList[0].id;
 
         isSummoned = false;
@@ -87,10 +90,12 @@ public class dbDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        staticCardColor = colour;
+        staticID = id;
         staticAttackBorder = false;
         staticCost = cost;
         staticSummoned = isSummoned;
-        Debug.Log(staticSummoned + " " + cardName);
+        // Debug.Log(staticSummoned + " " + cardName);
         displayCard();
         hand = GameObject.Find("hand");
         //if this parent is the same as the hands parent 
@@ -107,14 +112,14 @@ public class dbDisplay : MonoBehaviour
         pz = playZone;
         //summoning logic and cost logic
 
-        Debug.Log(cardName + " Is summoned false");
-        if (this.cost <= turnScript.currentMana && isSummoned == false)
+        // Debug.Log(cardName + " Is summoned false");
+        if (this.cost <= turnScript.currentMana && isSummoned == false && turnScript.actionPoints >= 1)
         {
             canBeSummoned = true;
-            Debug.Log(cardName + " Is now playable");
+            // Debug.Log(cardName + " Is now playable");
             if (currentZone == hand)
             {
-                Debug.Log(cardName + " Is now playable");
+                // Debug.Log(cardName + " Is now playable");
             }
 
         }
@@ -128,7 +133,7 @@ public class dbDisplay : MonoBehaviour
         if (canBeSummoned)
         {
             dragScript.isDraggable = true;
-            Debug.Log(cardName + " is now " + currentlyDraggable);
+            // Debug.Log(cardName + " is now " + currentlyDraggable);
             playableBorder.SetActive(true);
             unplayableBorder.SetActive(false);
         }
@@ -146,26 +151,28 @@ public class dbDisplay : MonoBehaviour
                 return;
             }
             isSummoned = true;
-            Debug.Log(cardName + " Summoned sucess | Cost: " + this.cost + " | Current zone: " + currentZone + " | play zone: " + playZone + " | Is summoned? " + isSummoned);
+            turnScript.totalSummons++;
+            // Debug.Log(cardName + " Summoned sucess | Cost: " + this.cost + " | Current zone: " + currentZone + " | play zone: " + playZone + " | Is summoned? " + isSummoned);
             //disable script component when summoned
             GetComponent<dragScript>().enabled = false;
             turnScript.currentMana = turnScript.currentMana - this.cost;
-            Debug.Log("Mana left: " + turnScript.currentMana);
+            // Debug.Log("Mana left: " + turnScript.currentMana);
+            turnScript.actionPoints--;
 
         }
 
         currentlyDraggable = dragScript.isDraggable;
 
         //decide attackers
-        if (turnScript.isMyTurn == true && isSummoned == true && hasAttacked == false && currentZone == playZone)
+        if (turnScript.isMyTurn == true && isSummoned == true && hasAttacked == false && currentZone == playZone && turnScript.actionPoints >= 1)
         {
             cantAttack = false;
-            Debug.Log(cardName + " ready to attack");
+            // Debug.Log(cardName + " ready to attack");
             unplayableBorder.SetActive(false);
             playableBorder.SetActive(false);
         }
 
-        if (turnScript.isMyTurn == true && cantAttack == false)
+        if (turnScript.isMyTurn == true && cantAttack == false && turnScript.actionPoints >= 1)
         {
             canAttack = true;
 
@@ -207,10 +214,12 @@ public class dbDisplay : MonoBehaviour
 
     private void Attack()
     {
-        if (canAttack == true && isSummoned)
+        if (canAttack == true && isSummoned && turnScript.actionPoints >= 1)
         {
+
             if (Target != null)
             {
+
                 if (Target == Enemy)
                 {
                     enemyHealth.HPStatic -= pow;
@@ -219,7 +228,7 @@ public class dbDisplay : MonoBehaviour
                     hasAttacked = true;
                     staticAttackBorder = false;
                     attackBorder = false;
-
+                    turnScript.actionPoints--;
                 }
 
                 if (Target.name == "cardInHand(Clone)")
@@ -243,10 +252,19 @@ public class dbDisplay : MonoBehaviour
     public void StartAttack()
     {
         staticTargeting = true;
+        if (currentZone == playZone)
+        {
+            attackDragging = true;
+        }
     }
     public void StopAttack()
     {
         staticTargeting = false;
+        if (currentZone == playZone)
+        {
+            attackDragging = false;
+        }
+
     }
     public void OneCardAttack()
     {
@@ -258,8 +276,9 @@ public class dbDisplay : MonoBehaviour
     }
     private void displayCard()
     {
-
+        this.id = displayList[0].id;//update ids to match real id of card
         this.cardName = displayList[0].cardName;
+        this.colour = displayList[0].colour;//new
         this.pow = displayList[0].pow;
         this.hp = displayList[0].hp;
         this.txt = displayList[0].txt;
@@ -270,6 +289,11 @@ public class dbDisplay : MonoBehaviour
         costText.text = " " + this.cost.ToString();
         powText.text = " " + this.pow.ToString();
         hpText.text = " " + this.hp.ToString();
+
+        //trying to get the border of the card drwan to change colour to match the card's colour int
+        Color border = renderCardColour(colour);//get what colour the border should be
+        Image.GetComponent<Image>().color = border; //then render the correct colour
+
 
     }
     private void cloneDraw()
@@ -286,4 +310,32 @@ public class dbDisplay : MonoBehaviour
             this.tag = "Untagged";
         }
     }
+
+    public Color renderCardColour(int cardColour)
+    {
+        //need to check card1's colour int to see what colour to make the border of the card
+        if (cardColour == 1)          // 1 == BLACK DECK
+        {
+            return Color.black;
+        }
+        else if (cardColour == 2)          // 2 == RED DECK
+        {
+            return Color.red;
+        }
+        else if (cardColour == 3)          // 3 == WHITE DECK
+        {
+            return Color.white;
+        }
+        else if (cardColour == 4)          // 4 == BLUE DECK
+        {
+            return Color.blue;
+        }
+        else
+        {
+            return Color.yellow;
+        }
+    }
+
+
+
 }
