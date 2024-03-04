@@ -42,7 +42,7 @@ describe('Show Rules', () => {
 });
 
 describe('Edit Rules', () => {
-  const mockId_true = '6553fcd8adcb4e7629dd495c';
+  const mockId_true = '65de8324eee003e10f5c18c0';
   const mockId_false = new mongoose.Types.ObjectId(); 
 
   it('should return 404 if rules not found', async () => {
@@ -64,7 +64,7 @@ describe('Edit Rules', () => {
 
     const data = {
       _id: mockId_true,
-      order: 1,
+      order: 100,
       context: 'test',
       title: 'test'
     };
@@ -84,6 +84,32 @@ describe('Edit Rules', () => {
   
 });
 
+describe('Add Rules', () => {
+  it('should return 400 if missing required fields', async () => {
+    const data = {
+      order: 1,
+      context: 'test'
+    };
+
+    const res = await request(app).post('/api/rules/addRules').send(data);
+    expect(res.status).toBe(400);
+  });
+
+  it('should return 200 if rule is added', async () => {
+    const data = {
+      order: 10,
+      context: 'test',
+      title: 'test'
+    };
+  
+    const res = await request(app).post('/api/rules/addRules').send(data);
+    expect(res.status).toBe(200);
+    const rule = await Rules.findOne({ order: 10, context: 'test', title: 'test' });
+    await rule.deleteOne();
+  });
+  
+});
+
+
 //TODO:
-//add rules
 //delete rules

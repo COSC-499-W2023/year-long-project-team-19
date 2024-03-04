@@ -1,55 +1,53 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
-import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
-const AddRuleModal = ({ show, handleClose, handleSaveChanges, setRuleInfo, ruleInfo, maxOrder }) => {
+const EditRuleModal = ({ show, handleClose, handleEditChanges, ruleInfo, setRuleInfo }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setRuleInfo((prevInfo) => ({
-      ...prevInfo,
-      [name]: value
+    setRuleInfo((prev) => ({
+      ...prev,
+      [name]: value,
     }));
   };
 
   return (
-    <Modal show={show} onHide={handleClose} centered>
+    <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Add New Rule</Modal.Title>
+        <Modal.Title>Edit Rule</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form>
-          <Form.Group controlId="formRuleOrder">
+        <Form.Group controlId="editRuleOrder">
             <Form.Label>Order</Form.Label>
             <Form.Control
-              placeholder="Enter order"
+              type="text"
               name="order"
-              value={maxOrder}
-              style={{ backgroundColor: '#f5f5f5', cursor: 'not-allowed' }}
-              readOnly
+              value={ruleInfo.order}
+              onChange={handleChange}
+              placeholder="Enter order"
             />
           </Form.Group>
-
-          <Form.Group controlId="formRuleTitle">
+          <Form.Group controlId="editRuleTitle">
             <Form.Label>Title</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Enter title"
               name="title"
               value={ruleInfo.title}
               onChange={handleChange}
+              placeholder="Enter title"
             />
           </Form.Group>
-
-          <Form.Group controlId="formRuleContext">
+          <Form.Group controlId="editRuleContext">
             <Form.Label>Context</Form.Label>
             <Form.Control
               as="textarea"
               rows={3}
-              placeholder="Enter context"
               name="context"
               value={ruleInfo.context}
               onChange={handleChange}
+              placeholder="Enter context"
             />
           </Form.Group>
         </Form>
@@ -58,7 +56,7 @@ const AddRuleModal = ({ show, handleClose, handleSaveChanges, setRuleInfo, ruleI
         <Button variant="secondary" onClick={handleClose}>
           Close
         </Button>
-        <Button variant="primary" onClick={handleSaveChanges}>
+        <Button variant="primary" onClick={handleEditChanges}>
           Save Changes
         </Button>
       </Modal.Footer>
@@ -66,4 +64,4 @@ const AddRuleModal = ({ show, handleClose, handleSaveChanges, setRuleInfo, ruleI
   );
 };
 
-export default AddRuleModal;
+export default EditRuleModal;

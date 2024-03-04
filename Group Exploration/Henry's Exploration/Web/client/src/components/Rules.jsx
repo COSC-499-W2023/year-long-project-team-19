@@ -3,13 +3,17 @@ import Navbar from "./Navbar";
 import axios from "axios";
 import { isLoggedIn } from "../auth.js";
 import AddRuleModal from "./modals/AddRuleModal";
+import EditRuleModal from "./modals/EditRuleModal";
 import Button from 'react-bootstrap/Button';
 
 const Rules = () => {
   const [reload, setReload] = React.useState(false);
+  const [id, setId] = React.useState([]);
   const [titles, setTitles] = React.useState([]);
   const [contexts, setContexts] = React.useState([]);
+  const [order, setOrder] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
+  const [maxOrder, setMaxOrder] = React.useState(0);
 
   //add rule modal
   const [show, setShow] = useState(false);
@@ -28,6 +32,52 @@ const Rules = () => {
     context: "",
   });
 
+  //edit rule modal
+  const [showEdit, setShowEdit] = useState(false);
+  const handleCloseEdit = () => {
+    setRuleInfoEdit({
+      _id: "",
+      order: "",
+      title: "",
+      context: "",
+    });
+    setShowEdit(false);
+  };
+  const handleShowEdit = (id, title, context, order) => {
+    setRuleInfoEdit({
+      _id: id,
+      title,
+      context,
+      order,
+    });
+    setShowEdit(true);
+  };
+  
+  const [ruleInfoEdit, setRuleInfoEdit] = useState({
+    _id: "",
+    order: "",
+    title: "",
+    context: "",
+  });
+
+  const handleEditChanges = async () => {
+    try {
+      await axios.post(
+        "https://nodeserver-two.vercel.app/api/rules/editRules",
+        {
+          _id: ruleInfoEdit._id,
+          order: ruleInfoEdit.order,
+          title: ruleInfoEdit.title,
+          context: ruleInfoEdit.context,
+        }
+      );
+      setReload(!reload);
+      setShowEdit(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -37,7 +87,10 @@ const Rules = () => {
         );
         const { rules } = result.data;
         setTitles(rules.map((item) => item.title));
+        setId(rules.map((item) => item._id));
         setContexts(rules.map((item) => item.context));
+        setOrder(rules.map((item) => item.order));
+        setMaxOrder(Math.max(...rules.map((item) => item.order)));
         setLoading(false);
       } catch (error) {
         console.log(error);
@@ -97,9 +150,9 @@ const Rules = () => {
                     margin: "10px",
                   }}
                 >
-                  <Button variant="primary">
-                    Edit{" "}
-                  </Button>
+                <Button variant="primary" onClick={() => handleShowEdit(id[index], title, contexts[index], order[index])}>
+                  Edit
+                </Button>
                 </div>
               </section>
             ))}
@@ -109,10 +162,19 @@ const Rules = () => {
 
       <AddRuleModal
         show={show}
+        maxOrder={maxOrder+1}
         handleClose={handleClose}
         handleSaveChanges={handleSaveChanges}
         setRuleInfo={setRuleInfo}
         ruleInfo={ruleInfo}
+      />
+
+      <EditRuleModal
+        show={showEdit}
+        handleClose={handleCloseEdit}
+        handleEditChanges={handleEditChanges}
+        setRuleInfo={setRuleInfoEdit}
+        ruleInfo={ruleInfoEdit}
       />
     </>
   );
