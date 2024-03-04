@@ -173,9 +173,14 @@ const Rules = () => {
                   }}
                 >
                 {isLoggedIn() ?(
-                  <Button variant="primary" onClick={() => handleShowEdit(id[index], title, contexts[index], order[index])}>
-                  Edit
-                  </Button>
+                  <>
+                    <Button variant="primary" onClick={() => handleShowEdit(id[index], title, contexts[index], order[index])}>
+                    Edit
+                    </Button>
+                    <Button variant="danger" style={{marginLeft: '5px'}} onClick={() => handleDelete(id[index])}>
+                      Delete
+                    </Button>
+                  </>
                  ) : null} 
                 </div>
               </section>
