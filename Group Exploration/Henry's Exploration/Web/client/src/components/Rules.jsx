@@ -138,6 +138,20 @@ const Rules = () => {
     }
   };
 
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(
+        "https://nodeserver-two.vercel.app/api/rules/deleteRules",
+        {
+          data: { _id: id,},
+        }
+      );
+      setReload(!reload);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <Navbar />
