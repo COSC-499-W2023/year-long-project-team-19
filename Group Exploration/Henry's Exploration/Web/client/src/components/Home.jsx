@@ -5,7 +5,7 @@ const Home = () => {
     <>
       <Navbar />
       <div className="game-container">
-        <iframe src="https://i.simmer.io/@Prelude14/c499-colourbreak-peertest-1" style={{ width: '960px', height: '600px' }}></iframe>
+        <iframe src="https://i.simmer.io/@dk2706/colourbreak030324" style={{ width: '960px', height: '600px' }}></iframe>
       </div>
     </>
   );
