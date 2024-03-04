@@ -342,3 +342,24 @@
 
 <h3>In Progress:</h3>
 <p>For the break and the week after there were talks of working on card design and how we're going to implement sprites for the cards. We're also moving towards shifting things to work with the server. I'm also thinking of reworking some cards to fit into our scope, we did realize some of the game parts seemed a little too difficult and scope creep did seem to play a part there.</p>
+
+<h1>Date Range: 19-02-2024 to 03-03-2024</h1>
+<img src ="/log_imgs/Adrian_t2_wk7.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>
+  This week I worked on the card abilities. I implemented a framework for this function and figured out how to draw cards as an ability. This was one of our bigger issues as calling a static function from a different class caused a lot of issues. Starting the coroutine on another class also opened up a whole other can of worms but I solved this through update triggers in the deck script.
+</p>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <lI>
+"Programming Card Abiliities": After assigning the abilities to the cards it was obvious that some of them needs a bit more work than the others. So this week I made progress on the abilities and now I'm working through most of them slowly. 
+  </lI>
+
+</ol>
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed and In Progress: </h3> 
+<p>Because of the high amount of cards we have and the redesign on some of the abilities we I'm not quite done yet and this feels like a multi-week task. But having figured out the bulk of the issues I can start working on this more efficiently.</p>
