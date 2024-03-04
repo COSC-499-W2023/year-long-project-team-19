@@ -249,7 +249,7 @@ I also am still working on getting the password reset feature to be fully operat
 
 # Date Range: 18-02-2024 to 03-03-2024 - W7 to W8
 
-<img src = "log_imgs/Leo_log_T2W8.png?raw=true"/>
+<img src = "log_imgs/Leo_log_Week8.png?raw=true"/>
 
 ## Which tasks from the project board are associated with these features?
 
@@ -264,10 +264,12 @@ I also am still working on getting the password reset feature to be fully operat
 
 I managed to get a lot of progress on the password reset system during the break. I set up a smtp server using SMTP2GO and a email sender domain using mail.com. I added to the SMTP2GO API to the reset script which now sends the reset token by email. 
 
-<img src = "log_imgs/Leo_T2W8_s1.png?raw=true"/>
+<img src = "log_imgs/leo_T2W8_s1.png?raw=true"/>
 
 I added a validate script which runs when the user inputs their token and hits the validate button in the game menu. It connects to the db and retrieves the user's password salt, it hashes the inputted token and compares it with the hashed token in the database. I ran into a problem with the tokens not matching up even though they were getting hashed correctly. I was stuck on this issue for a while. 
 
 ### This week: 
 
 After a lot of debugging and some help I finally figured out the issue with the tokens. I fixed the validate script and am working on new a script to recieve the new password input and change it in the database. Once that is done I plan on writing tests for these features. I would also like to implement the password reset feature to the guest menu and recieve an email input from the user so that the password can be reset without being logged in before the peer review session next week. 
+
+Draft PR on game repo (https://github.com/Prelude14/499UnityGameT19).
