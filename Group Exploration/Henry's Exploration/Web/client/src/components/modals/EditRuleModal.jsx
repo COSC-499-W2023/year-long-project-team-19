@@ -3,7 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-const EditRuleModal = ({ show, handleClose, handleEditChanges, ruleInfo, setRuleInfo }) => {
+const EditRuleModal = ({ show, handleClose, handleEditChanges, ruleInfo, setRuleInfo, isError }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setRuleInfo((prev) => ({
@@ -15,14 +15,24 @@ const EditRuleModal = ({ show, handleClose, handleEditChanges, ruleInfo, setRule
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Edit Rule</Modal.Title>
+        <Modal.Title>
+          Edit Rule
+          {
+            !isError ? null : 
+            <div style={{ color: 'red', fontWeight: 'bold' }}>
+              Input fields is not valid!
+            </div>
+          } 
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form>
         <Form.Group controlId="editRuleOrder">
-            <Form.Label>Order</Form.Label>
+            <Form.Label>
+              Order
+            </Form.Label>
             <Form.Control
-              type="text"
+              type="number"
               name="order"
               value={ruleInfo.order}
               onChange={handleChange}
