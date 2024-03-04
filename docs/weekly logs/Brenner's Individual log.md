@@ -434,7 +434,7 @@ We still have that other repo open, just because its a way better way to collabo
 
 #### https://github.com/Prelude14/499UnityGameT19/tree/07c1423884475e30bf0b521064815c14a5ade605/My%20project%20(4)
 <!--====================================================================================================================               TERM 2 ************ W1-->
-# TERM 2 - Date Range: 08-01-2023 to 14-01-2023 - W1
+# TERM 2 - Date Range: 08-01-2024 to 14-01-2024 - W1
 
 <img src = "log_imgs/brenner's_logT2W1.PNG?raw=true"/>
 
@@ -481,7 +481,7 @@ We still have another repo open from the design demo at the end of the first sem
 
 #### https://github.com/Prelude14/499UnityGameT19/tree/07c1423884475e30bf0b521064815c14a5ade605/My%20project%20(4)
 <!--====================================================================================================================               TERM 2 ************ W2-->
-# TERM 2 - Date Range: 14-01-2023 to 21-01-2023 - W2
+# TERM 2 - Date Range: 14-01-2024 to 21-01-2024 - W2
 
 <img src = "log_imgs/brenner's_logT2W2.PNG?raw=true"/>
 
@@ -520,7 +520,7 @@ Trying to figure out multiplayer (how to set up a server, do we want dedicated s
 So as the peer testing #1 milestone looms closer, I really tried to get into how to set up the back end infastructure of a multiplayer system for our game. Problem is, I've never done anything quite like it before, and despite watching at least 8 hours of different tutorials and videos this week, I still don't know exactly what to do. Most videos/guides completely gloss over how exactly to set up a server and just focus on how to develop the game with the client and sever in mind, which is helpful for what we are going to be doing, but not at actually telling me what I am looking for. I think for the first deliverable, it should be fine to just run 2 builds locally having one act as a host and the other a client, since that should still illustrate exactly how the game will work in the field if we actually deploy dedicated servers, while cutting out actually setting up a game server, since that feels honeslty like its outside the scope of the course. We are going to talk to the TA and the professor about it next class though. This week I'm going to shift my focus to turning our current game's objects and system into a new version that will work with the client and server builds of the game following along to this playlist's videos (https://youtube.com/playlist?list=PLCbP9KGntfcFTL19eDZsWSkVMfXANF7-U&si=I_NVzdA6X_DBcT4V), so that we will have the two different versions of the game ot test for the milestone date. 
 
 <!--====================================================================================================================               TERM 2 ************ W3-->
-# TERM 2 - Date Range: 21-01-2023 to 28-01-2023 - W3
+# TERM 2 - Date Range: 21-01-2024 to 28-01-2024 - W3
 
 <img src = "log_imgs/brenner's_logT2W3.PNG?raw=true"/>
 
@@ -562,7 +562,7 @@ So the peer testing milestone is in 4 days, and the only thing we need still is 
 Project (4) in repo (newest branch I'm working on): https://github.com/Prelude14/499UnityGameT19/tree/0a775dfd5538db865c24c984cf52e7c550704472/My%20project%20(4)
 
 <!--====================================================================================================================               TERM 2 ************ W4-->
-# TERM 2 - Date Range: 28-01-2023 to 04-02-2023 - W4
+# TERM 2 - Date Range: 28-01-2024 to 04-02-2024 - W4
 
 <img src = "log_imgs/brenner's_logT2W4.PNG?raw=true"/>
 
@@ -607,7 +607,7 @@ Network graph of repo:
 <img src = "log_imgs/brenner's_logT2W4Part2.PNG?raw=true"/>
 
 <!--====================================================================================================================               TERM 2 ************ W5-->
-# TERM 2 - Date Range: 04-02-2023 to 11-02-2023 - W5
+# TERM 2 - Date Range: 04-02-2024 to 11-02-2024 - W5
 
 <img src = "log_imgs/brenner's_logT2W5.PNG?raw=true"/>
 
@@ -650,7 +650,7 @@ Project (4) in repo (newest branch I've been working on): https://github.com/Pre
 <img src= "log_imgs/unityTutorialGIFFEB11.gif">
 
 <!--====================================================================================================================               TERM 2 ************ W6-->
-# TERM 2 - Date Range: 11-02-2023 to 18-02-2023 - W6
+# TERM 2 - Date Range: 11-02-2024 to 18-02-2024 - W6
 
 <img src = "log_imgs/brenner's_logT2W6.PNG?raw=true"/>
 
@@ -695,3 +695,51 @@ Project (4) in repo (newest branch I've been working on): https://github.com/Pre
 #### Here is the screenshots of the server dealing the cards in action (Host View is on the top, Client after ***Only deals 1 card to make debugging easier): 
 <img src= "log_imgs/serverDealWorking.PNG">
 <img src= "log_imgs/serverDealWorking2.PNG">
+
+<!--====================================================================================================================               TERM 2 ************ W8-->
+# TERM 2 - Date Range: 18-02-2024 to 03-03-2024 - W6 to W8
+
+<img src = "log_imgs/brenner's_logT2W8.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Resolve the card deal displaying issue, get ready for peer test #2, and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"matchmaking draft"</li>
+  <li>"Game Mirroring"</li>
+  <li>"Exploration: Brenner"</li>
+  <li>"T2 W7&8 Team Log"</li>
+  <li>"T2 W7&8 Individual Logs"</li>
+  <li>"PeerTest #2 Heuristic Eval Doc"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"PeerTest #2 Heuristic Eval Doc: (It is quite similar to the last eval, since we have somethings to test that we changed as a result of the first eval)"</li>
+  <li>"T2 W7&8 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"matchmaking draft: So the cards finally deal properly on both player's version of the game!!!!! The opponent's hand will even show the back of the cards instead of the front. Adrian helped me finally figure out what was causing the issue from last log, and this means we can finally start putting the rest of the game's features together for the final product. I got my branch (which is linked below) up to date with the rest of the repo as best as I could, and this meant the cards change colour when they can be played or attack the opponent properly, and the guide messages show up as well which is great. I then started figuring solving a bunch of smaller fixes for the peer testing build of the game (I changed some images as well as created a script to handle muting an audio source, which was cool). "</li>
+  <li>"Game Mirroring: We just need to get the play and attack features to work over the network now, and the game will be more or less fully functional over a multiplayer connection!"</li>
+  <li>"Exploration: Brenner: I had to do a bit of research while troubleshooting the audiosource muting feature since Leo set it up before the last peer testing and I hadn't gotten around to understanding how it worked yet."</li>
+  <li>"T2 W7&8 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+So since I was still having issues with the multiplayer, we decided to focus on trying to get our build that's going to be tested this week done, and my branch took a bit of a back seat this week because of that. That being said however, I did do a bunch of admin stuff trying to get the multiplayertroubleshooting branch up to date with the current game branch, and it was quite the task. Because the multiplayer features required a bunch of script changes (and a bit of experimentation), I didn't want to merge anything until I was sure what we were doing, so the branch has been quite separate for a couple weeks now, and it was not super straight forward to merge by this point as a result. The scripts came easy, but because the scenes on each branch had so many different changes I wasn't able to get it working after trying to just resolve each conflict in vs code, I had to basically rebuild the features using the scripts inside the Unity editor from scratch. That's why in the gif below you'll see the game isn't quite scaling properly in the display, but now that the branch is up (and functional), it should be fixed pretty soon (probably just after peer testing week).
+
+You can see the repo branch I used to fix the multiplayer at the link below, and the build that we are going to use for the peer testing is found on the designVideoDemo branch of the same repo.
+
+Project (4) in repo (newest branch I've been working on): https://github.com/Prelude14/499UnityGameT19/tree/b010c44db88ae12dd2bb38ca7d6b8cde3be8bd76/My%20project%20(4)
+
+#### I made a GIF of the current version of the multiplayer in action: 
+<img src= "log_imgs/peerTest2W8GIF.gif">
+
