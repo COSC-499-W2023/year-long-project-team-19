@@ -14,6 +14,7 @@ const Rules = () => {
   const [order, setOrder] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   const [maxOrder, setMaxOrder] = React.useState(0);
+  const [isError, setIsError] = React.useState(false);
 
   //add rule modal
   const [show, setShow] = useState(false);
@@ -65,6 +66,23 @@ const Rules = () => {
       //validate all inputs
       //if all inputs are valid, send a post request to the server
 
+      let isValid = true;
+      console.log(ruleInfoEdit.order);
+      if (!Number.isInteger(Number(ruleInfoEdit.order)) || ruleInfoEdit.order === "" || ruleInfoEdit.order < 0) {
+        isValid = false;
+      }
+      if(ruleInfoEdit.title === ""){
+        isValid = false;
+      };
+      if(ruleInfoEdit.context === ""){
+        isValid = false;
+      };
+
+      if(!isValid){
+        setIsError(true);
+        return;
+      };
+
       await axios.post(
         "https://nodeserver-two.vercel.app/api/rules/editRules",
         {
@@ -76,6 +94,7 @@ const Rules = () => {
       );
       setReload(!reload);
       setShowEdit(false);
+      setIsError(false);
     } catch (error) {
       console.log(error);
     }
@@ -180,6 +199,7 @@ const Rules = () => {
         handleEditChanges={handleEditChanges}
         setRuleInfo={setRuleInfoEdit}
         ruleInfo={ruleInfoEdit}
+        isError={isError}
       />
     </>
   );
