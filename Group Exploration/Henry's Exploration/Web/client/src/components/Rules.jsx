@@ -62,6 +62,9 @@ const Rules = () => {
 
   const handleEditChanges = async () => {
     try {
+      //validate all inputs
+      //if all inputs are valid, send a post request to the server
+
       await axios.post(
         "https://nodeserver-two.vercel.app/api/rules/editRules",
         {
@@ -150,9 +153,11 @@ const Rules = () => {
                     margin: "10px",
                   }}
                 >
-                <Button variant="primary" onClick={() => handleShowEdit(id[index], title, contexts[index], order[index])}>
+                {isLoggedIn() ?(
+                  <Button variant="primary" onClick={() => handleShowEdit(id[index], title, contexts[index], order[index])}>
                   Edit
-                </Button>
+                  </Button>
+                 ) : null} 
                 </div>
               </section>
             ))}
