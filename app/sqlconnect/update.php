@@ -40,6 +40,3 @@
     } else {
         echo "1: Password Update failed: " . $con->error;
     }
-
-	echo "0\t";
-?>
