@@ -272,4 +272,7 @@ I added a validate script which runs when the user inputs their token and hits t
 
 After a lot of debugging and some help I finally figured out the issue with the tokens. I fixed the validate script and am working on new a script to recieve the new password input and change it in the database. Once that is done I plan on writing tests for these features. I would also like to implement the password reset feature to the guest menu and recieve an email input from the user so that the password can be reset without being logged in before the peer review session next week. 
 
-Draft PR on game repo (https://github.com/Prelude14/499UnityGameT19).
+Draft PRs:
+(https://github.com/Prelude14/499UnityGameT19/pull/6).
+(https://github.com/COSC-499-W2023/year-long-project-team-19/pull/152).
+
