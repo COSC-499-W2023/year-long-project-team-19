@@ -131,6 +131,11 @@ const Rules = () => {
           context: ruleInfo.context
         }
       );
+      setRuleInfo({
+        order: "",
+        title: "",
+        context: "",
+      });
       setReload(!reload);
       setShow(false);
     } catch (error) {
