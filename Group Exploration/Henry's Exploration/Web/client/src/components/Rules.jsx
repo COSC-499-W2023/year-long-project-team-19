@@ -126,7 +126,7 @@ const Rules = () => {
       await axios.post(
         "https://nodeserver-two.vercel.app/api/rules/addRules",
         {
-          order: ruleInfo.order,
+          order: maxOrder+1,
           title: ruleInfo.title,
           context: ruleInfo.context
         }
