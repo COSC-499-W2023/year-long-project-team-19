@@ -23,6 +23,15 @@ const editRules = async (req, res) => {
   rules.order = order !== null ? order : rules.order;
   rules.context = context !== null ? context : rules.context;
   rules.title = title !== null ? title : rules.title;
+
+  //shift the order of the rules if the order is changed
+  if (order !== null) {
+    let rulesToUpdate = await Rules.find({ order: { $gte: order } }).sort({ order: 1 });
+    rulesToUpdate.forEach(async (rule) => {
+      rule.order = (parseInt(rule.order) + 1);
+      await rule.save();
+    });
+  }
   
   rules.markModified('rules');
   rules.save();
