@@ -39,12 +39,6 @@
 		echo "1: Update failed: " . $con->error;
 	}
 
-	if ($conn->query($updateTokenQuery)) {
-		echo "Update successful!";
-	} else {
-		echo "Update failed: " . $conn->error;
-	}
-
 	// Sending email
 	$api_key = 'api-B7913C7CCB2948FCA5699B60C6EF2626'; 
 
@@ -52,9 +46,9 @@
 	$input_data = [
 		'api_key' => $api_key,
 		'sender' => 'colorbreak@mail.com',
-		'to' => [$usernameClean],
+		'to' => [$username],
 		'subject' => 'Password Reset Verification Email',
-		'html_body' => '<h1>' . $token . ' is your reset code.<br>It will expier after 30 minutes.</h1>',
+		'html_body' => '<h1>' . $token . ' is your reset code.<br>It will expire after 30 minutes.</h1>',
 		'text_body' => 'Test',
 	];
 
