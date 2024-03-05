@@ -12,37 +12,41 @@
 		exit();
 	}
 
-	$username = mysqli_real_escape_string($con, $_POST["username"]); //real escape string is built in sql injection checker, will strip any sql commands out
-	//going to create a second username variable to further filter the user's inputted username to avoid sql injection
-	$usernameClean = filter_var($username, FILTER_SANITIZE_EMAIL); //remove all illegal characters from the email address (filter_var() is built in php function)
-	//was using filter sanitize string, with filter flag strip low and high to take out any characters from the username that aren't just the standard ASCII text characters (values 0-32 is special--the 
-	//low strip takes these out, and any above 128 is special as well, so the strip high takes care of these) before, but filter_sanitize_email seems better
+	// ini_set('display_errors', 1);
+	// error_reporting(E_ALL);
 
-	//CHECK IF USERNAME CLEAN MATCHES USERNAME TO RETURN ERROR CODE
-	if ($username != $usernameClean) {
-		echo "2: The inputted username contains some prohibitted characters, possibly some sql code.";//error 2, the usernameClean doesn't match the entered username, 
-		//so we exit before the sql query, as to avoid sql injection
-		exit();
-	}
+	$username = $_POST["username"];
 
-	$namequery = "SELECT useremail, reset_token_hash FROM useracc WHERE useremail ='" .$usernameClean. "';";
+	// $username = "john@doe.com";
 
-	$usernameCheck = mysqli_query($con, $namequery) or die("4: Name Check failed."); //error 4 for name check query failed
+	$getSalt = "SELECT salt FROM useracc WHERE useremail ='" .$username. "';";
+
+	$getSaltQuery = mysqli_query($con, $getSalt) or die("2: Validation failed: Email is not registered.");  
 
 	$token = bin2hex(random_bytes(4));
 
-    $token_hash = hash("sha256", $token);
+	$useraccInfo = mysqli_fetch_assoc($getSaltQuery); 
+	$salt = $useraccInfo["salt"]; 
 
-	$insertTokenQuery = "UPDATE useracc SET reset_token_hash='" .$token_hash. "' WHERE useremail ='" .$usernameClean. "';";
+    $token_hash = crypt($token, $salt);
 
-	mysqli_query($con, $insertTokenQuery) or die("11: Insert user query failed.");
+	//Updating token in database
+	$updateTokenQuery = "UPDATE useracc SET reset_token_hash = '$token_hash' WHERE useremail = '$username'";
 
-	echo "0\t";
+	if ($con->query($updateTokenQuery)) {
+		echo "0: Update successful!";
+	} else {
+		echo "1: Update failed: " . $con->error;
+	}
+
+	if ($conn->query($updateTokenQuery)) {
+		echo "Update successful!";
+	} else {
+		echo "Update failed: " . $conn->error;
+	}
 
 	// Sending email
 	$api_key = 'api-B7913C7CCB2948FCA5699B60C6EF2626'; 
-
-	echo $token;
 
 	// Email data
 	$input_data = [
