@@ -325,3 +325,18 @@ This week, I only managed to complete the unit test for the card API endpoint. I
 
 -----
 I only have a couple of features left to work on which is input validation for edit rule modal, delete rule implementation, and couple of test. I think I can finish it all before the peer testing (excluding tests)
+
+# Date Range: 26-02-2024 to 03-03-2024
+
+![henrylog13](log_imgs/henry_t2_log9.png)
+
+
+### Completed
+1. Implemented UI for delete Rule
+2. Implemented API call for delete Rule when pressing delete button
+3. Implemented React hook after successful API call on edit rule
+4. Fix Logic in edit rule for 'rule order'.
+5. peer testing #2
+-----
+
+All the features and tests are completed, only bug fixing from the peer testing left to do.
