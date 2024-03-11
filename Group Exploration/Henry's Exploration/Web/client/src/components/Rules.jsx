@@ -14,6 +14,7 @@ const Rules = () => {
   const [order, setOrder] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   const [maxOrder, setMaxOrder] = React.useState(0);
+  const [isError, setIsError] = React.useState(false);
 
   //add rule modal
   const [show, setShow] = useState(false);
@@ -62,6 +63,26 @@ const Rules = () => {
 
   const handleEditChanges = async () => {
     try {
+      //validate all inputs
+      //if all inputs are valid, send a post request to the server
+
+      let isValid = true;
+      console.log(ruleInfoEdit.order);
+      if (!Number.isInteger(Number(ruleInfoEdit.order)) || ruleInfoEdit.order === "" || ruleInfoEdit.order < 0) {
+        isValid = false;
+      }
+      if(ruleInfoEdit.title === ""){
+        isValid = false;
+      };
+      if(ruleInfoEdit.context === ""){
+        isValid = false;
+      };
+
+      if(!isValid){
+        setIsError(true);
+        return;
+      };
+
       await axios.post(
         "https://nodeserver-two.vercel.app/api/rules/editRules",
         {
@@ -73,6 +94,7 @@ const Rules = () => {
       );
       setReload(!reload);
       setShowEdit(false);
+      setIsError(false);
     } catch (error) {
       console.log(error);
     }
@@ -104,13 +126,32 @@ const Rules = () => {
       await axios.post(
         "https://nodeserver-two.vercel.app/api/rules/addRules",
         {
-          order: ruleInfo.order,
+          order: maxOrder+1,
           title: ruleInfo.title,
           context: ruleInfo.context
         }
       );
+      setRuleInfo({
+        order: "",
+        title: "",
+        context: "",
+      });
       setReload(!reload);
       setShow(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(
+        "https://nodeserver-two.vercel.app/api/rules/deleteRules",
+        {
+          data: { _id: id,},
+        }
+      );
+      setReload(!reload);
     } catch (error) {
       console.log(error);
     }
@@ -150,9 +191,16 @@ const Rules = () => {
                     margin: "10px",
                   }}
                 >
-                <Button variant="primary" onClick={() => handleShowEdit(id[index], title, contexts[index], order[index])}>
-                  Edit
-                </Button>
+                {isLoggedIn() ?(
+                  <>
+                    <Button variant="primary" onClick={() => handleShowEdit(id[index], title, contexts[index], order[index])}>
+                    Edit
+                    </Button>
+                    <Button variant="danger" style={{marginLeft: '5px'}} onClick={() => handleDelete(id[index])}>
+                      Delete
+                    </Button>
+                  </>
+                 ) : null} 
                 </div>
               </section>
             ))}
@@ -175,6 +223,7 @@ const Rules = () => {
         handleEditChanges={handleEditChanges}
         setRuleInfo={setRuleInfoEdit}
         ruleInfo={ruleInfoEdit}
+        isError={isError}
       />
     </>
   );
