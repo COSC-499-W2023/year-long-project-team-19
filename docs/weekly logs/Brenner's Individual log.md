@@ -743,3 +743,48 @@ Project (4) in repo (most up to date multiplayer): https://github.com/Prelude14/
 #### I made a GIF of the current version of the multiplayer in action: 
 <img src= "log_imgs/peerTest2W8GIF.gif">
 
+<!--====================================================================================================================               TERM 2 ************ W9-->
+# TERM 2 - Date Range: 03-03-2024 to 10-03-2024 - W9
+
+<img src = "log_imgs/brenner's_logT2W9.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Get final build ready for peer test #2, continue getting the multiplayer branch up to date, and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"PeerTest #2 Heuristic Eval Doc"</li>
+  <li>"matchmaking draft"</li>
+  <li>"Game Mirroring"</li>
+  <li>"T2 W9 Team Log"</li>
+  <li>"T2 W9 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"PeerTest #2 Heuristic Eval Doc: (Peer testing #2 was on Thursday the 7th, and we finalized the doc by Wednesday night)"</li>
+  <li>"T2 W9 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"matchmaking draft: So I haven't really had the chance to get back to this since last week, because getting the final build ready for peer testing ended up taking all my time. So the branch is still in the same position as last week, but bringing it up to date with the peer test build version shouldn't be that bad since I believe there should be less merge conflicts between that build and this branch compared to last week's merge between the older build and the older version of this branch. "</li>
+  <li>"Game Mirroring: We still need to get the play and attack features to work over the network."</li>
+  <li>"T2 W9 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+So this week started not so busy, since we felt like we were on a good track to have our build ready for the peer testing on time, but by Tuesday night, things got pretty stressful. We met earlier that day to finalize our tasks that we wanted to test and get all the final features together, and everything was coming together! The website was ready to go, Leo finished the reset password feature and commited it 
+to our branch, and I commited the sound feature and a couple other small bug fixes to the branch as well. The only thing we were waiting on when we left the meeting, was for Adrian to finalize and commit the 
+card zoom on hover feature that Aditya helped him with, and it was all supposed to be together and built by like 5 or 6 for testing (giving us all of Wednesday to fix any issues like last peer testing). Problem was, when Leo merged his code at the meeting, we didn't notice that they were working in a different Unity version than the rest of us, and it ended up completely breaking the branch (you can scale projects up a Unity version, but downgrading them is not supported). I didn't see the group chat message about the error until around 6 that night, and nobody in the group replied or did anything about it for some reason. I quickly realized it was the version error, and told Adrian to revert back to the newest commit they could to rebuild their features from there, and told Leo to fix their version and do the same, but nothing happened until the next morning. Adrian had their features done early, but Leo couldn't get it working at all on their system (somehow they couldn't download the correct editor version despite us using the exact same one since October). I ended up having to step in and rebuild Leo's features by recreating the scene's game objects and piecing them together using the scripts (with Leo explaining what did what over Discord), and combining that work with Adrian's newer and fixed branch. It took essentially all of my day Wednesday in order to get it done (I missed that day's career fair and was late for class), and for some reason no one else seemed to care that it wasn't working (complete radio silence from everyone but Leo until around 8, when I managed to get everything working, built, and uploaded to simmer.io so that it could be linked in our website). I was super stressed and a bit annoyed to be honest, but once it was working I felt better. Then again, when Aditya started testing it around 9, they were running into a bunch of issues that were seemingly happening for no reason, and I again, was forced to step in and try to figure what it was, since no one else was replying. We eventually figured it out, and we also got it working on Leo's machine after that as well though, so we ended up ready for the test class by the end of the night. It was super stressful to be sort of freaking out over issues that I couldn't necessarily do anything about (Leo and Adrian's features were easier to fix if it was Leo or Adrian doing the fixing, so until Leo definitely couldn't fix theirs, I just had to wait and hope it was getting done). Additionally, it was also pretty stressful to be freaking out a bit, and have the rest of the group not freaking out or not showing a lot of urgency. It felt like I was going crazy, and that no-one noticed or cared. So once the peer testing #2 ended, I figured I should take a bit of break until next week to avoid burnout. That's why the multiplayer branch hasn't changed much since last week. 
+
+You can see the repo branch I used to fix the multiplayer at the link below, and the final build that we used for peer testing is below that.
+
+Project (4) in repo (most up to date multiplayer): https://github.com/Prelude14/499UnityGameT19/tree/c59802f0a0f35516ff2e184c441da4565c7c7e53/My%20project%20(4)
+
+Project (4) in repo (peer testing #2 final build): https://github.com/Prelude14/499UnityGameT19/tree/4697f5a310b4f56139af3e6886992a320ba7e786/My%20project%20(4)
