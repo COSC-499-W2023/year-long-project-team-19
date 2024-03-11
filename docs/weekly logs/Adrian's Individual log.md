@@ -363,3 +363,25 @@
 
 <h3>Completed and In Progress: </h3> 
 <p>Because of the high amount of cards we have and the redesign on some of the abilities we I'm not quite done yet and this feels like a multi-week task. But having figured out the bulk of the issues I can start working on this more efficiently.</p>
+
+<h1>Date Range: 04-03-2024 to 10-03-2024</h1>
+<img src ="/log_imgs/Adrian_t2_wk9.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>
+  This week I had to work on the card zoom feature in preparation of our heuristic evaluation. I was supposed to work more on the abilities but had to divert more attention towards fixing and finalizing another feature that was supposed be finished before the evaluation. So for the sake of the evaluation I had to focus on that feature for now.
+</p>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <lI>
+"Card Zoom on Hover Feature": After reviewing the progress made by Aditya for this feature I had to make a lot of adjustments to make this feature work. It was a lot more prefab and script changes than expected and took longer than I had hoped. This meant I had less time to work on abilities.  
+  </lI>
+
+</ol>
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed and In Progress: </h3> 
+<p>While the card zoom on hover feature is technically finished I think it could do with more refining. After the heuristic evaluation the group sort of came to an agreement that this feature isn't as polished as we had hoped. The text was still a more blurry than we had hoped. So we are working to fix that. This will be included in next week's tasks. </p>
+
