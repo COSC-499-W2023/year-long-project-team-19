@@ -276,3 +276,29 @@ Draft PRs:
 (https://github.com/Prelude14/499UnityGameT19/pull/6).
 (https://github.com/COSC-499-W2023/year-long-project-team-19/pull/152).
 
+<<<<<<< Updated upstream
+=======
+# Date Range: 03-03-2024 to 10-03-2024 - W9
+
+`<img src = "log_imgs/Leo_log_T2W9.png?raw=true"/>`
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>Heuristic Evaluation</li>
+  <li>Password reset</li>
+  <li>login System</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+At the start of the week, I finally finished the new password input script and php file, and added error messages for each stage of the password reset process. There was a couple of issues with the SQL query for updating passwords which took an unexpected amount of time to figure out. One issue was that the hash exceeded the database attribute's length capacity. Another issue was the use of 'hash' as a database attribute conflicted with SQL's reserved keywords, which was messing up the password input query. 
+
+Trying to build the latest game version for the peer testing session proved to be very difficult. We had some unity editor version issues with merging my features which took a lot of work to figure out. We ended up having to manually redo all the changes inside unity for it to work properly. Once we resolved that, we found that we couldn't log in with the new password, which took additional troubleshooting. Following this, there was still some conflicts merging all our features together. Fortunatly we got the final build working with all our features ready for peer testing.
+
+Following the peer testing session, I made some updates on the error handling for the password reset, and added masked password input which I forgot to add initially. Then this weekend, I tried to work on updating some of the visual aspects of the game and doing some exploration on how we could improve the Game scene based on feedback from peer testing.
+
+With all these problems to fix along with finishing up all the password reset and login features aswell as preparing for the peer testing, this week required a considerable dedication of time and effort to the project, which is why I feel like I went above and beyond my milestone features.
+
+
+>>>>>>> Stashed changes
