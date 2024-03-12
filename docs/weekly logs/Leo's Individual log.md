@@ -276,11 +276,9 @@ Draft PRs:
 (https://github.com/Prelude14/499UnityGameT19/pull/6).
 (https://github.com/COSC-499-W2023/year-long-project-team-19/pull/152).
 
-<<<<<<< Updated upstream
-=======
 # Date Range: 03-03-2024 to 10-03-2024 - W9
 
-`<img src = "log_imgs/Leo_log_T2W9.png?raw=true"/>`
+<img src = "log_imgs/Leo_log_T2W9.png?raw=true"/>
 
 ## Which tasks from the project board are associated with these features?
 
@@ -299,6 +297,3 @@ Trying to build the latest game version for the peer testing session proved to b
 Following the peer testing session, I made some updates on the error handling for the password reset, and added masked password input which I forgot to add initially. Then this weekend, I tried to work on updating some of the visual aspects of the game and doing some exploration on how we could improve the Game scene based on feedback from peer testing.
 
 With all these problems to fix along with finishing up all the password reset and login features aswell as preparing for the peer testing, this week required a considerable dedication of time and effort to the project, which is why I feel like I went above and beyond my milestone features.
-
-
->>>>>>> Stashed changes
