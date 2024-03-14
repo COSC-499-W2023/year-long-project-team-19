@@ -31,7 +31,6 @@
 	//don't technically need to check against sql inject on the password, since it is never used in a query, just in a crypt function to be compare to the user's hash.
 	$password = $_POST["password"];
 
-
 	//Query to check database for that USERNAME, then its password and other info ==============================================
 	$namequery = "SELECT useremail, hash, salt, datecreated, gamesplayed, gameswon, damagedealt FROM useracc WHERE useremail ='" .$usernameClean. "';";
     //win loss ratio might need to be caluclated (not stored in table?)

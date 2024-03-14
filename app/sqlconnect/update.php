@@ -10,11 +10,11 @@
 
 	//grab unity's values that it sent, and store in local variable to be queried in our database
 	$username = $_POST["username"];
+	$password = $_POST["password"];
 
-	debug.log($username);
 
-	//Query to check database for that USERNAME,
-	$namequery = "SELECT useremail FROM useracc WHERE useremail ='" .$username. "';";
+	//Query to check database for that USERNAME, then its password and other info ==============================================
+	$namequery = "SELECT useremail, salt FROM useracc WHERE useremail ='" .$username. "';";
 
 	//Run the Query 
 	$usernameCheck = mysqli_query($con, $namequery) or die("2: Name Check failed."); //error 2 for name check query failed
@@ -26,26 +26,17 @@
 		exit();
 	}
 
-    $token = bin2hex(random_bytes(16));
+	$useraccInfo = mysqli_fetch_assoc($usernameCheck); 
+	$salt = $useraccInfo["salt"]; //get salt from DB
 
-    $token_hash = hash("sha256", $token);
+	//check supplied password combined with DB's salt 
+	$newHash = crypt($password, $salt);
 
-    $expiry = date("Y-m-d H:i:s", time() + 60 * 30);
+    //Updating password in database
+    $updatePassQuery = "UPDATE useracc SET 'hash'= '$newHash' WHERE useremail = '$username'";
 
-    // $mysqli = require __DIR__ . "/database.php";
-
-    $sql = "UPDATE user
-            SET reset_token_hash = ?,
-                reset_token_expires_at = ?
-            WHERE username = ?";
-
-    $stmt = $mysqli->prepare($sql);
-
-    $stmt->bind_param("sss", $token_hash, $expiry, $username);
-
-    $stmt->execute();
-
-	$stmt->bind_param("sss", $token_hash, $expiry, $email);
-
-	$stmt->execute();
-?>
+    if ($con->query($updatePassQuery)) {
+        echo "0: Password Update successful!";
+    } else {
+        echo "1: Password Update failed: " . $con->error;
+    }
