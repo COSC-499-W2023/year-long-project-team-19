@@ -51,7 +51,7 @@
 	}
 
 	//Query to CHECK database for that USERNAME USING THE CLEAN VERSION to avoid sql injection ==============================================
-	$namequery = "SELECT useremail, hash, salt, datecreated, gamesplayed, gameswon, damagedealt FROM useracc WHERE useremail ='" .$usernameClean. "';";
+	$namequery = "SELECT useremail, userhash, salt, datecreated, gamesplayed, gameswon, damagedealt FROM useracc WHERE useremail ='" .$usernameClean. "';";
 
 	//RUN the Query 
 	$usernameCheck = mysqli_query($con, $namequery) or die("4: Name Check failed."); //error 4 for name check query failed
@@ -74,14 +74,52 @@
 
 	//Now we can successfully store all of the new user's info in the databse
 	//Query to INSERT USER INFO into useracc ==============================================
-	$insertuserquery = "INSERT INTO useracc (useremail, hash, salt) VALUES ('" .$usernameClean. "', '" .$hash. "', '" .$salt. "');";
+	$insertuserquery = "INSERT INTO useracc (useremail, userhash, salt) VALUES ('" .$usernameClean. "', '" .$hash. "', '" .$salt. "');";
 
 	//RUN the INSERT Query 
 	mysqli_query($con, $insertuserquery) or die("11: Insert user query failed."); //error 11 for insert user query failed. 
+
+	// Sending email
+	$api_key = 'api-B7913C7CCB2948FCA5699B60C6EF2626'; 
+
+	// Extract the part before the '@'	
+	$partBeforeAt = strstr($usernameClean, '@', true);
+
+	// Email data
+	$input_data = [
+		'api_key' => $api_key,
+		'sender' => 'colorbreak@mail.com',
+		'to' => [$usernameClean],
+		'subject' => 'Welcome to Color Break!',
+		'html_body' => '<h1>' . 'Hi ' . $partBeforeAt . '.<br><br>Welcome to Color Break.<br><br> Happy Gaming!</h1>',
+		'text_body' => 'Test',
+	];
+
+	$json_data = json_encode($input_data);
+
+	$ch = curl_init('https://api.smtp2go.com/v3/email/send');
+
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $json_data);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, [
+		'Content-Type: application/json',
+		'accept: application/json',
+	]);
+
+	$response = curl_exec($ch);
+
+	curl_close($ch);
 
 	//if we get here, then the user WAS CREATED SUCCESSFULLY, so we need to echo a message supplying Unity all the user info (readInput.cs) to achieve LOGGED IN
 	echo "0\t" . date("Y/m/d") . "\t0\t0\t0\t";
 	//send todays date (not sure how to calculate this in php), then send 0 for gamesplayed, 0 for games won, and 0 for damagedealt ratio ALL SEPERATED BY TABS
 
+	//output response
+	if ($response === false) {
+		echo 'Error making API call: cURL error - ' . curl_error($ch);
+	} else {
+		echo 'API Response: ' . $response . PHP_EOL;
+	}
 
 ?>
