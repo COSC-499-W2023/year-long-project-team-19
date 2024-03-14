@@ -205,3 +205,20 @@ This week I added the zoom in on card functionality. Currently the functionality
 ## Among these tasks, which have you completed/in progress in the last week?
 I am still writing automated tests code for some features to check if they have been implemented and are functioning successfully. That is under progress and I am debugging the card zoom feature as we speak.
 
+<h1>Date Range: 19-02-2024 to 03-03-2024</h1>
+
+<img src = "log_imgs/Aditya_T2_Week8.png?raw=true"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+I am still working to fix the zoom card feature. It is a bit of a task at the moment to figure out as our card game objects have been constructed in a different way than most tutorials or internet sources can tell. SO at the moment I am still working on the task
+
+<h1>Date Range: 04-03-2024 to 10-03-2024</h1>
+
+<img src = "log_imgs/Aditya_T2_Week9.png?raw=true"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+During this week we had to conduct peer to peer testing #2 for which our game prototype had to be ready with it's features. With help of my teammate Adrian the problem I was running into to create the zoom effect got solved and the feature worked during peer to peer testing
+
+## Among these tasks, which have you completed/in progress in the last week?
+The zoom effect feature got completed and implemented now our team goal is to figure out the implementation of multiplayer for our game which is the task in progress for the coming weeks. I will also be writing automated testing code to test our features.
+
