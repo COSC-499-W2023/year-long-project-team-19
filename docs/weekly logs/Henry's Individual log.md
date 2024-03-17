@@ -326,7 +326,7 @@ This week, I only managed to complete the unit test for the card API endpoint. I
 -----
 I only have a couple of features left to work on which is input validation for edit rule modal, delete rule implementation, and couple of test. I think I can finish it all before the peer testing (excluding tests)
 
-# Date Range: 26-02-2024 to 03-03-2024
+# Date Range: 03-03-2024 to 10-03-2024 (fixed date)
 
 ![henrylog13](log_imgs/henry_t2_log9.png)
 
@@ -340,3 +340,17 @@ I only have a couple of features left to work on which is input validation for e
 -----
 
 All the features and tests are completed, only bug fixing from the peer testing left to do.
+
+# Date Range: 10-03-2024 to 17-03-2024
+
+![henrylog13](log_imgs/henry_t2_log10.png)
+
+
+### Completed
+1. Fix bug known in the last peer testing (delete rule logic; the rule order is not updated after deleting a rule)
+2. Did some research about mySQL hosting for our Unity game db.
+
+-----
+
+This week I got nothing much to do, just some bug fixing from the peer testing and some research about mySQL hosting for our Unity game db.
+I did some research about mySQL hosting for our unity db but I can't find any free hosting for mySQL, so I think we should use UBC server for the db (just some idea). Other than that, all my work for website are done unless there's a new bug found.
