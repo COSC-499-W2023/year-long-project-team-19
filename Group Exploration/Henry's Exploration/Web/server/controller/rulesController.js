@@ -79,14 +79,29 @@ const deleteRules = async (req, res) => {
   }
 
   try {
-    const rule = await Rules.findOne({ _id });
-    
-    await rule.deleteOne();
-    return res.status(200).json({ message: 'Rule deleted'});
+    const ruleToDelete = await Rules.findOne({ _id });
+    if (!ruleToDelete) {
+      return res.status(404).json({ message: 'Rule not found' });
+    }
+
+    const orderToDelete = ruleToDelete.order;
+    await ruleToDelete.deleteOne();
+
+    // decrement order of the rules after the deleted rule
+    const rulesToUpdate = await Rules.find({ order: { $gt: orderToDelete } }).sort({ order: 1 });
+    if (rulesToUpdate.length > 0) {
+      for (const rule of rulesToUpdate) {
+        rule.order = parseInt(rule.order) - 1;
+        await rule.save();
+      }
+    }
+
+    return res.status(200).json({ message: 'Rule deleted' });
   } catch (error) {
-    res.status(500).json({ message: 'Server error'});
+    return res.status(500).json({ message: 'Server error' });
   }
 };
+
 module.exports = {
   showRules,
   editRules,
