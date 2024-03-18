@@ -385,3 +385,23 @@
 <h3>Completed and In Progress: </h3> 
 <p>While the card zoom on hover feature is technically finished I think it could do with more refining. After the heuristic evaluation the group sort of came to an agreement that this feature isn't as polished as we had hoped. The text was still a more blurry than we had hoped. So we are working to fix that. This will be included in next week's tasks. </p>
 
+<h1>Date Range: 10-03-2024 to 17-03-2024</h1>
+<img src ="/log_imgs/Adrian_t2_wk10.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>
+This week I finished up on the abilities script. I managed to finish all of the doable abilities. I wrote the scripts for all the colors. Some Abilities are left blank on purpose until we finalize the ability and finalize multiplayer so we can enable targetting.
+</p>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <lI>
+"Programming Card Abiliities": I mostly coded and translated the abilities from paper to code. Furthemore, I also had to redesign some of the abilities for this task.
+  </lI>
+
+</ol>
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed and In Progress: </h3> 
+<p>I technically haven't completed the task but I made singnificant progress. I needed to figure out different systems to trigger certain abiltiies at certain times, working on that framework should help later on.</p>
