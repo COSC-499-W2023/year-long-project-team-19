@@ -309,7 +309,6 @@ With all these problems to fix along with finishing up all the password reset an
   <li>"Login System Draft"</li>
   <li>"Create Account System Draft"</li>
   <li>"UI Recommendations: Card Ui changes"</li>
-  <li>"T2 W10 Team log"</li>
   <li>"T2 W10 Individual logs"</li>
 </ol>
 
@@ -318,7 +317,7 @@ With all these problems to fix along with finishing up all the password reset an
 ### Completed:
 
 **Improvement to Password Reset and Account Creation**:
-  - manually merged multiplayer functionalities with updates from our second round of peer testing.
+  - manually merged multiplayer features with updates from our second round of peer testing.
   - Implemented a double password input with masking to improve security during account creation and password reset.
   - Added confirmation messages specifying the email to which the reset token was sent, including an option to resend the token in case of an error.
   - Updated the account creation script to automatically send a welcome email to new users.
