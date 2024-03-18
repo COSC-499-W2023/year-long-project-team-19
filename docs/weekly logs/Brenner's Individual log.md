@@ -788,3 +788,43 @@ You can see the repo branch I used to fix the multiplayer at the link below, and
 Project (4) in repo (most up to date multiplayer): https://github.com/Prelude14/499UnityGameT19/tree/c59802f0a0f35516ff2e184c441da4565c7c7e53/My%20project%20(4)
 
 Project (4) in repo (peer testing #2 final build): https://github.com/Prelude14/499UnityGameT19/tree/4697f5a310b4f56139af3e6886992a320ba7e786/My%20project%20(4)
+
+<!--====================================================================================================================               TERM 2 ************ W10-->
+# TERM 2 - Date Range: 10-03-2024 to 17-03-2024 - W10
+
+<img src = "log_imgs/brenner's_logT2W10.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Continue getting the multiplayer branch up to date, work on Play card feature, and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"matchmaking draft"</li>
+  <li>"T2 W10 Team Log"</li>
+  <li>"T2 W10 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"T2 W10 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"matchmaking draft: So the current version of the branch is essentially up to date with the peer testing branch minus some of Adrian's newest features that weren't able to be brought into it perfectly quite yet. I had to fix a couple bugs in the card deal system which took a bit, and stopped me from getting the card play done. Aiming to spend the first couple days of this week to get back on schedule before next class. "</li>
+  <li>"T2 W10 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+So I ended up surprisingly quite busy with life this week, and apart from doing a coupole hours worth of bug fixing/troubleshooting, I wasn't able to get as much work done as I had hoped for this week. I do plan to hunker down quite a bit in the next couple days to try to get back on track before we meet next however, so here's hoping that goes well.
+
+You can see the repo branch I used to fix the multiplayer at the link below;
+
+Project (4) in repo (most up to date multiplayer): https://github.com/Prelude14/499UnityGameT19/tree/b65e27f65f08cd84d28aadf7c9f294591a03c16d/My%20project%20(4)
+
+
