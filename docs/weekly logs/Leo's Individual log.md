@@ -300,7 +300,7 @@ With all these problems to fix along with finishing up all the password reset an
 
 # Date Range: 10-03-2024 to 17-03-2024 - W10
 
-<img src = "log_imgs/Leo_log_T2W10.png?raw=true"/>
+<img src = "log_imgs/Leo_T2W10.png?raw=true"/>
 
 ## Which tasks from the project board are associated with these features?
 
