@@ -325,8 +325,6 @@ With all these problems to fix along with finishing up all the password reset an
   - Added a mechanism to prevent users from resetting their password to the previous one.
   - Implemented visual icons next to create and update password inputs, indicating the validity of the password based on our criteria (e.g., length, characters).
 
-<img src = "log_imgs/Leo_logImg_W10_s1.png?raw=true"/>
-<img src = "log_imgs/Leo_logImg_W10_s2.png?raw=true"/>
 <img src = "log_imgs/Leo_logImg_W10_s4.png?raw=true"/>
 <img src = "log_imgs/Leo_logImg_W10_s5.png?raw=true"/>
 <img src = "log_imgs/Leo_logImg_W10_s7.png?raw=true"/>
