@@ -297,3 +297,55 @@ Trying to build the latest game version for the peer testing session proved to b
 Following the peer testing session, I made some updates on the error handling for the password reset, and added masked password input which I forgot to add initially. Then this weekend, I tried to work on updating some of the visual aspects of the game and doing some exploration on how we could improve the Game scene based on feedback from peer testing.
 
 With all these problems to fix along with finishing up all the password reset and login features aswell as preparing for the peer testing, this week required a considerable dedication of time and effort to the project, which is why I feel like I went above and beyond my milestone features.
+
+# Date Range: 10-03-2024 to 17-03-2024 - W10
+
+<img src = "log_imgs/Leo_T2W10.png?raw=true"/>
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Password reset system"</li>
+  <li>"Login System Draft"</li>
+  <li>"Create Account System Draft"</li>
+  <li>"UI Recommendations: Card Ui changes"</li>
+  <li>"T2 W10 Individual logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+**Improvement to Password Reset and Account Creation**:
+  - manually merged multiplayer features with updates from our second round of peer testing.
+  - Implemented a double password input with masking to improve security during account creation and password reset.
+  - Added confirmation messages specifying the email to which the reset token was sent, including an option to resend the token in case of an error.
+  - Updated the account creation script to automatically send a welcome email to new users.
+  - Introduced specific error feedback for the create account and reset password scenes, helping users understand the process's failure points.
+  - Added a mechanism to prevent users from resetting their password to the previous one.
+  - Implemented visual icons next to create and update password inputs, indicating the validity of the password based on our criteria (e.g., length, characters).
+
+<img src = "log_imgs/Leo_logImg_W10_s4.png?raw=true"/>
+<img src = "log_imgs/Leo_logImg_W10_s5.png?raw=true"/>
+<img src = "log_imgs/Leo_logImg_W10_s7.png?raw=true"/>
+
+----------------------------------------------------------------
+### In Progress:
+
+**Reset Token Timestamp**: 
+  - Working on integrating a timestamp system for the password reset feature, which will introduce an expiry time for reset tokens and a cooldown period for reset requests. I havent had enough time to implement this week as I had an issue with the create process which took me a long time to resolve.
+
+**Game Scene Visuals**: 
+  - working on improving the game's visual presentation, added dynamic arrow mechanism to visually indicate the direction and target of card attacks.
+  - Adding an option in the game scene to turn instruction labels on or off with a tooltip in the for better view of the game panel.
+  - Potantially, adding a magnification effect for playable cards and looking into incorporating attack animations to enhance gameplay visuals.
+
+**Turn System**: 
+  -  Trying to implement the turn system and integrating visual cues for the play panel to reflect whos turn it is more clearly.
+
+----------------------------------------------------------------
+#### Pull Requests: 
+  - [https://github.com/Prelude14/499UnityGameT19/pull/10]
+  - [https://github.com/COSC-499-W2023/year-long-project-team-19/pull/166]
+  - [https://github.com/Prelude14/499UnityGameT19/pull/11]
+

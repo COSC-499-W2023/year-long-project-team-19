@@ -14,7 +14,7 @@
 
 
 	//Query to check database for that USERNAME, then its password and other info ==============================================
-	$namequery = "SELECT useremail, salt FROM useracc WHERE useremail ='" .$username. "';";
+	$namequery = "SELECT useremail, salt, userhash FROM useracc WHERE useremail ='" .$username. "';";
 
 	//Run the Query 
 	$usernameCheck = mysqli_query($con, $namequery) or die("2: Name Check failed."); //error 2 for name check query failed
@@ -28,9 +28,15 @@
 
 	$useraccInfo = mysqli_fetch_assoc($usernameCheck); 
 	$salt = $useraccInfo["salt"]; //get salt from DB
+	$userhash = $useraccInfo["userhash"]; //get salt from DB
 
 	//check supplied password combined with DB's salt 
 	$newHash = crypt($password, $salt);
+
+	if ($userhash == $newHash){
+		echo "99: User is trying to reset the same password twice"; 
+		exit();
+	}
 
     //Updating password in database
     $updatePassQuery = "UPDATE useracc SET 'hash'= '$newHash' WHERE useremail = '$username'";
