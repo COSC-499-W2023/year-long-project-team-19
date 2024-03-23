@@ -1,0 +1,112 @@
+{
+  "id": "eef7baa2-e37f-4779-bf5e-062f6abf6ea3",
+  "version": "2.0",
+  "name": "COSC499 Web Test",
+  "url": "https://client-jade-seven.vercel.app/adminLogin",
+  "tests": [{
+    "id": "a0acca66-9170-4f05-80eb-434902fe290b",
+    "name": "admin login",
+    "commands": [{
+      "id": "c4d994e0-8d48-4796-b535-0b43c8a91d41",
+      "comment": "",
+      "command": "open",
+      "target": "/adminLogin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c55c044-dce3-4ab3-8103-4a6955f5e58d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x788",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24af7366-ff2b-44d4-af82-b1f700178982",
+      "comment": "",
+      "command": "click",
+      "target": "id=formBasicUsername",
+      "targets": [
+        ["id=formBasicUsername", "id"],
+        ["css=#formBasicUsername", "css:finder"],
+        ["xpath=//input[@id='formBasicUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b985fc5-95fc-434a-b96b-c40790682dc8",
+      "comment": "",
+      "command": "type",
+      "target": "id=formBasicUsername",
+      "targets": [
+        ["id=formBasicUsername", "id"],
+        ["css=#formBasicUsername", "css:finder"],
+        ["xpath=//input[@id='formBasicUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "66db0694-47a4-476d-891c-bb36a0dbb3d4",
+      "comment": "",
+      "command": "click",
+      "target": "id=formBasicPassword",
+      "targets": [
+        ["id=formBasicPassword", "id"],
+        ["css=#formBasicPassword", "css:finder"],
+        ["xpath=//input[@id='formBasicPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d09a52d1-0142-4e12-b6e3-a0c9c9b16af1",
+      "comment": "",
+      "command": "type",
+      "target": "id=formBasicPassword",
+      "targets": [
+        ["id=formBasicPassword", "id"],
+        ["css=#formBasicPassword", "css:finder"],
+        ["xpath=//input[@id='formBasicPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "40198fcb-2909-4997-8776-7a3e13dce717",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3af489c8-9a12-4363-ab08-38d051f53948",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.title",
+      "targets": [
+        ["css=.title", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Pick your deck!')]", "xpath:innerText"]
+      ],
+      "value": "Pick your deck!"
+    }]
+  },
+  "suites": [{
+    "id": "a4703bc8-c256-47ea-b824-6f0f4cdec7a4",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a0acca66-9170-4f05-80eb-434902fe290b", "d9c956c1-e3c9-4acb-87b7-d11c03472999"]
+  }],
+  "urls": ["https://client-jade-seven.vercel.app/", "https://client-jade-seven.vercel.app/cards", "https://client-jade-seven.vercel.app/adminLogin"],
+  "plugins": []
+}
