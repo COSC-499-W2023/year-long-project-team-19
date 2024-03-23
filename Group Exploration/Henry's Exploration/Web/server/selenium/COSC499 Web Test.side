@@ -98,7 +98,211 @@
       ],
       "value": "Pick your deck!"
     }]
-  },
+  }, {
+    "id": "d9c956c1-e3c9-4acb-87b7-d11c03472999",
+    "name": "Add Card",
+    "commands": [{
+      "id": "2167768c-16f8-4ae0-98ae-eb947d4c7971",
+      "comment": "",
+      "command": "open",
+      "target": "/adminLogin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d70c0a0b-690c-49e9-b648-efaa2badfb1f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x747",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03a2062c-a499-4c8d-b5e1-ac5bfd5440da",
+      "comment": "",
+      "command": "click",
+      "target": "id=formBasicUsername",
+      "targets": [
+        ["id=formBasicUsername", "id"],
+        ["css=#formBasicUsername", "css:finder"],
+        ["xpath=//input[@id='formBasicUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a3314ac-96ba-4343-8497-2480578208c7",
+      "comment": "",
+      "command": "type",
+      "target": "id=formBasicUsername",
+      "targets": [
+        ["id=formBasicUsername", "id"],
+        ["css=#formBasicUsername", "css:finder"],
+        ["xpath=//input[@id='formBasicUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "ae3355ea-cd35-467f-9ef8-7e2f78a934e4",
+      "comment": "",
+      "command": "click",
+      "target": "id=formBasicPassword",
+      "targets": [
+        ["id=formBasicPassword", "id"],
+        ["css=#formBasicPassword", "css:finder"],
+        ["xpath=//input[@id='formBasicPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24682115-3d3d-431f-a6a2-646d281052d7",
+      "comment": "",
+      "command": "type",
+      "target": "id=formBasicPassword",
+      "targets": [
+        ["id=formBasicPassword", "id"],
+        ["css=#formBasicPassword", "css:finder"],
+        ["xpath=//input[@id='formBasicPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "4c761637-caea-4729-91d0-423eef87508f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "af44a287-62bd-4379-96ad-e02b2f7042fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.blue-team-button",
+      "targets": [
+        ["css=.blue-team-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'BLUE')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "133e0a4e-eee4-4c98-ae0c-4b61ade5cb90",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Card')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "31e747ed-119d-47b1-b3e0-71a3aaa259bf",
+      "comment": "",
+      "command": "type",
+      "target": "id=formCardName",
+      "targets": [
+        ["id=formCardName", "id"],
+        ["name=name", "name"],
+        ["css=#formCardName", "css:finder"],
+        ["xpath=//input[@id='formCardName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "de495b7b-3d18-45a6-8752-558e348a8daa",
+      "comment": "",
+      "command": "type",
+      "target": "id=formCardType",
+      "targets": [],
+      "value": "blue"
+    }, {
+      "id": "977512d1-ee1f-4336-9bf0-0e666f5ba176",
+      "comment": "",
+      "command": "type",
+      "target": "id=formCardHp",
+      "targets": [
+        ["id=formCardHp", "id"],
+        ["name=hp", "name"],
+        ["css=#formCardHp", "css:finder"],
+        ["xpath=//input[@id='formCardHp']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "10"
+    }, {
+      "id": "1b0d5b16-0f10-4bcb-8fc4-14b9e187c371",
+      "comment": "",
+      "command": "type",
+      "target": "id=formCardAttack",
+      "targets": [
+        ["id=formCardAttack", "id"],
+        ["name=attack", "name"],
+        ["css=#formCardAttack", "css:finder"],
+        ["xpath=//input[@id='formCardAttack']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "10"
+    }, {
+      "id": "38c33102-4aae-41aa-a242-3bd49725e116",
+      "comment": "",
+      "command": "type",
+      "target": "id=formCardDefense",
+      "targets": [
+        ["id=formCardDefense", "id"],
+        ["name=cost", "name"],
+        ["css=#formCardDefense", "css:finder"],
+        ["xpath=//input[@id='formCardDefense']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "10"
+    }, {
+      "id": "8357fcbb-563e-4b96-ba02-d1ad373a057b",
+      "comment": "",
+      "command": "type",
+      "target": "id=formCardAbility",
+      "targets": [
+        ["id=formCardAbility", "id"],
+        ["name=ability", "name"],
+        ["css=#formCardAbility", "css:finder"],
+        ["xpath=//input[@id='formCardAbility']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "3cc0280e-d589-4f31-88ba-0e6cf1ac4517",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=(//button[@type='button'])[19]", "xpath:attributes"],
+        ["xpath=//div[3]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Changes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "de7ab2f8-540b-47d8-bc5d-95803cba1337",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.card:nth-child(7) .card__name",
+      "targets": [
+        ["css=.card:nth-child(7) .card__name", "css:finder"],
+        ["xpath=//div[@id='cards']/figure[7]/figcaption/h1", "xpath:idRelative"],
+        ["xpath=//figure[7]/figcaption/h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'test')]", "xpath:innerText"]
+      ],
+      "value": "test"
+    }]
+  }],
   "suites": [{
     "id": "a4703bc8-c256-47ea-b824-6f0f4cdec7a4",
     "name": "Default Suite",
