@@ -302,6 +302,80 @@
       ],
       "value": "test"
     }]
+  }, {
+    "id": "a32142bb-113b-427a-b7bd-472acabb9795",
+    "name": "Delete Card",
+    "commands": [{
+      "id": "abd03157-c091-4c2c-b23c-dd76591e02e9",
+      "comment": "",
+      "command": "open",
+      "target": "/adminLogin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19d7d031-2fde-4c16-a10f-967975bc9b55",
+      "comment": "",
+      "command": "type",
+      "target": "id=formBasicUsername",
+      "targets": [
+        ["id=formBasicUsername", "id"],
+        ["css=#formBasicUsername", "css:finder"],
+        ["xpath=//input[@id='formBasicUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "af328612-d90f-49ac-bc81-4b3fa5eb9fc7",
+      "comment": "",
+      "command": "type",
+      "target": "id=formBasicPassword",
+      "targets": [
+        ["id=formBasicPassword", "id"],
+        ["css=#formBasicPassword", "css:finder"],
+        ["xpath=//input[@id='formBasicPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "50d67cc3-4d8d-43e7-8e86-c4a22d412eea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "392ae4fe-1181-4ea7-bf7c-77cf506f8726",
+      "comment": "",
+      "command": "click",
+      "target": "css=.blue-team-button",
+      "targets": [
+        ["css=.blue-team-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'BLUE')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a610453-7d66-4249-a7f5-e1c12cee136f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(7) .btn-danger",
+      "targets": [
+        ["css=.card:nth-child(7) .btn-danger", "css:finder"],
+        ["xpath=(//button[@type='button'])[16]", "xpath:attributes"],
+        ["xpath=//div[@id='cards']/figure[7]/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//figure[7]/div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "a4703bc8-c256-47ea-b824-6f0f4cdec7a4",
