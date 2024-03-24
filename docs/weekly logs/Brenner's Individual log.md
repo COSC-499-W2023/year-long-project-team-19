@@ -827,4 +827,44 @@ You can see the repo branch I used to fix the multiplayer at the link below;
 
 Project (4) in repo (most up to date multiplayer): https://github.com/Prelude14/499UnityGameT19/tree/b65e27f65f08cd84d28aadf7c9f294591a03c16d/My%20project%20(4)
 
+<!--====================================================================================================================               TERM 2 ************ W11-->
+# TERM 2 - Date Range: 17-03-2024 to 24-03-2024 - W11
+
+<img src = "log_imgs/brenner's_logT2W11.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Finish multiplayer play card feature, start the multiplayer turn system, start outlining system features for final report doc, and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"matchmaking draft: (Specifically for playing a card)"</li>
+  <li>"Turn system over multiplayer"</li>
+  <li>"T2 W11 Team Log"</li>
+  <li>"T2 W11 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"matchmaking draft: (Specifically for playing a card): So if a card in their hand is playable, players can now successfully play it by placing it in their "playPanel", and the server will communicate that the card was played to the other player's game, moving it from their opponent's hand to their opponent's "playPanel" and facing the right way as well (the opponent's cards show their backs while in their hand). Players cannot play their opponent's cards even if they can afford to, and they cannot move cards once they are played. I had to add an RPC call in sharedVarManager that gets triggered whenever a card is done being dragged into the client's playPanel, which is controlled by the dragScript. The CmdDraw command in the sharedVarManager uses the same RPC to control where the cards are dealt to on each client, but the dragScript treats the cards as "played" instead of dealt, so they show up in the playPanels instead of the hands."</li>
+  <li>"Turn system over multiplayer: So this was a bit tricky to get figured out at first, because I needed someway for the server to assign each client as a specific player, and keep track of the turns. At first I tried using a new method in sharedVarManager, that the server would trigger when the first colour was added to the list in the CmdGetPlayerColour (the one that starts the game once two players connect and send valid colours). This didn't work however, because that command is run on the server, so the method was always running on the Host's build despite not being a command or RPC. I was finding the network identity inside that method before assigning the playermanager with that id to be player one or two, so since the server was always the one running it, it would always use the host's network id, overwriting who was player one and two. Eventually I figured out that the clients can actually send their network identity as a variable, and that made all the difference. So now when clients send their colour to the server to begin the game, they also send their ID. The first player to send their colour becomes first player (the server assign's that id's playermanager as first player), and the second player gets assigned to be player 2. SharedVarManager also has a couple new sync vars to control who's turn it is (always starting with one when game begins), what turn it is, as well as each players mana count. I then changed Turnscript and the dragscript to use each client's assigned player number in combination with the server's turn variables to control how clients can change/end turns, as well as how they can play cards. The proper client will get to go first, and the other will know it isn't their turn, because of turn display text. Players will not be able to drag their cards if it isn't their turn, or if it isn't their card. They also can't end the opponent's turn using the end turn button (but the old end opponent's turn still might work and is there for testing purposes). Ther server seems to track the turns without issue (it flips whosTurn every time the correct player ends their turn), and it tracks each players mana properly as well (In same cmd as the whosTurn flip, it adds to each player's mana accordingly). Just need to get the attack feature to also work over the server now, and the game should be fully playable."</li>
+  <li>"T2 W11 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"T2 W11 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+So I ended up getting the play card over multiplayer working before last week's team meeting like I planned, and then I managed to get the turn system up and working pretty well on the weekend. We also started outling our system features in preparation for the final report thats due in 2 weeks as well, which overall felt pretty good. This week I'm focussed on getting the attack feature to work over the server, and then any last minute bugs or small features I have time for, since we only have two weeks before the final thing is due. I have been making all of my changes on our other repo since I started the multiplayer, but this week I pushed a couple of the main scripts this repo as well to show the works thats been done. 
+
+You can see the repo branch with the turn system below:
+
+Project (4) in repo (most up to date multiplayer): https://github.com/Prelude14/499UnityGameT19/tree/8ea5d05434230822c97e35ce41c085fe5823e896/My%20project%20(4)
+
 
