@@ -861,7 +861,7 @@ Finish multiplayer play card feature, start the multiplayer turn system, start o
 </ol>
 
 #### Aditional Context:
-So I ended up getting the play card over multiplayer working before last week's team meeting like I planned, and then I managed to get the turn system up and working pretty well on the weekend. We also started outling our system features in preparation for the final report thats due in 2 weeks as well, which overall felt pretty good. This week I'm focussed on getting the attack feature to work over the server, and then any last minute bugs or small features I have time for, since we only have two weeks before the final thing is due. I have been making all of my changes on our other repo since I started the multiplayer, but this week I pushed a couple of the main scripts this repo as well to show the works thats been done. 
+So I ended up getting the play card over multiplayer working before last week's team meeting like I planned, and then I managed to get the turn system up and working pretty well on the weekend. We also started outling our system features in preparation for the final report thats due in 2 weeks as well, which overall felt pretty good. This week I'm focussed on getting the attack feature to work over the server, and then any last minute bugs or small features I have time for, since we only have two weeks before the final thing is due. I have been making all of my changes on our other repo since I started the multiplayer, but this week I pushed a couple of the main scripts to this repo as well to show the works thats been done. 
 
 You can see the repo branch with the turn system below:
 
