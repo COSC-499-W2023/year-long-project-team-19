@@ -354,3 +354,19 @@ All the features and tests are completed, only bug fixing from the peer testing 
 
 This week I got nothing much to do, just some bug fixing from the peer testing and some research about mySQL hosting for our Unity game db.
 I did some research about mySQL hosting for our unity db but I can't find any free hosting for mySQL, so I think we should use UBC server for the db (just some idea). Other than that, all my work for website are done unless there's a new bug found.
+
+# Date Range: 10-03-2024 to 17-03-2024
+
+![henrylog11](log_imgs/henry_t2_log11.png)
+
+
+### Completed
+1. Figure out how to use Selenium for UI testing
+2. Created tests for admin login UI, delete card, add card.
+
+-----
+
+The Selenium testing is a bit tricky to set up, since each test runs on a different browser session, each test have to include the "admin login" part to store admin credentials in the broswer session in order for the selenium to run the "admin features" such as add,delete card.
+
+![](log_imgs/henry_test_cardSelenium.png)
+
