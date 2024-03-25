@@ -405,3 +405,24 @@ This week I finished up on the abilities script. I managed to finish all of the 
 
 <h3>Completed and In Progress: </h3> 
 <p>I technically haven't completed the task but I made singnificant progress. I needed to figure out different systems to trigger certain abiltiies at certain times, working on that framework should help later on.</p>
+
+<h1>Date Range: 18-03-2024 to 24-03-2024</h1>
+<img src ="/log_imgs/Adrian_t2_wk11.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>
+This week I worked on mostly UI fixes considering how broken the UI. Most of the text was either blurry  or impossible to read. Furthermore, there were bugs in some features that I had to work on mainly the zoom feature. I also polished the game further by making assets and adding UI elements into the game. We also met to discuss documentation.
+</p>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <lI>
+"UI Changes: Game Board and Text": Buttons changed, UI elements fixed, scripts relating to text changes fixed. Implemented stylized and aesthetic changes to the UI elements specifically in the game scene.
+  </lI>
+
+</ol>
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed and In Progress: </h3> 
+<p>I have a general mock up of the game's UI direction we're finalizing. The text for most prefabs have been fixed so they're not presented as blurry anymore. Furthermore, the zoom feautre had more bugs that I had to fix, some cards were displayed even when they weren't supposed to and some cards would be displayed a little too far up. But those bugs were fixed.</p>
