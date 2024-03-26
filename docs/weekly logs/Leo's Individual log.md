@@ -349,3 +349,22 @@ With all these problems to fix along with finishing up all the password reset an
   - [https://github.com/COSC-499-W2023/year-long-project-team-19/pull/166]
   - [https://github.com/Prelude14/499UnityGameT19/pull/11]
 
+# Date Range: 17-03-2024 to 24-03-2024 - W11
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Password reset system"</li>
+  <li>"Login System Draft"</li>
+  <li>"Create Account System Draft"</li>
+  <li>"Game over screen"</li>
+  <li>"UI Recommendations: Card Ui changes"</li>
+  <li>"Look into testing"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+- Added a game over screen that will trigger when a player is out of health.
+- Added an option in the game scene to turn instruction labels on or off
+- Still working on reset token timstamp system and UI changes based on previous ideas.
+- Looking into testing for the login, create, reset. 
