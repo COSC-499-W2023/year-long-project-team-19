@@ -40,9 +40,8 @@ public class SharedVarManager : NetworkBehaviour
     [SyncVar] public int p1Mana = 1; //need sync var to track each player's mana
     [SyncVar] public int p2Mana = 1; //need sync var to track each player's mana
 
-    [SyncVar] public int p1Health = 30; //need sync var to track each player's health (start with full 30 points)
-    [SyncVar] public int p2Health = 30; //need sync var to track each player's health
-
+    [SyncVar] public float p1Health = 30; //need sync var to track each player's health (start with full 30 points)
+    [SyncVar] public float p2Health = 30; //need sync var to track each player's health
 
     //=====================================================================  METHODS  ===============================================================================
 
