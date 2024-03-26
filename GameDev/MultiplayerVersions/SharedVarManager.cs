@@ -37,39 +37,20 @@ public class SharedVarManager : NetworkBehaviour
     [SyncVar]//need to store who's turn it is
     public int serverTurnCount = 0; //start at 0, but it will be incremented each time a turn ends
 
-    [SyncVar] public int p1Mana = 1; //need sync var to treack each player's mana
-    [SyncVar] public int p2Mana = 1; //need sync var to treack each player's mana
+    [SyncVar] public int p1Mana = 1; //need sync var to track each player's mana
+    [SyncVar] public int p2Mana = 1; //need sync var to track each player's mana
+
+    [SyncVar] public int p1Health = 30; //need sync var to track each player's health (start with full 30 points)
+    [SyncVar] public int p2Health = 30; //need sync var to track each player's health
 
 
     //=====================================================================  METHODS  ===============================================================================
 
-    /*public void setPlayerNum() //first client to add thier colour to sharedVar's list is made 1st player 
-    {
-        //locate the PlayerManager in the Client that sent their colour to server, assign them as 1st, 2nd, or no player
-        NetworkIdentity networkIdentity = NetworkClient.connection.identity;
-        PlayerManager = networkIdentity.GetComponent<PlayerManager>();
-
-        if (playerColors.Count == 1) 
-        {
-            PlayerManager.isPlayerOne = true; //SET sync variables from player manager to true or false in order for it to track who is player ONE
-            PlayerManager.isPlayerTwo = false;
-        }
-        else if (playerColors.Count == 2)
-        {
-            PlayerManager.isPlayerOne = false; //SET sync variables from player manager to true or false in order for it to track who is player TWO
-            PlayerManager.isPlayerTwo = true;
-        }
-        else //set both to false, because the game shouldn't be working if their is more than 2 players
-        {
-            PlayerManager.isPlayerOne = false; //SET sync variables from player manager to false incase error on second player
-            PlayerManager.isPlayerTwo = false;
-        }
-    }*/
-
-    [Command(requiresAuthority = false)]
+    //command when turn is ended on client side (they press end turn button and call this command in turnscript)
+    [Command(requiresAuthority = false)] 
     public void CmdUpdateWhosTurn(NetworkIdentity networkTurnIdentity)
     {
-        PlayerTurnManager = networkTurnIdentity.GetComponent<PlayerManager>();          //want to track who is ending each turn
+        PlayerTurnManager = networkTurnIdentity.GetComponent<PlayerManager>(); //want to track who is ending each turn
 
         if (whosTurn == 1) //if its player one's turn
         {
@@ -84,6 +65,7 @@ public class SharedVarManager : NetworkBehaviour
             else if (PlayerTurnManager.isPlayerTwo == true && PlayerTurnManager.isPlayerOne == false) //if player 2 ended player 1's turn somehow
             {
                 //Do NOTHING SINCE player2 should never be able to end turn when whosTurn = 1
+                //Debug.log("Player 2 tried to end player 1's turn");
             }
         }
         else if (whosTurn == 2)
@@ -91,6 +73,7 @@ public class SharedVarManager : NetworkBehaviour
             if (PlayerTurnManager.isPlayerOne == true && PlayerTurnManager.isPlayerTwo == false) //if player one ended player 2's turn somehow
             {
                 //Do NOTHING SINCE player1 should never be able to end turn when whosTurn = 2
+                //Debug.log("Player 1 tried to end player 2's turn");
             }
             else if (PlayerTurnManager.isPlayerTwo == true && PlayerTurnManager.isPlayerOne == false) //if player 2 ended their turn
             {
@@ -103,6 +86,38 @@ public class SharedVarManager : NetworkBehaviour
         }
     }
 
+    //command when a client attacks the other player (they drag a played card into the opponent's avatar in order to attack)
+    [Command(requiresAuthority = false)]
+    public void CmdAttackOtherPlayer(int damage, NetworkIdentity networkAttackIdentity)
+    {
+        PlayerTurnManager = networkAttackIdentity.GetComponent<PlayerManager>(); //want to track who is attacking
+        
+        if (whosTurn == 1) //if its player one's turn
+        {
+            if (PlayerTurnManager.isPlayerOne == true && PlayerTurnManager.isPlayerTwo == false) //if player one attacked
+            {
+                p2Health -= damage; //update p2 Health to equal old health minus the amount of damage that was sent by p1
+                
+            } 
+            else if (PlayerTurnManager.isPlayerTwo == true && PlayerTurnManager.isPlayerOne == false) //if player 2 attacked player 1 somehow
+            {
+                //Do NOTHING SINCE player2 should never be able to attack when whosTurn = 1
+                //Debug.log("Player 2 tried to attack p1 during player 1's turn");
+            }
+        }
+        else if (whosTurn == 2)
+        {
+            if (PlayerTurnManager.isPlayerOne == true && PlayerTurnManager.isPlayerTwo == false) //if player one attacked player 2 somehow
+            {
+                //Do NOTHING SINCE player1 should never be able to attack when whosTurn = 2
+                //Debug.log("Player 1 tried to attack p2 during player 2's turn");
+            }
+            else if (PlayerTurnManager.isPlayerTwo == true && PlayerTurnManager.isPlayerOne == false) //if player 2 attacked
+            {
+                p1Health -= damage; //update p1 Health to equal old health minus the amount of damage that was sent by p2
+            }
+        }
+    }
 
     //this command receives a client's colour, and then checks to see if game can be started
     [Command(requiresAuthority = false)]
