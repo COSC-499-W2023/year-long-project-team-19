@@ -483,6 +483,82 @@
         ["xpath=//button[contains(.,'Save Changes')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "139b8aee-e10c-4728-a762-99eb4e54eb68",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.rule-section:nth-child(4) > h2",
+      "targets": [
+        ["css=.rule-section:nth-child(4) > h2", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/section[4]/h2", "xpath:idRelative"],
+        ["xpath=//section[4]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'test')]", "xpath:innerText"]
+      ],
+      "value": "test"
+    }]
+  }, {
+    "id": "3fcd6ae0-6d14-481a-a582-bb7845d9b796",
+    "name": "Delete Rule",
+    "commands": [{
+      "id": "53562dc5-9ba2-4430-b9df-18b4748f6305",
+      "comment": "",
+      "command": "open",
+      "target": "/adminLogin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e67f9a93-7c95-401c-bbfb-5db862f81b87",
+      "comment": "",
+      "command": "type",
+      "target": "id=formBasicUsername",
+      "targets": [
+        ["id=formBasicUsername", "id"],
+        ["css=#formBasicUsername", "css:finder"],
+        ["xpath=//input[@id='formBasicUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "a628a2ad-2034-4e23-965a-4197513d7c15",
+      "comment": "",
+      "command": "type",
+      "target": "id=formBasicPassword",
+      "targets": [
+        ["id=formBasicPassword", "id"],
+        ["css=#formBasicPassword", "css:finder"],
+        ["xpath=//input[@id='formBasicPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "30a0814f-c216-498a-ba37-b4008381692e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "71798793-ef6f-4614-af26-8f5967abc3c6",
+      "comment": "",
+      "command": "open",
+      "target": "/rules",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e6b18089-6296-47cb-ace3-438a2f7f04df",
+      "comment": "",
+      "command": "click",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }],
   "suites": [{
