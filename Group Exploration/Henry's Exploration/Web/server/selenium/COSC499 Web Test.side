@@ -554,10 +554,27 @@
       "value": ""
     }, {
       "id": "e6b18089-6296-47cb-ace3-438a2f7f04df",
+      "comment": "check if \"test\" is present",
+      "command": "assertText",
+      "target": "css=.rule-section:nth-child(4) > h2",
+      "targets": [
+        ["css=.rule-section:nth-child(4) > h2", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/section[4]/h2", "xpath:idRelative"],
+        ["xpath=//section[4]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'test')]", "xpath:innerText"]
+      ],
+      "value": "test"
+    }, {
+      "id": "89ba0656-689c-4662-b634-6ff0441972ad",
       "comment": "",
       "command": "click",
-      "target": "",
-      "targets": [],
+      "target": "css=.rule-section:nth-child(4) .btn-danger",
+      "targets": [
+        ["css=.rule-section:nth-child(4) .btn-danger", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/section[4]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//section[4]/div/button[2]", "xpath:position"]
+      ],
       "value": ""
     }]
   }],
