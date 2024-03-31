@@ -23,7 +23,6 @@ public class abilityScript : MonoBehaviour
         if (triggered == false && dbDisplay.staticSummoned == true)
         {
             Debug.Log("Ability triggered init " + color);
-
             switch (color)
             {
                 case 1:
@@ -50,6 +49,7 @@ public class abilityScript : MonoBehaviour
     public void abilityListBlack(int id)
     {
         Debug.Log("black trigger id: " + id);
+
         int damage;
         NetworkIdentity networkAttackIdentity = NetworkClient.connection.identity;
         PlayerManager = networkAttackIdentity.GetComponent<PlayerManager>();
@@ -76,7 +76,6 @@ public class abilityScript : MonoBehaviour
             case 6:
             case 7:
                 //target enemy or minion targetting yet
-                 
                 break;
             case 8:
             case 9:
@@ -135,6 +134,7 @@ public class abilityScript : MonoBehaviour
     }
     public void abilityListWhite(int id)
     {
+
         
         Debug.Log("TRIGGER WHITE ABILTIY");
         // PlayerManager.CmdDraw(3, PlayerManager.clientDecks);
@@ -206,6 +206,7 @@ public class abilityScript : MonoBehaviour
     }
     public void abilityListBlue(int id)
     {
+
         // case 0:
         //ability 0: deal 2 damage to yourself
          NetworkIdentity networkAttackIdentity = NetworkClient.connection.identity;
@@ -369,5 +370,6 @@ public class abilityScript : MonoBehaviour
        Destroy(cardDupe);
     }
 }
+
 
 

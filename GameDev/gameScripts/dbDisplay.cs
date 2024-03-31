@@ -10,13 +10,19 @@ public class dbDisplay : MonoBehaviour
     public int displayId;
     public static bool attackDragging;
     public int colour; //for each card's colour
+    public static int staticColour;
     public int id;
+    public static int staticID;
     public int hp;
+    public static int staticHP;
     public int pow;
+    public static int staticPow;
     public int cost;
     public static int staticCost;
     public string cardName;
+    public static string staticName;
     public string txt;
+    public static string staticTxt;
 
     public Text nameText;
     public Text descriptionText;
@@ -68,7 +74,9 @@ public class dbDisplay : MonoBehaviour
     public static int staticID;
     public static int staticCardColor;
 
+
     public static int staticPow;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -126,11 +134,9 @@ public class dbDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         staticPow = pow;
-        staticCardColor = colour;
-        staticID = id;
-        staticAttackBorder = false;
-        staticCost = cost;
+
         staticSummoned = isSummoned;
         // Debug.Log(staticSummoned + " " + cardName);
         displayCard();
@@ -150,6 +156,7 @@ public class dbDisplay : MonoBehaviour
         //summoning logic and cost logic
 
         // Debug.Log(cardName + " Is summoned false");
+
         if (this.cost <= turnScript.currentMana && isSummoned == false && turnScript.actionPoints >= 1)
         {
             canBeSummoned = true;
@@ -159,13 +166,14 @@ public class dbDisplay : MonoBehaviour
                 // Debug.Log(cardName + " Is now playable");
             }
 
-        }
-        else
-        {
-            canBeSummoned = false;
-            playableBorder.SetActive(false);
-            unplayableBorder.SetActive(true);
-        }
+
+            }
+            else
+            {
+                canBeSummoned = false;
+                playableBorder.SetActive(false);
+                unplayableBorder.SetActive(true);
+            }
 
         if (canBeSummoned)
         {
@@ -175,8 +183,6 @@ public class dbDisplay : MonoBehaviour
             unplayableBorder.SetActive(false);
         }
 
-
-        GameObject startParent = transform.parent.gameObject;
 
         if (isSummoned == false && currentZone == playZone)
         {
@@ -194,7 +200,9 @@ public class dbDisplay : MonoBehaviour
             GetComponent<dragScript>().enabled = false;
             turnScript.currentMana = turnScript.currentMana - this.cost;
             // Debug.Log("Mana left: " + turnScript.currentMana);
+
             turnScript.actionPoints--;
+
 
         }
 
@@ -248,6 +256,11 @@ public class dbDisplay : MonoBehaviour
         }
 
     }
+    public void Awake()
+    {
+        Canvas = GameObject.Find("Canvas");
+    }
+
 
     private void Attack()
     {
@@ -327,6 +340,9 @@ public class dbDisplay : MonoBehaviour
         powText.text = " " + this.pow.ToString();
         hpText.text = " " + this.hp.ToString();
 
+
+
+
         //trying to get the border of the card drwan to change colour to match the card's colour int
         Color border = renderCardColour(colour);//get what colour the border should be
         Image.GetComponent<Image>().color = border; //then render the correct colour
@@ -373,6 +389,29 @@ public class dbDisplay : MonoBehaviour
         }
     }
 
+    public void OnHoverEnter()
+    {
+        // Add logic for zooming in on hover enter
+        Debug.Log("Zooming on: " + cardName);
+        zoomCard = Instantiate(ZoomCard, new Vector2(Input.mousePosition.x, Input.mousePosition.y + 250), Quaternion.identity);
+        zoomCard.transform.SetParent(Canvas.transform, true);
+        RectTransform rect = zoomCard.GetComponent<RectTransform>();
+        rect.sizeDelta = new Vector2(200, 300);
+        zoomCard.GetComponent<contentZoom>().cardName = cardName;
+        zoomCard.GetComponent<contentZoom>().txt = txt;
+        zoomCard.GetComponent<contentZoom>().cost = cost;
+        zoomCard.GetComponent<contentZoom>().pow = pow;
+        zoomCard.GetComponent<contentZoom>().hp = hp;
+
+
+
+    }
+
+    public void OnHoverExit()
+    {
+        // Add logic for zooming out on hover exit
+        Destroy(zoomCard);
+    }
 
 
 }
