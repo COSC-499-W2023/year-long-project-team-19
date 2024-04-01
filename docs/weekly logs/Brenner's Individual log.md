@@ -867,4 +867,44 @@ You can see the repo branch with the turn system below:
 
 Project (4) in repo (most up to date multiplayer): https://github.com/Prelude14/499UnityGameT19/tree/8ea5d05434230822c97e35ce41c085fe5823e896/My%20project%20(4)
 
+<!--====================================================================================================================               TERM 2 ************ W12-->
+# TERM 2 - Date Range: 24-03-2024 to 31-03-2024 - W12
 
+<img src = "log_imgs/brenner's_logT2W12.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Finish multiplayer turn system, start the multiplayer attack system, continue outlining system features for final report doc, and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Turn system over multiplayer"</li>
+  <li>"matchmaking draft: (Specifically for attacking with a card and updating player health accordingly)"</li>
+  <li>"Final Deliverable Documentation"</li>
+  <li>"T2 W12 Team Log"</li>
+  <li>"T2 W12 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"Turn system over multiplayer: So it was mostly finished last week, but I ended up needing to add some logic to get the game to deal a new card out to the player when they end their turn. Adrian had added just a call to the Draw Cmd inside Playermanager that we use to deal the first cards out at the begining of the game, but it was a massive exploit because of where they addded it. It was put inside the TurnScript right after the updateturnInfo function call that gets the server to figure out whos turn it is and act accordingly if the right player ended their turn. The problem was that all the checks for the if it is the player's turn happen inside the server's cmds, not inside turnScript itself, so turnScript has no actual check to see if its the player's turn or not before executing the code. This meant that a player could repeatedly spam the end turn button during the opponent's turn or their own and get a new card each time the clicked it, which is definietly game breaking. I fixed by adding a checkTurn method inside turnScript that checks if it is the player who is clicking the button's turn before doing anything to the turn information, even before calling the updateTurnInfo call from before. This means there is two checks for the players turn before the server actually updates the turn info. Seems to work good and after manually testing again, seems fully fixed.  "</li>
+  <li>"matchmaking draft: (Specifically for attacking with a card and updating player health accordingly): So now that card deal works, playing a card works, and turns work, we now need to get attacking and the player's health to work with them as well. I set up the sharedVarManager (the server) to now track each player's health and mana using a very similar method to how it tracks the turn info of each player. Then I just had to change turnScript, playerHealth and opponentsHealth to use those same values, similar to how I did it with turnScript or dragScript. Overall seems to work great, players can only attack when a card is played and its in their playPanel, and attacking updates both clients to display the proper health and mana after the attack or when a card is played. attacking isn't very flashy (theres now message or animation or anything), so we might add something to make it more obvious that your were attacked, but I don't know if we have time. "</li>
+  <li>"T2 W12 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"Final Deliverable Documentation: We have our list of system features started and partially filled out, but we have some details to iron out still this week."</li>
+  <li>"T2 W12 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+The game is really coming together now and we are shifting focus to last minute changes and then paperwork for the final submission. Still actually commiting to the other repo, but I updated this repo's scripts in GameDev/MultiplayerVersions/ again to show commits in this repo.
+
+You can see the repo branch with the turn system below:
+
+Project (4) in repo (most up to date multiplayer): https://github.com/Prelude14/499UnityGameT19/tree/89c4d3054d87aed223dd3944be04ddca99fd25cf/My%20project%20(4)
