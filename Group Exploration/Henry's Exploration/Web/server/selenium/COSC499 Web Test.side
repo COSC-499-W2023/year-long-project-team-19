@@ -376,6 +376,207 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "8d569f2c-cf26-4c4c-98f4-0230b4bbe699",
+    "name": "Add Rule",
+    "commands": [{
+      "id": "9408ebff-68d8-49d5-b616-ffd049c60488",
+      "comment": "",
+      "command": "open",
+      "target": "/adminLogin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "381eea4c-802a-4f45-8c8c-4f6ceab8b43c",
+      "comment": "",
+      "command": "type",
+      "target": "id=formBasicUsername",
+      "targets": [
+        ["id=formBasicUsername", "id"],
+        ["css=#formBasicUsername", "css:finder"],
+        ["xpath=//input[@id='formBasicUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "4d1f4128-5a1b-4728-b714-687a484f8a00",
+      "comment": "",
+      "command": "type",
+      "target": "id=formBasicPassword",
+      "targets": [
+        ["id=formBasicPassword", "id"],
+        ["css=#formBasicPassword", "css:finder"],
+        ["xpath=//input[@id='formBasicPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "e14086b2-cec1-4f32-a397-c813c67a9efb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8eafe980-ed37-475f-b1fb-7a4e56dda66c",
+      "comment": "",
+      "command": "open",
+      "target": "/rules",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2181b2f7-b79c-43d8-9a32-89973a1556a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Rules')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2148fff5-6a16-47d1-92e1-88f87392f301",
+      "comment": "",
+      "command": "type",
+      "target": "id=formRuleTitle",
+      "targets": [
+        ["id=formRuleTitle", "id"],
+        ["name=title", "name"],
+        ["css=#formRuleTitle", "css:finder"],
+        ["xpath=//input[@id='formRuleTitle']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "e96494fc-753b-4c53-b1db-9f7824767a8e",
+      "comment": "",
+      "command": "type",
+      "target": "id=formRuleContext",
+      "targets": [
+        ["id=formRuleContext", "id"],
+        ["name=context", "name"],
+        ["css=#formRuleContext", "css:finder"],
+        ["xpath=//textarea[@id='formRuleContext']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "test context"
+    }, {
+      "id": "8a540f8b-f62c-4b7a-9126-a2f157e12ba8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(2)",
+      "targets": [
+        ["css=.btn-primary:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[3]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Changes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "139b8aee-e10c-4728-a762-99eb4e54eb68",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.rule-section:nth-child(4) > h2",
+      "targets": [
+        ["css=.rule-section:nth-child(4) > h2", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/section[4]/h2", "xpath:idRelative"],
+        ["xpath=//section[4]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'test')]", "xpath:innerText"]
+      ],
+      "value": "test"
+    }]
+  }, {
+    "id": "3fcd6ae0-6d14-481a-a582-bb7845d9b796",
+    "name": "Delete Rule",
+    "commands": [{
+      "id": "53562dc5-9ba2-4430-b9df-18b4748f6305",
+      "comment": "",
+      "command": "open",
+      "target": "/adminLogin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e67f9a93-7c95-401c-bbfb-5db862f81b87",
+      "comment": "",
+      "command": "type",
+      "target": "id=formBasicUsername",
+      "targets": [
+        ["id=formBasicUsername", "id"],
+        ["css=#formBasicUsername", "css:finder"],
+        ["xpath=//input[@id='formBasicUsername']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "a628a2ad-2034-4e23-965a-4197513d7c15",
+      "comment": "",
+      "command": "type",
+      "target": "id=formBasicPassword",
+      "targets": [
+        ["id=formBasicPassword", "id"],
+        ["css=#formBasicPassword", "css:finder"],
+        ["xpath=//input[@id='formBasicPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "30a0814f-c216-498a-ba37-b4008381692e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "71798793-ef6f-4614-af26-8f5967abc3c6",
+      "comment": "",
+      "command": "open",
+      "target": "/rules",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e6b18089-6296-47cb-ace3-438a2f7f04df",
+      "comment": "check if \"test\" is present",
+      "command": "assertText",
+      "target": "css=.rule-section:nth-child(4) > h2",
+      "targets": [
+        ["css=.rule-section:nth-child(4) > h2", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/section[4]/h2", "xpath:idRelative"],
+        ["xpath=//section[4]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'test')]", "xpath:innerText"]
+      ],
+      "value": "test"
+    }, {
+      "id": "89ba0656-689c-4662-b634-6ff0441972ad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rule-section:nth-child(4) .btn-danger",
+      "targets": [
+        ["css=.rule-section:nth-child(4) .btn-danger", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/section[4]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//section[4]/div/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "a4703bc8-c256-47ea-b824-6f0f4cdec7a4",
