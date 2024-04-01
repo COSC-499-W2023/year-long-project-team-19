@@ -17,7 +17,7 @@ public class turnScript : NetworkBehaviour
     public int maxMana;
 
     public static int currentMana;
-    public Text manaText;
+    public TMPro.TMP_Text manaText;
 
     public static bool turnStart;
 
@@ -25,6 +25,8 @@ public class turnScript : NetworkBehaviour
     public GameObject playArrows;
     public GameObject attackArrows;
 
+    public static float p1StartingHP; // turn start HP
+    public static float p2StartingHP; // turn start HP
     //need access to player manager script that is unique to each client
     public PlayerManager PlayerManager;
 
@@ -115,6 +117,7 @@ public class turnScript : NetworkBehaviour
         if (isMyTurn == true)
         {
             turnText.text = "Your turn";
+            
         }
         else
         {
@@ -153,20 +156,88 @@ public class turnScript : NetworkBehaviour
         Debug.Log("endturn button pressed...updateturnCount sent Cmd...");
 
         //turnStart = PlayerManager.myTurnStart;//set this to update properly when updateTurn is triggered in place of the end opponent's turn method.
-
+        
     }
 
     public void endTurn()
     {
-        isMyTurn = false;
-        isTheirTurn = 1;
-        playArrows.SetActive(false);
-        attackArrows.SetActive(false);
-        disable = true;
+        bool itsMyTurn = checkTurnInScript(); //check if it is the client that pressed the end turn button's turn before actually changing the turn values and dealing a new card to the client
 
-        //turnCount++;
-        updateTurnCount();
+        if (itsMyTurn == true) //*** It must be the client's turn in order for the button to actually change the hands and deal a card
+        {
+            isMyTurn = false;
+            isTheirTurn = 1;
+            playArrows.SetActive(false);
+            attackArrows.SetActive(false);
+            disable = true;
+
+            //turnCount++;
+            updateTurnCount();
+            //redundantly locate the PlayerManager in the Client, need to call our specific version of playermanager's CmdDraw
+            NetworkIdentity networkIdentity = NetworkClient.connection.identity;
+            PlayerManager = networkIdentity.GetComponent<PlayerManager>();
+            PlayerManager.CmdDraw(1, PlayerManager.clientDecks);  //ONLY DEAL NEW CARD IF IT IS ACTUALLY MY TURN
+
+            //update the health of each player at the end of each turn
+            p1StartingHP = SharedVarManager.p1HP;
+            p2StartingHP = SharedVarManager.p2HP;
+        }
+        //if itsMyTurn is not true, then nothing should happen when button is clicked
     }
+
+    public bool checkTurnInScript()
+    {
+        //find sharedvar game object in scene at runtime, CHECK for turn count
+        GameObject sharedVarManagerObj = GameObject.Find("SharedVarManager");
+        SharedVarManager sharedVarManager = sharedVarManagerObj.GetComponent<SharedVarManager>();
+
+        int turnScriptwhosTurn = sharedVarManager.whosTurn;//set turnScriptwhosTurn to be based off SharedVarManager's value
+
+        if (turnScriptwhosTurn == 0)
+        {
+            //Debug.Log("Turn # 0 according to SharedVarManager");
+            return false;
+        }
+        else if (turnScriptwhosTurn == 1) //its player one's turn
+        {
+            //Debug.Log("Player # 1's turn according to SharedVarManager");
+            //locate the PlayerManager in the Client, need to check if it is player 1 or 2
+            NetworkIdentity networkIdentity = NetworkClient.connection.identity;
+            PlayerManager = networkIdentity.GetComponent<PlayerManager>();
+
+            if (PlayerManager.isPlayerOne == true && PlayerManager.isPlayerTwo == false) //if I'm player ONE and its PLAYER ONE'S Turn, then it IS my turn
+            {
+                //isDraggable = true; //let card be draggable
+                return true;
+            }
+            else if (PlayerManager.isPlayerTwo == true && PlayerManager.isPlayerOne == false) //if I'm player TWO and its PLAYER ONE'S Turn, then it is NOT my turn
+            {
+                //isDraggable = false; //card should NOT be draggable, the startDrag() should fail
+                return false;
+            }
+
+        }
+        else if (turnScriptwhosTurn == 2)
+        {
+            //Debug.Log("Player # 2's turn according to SharedVarManager");
+            //locate the PlayerManager in the Client, need to check if it is player 1 or 2
+            NetworkIdentity networkIdentity = NetworkClient.connection.identity;
+            PlayerManager = networkIdentity.GetComponent<PlayerManager>();
+
+            if (PlayerManager.isPlayerOne == true && PlayerManager.isPlayerTwo == false) //if I'm player ONE and its PLAYER TWO'S Turn, then it IS NOT my turn
+            {
+                //isDraggable = false; //card should NOT be draggable, the startDrag() should fail
+                return false;
+            }
+            else if (PlayerManager.isPlayerTwo == true && PlayerManager.isPlayerOne == false) //if I'm player TWO and its PLAYER TWO'S Turn, then it IS my turn
+            {
+                //isDraggable = true; //let card be draggable
+                return true;
+            }
+        }
+        return false; //default returns false 
+    }
+
     public void endOpponentTurn()
     {
         isMyTurn = true;
@@ -179,7 +250,14 @@ public class turnScript : NetworkBehaviour
         {
             disable = false;
         }
+
+        playerHealth.turnStartHealth = (int)playerHealth.HPStatic; //updates turnstart health to track how much life they started w/
+        Debug.Log("Your health is at: " + playerHealth.turnStartHealth);
+        
     }
+
+
+}
 
 
 }
