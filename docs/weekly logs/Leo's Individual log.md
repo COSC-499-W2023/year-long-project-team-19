@@ -367,4 +367,22 @@ With all these problems to fix along with finishing up all the password reset an
 - Added a game over screen that will trigger when a player is out of health.
 - Added an option in the game scene to turn instruction labels on or off
 - Still working on reset token timstamp system and UI changes based on previous ideas.
-- Looking into testing for the login, create, reset. 
+- Looking into testing for the login, create, reset.
+
+# Date Range: 24-03-2024 to 31-03-2024 - W12
+
+<img src = "log_imgs/Leo_log_T2W12.png?raw=true"/>
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Password reset system"</li>
+  <li>"UI Recommendations: Card Ui changes""</li>
+  <li>"Game over screen"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+I stopped working on the reset cooldown that I started last week because it was taking me too long, I will try to finish that later if I have time. I update the game over scene and still want to update that to show player stats and win/loss status. I added an option in the game scene to turn instruction labels on or off in the for less obstruction. Other than that, I mostly got started on documentation this week and looking at code reviews today. 
+- 
+
