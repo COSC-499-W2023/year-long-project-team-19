@@ -13,6 +13,9 @@ public class turnScript : MonoBehaviour
     public static int totalSummons;
 
     public int maxMana;
+
+    public static int staticMaxMana;
+
     public static int actionPoints;
 
     public int actionPointsTotal;
@@ -20,10 +23,14 @@ public class turnScript : MonoBehaviour
     public Text manaText;
 
     public static bool turnStart;
+    public static int damageHealed = 0;
 
     public static int turnCount = 0;
     public GameObject playArrows;
     public GameObject attackArrows;
+
+    public static int cardsDrawn;
+
     public Text actionText;
 
     // Start is called before the first frame update
@@ -45,6 +52,7 @@ public class turnScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (isMyTurn == true)
         {
             turnText.text = "Your turn";
@@ -74,7 +82,7 @@ public class turnScript : MonoBehaviour
         {
             attackArrows.active = false;
         }
-
+        staticMaxMana = maxMana;
     }
     public void endTurn()
     {
@@ -100,6 +108,8 @@ public class turnScript : MonoBehaviour
         }
         actionUpdate();
         playerHealth.turnStartHealth = playerHealth.HPStatic;
+        cardsDrawn = 0;
+
     }
 
     public void actionUpdate()

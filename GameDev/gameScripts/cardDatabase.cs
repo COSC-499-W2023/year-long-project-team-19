@@ -71,17 +71,21 @@ public class cardDatabase : MonoBehaviour
       blackCardList.Add(new Card1(1, 2, "Eye for an Eye", 3, 1, 2, "Discard a random card from your hand, but destroy a target creature as a trade."));
       blackCardList.Add(new Card1(1, 3, "Eye for an Eye", 3, 1, 2, "Discard a random card from your hand, but destroy a target creature as a trade."));
 
-      blackCardList.Add(new Card1(1, 4, "Necromancer's Summon", 7, 5, 5, "Deal 3 damage to yourself"));
-      blackCardList.Add(new Card1(1, 5, "Necromancer's Summon", 7, 5, 5, "Deal 3 damage to yourself"));
+
+      blackCardList.Add(new Card1(1, 4, "Necromancer's Summon", 7, 5, 5, "Deal 3 damage to self."));
+      blackCardList.Add(new Card1(1, 5, "Necromancer's Summon", 7, 5, 5, "Deal 3 damage to self."));
+
 
       blackCardList.Add(new Card1(1, 6, "Russian Roulette", 6, 3, 4, "For each life you lost this turn deal that much damage to enemy"));
       blackCardList.Add(new Card1(1, 7, "Russian Roulette", 6, 3, 4, "For each life you lost this turn deal that much damage to enemy"));
 
       blackCardList.Add(new Card1(1, 8, "Sacrificial Lamb", 3, 1, 1, "Heal yourself equal to damage dealt to self this turn."));
-      blackCardList.Add(new Card1(1, 9, "Sacrificial Lamb", 3, 1, 1, "Heal yourself equal to damage dealt to self this turn."));
 
-      blackCardList.Add(new Card1(1, 10, "Vengeful/Spiteful Spirits", 4, 3, 2, "For each life you're missing draw that many cards divided by 3"));
-      blackCardList.Add(new Card1(1, 11, "Vengeful/Spiteful Spirits", 4, 3, 2, "For each life you're missing draw that many cards divided by 3"));
+      blackCardList.Add(new Card1(1, 9, "Sacrificial Lamb", 3, 1, 1, "Heal yourself equal to damage dealt to self this turn. "));
+
+      blackCardList.Add(new Card1(1, 10, "Vengeful/Spiteful Spirits", 4, 3, 2, "For each life you're missing draw that many cards divided by 3."));
+      blackCardList.Add(new Card1(1, 11, "Vengeful/Spiteful Spirits", 4, 3, 2, "For each life you're missing draw that many cards divided by 3."));
+
 
    } //end BLACK deck  ============================================================
 
@@ -136,8 +140,8 @@ public class cardDatabase : MonoBehaviour
       whiteCardList.Add(new Card1(3, 8, "Copycat", 4, 3, 2, "Summon a copy of this creature if you have healed 5 damage so far."));
       whiteCardList.Add(new Card1(3, 9, "Copycat", 4, 3, 2, "Summon a copy of this creature if you have healed 5 damage so far."));
 
-      whiteCardList.Add(new Card1(3, 10, "Karma Heal", 6, 5, 5, "Deal an amount of damage equal to the amount you have healed this game to the enemy."));
-      whiteCardList.Add(new Card1(3, 11, "Karma Heal", 6, 5, 5, "Deal an amount of damage equal to the amount you have healed this game to the enemy."));
+      whiteCardList.Add(new Card1(3, 10, "Karma Heal", 10, 5, 5, "Deal damage equal to damage you've healed this game to enemy."));
+      whiteCardList.Add(new Card1(3, 11, "Karma Heal", 10, 5, 5, "Deal damage equal to damage you've healed this game to enemy."));
 
    } //end WHITE deck  =============================================================
 

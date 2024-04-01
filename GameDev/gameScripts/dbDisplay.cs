@@ -49,6 +49,12 @@ public class dbDisplay : MonoBehaviour
     public bool cantAttack;
     public static bool hasAttacked;
 
+    public GameObject Canvas;
+    public GameObject ZoomCard;
+
+    private GameObject zoomCard;
+    private Sprite zoomSprite;
+
     public bool targeting;
     public bool targetingEnemy;
     public static bool staticTargeting;
@@ -65,17 +71,11 @@ public class dbDisplay : MonoBehaviour
     public GameObject unplayableBorder;
     public static GameObject currentLoc;
     public static GameObject pz;
-
+    public static int staticID;
     public static int staticCardColor;
 
 
-    //testing zoom in dbdisplay
-    public GameObject Canvas;
-    public GameObject ZoomCard;
-
-    private GameObject zoomCard;
-    private Sprite zoomSprite;
-
+    public static int staticPow;
 
     // Start is called before the first frame update
     void Start()
@@ -102,17 +102,40 @@ public class dbDisplay : MonoBehaviour
         playableBorder.SetActive(false);
         unplayableBorder.SetActive(false);
     }
+     public void Awake()
+    {
+        Canvas = GameObject.Find("Canvas");
+    }
+
+    public void OnHoverEnter()
+    {
+        // Add logic for zooming in on hover enter
+        Debug.Log("Zooming on: " + cardName);
+        zoomCard = Instantiate(ZoomCard, new Vector2(Input.mousePosition.x, Input.mousePosition.y + 250), Quaternion.identity);
+        zoomCard.transform.SetParent(Canvas.transform, true);
+        RectTransform rect = zoomCard.GetComponent<RectTransform>();
+        rect.sizeDelta = new Vector2(200, 300);
+        zoomCard.GetComponent<contentZoom>().cardName = cardName;
+        zoomCard.GetComponent<contentZoom>().txt = txt;
+        zoomCard.GetComponent<contentZoom>().cost = cost;
+        zoomCard.GetComponent<contentZoom>().pow = pow;
+        zoomCard.GetComponent<contentZoom>().hp = hp;
+
+
+
+    }
+
+    public void OnHoverExit()
+    {
+        // Add logic for zooming out on hover exit
+        Destroy(zoomCard);
+    }
 
     // Update is called once per frame
     void Update()
     {
 
-        staticCardColor = colour;
-        staticID = id;
-        staticAttackBorder = false;
-        staticCost = cost;
-
-
+        staticPow = pow;
 
         staticSummoned = isSummoned;
         // Debug.Log(staticSummoned + " " + cardName);
@@ -135,16 +158,14 @@ public class dbDisplay : MonoBehaviour
         // Debug.Log(cardName + " Is summoned false");
 
         if (this.cost <= turnScript.currentMana && isSummoned == false && turnScript.actionPoints >= 1)
-
-            if (this.cost <= turnScript.currentMana && isSummoned == false)
-
+        {
+            canBeSummoned = true;
+            // Debug.Log(cardName + " Is now playable");
+            if (currentZone == hand)
             {
-                canBeSummoned = true;
                 // Debug.Log(cardName + " Is now playable");
-                if (currentZone == hand)
-                {
-                    // Debug.Log(cardName + " Is now playable");
-                }
+            }
+
 
             }
             else
@@ -181,7 +202,6 @@ public class dbDisplay : MonoBehaviour
             // Debug.Log("Mana left: " + turnScript.currentMana);
 
             turnScript.actionPoints--;
-
 
 
         }
