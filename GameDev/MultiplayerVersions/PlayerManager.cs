@@ -151,6 +151,11 @@ public class PlayerManager : NetworkBehaviour
                     NetworkServer.Spawn(card, connectionToClient); //Server spawns object across network for other clients to use, and gives Client the authority of the object (their card in this case)
                     RpcShowCard(card, "Dealt"); //this gets server to display the card object across both clients (and it displays specificly based on who has authority inside the rpc method)
                                                 //renderCardColour(card);
+                    if(SharedVarManager.staticTurn == 1){
+                        SharedVarManager.p1TotalDraw += drawSize;
+                    }else {
+                        SharedVarManager.p2TotalDraw += drawSize;
+                    }
                 }
                 //sharedVarManager.gameStarted = true; //server should sync this value to all clients, and once 
             }
@@ -163,14 +168,31 @@ public class PlayerManager : NetworkBehaviour
         }
     }
     //method for when player plays a card
-    public void PlayCard(GameObject card)
+    public void PlayCard(GameObject card, int manaCost, NetworkIdentity networkPlayIdentity)
     {
-        CmdPlayCard(card); //call server command
+        CmdPlayCard(card, manaCost, networkPlayIdentity); //call server command
     }
-    [Command]                                       
-    void CmdPlayCard(GameObject card) //just run rpc on clients to show card as played now
+    [Command(requiresAuthority = false)]                                       
+    void CmdPlayCard(GameObject card, int manaCost, NetworkIdentity networkPlayIdentity) //just run rpc on clients to show card as played now, also tell server to update mana of the player who played the card
     {
-        RpcShowCard(card, "Played");
+        //find sharedvar game object in scene at runtime (for deck colour strings and game start booleans
+        GameObject sharedVarManagerObj = GameObject.Find("SharedVarManager");
+
+        // Check if the SharedVarManager GameObject is found AND 
+        if (sharedVarManagerObj != null)
+        {
+            SharedVarManager sharedVarManager = sharedVarManagerObj.GetComponent<SharedVarManager>();
+            //Call the command on the NetworkManager
+
+            sharedVarManager.CmdUpdateManaCount(manaCost, networkPlayIdentity); //call server's updateManaCount CMD to update mana variables accordingly
+            Debug.Log("Card Played Info recieved from dragscript...manaCost sent to server's CmdUpdateManaCount...");
+        }
+        else
+        {
+            Debug.Log("SharedVarManager GameObject not found! In CmdplayCard"); //couldn't send attack info properly
+        }
+
+        RpcShowCard(card, "Played"); //actually tell clients about card played
 
     }
 
@@ -230,14 +252,78 @@ public class PlayerManager : NetworkBehaviour
             SharedVarManager sharedVarManager = sharedVarManagerObj.GetComponent<SharedVarManager>();
             //Call the command on the NetworkManager
 
-            sharedVarManager.CmdUpdateWhosTurn(networkTurnIdentity); // this calls the SharedVarManager script, which should handle the game logic from here, and deal out cards properly
+            sharedVarManager.CmdUpdateWhosTurn(networkTurnIdentity); // this calls the SharedVarManager script, which should handle the game logic from here, and update who's turn it is
+
         }
         else
         {
-            Debug.Log("SharedVarManager GameObject not found! In CmdSendTurnInfo"); //couldn't send colour properly
+            Debug.Log("SharedVarManager GameObject not found! In CmdSendTurnInfo"); //couldn't send turn info properly
         }
 
     }
+
+    //Client CMD to attack other player on the server, and get it to update sync variables for health accordingly
+    [Command(requiresAuthority = false)] //added the authority bit in the process of debugging, defaults to true, so I think only the owner's version of their clientDeck will be changed unless this is here (but haven't really seen proof yet)
+    public void CmdSendAttackInfo(int damage, NetworkIdentity networkAttackIdentity)
+    {
+        //find sharedvar game object in scene at runtime (for deck colour strings and game start booleans
+        GameObject sharedVarManagerObj = GameObject.Find("SharedVarManager");
+
+        // Check if the SharedVarManager GameObject is found AND 
+        if (sharedVarManagerObj != null)
+        {
+            SharedVarManager sharedVarManager = sharedVarManagerObj.GetComponent<SharedVarManager>();
+            //Call the command on the 
+
+            sharedVarManager.CmdAttackOtherPlayer(damage, networkAttackIdentity); //call server's attackPlayer CMD to update health variables accordingly
+            Debug.Log("Attacked info recieved by dbdisplay...attack sent to server's CmdAttackOtherPlayer...");
+        }
+        else
+        {
+            Debug.Log("SharedVarManager GameObject not found! In CmdSendAttackInfo"); //couldn't send attack info properly
+        }
+
+    }
+    //cmdsendselfdamage info
+    [Command(requiresAuthority = false)] //added the authority bit in the process of debugging, defaults to true, so I think only the owner's version of their clientDeck will be changed unless this is here (but haven't really seen proof yet)
+    public void CmdSendSelfDamage(int damage, NetworkIdentity networkAttackIdentity)
+    {
+        //find sharedvar game object in scene at runtime (for deck colour strings and game start booleans
+        GameObject sharedVarManagerObj = GameObject.Find("SharedVarManager");
+        SharedVarManager sharedVarManager = sharedVarManagerObj.GetComponent<SharedVarManager>();
+        sharedVarManager.CmdSelfDamage(damage);
+        Debug.Log("SENDING " + damage +" to self");
+    }
+    //specific to black heal
+    [Command(requiresAuthority = false)] //added the authority bit in the process of debugging, defaults to true, so I think only the owner's version of their clientDeck will be changed unless this is here (but haven't really seen proof yet)
+    public void CmdHealDamage(float heal, NetworkIdentity networkAttackIdentity)
+    {
+        //find sharedvar game object in scene at runtime (for deck colour strings and game start booleans
+        GameObject sharedVarManagerObj = GameObject.Find("SharedVarManager");
+        SharedVarManager sharedVarManager = sharedVarManagerObj.GetComponent<SharedVarManager>();
+        sharedVarManager.CmdSelfHealAbility(heal);
+        Debug.Log("SENDING healing " + heal +" to self");
+    }
+    //general heal
+    [Command(requiresAuthority = false)] //added the authority bit in the process of debugging, defaults to true, so I think only the owner's version of their clientDeck will be changed unless this is here (but haven't really seen proof yet)
+    public void CmdSendHealing(int healed, NetworkIdentity networkAttackIdentity)
+    {
+        //find sharedvar game object in scene at runtime (for deck colour strings and game start booleans
+        GameObject sharedVarManagerObj = GameObject.Find("SharedVarManager");
+        SharedVarManager sharedVarManager = sharedVarManagerObj.GetComponent<SharedVarManager>();
+        sharedVarManager.CmdHealDamage(healed);
+        Debug.Log("SENDING " + healed +" to self");
+    }
+    [Command(requiresAuthority = false)] //added the authority bit in the process of debugging, defaults to true, so I think only the owner's version of their clientDeck will be changed unless this is here (but haven't really seen proof yet)
+    public void CmdPingDamage(int ping, NetworkIdentity networkAttackIdentity)
+    {
+        //find sharedvar game object in scene at runtime (for deck colour strings and game start booleans
+        GameObject sharedVarManagerObj = GameObject.Find("SharedVarManager");
+        SharedVarManager sharedVarManager = sharedVarManagerObj.GetComponent<SharedVarManager>();
+        sharedVarManager.CmdPingDamage(ping);
+    }
+
+    
 
     /*
     [Command]
@@ -285,6 +371,10 @@ public class PlayerManager : NetworkBehaviour
         //    turnScript.turnStart = false;
         //}
     } */
+
+
+}
+
 
 
 }
