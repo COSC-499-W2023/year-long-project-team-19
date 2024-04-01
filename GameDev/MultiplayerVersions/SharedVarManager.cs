@@ -45,9 +45,17 @@ public class SharedVarManager : NetworkBehaviour
 
     [SyncVar] public float p1Health = 30; //need sync var to track each player's health (start with full 30 points)
     [SyncVar] public float p2Health = 30; //need sync var to track each player's health
-
     //=====================================================================  METHODS  ===============================================================================
 
+    public static float p1HP;
+    public static float p2HP;
+    public static int staticTurn;
+
+    public static float p1TotalHeal;
+    public static float p2TotalHeal;
+
+    public static int p1TotalDraw;
+    public static int p2TotalDraw;
     //command when turn is ended on client side (they press end turn button and call this command in turnscript)
     [Command(requiresAuthority = false)]
     public void CmdUpdateWhosTurn(NetworkIdentity networkTurnIdentity)
@@ -156,6 +164,58 @@ public class SharedVarManager : NetworkBehaviour
         }
     }
 
+    //command to self damage your own health
+    [Command(requiresAuthority = false)]
+    public void CmdSelfDamage(int damage){
+        if(whosTurn == 1){ //if player one played this
+            p1Health -= damage;
+        }else {
+            p2Health -= damage;
+        }
+    }
+
+    //ping bits of damage
+    [Command(requiresAuthority = false)]
+    public void CmdPingDamage(int damage){
+        if(whosTurn == 1){ //if player one played this
+            p2Health -= damage;
+        }else {
+            p1Health -= damage;
+        }
+    }
+    [Command(requiresAuthority = false)]
+    public void CmdHealDamage(int healed){
+        if(whosTurn == 1){ //if player one played this
+            p1Health += healed;
+            p1TotalHeal += healed;
+        }else {
+            p2Health += healed;
+            p2TotalHeal += healed;
+        }
+    }
+
+     [Command(requiresAuthority = false)]
+    public void CmdSelfHealAbility(float heal){
+        float toHeal;
+        if(whosTurn == 1){ //if player one played this
+            toHeal = turnScript.p1StartingHP - p1Health; //difference in heal
+            if(toHeal >= 0){
+                p1Health += toHeal;
+                p1TotalHeal += toHeal;
+            }else{
+                p1Health += 0;
+            }
+        }else {
+            toHeal = turnScript.p2StartingHP - p2Health; //difference in heal
+            if(toHeal >= 0){
+                p2Health += toHeal;
+                p2TotalHeal += toHeal;
+            }else{
+                p2Health += 0;
+            }
+        }
+    }
+
     //this command receives a client's colour, and then checks to see if game can be started
     [Command(requiresAuthority = false)]
     public void CmdGetPlayerColor(string clientColour, NetworkIdentity networkClientIdentity) //clients will call this server function to add their colour to this list of strings (list should get around the 2 instances of playerManager 
@@ -234,7 +294,7 @@ public class SharedVarManager : NetworkBehaviour
         //add the full game deck to the playerDeck script as well
         playerDeck.staticDeck.AddRange(gameDeck); //add ALL OF GAME DECK to playerDeck's static deck list, so that db display can access the right cards.
 
-        PlayerManager.CmdDraw(1, combo); //get server to deal out two cards for each client
+        PlayerManager.CmdDraw(3, combo); //get server to deal out two cards for each client
 
         Debug.Log("Game started !");
 
@@ -753,6 +813,13 @@ public class SharedVarManager : NetworkBehaviour
     }
 
 
+    void Update(){
+        //update any public data
+        p1HP = p1Health; 
+        p2HP = p2Health;
+        staticTurn = whosTurn;
+    }
+}
 
 }
 
