@@ -113,6 +113,7 @@ public class dbDisplay : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+        staticColour = colour;
 
         staticAttackBorder = false;
         staticCost = cost;
@@ -312,7 +313,7 @@ public class dbDisplay : NetworkBehaviour
 
         PlayerManager.CmdSendAttackInfo(damage, networkAttackIdentity); //call playermanager's cmd that calls server's attackPlayer CMD
         Debug.Log("Attacked opponent...attack sent CmdSendAttackInfo to playermanager...");
-
+        abilityScript.attacked = true;
     }
 
     public void UntargetEnemy()
@@ -418,7 +419,7 @@ public class dbDisplay : NetworkBehaviour
         }
         // Add logic for zooming in on hover enter
         Debug.Log("Zooming on: " + cardName);
-        zoomCard = Instantiate(ZoomCard, new Vector2(600, 250), Quaternion.identity);
+        zoomCard = Instantiate(ZoomCard, new Vector2(Input.mousePosition.x + 100, 250), Quaternion.identity);
         zoomCard.transform.SetParent(Canvas.transform, true);
         RectTransform rect = zoomCard.GetComponent<RectTransform>();
         rect.sizeDelta = new Vector2(200, 300);
@@ -427,9 +428,6 @@ public class dbDisplay : NetworkBehaviour
         zoomCard.GetComponent<contentZoom>().cost = cost;
         zoomCard.GetComponent<contentZoom>().pow = pow;
         zoomCard.GetComponent<contentZoom>().hp = hp;
-
-
-
     }
 
     public void OnHoverExit()
@@ -437,8 +435,6 @@ public class dbDisplay : NetworkBehaviour
         // Add logic for zooming out on hover exit
         Destroy(zoomCard);
     }
-
-
 
 }
 
