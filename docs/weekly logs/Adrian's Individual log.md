@@ -426,3 +426,24 @@ This week I worked on mostly UI fixes considering how broken the UI. Most of the
 
 <h3>Completed and In Progress: </h3> 
 <p>I have a general mock up of the game's UI direction we're finalizing. The text for most prefabs have been fixed so they're not presented as blurry anymore. Furthermore, the zoom feautre had more bugs that I had to fix, some cards were displayed even when they weren't supposed to and some cards would be displayed a little too far up. But those bugs were fixed.</p>
+
+<h1>Date Range: 25-03-2024 to 31-03-2024</h1>
+<img src ="/log_imgs/Adrian_t2_wk12.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>
+This week I finalized my portion of the game. I finished the majority of the abilities and only left some that were more problematic for our last meeting before submission.
+</p>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <lI>
+"Card Abilties": Finished the majority of the abilities. The entire script had to be reworked so it functioned with all the shared variables and player managers.
+  </lI>
+
+</ol>
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed and In Progress: </h3> 
+<p>Finished all tasks. One more meeting to finalize the abilties and submit our reports. Targeting enemy objects is probably the last feature we have and bug fixing before we submit the game.</p>
