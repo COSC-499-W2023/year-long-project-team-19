@@ -367,7 +367,6 @@ With all these problems to fix along with finishing up all the password reset an
 - Added a game over screen that will trigger when a player is out of health.
 - Added an option in the game scene to turn instruction labels on or off
 - Still working on reset token timstamp system and UI changes based on previous ideas.
-- Looking into testing for the login, create, reset.
 
 # Date Range: 24-03-2024 to 31-03-2024 - W12
 
