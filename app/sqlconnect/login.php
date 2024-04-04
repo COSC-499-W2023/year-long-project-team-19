@@ -32,7 +32,7 @@
 	$password = $_POST["password"];
 
 	//Query to check database for that USERNAME, then its password and other info ==============================================
-	$namequery = "SELECT useremail, hash, salt, datecreated, gamesplayed, gameswon, damagedealt FROM useracc WHERE useremail ='" .$usernameClean. "';";
+	$namequery = "SELECT useremail, userhash, salt, datecreated, gamesplayed, gameswon, damagedealt FROM useracc WHERE useremail ='" .$usernameClean. "';";
     //win loss ratio might need to be caluclated (not stored in table?)
 
 	//Run the Query 
@@ -47,7 +47,7 @@
 	//Need to check salt and hash with supplied PASSWORD to check if correct ==============================================
 	$useraccInfo = mysqli_fetch_assoc($usernameCheck); //get query info as associative array 
 	$salt = $useraccInfo["salt"]; //get salt from DB
-	$hash = $useraccInfo["hash"]; //get hash from DB
+	$hash = $useraccInfo["userhash"]; //get hash from DB
 
 	//check supplied password combined with DB's salt 
 	$loginhash = crypt($password, $salt);
