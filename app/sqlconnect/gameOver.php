@@ -15,9 +15,9 @@ $username = $_POST["username"];
 $result = $_POST["result"];
 $damage = $_POST["damage"];
 
-echo "username: " . $username;
-echo " result:" . $result;
-echo " damage:"  . $damage;
+// echo "username: " . $username;
+// echo " result:" . $result;
+// echo " damage:"  . $damage;
 
 // // Check if the result is either 'w' or 'l'
 // if ($result != 'w' && $result != 'l'){
