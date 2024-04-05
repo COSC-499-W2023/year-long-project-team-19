@@ -35,10 +35,10 @@ echo " damage:"  . $damage;
 // }
 
 if ($result == 'w'){
-	$updateStats = "UPDATE useracc SET gamesplayed = gamesplayed + 1, gameswon = gameswon + 1, damagedealt = damagedealt +  '".$damage. "'WHERE useremail = '".$username."'";
+	$updateStats = "UPDATE useracc SET gamesplayed = gamesplayed + 1, gameswon = gameswon + 1, damagedealt = damagedealt +  '".$damage."' WHERE useremail = '".$username."';";
 }
 else {
-	$updateStats = "UPDATE useracc SET gamesplayed = gamesplayed + 1, damagedealt = damagedealt + '".$damage. "' WHERE useremail = '".$username."'";
+	$updateStats = "UPDATE useracc SET gamesplayed = gamesplayed + 1, damagedealt = damagedealt +  '" .$damage. "' WHERE useremail = '" .$username. "';";
 }
 
 if ($con->query($updateStats)) {
