@@ -1,4 +1,7 @@
 <?php 
+    // error_reporting(E_ALL);
+	// ini_set('display_errors', 1);
+
 	$con = mysqli_connect("localhost", "root2", "Cosc499Team19DuelTimejkwndjfifi", "cosc499");
 
 	//check connection
@@ -14,7 +17,7 @@
 
 
 	//Query to check database for that USERNAME, then its password and other info ==============================================
-	$namequery = "SELECT useremail, salt, userhash FROM useracc WHERE useremail ='" .$username. "';";
+	$namequery = "SELECT useremail, salt FROM useracc WHERE useremail ='" .$username. "';";
 
 	//Run the Query 
 	$usernameCheck = mysqli_query($con, $namequery) or die("2: Name Check failed."); //error 2 for name check query failed
@@ -25,21 +28,16 @@
 		echo "5: 0 or more than 1 user was found with that username."; //error code 5, there is either no account with that name, or there is more than one matching somehow
 		exit();
 	}
+	//echo $username;
 
 	$useraccInfo = mysqli_fetch_assoc($usernameCheck); 
 	$salt = $useraccInfo["salt"]; //get salt from DB
-	$userhash = $useraccInfo["userhash"]; //get salt from DB
 
 	//check supplied password combined with DB's salt 
 	$newHash = crypt($password, $salt);
 
-	if ($userhash == $newHash){
-		echo "99: User is trying to reset the same password twice"; 
-		exit();
-	}
-
     //Updating password in database
-    $updatePassQuery = "UPDATE useracc SET 'hash'= '$newHash' WHERE useremail = '$username'";
+    $updatePassQuery = "UPDATE useracc SET userhash = '" .$newHash. "' WHERE useremail = '". $username. "';";
 
     if ($con->query($updatePassQuery)) {
         echo "0: Password Update successful!";
