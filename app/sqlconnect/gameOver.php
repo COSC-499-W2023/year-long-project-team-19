@@ -15,11 +15,11 @@ $username = $_POST["username"];
 $result = $_POST["result"];
 $damage = $_POST["damage"];
 
-echo "username: " . $username;
-echo " result:" . $result;
-echo " damage:"  . $damage;
+// echo "username: " . $username;
+// echo " result:" . $result;
+// echo " damage:"  . $damage;
 
-// // Check if the result is either 'w' or 'l'
+// Check if the result is either 'w' or 'l'
 // if ($result != 'w' && $result != 'l'){
 // 	echo "3: Invalid result.";
 // 	exit();
@@ -34,11 +34,11 @@ echo " damage:"  . $damage;
 // 	$updateStats->bind_param("is", $damage, $username);
 // }
 
-if ($result == 'w'){
-	$updateStats = "UPDATE useracc SET gamesplayed = gamesplayed + 1, gameswon = gameswon + 1, damagedealt = damagedealt +  '".$damage."' WHERE useremail = '".$username."';";
+if ($result == 'l'){
+	$updateStats = "UPDATE useracc SET gamesplayed = gamesplayed + 1, damagedealt = damagedealt +  '".$damage."' WHERE useremail = '".$username."';";
 }
 else {
-	$updateStats = "UPDATE useracc SET gamesplayed = gamesplayed + 1, damagedealt = damagedealt +  '" .$damage. "' WHERE useremail = '" .$username. "';";
+	$updateStats = "UPDATE useracc SET gamesplayed = gamesplayed + 1, gameswon = gameswon + 1, damagedealt = damagedealt +  '".$damage."' WHERE useremail = '".$username."';";
 }
 
 if ($con->query($updateStats)) {

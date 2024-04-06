@@ -29,7 +29,10 @@ public class MainMenu : MonoBehaviour
     public playerDeck mainmenusPlayDeckScript;
     public string pickedColour = ""; //set empty to start
 
-
+    void start(){
+        ActiveMainMenu();
+        Debug.Log("Main Menu Start");
+    }
     // logout button of the user menu background calls this to log out the user and go back to the guest menu background
     public void LogOutButton()
     {
@@ -124,7 +127,7 @@ public class MainMenu : MonoBehaviour
             //display user email in top right of screen
             userDisplay.text = "Welcome, " + DBManager.username;
             //set reset pass menu's email text to equal the username as well
-            userDisplayRESETmenu.text = DBManager.username;
+            // userDisplayRESETmenu.text = DBManager.username;
 
             //assign values from DBManager to all of the account info and stat page's text items
             userEmail.text = "" + DBManager.username;
