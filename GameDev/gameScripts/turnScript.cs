@@ -16,6 +16,10 @@ public class turnScript : NetworkBehaviour
 
     public int maxMana;
 
+    public static int staticMaxMana;
+
+    public static int actionPoints;
+
     public static int currentMana;
     public TMPro.TMP_Text manaText;
 
@@ -31,6 +35,9 @@ public class turnScript : NetworkBehaviour
     public PlayerManager PlayerManager;
 
     public int playerNumber;
+    public static int cardsDrawn;
+
+    public Text actionText;
 
     // Start is called before the first frame update
     void Start()
@@ -253,6 +260,11 @@ public class turnScript : NetworkBehaviour
         {
             disable = false;
         }
+        actionUpdate();
+        playerHealth.turnStartHealth = playerHealth.HPStatic;
+        cardsDrawn = 0;
+
+    }
 
         playerHealth.turnStartHealth = (int)playerHealth.HPStatic; //updates turnstart health to track how much life they started w/
         Debug.Log("Your health is at: " + playerHealth.turnStartHealth);

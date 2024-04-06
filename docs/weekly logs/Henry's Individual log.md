@@ -355,7 +355,7 @@ All the features and tests are completed, only bug fixing from the peer testing 
 This week I got nothing much to do, just some bug fixing from the peer testing and some research about mySQL hosting for our Unity game db.
 I did some research about mySQL hosting for our unity db but I can't find any free hosting for mySQL, so I think we should use UBC server for the db (just some idea). Other than that, all my work for website are done unless there's a new bug found.
 
-# Date Range: 10-03-2024 to 17-03-2024
+# Date Range: 17-03-2024 to 24-03-2024
 
 ![henrylog11](log_imgs/henry_t2_log11.png)
 
@@ -370,3 +370,17 @@ The Selenium testing is a bit tricky to set up, since each test runs on a differ
 
 ![](log_imgs/henry_test_cardSelenium.png)
 
+# Date Range: 24-03-2024 to 31-03-2024
+
+![henrylog11](log_imgs/henry_t2_log12.png)
+
+
+### Completed
+1. Created tests for  add rules UI and delete rules using selenium
+2. Used Bing AI to generate character images for web's card page and the unity game if possible.
+3. Implemented the character images in the web's card page.
+
+-----
+
+![](log_imgs/henry_test_seleniumRules.png)
+![](log_imgs/henry_cardchar.png)

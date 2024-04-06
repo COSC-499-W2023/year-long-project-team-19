@@ -203,7 +203,8 @@ const Cards = () => {
               className={`card card--${card.type.toLowerCase()}`}
             >
               <div className="card__image-container">
-                <img src={logo} alt={card.name} className="card__image" />
+                {/* <img src={logo} alt={card.name} className="card__image" /> */}
+                <img src={`../../../characters/${card.name}.jpeg`} alt={card.name} className="card__image" style={{ borderRadius: '10%' }}/>
               </div>
 
               <figcaption className="card__caption">

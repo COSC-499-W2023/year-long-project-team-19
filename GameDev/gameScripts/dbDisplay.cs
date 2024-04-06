@@ -127,6 +127,7 @@ public class dbDisplay : NetworkBehaviour
             hasAttacked = false;
             lastTurn = currentTurn;
         }
+
         staticID = this.id;
         Debug.Log(id +" <id color> "+ colour);
         staticColour = this.colour;
