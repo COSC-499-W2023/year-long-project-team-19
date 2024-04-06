@@ -13,7 +13,9 @@ public class turnScript : MonoBehaviour
     public static int totalSummons;
 
     public int maxMana;
+
     public static int staticMaxMana;
+
     public static int actionPoints;
 
     public int actionPointsTotal;
@@ -26,7 +28,9 @@ public class turnScript : MonoBehaviour
     public static int turnCount = 0;
     public GameObject playArrows;
     public GameObject attackArrows;
+
     public static int cardsDrawn;
+
     public Text actionText;
 
     // Start is called before the first frame update
@@ -105,6 +109,7 @@ public class turnScript : MonoBehaviour
         actionUpdate();
         playerHealth.turnStartHealth = playerHealth.HPStatic;
         cardsDrawn = 0;
+
     }
 
     public void actionUpdate()
