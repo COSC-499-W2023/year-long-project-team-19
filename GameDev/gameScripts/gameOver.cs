@@ -43,7 +43,7 @@ public class gameOver : MonoBehaviour
 
         Debug.Log("damage dealt: " + myDamage + " result: " +  myResult);
 
-        if (myResult =='w'){
+        if (myResult == 'w'){
             title.text = "You Won!";
         } else if (myResult == 'l'){
             title.text = "You Lost!";
