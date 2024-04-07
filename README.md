@@ -110,7 +110,7 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
          install them from [Node.js official website] (https://nodejs.org/en).
   
       2. Navigate to the client directory:
-         `cd /Group Exploration/Henry's Exploration/Web/client`
+         `cd Web/client`
   
       3. Install dependencies: `npm i`
   
@@ -119,7 +119,7 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
 * #### Backend (API and Server for Web app)
 
       1. Navigate to the server directory:
-         `cd /Group Exploration/Henry's Exploration/Web/server`
+         `cd Web/server`
   
       2. Install dependencies: `npm i`
   
@@ -129,7 +129,7 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
         - `MONGO_URI=<your_mongodb_uri>`
   
       4. Start the server: `node index.js`
-
+  
 ### User Accounts Server:
 * #### SQL Database (XAMPP)
 
