@@ -1,3 +1,5 @@
 Group Exploration/Henry's Exploration/Web/server/.env
 Web/client/node_modules
 Web/server/node_modules
+Web/server/.env
+.DS_Store
