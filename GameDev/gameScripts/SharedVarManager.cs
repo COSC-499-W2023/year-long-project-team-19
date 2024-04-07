@@ -6,14 +6,11 @@ using Mirror;
 using UnityEngine.SceneManagement;
 
 
-using Mirror;
-
 public class SharedVarManager : NetworkBehaviour
 {
     //=====================================================================  VARIABLES  ===============================================================================
     //we will share a list of strings to use in order to create the game
     private List<string> playerColors = new List<string>();
-
 
     public gameOver gameOver;
 
@@ -33,7 +30,6 @@ public class SharedVarManager : NetworkBehaviour
     public List<Card1> container = new List<Card1>(); //temp list for shuffling deck
     [SyncVar]//need to store how many cards are in the deck (start with 40)
     public int deckSize = 40; //two decks combined should always equal 40 cards
-    public static int deckSize = 40; //two decks combined should always equal 40 cards
     public List<Card1> combinedDeck = new List<Card1>(); //list of card1 game objects for combined deck
 
     public List<Card1> temp_combinedDeck = new List<Card1>(); //list of card1 game objects for server's temporary combined deck
@@ -77,12 +73,6 @@ public class SharedVarManager : NetworkBehaviour
     [SyncVar] public char p2Result; //need sync var to track each player's health
 
     //==================================================================== VARIABLES FOR ABILITIES ===========================================
-    [SyncVar] public int p1Mana = 1; //need sync var to track each player's mana
-    [SyncVar] public int p2Mana = 1; //need sync var to track each player's mana
-
-    [SyncVar] public float p1Health = 30; //need sync var to track each player's health (start with full 30 points)
-    [SyncVar] public float p2Health = 30; //need sync var to track each player's health
-    //=====================================================================  METHODS  ===============================================================================
 
     public static float p1HP;
     public static float p2HP;
@@ -164,8 +154,6 @@ public class SharedVarManager : NetworkBehaviour
                 p1MaxMana++; //add one mana to player one since they will need it come the next turn, player 2 still needs to take their turn before gaining more mana
                 p1StaticMana = p1MaxMana;
                 p1Mana = p1MaxMana;
-                p1Mana++; //add one mana to player one since they will need it come the next turn, player 2 still needs to take their turn before gaining more mana
-
                 //PlayerTurnManager.isPlayerManagersTurn = false;//It is no longer my turn
             }
             else if (PlayerTurnManager.isPlayerTwo == true && PlayerTurnManager.isPlayerOne == false) //if player 2 ended player 1's turn somehow
@@ -188,8 +176,6 @@ public class SharedVarManager : NetworkBehaviour
                 p2MaxMana++; //add one mana to player two since they will need it come the next turn, player 1 still needs to take their turn before gaining more mana
                 p2StaticMana = p2MaxMana;
                 p2Mana = p2MaxMana;
-                p2Mana++; //add one mana to player two since they will need it come the next turn, player 1 still needs to take their turn before gaining more mana
-
                 //PlayerTurnManager.isPlayerManagersTurn = false;//It is no longer my turn
             }
         }
@@ -242,8 +228,6 @@ public class SharedVarManager : NetworkBehaviour
             if (PlayerAttackManager.isPlayerOne == true && PlayerAttackManager.isPlayerTwo == false) //if player one attacked
             {
                 DeductHealth(2,damage); //update p2 Health to equal old health minus the amount of damage that was sent by p1
-                p2Health -= damage; //update p2 Health to equal old health minus the amount of damage that was sent by p1
-
             }
             else if (PlayerAttackManager.isPlayerTwo == true && PlayerAttackManager.isPlayerOne == false) //if player 2 attacked player 1 somehow
             {
@@ -262,7 +246,6 @@ public class SharedVarManager : NetworkBehaviour
             else if (PlayerAttackManager.isPlayerTwo == true && PlayerAttackManager.isPlayerOne == false) //if player 2 attacked
             {
                DeductHealth(1,damage); 
-                p1Health -= damage; //update p1 Health to equal old health minus the amount of damage that was sent by p2
             }
         }
     }
@@ -278,11 +261,6 @@ public class SharedVarManager : NetworkBehaviour
         else
         {
             DeductHealth(2,damage);
-    public void CmdSelfDamage(int damage){
-        if(whosTurn == 1){ //if player one played this
-            p1Health -= damage;
-        }else {
-            p2Health -= damage;
         }
     }
 
@@ -309,19 +287,6 @@ public class SharedVarManager : NetworkBehaviour
         }
         else
         {
-    public void CmdPingDamage(int damage){
-        if(whosTurn == 1){ //if player one played this
-            p2Health -= damage;
-        }else {
-            p1Health -= damage;
-        }
-    }
-    [Command(requiresAuthority = false)]
-    public void CmdHealDamage(int healed){
-        if(whosTurn == 1){ //if player one played this
-            p1Health += healed;
-            p1TotalHeal += healed;
-        }else {
             p2Health += healed;
             p2TotalHeal += healed;
         }
@@ -355,24 +320,6 @@ public class SharedVarManager : NetworkBehaviour
             else
             {
                 // p2Health += 0;
-     [Command(requiresAuthority = false)]
-    public void CmdSelfHealAbility(float heal){
-        float toHeal;
-        if(whosTurn == 1){ //if player one played this
-            toHeal = turnScript.p1StartingHP - p1Health; //difference in heal
-            if(toHeal >= 0){
-                p1Health += toHeal;
-                p1TotalHeal += toHeal;
-            }else{
-                p1Health += 0;
-            }
-        }else {
-            toHeal = turnScript.p2StartingHP - p2Health; //difference in heal
-            if(toHeal >= 0){
-                p2Health += toHeal;
-                p2TotalHeal += toHeal;
-            }else{
-                p2Health += 0;
             }
         }
     }
@@ -456,7 +403,6 @@ public class SharedVarManager : NetworkBehaviour
         playerDeck.staticDeck.AddRange(gameDeck); //add ALL OF GAME DECK to playerDeck's static deck list, so that db display can access the right cards.
 
         PlayerManager.CmdDraw(3, combo); //get server to deal out two cards for each client
-        PlayerManager.CmdDraw(1, combo); //get server to deal out two cards for each client
 
         Debug.Log("Game started !");
 
@@ -630,22 +576,14 @@ public class SharedVarManager : NetworkBehaviour
     { //colour 5 is for neutral since 0 is the old deck and 1-4 are the colours
 
         //colour,  id,  name,  cost, pow,  hp,  description
-           neutralCardList.Add(new Card1(5, 0, "Stick Man", 1, 2, 3, " "));
-        neutralCardList.Add(new Card1(5, 1, "Stick Man", 1, 2, 3, " "));
+        neutralCardList.Add(new Card1(5, 0, "Stick Man", 1, 2, 3, "Just a dude. No abilities"));
+        neutralCardList.Add(new Card1(5, 1, "Stick Man", 1, 2, 3, "Just a dude. No abilities "));
         neutralCardList.Add(new Card1(5, 2, "PickPocket", 2, 1, 3, "Draw a card"));
         neutralCardList.Add(new Card1(5, 3, "PickPocket", 2, 1, 3, "Draw a card"));
         neutralCardList.Add(new Card1(5, 4, "Toy Pistol", 5, 3, 4, "Deal 3 damage to the enemy"));
         neutralCardList.Add(new Card1(5, 5, "Toy Pistol", 5, 3, 4, "Deal 3 damage to the enemy"));
         neutralCardList.Add(new Card1(5, 6, "Toy Bomb", 7, 3, 3, "Destroy all creatures currently in play, including this one!"));
         neutralCardList.Add(new Card1(5, 7, "Toy Bomb", 7, 3, 3, "Destroy all creatures currently in play, including this one!"));
-        neutralCardList.Add(new Card1(5, 0, "Stick Man", 1, 2, 3, "No abilities. Just a Dude."));
-        neutralCardList.Add(new Card1(5, 1, "Stick Man", 1, 2, 3, "No abilities. Just a Dude."));
-        neutralCardList.Add(new Card1(5, 2, "PickPocket", 2, 1, 3, "Selectively pick a card that matches your chosen deck colour from the player deck."));
-        neutralCardList.Add(new Card1(5, 3, "PickPocket", 2, 1, 3, "Selectively pick a card that matches your chosen deck colour from the player deck."));
-        neutralCardList.Add(new Card1(5, 4, "ToyPistol", 5, 3, 4, "Deal 3 damage to target."));
-        neutralCardList.Add(new Card1(5, 5, "ToyPistol", 5, 3, 4, "Deal 3 damage to target."));
-        neutralCardList.Add(new Card1(5, 6, "Toy Bomb", 7, 3, 3, "Destroy all other creatures currently in play."));
-        neutralCardList.Add(new Card1(5, 7, "Toy Bomb", 7, 3, 3, "Destroy all other creatures currently in play."));
 
     } // end NEUTRAL deck ============================================================
 
@@ -656,7 +594,7 @@ public class SharedVarManager : NetworkBehaviour
     { //colour 1 is for black cards
 
         //colour,  id,  name,  cost, pow,  hp,  description
-             blackCardList.Add(new Card1(1, 0, "Curse Gamble", 1, 3, 3, "Deal 2 damage to yourself"));
+        blackCardList.Add(new Card1(1, 0, "Curse Gamble", 1, 3, 3, "Deal 2 damage to yourself"));
         blackCardList.Add(new Card1(1, 1, "Curse Gamble", 1, 3, 3, "Deal 2 damage to yourself"));
 
         blackCardList.Add(new Card1(1, 2, "Eye for an Eye", 3, 1, 2, "Destroy a random minion, deal 5 damage to yourself"));
@@ -673,23 +611,6 @@ public class SharedVarManager : NetworkBehaviour
 
         blackCardList.Add(new Card1(1, 10, "Vengeful/Spiteful Spirits", 5, 3, 2, "Discard a random card, and then deal 3 damage to all enemy creatures. If you have discarded 3 or more cards so far, then it deals 6 damage to all enemy creatures instead."));
         blackCardList.Add(new Card1(1, 11, "Vengeful/Spiteful Spirits", 5, 3, 2, "Discard a random card, and then deal 3 damage to all enemy creatures. If you have discarded 3 or more cards so far, then it deals 6 damage to all enemy creatures instead."));
-        blackCardList.Add(new Card1(1, 0, "Curse Gamble", 1, 3, 3, "Deal 2 damage to yourself."));
-        blackCardList.Add(new Card1(1, 1, "Curse Gamble", 1, 3, 3, "Deal 2 damage to yourself."));
-
-        blackCardList.Add(new Card1(1, 2, "Eye for an Eye", 3, 1, 2, "Discard a random card from your hand, but destroy a target creature as a trade."));
-        blackCardList.Add(new Card1(1, 3, "Eye for an Eye", 3, 1, 2, "Discard a random card from your hand, but destroy a target creature as a trade."));
-
-        blackCardList.Add(new Card1(1, 4, "Necromancer's Summon", 7, 5, 5, "If this card gets discarded, it gets summoned to the play area instead."));
-        blackCardList.Add(new Card1(1, 5, "Necromancer's Summon", 7, 5, 5, "If this card gets discarded, it gets summoned to the play area instead."));
-
-        blackCardList.Add(new Card1(1, 6, "Russian Roulette", 6, 3, 4, "Deal 1 damage for every card you've discarded so far to a single random enemy."));
-        blackCardList.Add(new Card1(1, 7, "Russian Roulette", 6, 3, 4, "Deal 1 damage for every card you've discarded so far to a single random enemy."));
-
-        blackCardList.Add(new Card1(1, 8, "Sacrificial Lamb", 3, 1, 1, "Discard a random card, and then draw a new card for each card you have discarded so far."));
-        blackCardList.Add(new Card1(1, 9, "Sacrificial Lamb", 3, 1, 1, "Discard a random card, and then draw a new card for each card you have discarded so far."));
-
-        blackCardList.Add(new Card1(1, 10, "Vengeful/Spiteful Spirits", 4, 3, 2, "Discard a random card, and then deal 3 damage to all enemy creatures. If you have discarded 3 or more cards so far, then it deals 6 damage to all enemy creatures instead."));
-        blackCardList.Add(new Card1(1, 11, "Vengeful/Spiteful Spirits", 4, 3, 2, "Discard a random card, and then deal 3 damage to all enemy creatures. If you have discarded 3 or more cards so far, then it deals 6 damage to all enemy creatures instead."));
 
     } //end BLACK deck  ============================================================
 
@@ -701,11 +622,11 @@ public class SharedVarManager : NetworkBehaviour
     { //colour 2 is for red cards
 
         //colour,  id,  name,  cost, pow,  hp,  description
-             redCardList.Add(new Card1(2, 0, "Toxic Blade", 1, 2, 1, "If this creature attacks an enemy, deal another 2 damage"));
+        redCardList.Add(new Card1(2, 0, "Toxic Blade", 1, 2, 1, "If this creature attacks an enemy, deal another 2 damage"));
         redCardList.Add(new Card1(2, 1, "Toxic Blade", 1, 2, 1, "If this creature attacks an enemy, deal another 2 damage"));
 
-        redCardList.Add(new Card1(2, 2, "Beserker", 3, 5, 1, " "));
-        redCardList.Add(new Card1(2, 3, "Beserker", 3, 5, 1, " "));
+        redCardList.Add(new Card1(2, 2, "Beserker", 3, 5, 1, "Go crazy!"));
+        redCardList.Add(new Card1(2, 3, "Beserker", 3, 5, 1, "Go crazy!"));
 
         redCardList.Add(new Card1(2, 4, "Summoner", 4, 2, 3, "Draw a new card for each creature you currently control"));
         redCardList.Add(new Card1(2, 5, "Summoner", 4, 2, 3, "Draw a new card for each creature you currently control"));
@@ -718,23 +639,6 @@ public class SharedVarManager : NetworkBehaviour
 
         redCardList.Add(new Card1(2, 10, "Soldier's Pact", 8, 4, 4, "Deal 2 damage to the enemy for each creature you control"));
         redCardList.Add(new Card1(2, 11, "Soldier's Pact", 8, 4, 4, "Deal 2 damage to the enemy for each creature you control"));
-        redCardList.Add(new Card1(2, 0, "Toxic Blade", 1, 2, 1, "If this creature attacks an enemy, deal another 2 damage."));
-        redCardList.Add(new Card1(2, 1, "Toxic Blade", 1, 2, 1, "If this creature attacks an enemy, deal another 2 damage."));
-
-        redCardList.Add(new Card1(2, 2, "Beserker", 2, 1, 1, "Gives all your creatures played a +1/+0 stat buff."));
-        redCardList.Add(new Card1(2, 3, "Beserker", 2, 1, 1, "Gives all your creatures played a +1/+0 stat buff."));
-
-        redCardList.Add(new Card1(2, 4, "Summoner", 4, 2, 3, "Draw a new card for each creature you currently control."));
-        redCardList.Add(new Card1(2, 5, "Summoner", 4, 2, 3, "Draw a new card for each creature you currently control."));
-
-        redCardList.Add(new Card1(2, 6, "Dogpiler", 5, 2, 4, "Deal 2 damage for every creature you have attacked with so far, then destroy all other creatures."));
-        redCardList.Add(new Card1(2, 7, "Dogpiler", 5, 2, 4, "Deal 2 damage for every creature you have attacked with so far, then destroy all other creatures."));
-
-        redCardList.Add(new Card1(2, 8, "Revenge Seeker", 3, 2, 2, "Gives all your creatures played a +2/+0 stat buff."));
-        redCardList.Add(new Card1(2, 9, "Revenge Seeker", 3, 2, 2, "Gives all your creatures played a +1/+0 stat buff."));
-
-        redCardList.Add(new Card1(2, 10, "Suicide Pact", 8, 4, 4, "Destroy all of your other creatures in play, and for each creature you sacrifice, deal 2 damage to a random enemy target."));
-        redCardList.Add(new Card1(2, 11, "Suicide Pact", 8, 4, 4, "Destroy all of your other creatures in play, and for each creature you sacrifice, deal 2 damage to a random enemy target."));
 
     } //end RED deck  =============================================================
 
@@ -764,25 +668,6 @@ public class SharedVarManager : NetworkBehaviour
         whiteCardList.Add(new Card1(3, 10, "Karma Heal", 10, 5, 5, "Deal an amount of damage equal to the amount you have healed this game to the enemy"));
         whiteCardList.Add(new Card1(3, 11, "Karma Heal", 10, 5, 5, "Deal an amount of damage equal to the amount you have healed this game to the enemy"));
     
-        //colour,  id,  name,  cost, pow,  hp,  description
-        whiteCardList.Add(new Card1(3, 0, "Healer", 1, 1, 1, "Heal yourself for 2 damage. Maybe also able to heal other creatures."));
-        whiteCardList.Add(new Card1(3, 1, "Healer", 1, 1, 1, "Heal yourself for 2 damage. Maybe also able to heal other creatures."));
-
-        whiteCardList.Add(new Card1(3, 2, "Spiteful Healer", 4, 2, 2, "Heal yourself for 2 damage, and deal 2 damage to the enemy as well."));
-        whiteCardList.Add(new Card1(3, 3, "Spiteful Healer", 4, 2, 2, "Heal yourself for 2 damage, and deal 2 damage to the enemy as well."));
-
-        whiteCardList.Add(new Card1(3, 4, "Lucky Healer", 5, 5, 5, "Draw a new card, and heal yourself an amount of damage equal to the cost of the card that was drawn."));
-        whiteCardList.Add(new Card1(3, 5, "Lucky Healer", 5, 5, 5, "Draw a new card, and heal yourself an amount of damage equal to the cost of the card that was drawn."));
-
-        whiteCardList.Add(new Card1(3, 6, "Field Medic", 3, 2, 4, "Heal a target creature for 3 damage."));
-        whiteCardList.Add(new Card1(3, 7, "Field Medic", 3, 2, 4, "Heal a target creature for 3 damage."));
-
-        whiteCardList.Add(new Card1(3, 8, "Copycat", 4, 3, 2, "Summon a copy of this creature if you have healed 5 damage so far."));
-        whiteCardList.Add(new Card1(3, 9, "Copycat", 4, 3, 2, "Summon a copy of this creature if you have healed 5 damage so far."));
-
-        whiteCardList.Add(new Card1(3, 10, "Karma Heal", 6, 5, 5, "Deal an amount of damage equal to the amount you have healed this game to the enemy."));
-        whiteCardList.Add(new Card1(3, 11, "Karma Heal", 6, 5, 5, "Deal an amount of damage equal to the amount you have healed this game to the enemy."));
-
     } //end WHITE deck  =============================================================
 
 
@@ -811,25 +696,6 @@ public class SharedVarManager : NetworkBehaviour
         blueCardList.Add(new Card1(4, 10, "The House Always Wins", 6, 2, 2, "Deal 2 damage to a random enemy for every card you have drawn this game"));
         blueCardList.Add(new Card1(4, 11, "The House Always Wins", 6, 2, 2, "Deal 2 damage to a random enemy for every card you have drawn this game"));
     
-        //colour,  id,  name,  cost, pow,  hp,  description
-        blueCardList.Add(new Card1(4, 0, "Damage Dealer", 2, 1, 1, "Deal damage equal to the amount of cards you've drawn this turn to one enemy minion."));
-        blueCardList.Add(new Card1(4, 1, "Damage Dealer", 2, 1, 1, "Deal damage equal to the amount of cards you've drawn this turn to one enemy minion."));
-
-        blueCardList.Add(new Card1(4, 2, "Minion Hunter", 4, 2, 2, "Destroy one enemy minion."));
-        blueCardList.Add(new Card1(4, 3, "Minion Hunter", 4, 2, 2, "Destroy one enemy minion."));
-
-        blueCardList.Add(new Card1(4, 4, "Firesale Shuffle", 2, 1, 2, "Draw a new card, and reduce its cost by 1."));
-        blueCardList.Add(new Card1(4, 5, "Firesale Shuffle", 2, 1, 2, "Draw a new card, and reduce its cost by 1."));
-
-        blueCardList.Add(new Card1(4, 6, "Balance the Scales", 5, 3, 5, "Draw new cards until you have the same amount of cards in your hand as your opponent."));
-        blueCardList.Add(new Card1(4, 7, "Balance the Scales", 5, 3, 5, "Draw new cards until you have the same amount of cards in your hand as your opponent."));
-
-        blueCardList.Add(new Card1(4, 8, "Clean Slate", 4, 3, 2, "You and your opponent both discard your entire hands. You then draw the same amount that you discarded plus 1 extra card."));
-        blueCardList.Add(new Card1(4, 9, "Clean Slate", 4, 3, 2, "You and your opponent both discard your entire hands. You then draw the same amount that you discarded plus 1 extra card."));
-
-        blueCardList.Add(new Card1(4, 10, "The House Always Wins", 6, 2, 2, "Deal 2 damage to a random enemy for every card you have drawn this game."));
-        blueCardList.Add(new Card1(4, 11, "The House Always Wins", 6, 2, 2, "Deal 2 damage to a random enemy for every card you have drawn this game."));
-
     } //end BLUE deck  =============================================================
 
     //add 40 cards from the cardDatabase using 2 neutral decks plus two colours (which gets selected by player) -- ONLY SERVER CAN DO THIS
@@ -1102,12 +968,5 @@ public class SharedVarManager : NetworkBehaviour
         {
             cardInDeck1.SetActive(false);
         }
-    }
-}
-    void Update(){
-        //update any public data
-        p1HP = p1Health; 
-        p2HP = p2Health;
-        staticTurn = whosTurn;
     }
 }

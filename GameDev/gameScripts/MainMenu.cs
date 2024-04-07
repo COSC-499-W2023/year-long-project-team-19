@@ -29,10 +29,7 @@ public class MainMenu : MonoBehaviour
     public playerDeck mainmenusPlayDeckScript;
     public string pickedColour = ""; //set empty to start
 
-    void start(){
-        ActiveMainMenu();
-        Debug.Log("Main Menu Start");
-    }
+
     // logout button of the user menu background calls this to log out the user and go back to the guest menu background
     public void LogOutButton()
     {
@@ -103,6 +100,16 @@ public class MainMenu : MonoBehaviour
         //now load scene
         SceneManager.LoadScene("SampleScene");
 
+    }
+
+    public void LoadTutorialScene()
+    {
+        SceneManager.LoadScene("TutorialScene"); // Make sure the scene name matches exactly
+    }
+
+    public void LoadBackToMainMenuScene()
+    {
+        SceneManager.LoadScene("MainMenu"); // Make sure the scene name matches exactly
     }
 
 
