@@ -196,7 +196,7 @@ Merged the deck select scene with the latest game updates using Brenner's update
 
 I am working on updating the reset password feature so that we can test sending a reset token and update the account password on the database.
 
-# Date Range: 28-01-2023 to 04-03-2023 - W4
+# Date Range: 28-01-2023 to 04-02-2023 - W4
 
 <img src = "log_imgs/Leo_log_T2W4.png?raw=true"/>
 
@@ -377,11 +377,29 @@ With all these problems to fix along with finishing up all the password reset an
 <ol>
   <li>"Password reset system"</li>
   <li>"UI Recommendations: Card Ui changes""</li>
-  <li>"Game over screen"</li>
+  <li>"Game over Scene"</li>
 </ol>
 
 ## Among these tasks, which have you completed/in progress in the last week?
 
 I stopped working on the reset cooldown that I started last week because it was taking me too long, I will try to finish that later if I have time. I update the game over scene and still want to update that to show player stats and win/loss status. I added an option in the game scene to turn instruction labels on or off in the for less obstruction. Other than that, I mostly got started on documentation this week and looking at code reviews today. 
-- 
 
+# Date Range: 01-04-2024 to 07-04-2024 - W13
+
+<img src = "log_imgs/Leo_log_T2W13.png?raw=true"/>
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Game over Scene"</li>
+  <li>"Final Project Deliverables"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+For this last week, my main goal was to get the game over scene fully working and get sharedManager to update the player stats for each client. This took a lot longer than expected especially getting the stat variables for each clients to send to the gameover scene and saving the player number after the multiplayer connection has ended. I spent all day on Wenesday trying to fix this and came across a lot of errors. Luckily I was able to get that working but I wasn't able to fix the instructions button on the game scene. Once I got that game over scene working which was quite tricky, the main focus was just making last minute touch ups to make sure the system was ready. There was another problem the player stats and account info display which took a while to fix. I added an option in the account info screen to delete your account with a pop up confirmation message. I also did some work on integratring the tutorial in the build settings, linking the tutorial scene to the main menu scene and added the end tutorial button to go back to the main menu or exit the tutorial early. I also updated all the scripts and game assets that were outdated into the main repo before submission. Other than that, the rest of my the time was spent finishing up documentation and working on the final project report and video. 
+
+#### PRs: 
+[https://github.com/Prelude14/499UnityGameT19/pull/12]
+[https://github.com/COSC-499-W2023/year-long-project-team-19/pull/199]
+[https://github.com/COSC-499-W2023/year-long-project-team-19/pull/197]
