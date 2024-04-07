@@ -19,7 +19,7 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
 ## Technologies Used
 
 - **Web App:** MongoDB, Express.js, React.js, Node.js
-- **Game:** Unity, Mirror Networking for Unity, Parallelsync for Unity, XAMPP, SQL, and PHP
+- **Game:** Unity, Mirror Networking for Unity, ParallelSync for Unity, XAMPP, SQL, and PHP
 
 ## Developer Setup Instructions
 
