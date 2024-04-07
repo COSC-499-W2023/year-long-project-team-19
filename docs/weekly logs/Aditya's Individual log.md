@@ -222,3 +222,34 @@ During this week we had to conduct peer to peer testing #2 for which our game pr
 ## Among these tasks, which have you completed/in progress in the last week?
 The zoom effect feature got completed and implemented now our team goal is to figure out the implementation of multiplayer for our game which is the task in progress for the coming weeks. I will also be writing automated testing code to test our features.
 
+<h1>Date Range: 11-03-2024 to 17-03-2024</h1>
+
+<img src = "log_imgs/Aditya_T2_Week10.png?raw=true"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+This week I haven't been able to focus on the tutorial screen for my capstone project as i am very caught up in my other deadlines which are very soon. So I have prioritised this week for other tasks at hand.
+
+## Among these tasks, which have you completed/in progress in the last week?
+From next week onwards i'll be starting working on the tutorial screen for the game so that the users can get a basic introduction on how to play the game.
+
+<h1>Date Range: 18-03-2024 to 24-03-2024</h1>
+
+<img src = "log_imgs/Aditya_T2_Week11.png?raw=true"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+I have written the dialogue script and game tutorial script for the tutorial scene of the game. These scripts provide functionality for the order of the dialogues and the steps of the tutorial. I still have to work on the design elements and position all elements accordingly in the screen. I have imported all the extra assets that are required. 
+
+## Among these tasks, which have you completed/in progress in the last week?
+By next week the tutorial screen will be completed and functioning and the only thing remaining would be to attatch it with the latest working copy of the game.
+
+<h1>Date Range: 24-03-2024 to 31-03-2024</h1>
+
+<img src = "log_imgs/Aditya_T2_Week12.png?raw=true"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+I have finished building the tutorial screen for the game and it is fully functional. I have unfortunately run into an issue as the latest copy of the game has scripts which have been updated and I worked with an older copy of the game so that making the tutorial screen would be a litte simple and straight forward process but I am having an issue where the deck of cards won't spawn when the tutorial starts.
+
+## Among these tasks, which have you completed/in progress in the last week?
+I am currently trying to fix this issue which I have encountered, so that the final copy of the game gets updated and we can work on the documentation of the game
+Note: I have been working on the tutorial screen for the past two weeks and i am committing my log entries for two weeks today as I had no progress in week 10 and starting days of week 11. My tutorial screen is pushed in a different branch. 
