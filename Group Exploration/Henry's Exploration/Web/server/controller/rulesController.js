@@ -23,6 +23,15 @@ const editRules = async (req, res) => {
   rules.order = order !== null ? order : rules.order;
   rules.context = context !== null ? context : rules.context;
   rules.title = title !== null ? title : rules.title;
+
+  //shift the order of the rules if the order is changed
+  if (order !== null) {
+    let rulesToUpdate = await Rules.find({ order: { $gte: order } }).sort({ order: 1 });
+    rulesToUpdate.forEach(async (rule) => {
+      rule.order = (parseInt(rule.order) + 1);
+      await rule.save();
+    });
+  }
   
   rules.markModified('rules');
   rules.save();
@@ -42,7 +51,18 @@ const addRules = async (req, res) => {
   }
 
   try {
-    const newRule = new Rules({order, context, title});
+    let newOrder = order;
+    let rulesToUpdate = await Rules.find({ order: { $gte: order } }).sort({ order: -1 }); 
+
+    // if rule's order already exists, increment the order of the existing rules
+    if (rulesToUpdate.length > 0) {
+      rulesToUpdate.forEach(async (rule) => {
+        rule.order = (parseInt(rule.order) + 1);
+        await rule.save();
+      });
+    }
+
+    const newRule = new Rules({ order: newOrder, context, title });
     await newRule.save();
     
     return res.status(200).json({ message: 'Rule added', rules: newRule });
@@ -59,14 +79,29 @@ const deleteRules = async (req, res) => {
   }
 
   try {
-    const rule = await Rules.findOne({ _id });
-    
-    await rule.deleteOne();
-    return res.status(200).json({ message: 'Rule deleted'});
+    const ruleToDelete = await Rules.findOne({ _id });
+    if (!ruleToDelete) {
+      return res.status(404).json({ message: 'Rule not found' });
+    }
+
+    const orderToDelete = ruleToDelete.order;
+    await ruleToDelete.deleteOne();
+
+    // decrement order of the rules after the deleted rule
+    const rulesToUpdate = await Rules.find({ order: { $gt: orderToDelete } }).sort({ order: 1 });
+    if (rulesToUpdate.length > 0) {
+      for (const rule of rulesToUpdate) {
+        rule.order = parseInt(rule.order) - 1;
+        await rule.save();
+      }
+    }
+
+    return res.status(200).json({ message: 'Rule deleted' });
   } catch (error) {
-    res.status(500).json({ message: 'Server error'});
+    return res.status(500).json({ message: 'Server error' });
   }
 };
+
 module.exports = {
   showRules,
   editRules,

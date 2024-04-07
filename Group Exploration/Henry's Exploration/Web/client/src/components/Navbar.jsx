@@ -2,7 +2,8 @@ import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import Logo from "../images/logo.png";
+import Logo from "../images/logo3.png";
+// import Logo from "../images/logo2.jpg";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const NavbarClient = () => {
@@ -21,7 +22,7 @@ const NavbarClient = () => {
   };
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" bg="dark" data-bs-theme="dark">
       <Container fluid>
         <Navbar.Brand>
           <img

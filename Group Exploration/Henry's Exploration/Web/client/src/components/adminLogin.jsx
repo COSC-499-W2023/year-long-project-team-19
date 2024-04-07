@@ -11,6 +11,7 @@ import Navbar from "./Navbar";
 const AdminLogin = () => {
   const navigate = useNavigate();
   const [validated, setValidated] = useState(false);
+  const [loginError, setLoginError] = useState(false); // State to handle login error
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -24,14 +25,21 @@ const AdminLogin = () => {
           password: form.elements.formBasicPassword.value,
         }
       );
-      if(result.data.message === "Loggin successful") {
+      if (result.data.message === "Loggin successful") {
+        setValidated(true);
+        setLoginError(false);
         sessionStorage.setItem("isLoggedIn", "true");
-        navigate("/cards");
-      };
+
+        // Wait for 3 seconds before redirecting to show UI success
+        setTimeout(() => {
+          navigate("/cards");
+        }, 1000);
+      }
     } catch (error) {
+      setValidated(false);
+      setLoginError(true);
       console.log(error);
     }
-    setValidated(true);
   };
   
   return (
@@ -50,6 +58,11 @@ const AdminLogin = () => {
           }}
         >
           <h1 className="text-center mb-4">Admin Login</h1>
+          {loginError && (
+            <div class="alert alert-danger" role="alert">
+              Login failed. Please check your credentials.
+            </div>
+          )}
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicUsername">
               <Form.Label>Username</Form.Label>

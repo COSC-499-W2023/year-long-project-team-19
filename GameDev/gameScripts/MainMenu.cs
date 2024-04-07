@@ -25,7 +25,14 @@ public class MainMenu : MonoBehaviour
     public Text userWLRatio;
     public Text userDamageDealt;
 
+    //public variable to tell game scene what colour the user wants to play the game with.
+    public playerDeck mainmenusPlayDeckScript;
+    public string pickedColour = ""; //set empty to start
 
+    void start(){
+        ActiveMainMenu();
+        Debug.Log("Main Menu Start");
+    }
     // logout button of the user menu background calls this to log out the user and go back to the guest menu background
     public void LogOutButton()
     {
@@ -40,8 +47,60 @@ public class MainMenu : MonoBehaviour
 
     }
 
-    // Start is called before the first frame update
-    public void StartGame() {
+    // Start games with specific colour deck choosen by selecting a colour after clicking quick match
+    
+    //BLACK start button ======================================================         B  1
+    public void StartBlackGame() {
+
+        //set picked colour to black, in order for game scene to draw correct cards
+        pickedColour = "BLACK";
+        Debug.Log(pickedColour);
+
+        //change variable inside playerDeck script so the other scene can change it
+        playerDeck.playerColour = pickedColour;
+        //now load scene
+        SceneManager.LoadScene("SampleScene");
+
+    }
+    //RED start button ========================================================         R  2
+    public void StartRedGame()
+    {
+
+        //set picked colour to red, in order for game scene to draw correct cards
+        pickedColour = "R";
+        Debug.Log(pickedColour);
+
+        //change variable inside playerDeck script so the other scene can change it
+        playerDeck.playerColour = pickedColour;
+        //now load scene
+        SceneManager.LoadScene("SampleScene");
+
+    }
+    //WHITE start button =======================================================         W  3 
+    public void StartWhiteGame()
+    {
+
+        //set picked colour to white, in order for game scene to draw correct cards
+        pickedColour = "W";
+        Debug.Log(pickedColour);
+
+        //change variable inside playerDeck script so the other scene can change it
+        playerDeck.playerColour = pickedColour;
+        //now load scene
+        SceneManager.LoadScene("SampleScene");
+
+    }
+    //BLUE start button ========================================================         B   4
+    public void StartBlueGame()
+    {
+
+        //set picked colour to blue, in order for game scene to draw correct cards
+        pickedColour = "BLUE";
+        Debug.Log(pickedColour);
+
+        //change variable inside playerDeck script so the other scene can change it
+        playerDeck.playerColour = pickedColour;
+        //now load scene
         SceneManager.LoadScene("SampleScene");
 
     }
@@ -68,7 +127,7 @@ public class MainMenu : MonoBehaviour
             //display user email in top right of screen
             userDisplay.text = "Welcome, " + DBManager.username;
             //set reset pass menu's email text to equal the username as well
-            userDisplayRESETmenu.text = DBManager.username;
+            // userDisplayRESETmenu.text = DBManager.username;
 
             //assign values from DBManager to all of the account info and stat page's text items
             userEmail.text = "" + DBManager.username;

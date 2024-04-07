@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import axios from "axios";
 import Navbar from "./Navbar";
-import logo from "../images/logo.png";
+import logo from "../images/logo3.png";
 import { isLoggedIn } from "../auth.js";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -14,6 +14,7 @@ const Cards = () => {
   const [reload, setReload] = React.useState(false);
   // Modal for adding cards
   const [show, setShow] = useState(false);
+  const colorOptions = ['red', 'black', 'blue', 'white'];
   const handleClose = () => {
     setShow(false);
     setCardInfo({
@@ -21,7 +22,7 @@ const Cards = () => {
       type: '',
       hp: 0,
       attack: 0,
-      defense: 0,
+      cost: 0,
       ability: '',
     });
   };
@@ -31,14 +32,14 @@ const Cards = () => {
     type: '',
     hp: 0,
     attack: 0,
-    defense: 0,
+    cost: 0,
     ability: '',
   });
   const handleChange = async (e) => {
     const { name, value } = e.target;
     setCardInfo((prevInfo) => ({
       ...prevInfo,
-      [name]: name === 'hp' || name === 'attack' || name === 'defense' ? parseInt(value) : value,
+      [name]: name === 'hp' || name === 'attack' || name === 'cost' ? parseInt(value) : value,
     }));
   };
   const handleSaveChanges = async () => {
@@ -62,7 +63,7 @@ const Cards = () => {
           type: cardInfo.type,
           hp: cardInfo.hp,
           attack: cardInfo.attack,
-          defense: cardInfo.defense,
+          cost: cardInfo.cost,
           ability: cardInfo.ability,
         }
       );
@@ -77,6 +78,7 @@ const Cards = () => {
 
   //Modal for editing cards
   const [showEdit, setShowEdit] = useState(false);
+  const [originalCardName, setOriginalCardName] = useState("");
   const handleCloseEdit = () => {
     setShowEdit(false);
     setCardInfo({
@@ -84,17 +86,18 @@ const Cards = () => {
       type: '',
       hp: 0,
       attack: 0,
-      defense: 0,
+      cost: 0,
       ability: '',
     });
   };
   const handleShowEdit = (card) => {
+    setOriginalCardName(card.name);
     setCardInfo({
       name: card.name,
       type: card.type,
       hp: card.hp,
       attack: card.attack,
-      defense: card.defense,
+      cost: card.cost,
       ability: card.ability,
     });
     setShowEdit(true);
@@ -102,7 +105,7 @@ const Cards = () => {
   const handleSaveChangesEdit = async () => {
     let isValid = true;
     for (const key in cardInfo) {
-      if (cardInfo[key] === '' || cardInfo[key] === 0 || isNaN(cardInfo.attack) || isNaN(cardInfo.defense) || isNaN(cardInfo.hp)) { 
+      if (cardInfo[key] === '' || cardInfo[key] === 0 || isNaN(cardInfo.attack) || isNaN(cardInfo.cost) || isNaN(cardInfo.hp)) { 
         isValid = false;
         break;
       }
@@ -116,11 +119,12 @@ const Cards = () => {
       await axios.put(
         "https://nodeserver-two.vercel.app/api/cards/editCard",
         {
+          originalName: originalCardName,
           name: cardInfo.name,
           type: cardInfo.type,
           hp: cardInfo.hp,
           attack: cardInfo.attack,
-          defense: cardInfo.defense,
+          cost: cardInfo.cost,
           ability: cardInfo.ability,
         }
       )
@@ -130,7 +134,7 @@ const Cards = () => {
         type: '',
         hp: 0,
         attack: 0,
-        defense: 0,
+        cost: 0,
         ability: '',
       });
 
@@ -199,7 +203,8 @@ const Cards = () => {
               className={`card card--${card.type.toLowerCase()}`}
             >
               <div className="card__image-container">
-                <img src={logo} alt={card.name} className="card__image" />
+                {/* <img src={logo} alt={card.name} className="card__image" /> */}
+                <img src={`../../../characters/${card.name}.jpeg`} alt={card.name} className="card__image" style={{ borderRadius: '10%' }}/>
               </div>
 
               <figcaption className="card__caption">
@@ -219,8 +224,8 @@ const Cards = () => {
                     </tr>
 
                     <tr>
-                      <th>Defense</th>
-                      <td>{card.defense}</td>
+                      <th>Cost</th>
+                      <td>{card.cost}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -250,7 +255,7 @@ const Cards = () => {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Modal Add Card */}
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
           <Modal.Title>Add New Card</Modal.Title>
@@ -269,14 +274,20 @@ const Cards = () => {
             </Form.Group>
 
             <Form.Group controlId="formCardType">
-              <Form.Label>Type</Form.Label>
+              <Form.Label>Color</Form.Label>
               <Form.Control
-                type="text"
-                placeholder="Enter type"
+                as="select"  // for dropdown
                 name="type"
                 value={cardInfo.type}
                 onChange={handleChange}
-              />
+              >
+                <option value="">Select Color</option>
+                {colorOptions.map((color, index) => (
+                  <option key={index} value={color}>
+                    {color}
+                  </option>
+                ))}
+              </Form.Control>
             </Form.Group>
 
             <Form.Group controlId="formCardHp">
@@ -302,12 +313,12 @@ const Cards = () => {
             </Form.Group>
 
             <Form.Group controlId="formCardDefense">
-              <Form.Label>Defense</Form.Label>
+              <Form.Label>Cost</Form.Label>
               <Form.Control
                 type="number"
-                placeholder="Enter defense"
-                name="defense"
-                value={cardInfo.defense}
+                placeholder="Enter cost"
+                name="cost"
+                value={cardInfo.cost}
                 onChange={handleChange}
               />
             </Form.Group>
@@ -349,18 +360,25 @@ const Cards = () => {
                 name="name"
                 value={cardInfo.name}
                 onChange={handleChange}
+                // 
               />
             </Form.Group>
 
             <Form.Group controlId="formCardTypeEdit">
-              <Form.Label>Type</Form.Label>
+            <Form.Label>Color</Form.Label>
               <Form.Control
-                type="text"
-                placeholder="Enter type"
+                as="select"  // for dropdown
                 name="type"
                 value={cardInfo.type}
                 onChange={handleChange}
-              />
+              >
+                <option value="">Select Color</option>
+                {colorOptions.map((color, index) => (
+                  <option key={index} value={color}>
+                    {color}
+                  </option>
+                ))}
+              </Form.Control>
             </Form.Group>
 
             <Form.Group controlId="formCardHpEdit">
@@ -386,12 +404,12 @@ const Cards = () => {
             </Form.Group>
 
             <Form.Group controlId="formCardDefenseEdit">
-              <Form.Label>Defense</Form.Label>
+              <Form.Label>Cost</Form.Label>
               <Form.Control
                 type="number"
-                placeholder="Enter defense"
-                name="defense"
-                value={parseInt(cardInfo.defense)}
+                placeholder="Enter cost"
+                name="cost"
+                value={parseInt(cardInfo.cost)}
                 onChange={handleChange}
               />
             </Form.Group>
