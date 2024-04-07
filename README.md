@@ -150,6 +150,12 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
          successfully use them to query the user account table when logging in, creating
          accounts, resetting passwords or managing an account's stats.
 
+  * #### Email Server Setup:
+
+      1. Sign up or login to SMTP2GO (link here: https://app.smtp2go.com/login/)
+      2. Set up your sender domain in SMTP2GO (colorbreak@mail.com in this case).
+      3. Generate an API key and add it to the create.php and reset.php files.
+
 
 ## Team 19 Members: 
 <ul>
