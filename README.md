@@ -157,6 +157,9 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
         3. Generate an API key and add it to the create.php and reset.php files.
 
 
+### Credit:
+     
+        1. Game Logo and Card Artwork made using BING AI `https://www.bing.com/images/create`
 ## Team 19 Members: 
 <ul>
 <li>aditya39p</li>
