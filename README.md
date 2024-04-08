@@ -14,7 +14,7 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
   * **Gameover.scene** (Scene triggered when a player runs out of health, it updates the user's stats, and returns to the mainmenu)
     * https://github.com/COSC-499-W2023/year-long-project-team-19/tree/271ce6689dc7bdf0bd72ed9a4f69d210012b7302/GameOverScene
        
-* ### Custom Website (found here: )
+* ### Custom Website (found here: https://client-jade-seven.vercel.app)
   * Web folder (https://github.com/COSC-499-W2023/year-long-project-team-19/tree/271ce6689dc7bdf0bd72ed9a4f69d210012b7302/Web)
     * Can play a non-multiplayer version of the game, view the rules page, or the card information page
     * Admins get special access to edit the other pages live in the browser, after logging in (found here: )
@@ -167,8 +167,9 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
 * Website runs old build of the game, missing multiplayer features, because multiplayer needs dedicated server build that clients connect to and it was easier to just develop
   multiplayer to work locally in 2 editors using ParallelSync, and it still demonstrates multiplayer functionality, just not deployed to the browser.
  
-* Connecting to a locally run XAMPP server to log in inside of the website version of the game requires changing the http.config file of your XAMPP server to allow connections
-  from all sources (see this file:), and it might still break if you are using a specific browser (Firefox and Google Chrome seem to be fine).
+* Connecting to a locally run XAMPP server to log in inside of the website version of the game requires changing the http.config file of your XAMPP apache server to allow connections
+  from all sources (see this file: https://github.com/COSC-499-W2023/year-long-project-team-19/blob/4ac696aaf175a41fb538dfcaf85fa5583c1b6317/app/Xampp%20Config%20Files/httpd.conf),
+  and it might still break if you are using a specific browser (Firefox and Google Chrome seem to be fine).
  
 * While running a multiplayer setup, the host build of the game will be able to see the game over scene and update the stat's of its user fine, but the client doesn't always
   get sent to the game over scene properly, they might get stuck on the samplescene indefinitely.
