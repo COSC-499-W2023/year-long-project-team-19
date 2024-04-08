@@ -35,10 +35,10 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
 
       1. Setup a Unity account and download Unity Hub.
 
-      2. Download Editor version 2021.30.3f. (might have to check archive versions)
+      2. Download Editor version 2021.30.3f. (https://unity.com/releases/editor/whats-new/2021.3.30)
   
       3. Clone the 499UnityGameT19 repository, import it as a new project in Unity Hub,
-         and open it (add link)
+         and open it (https://github.com/Prelude14/499UnityGameT19/tree/e4fbdb3adbae1bd93975854ed217951215662b8d/My%20project%20(4))
 
       4. Project should automatically come with Mirror, parallelSync, and other packages
          required for multiplayer networking already downloaded in the project.
@@ -117,7 +117,7 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
          install them from [Node.js official website] (https://nodejs.org/en).
   
       2. Navigate to the client directory:
-         `cd /Group Exploration/Henry's Exploration/Web/client`
+         `cd Web/client`
   
       3. Install dependencies: `npm i`
   
@@ -126,7 +126,7 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
 * #### Backend (API and Server for Web app)
 
       1. Navigate to the server directory:
-         `cd /Group Exploration/Henry's Exploration/Web/server`
+         `cd Web/server`
   
       2. Install dependencies: `npm i`
   
@@ -136,11 +136,11 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
         - `MONGO_URI=<your_mongodb_uri>`
   
       4. Start the server: `node index.js`
-
+  
 ### User Accounts Server:
 * #### SQL Database (XAMPP)
 
-      1. Download and install Xampp (link here: )
+      1. Download and install Xampp (link here: https://www.apachefriends.org/)
   
       2. Download the “sqlconnect” folder from the main repository, which should contain
          the backend php files and the useracc.sql database file. (add link to folder)
@@ -156,6 +156,12 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
          editor will be able to connect to the php files that are being hosted and
          successfully use them to query the user account table when logging in, creating
          accounts, resetting passwords or managing an account's stats.
+         
+ * #### Email Server Setup:
+    
+        1. Sign up or login to SMTP2GO (link here: [https://app.smtp2go.com/login/])
+        2. Set up your sender domain in SMTP2GO (colorbreak@mail.com).
+        3. Generate an API key and add it to the create.php and reset.php files.
 
 ### Known Issues: 
 * Website runs old build of the game, missing multiplayer features, because multiplayer needs dedicated server build that clients connect to and it was easier to just develop
@@ -176,14 +182,14 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
 * Cards don't naturally disappear off the screen, so to get to the end of a game, the majority of the 40 cards in the game deck will be dealt across both players, and the
   player's hands might start overflowing off the page. The cards are supposed to die naturally after attacking twice, and their are a couple cards with the ability to destroy
   all of the cards in the player's or opponent's play zones, so its a work in progress.
-  
+
 ### Credit:
      
         1. Game Logo and Card Artwork made using BING AI `https://www.bing.com/images/create`
         
         2. View this README (https://github.com/COSC-499-W2023/year-long-project-team-19/tree/271ce6689dc7bdf0bd72ed9a4f69d210012b7302/Resources)
            in the resources folder to see the other credits for any assests used.
-  
+
 ## Team 19 Members: 
 <ul>
 <li>aditya39p</li>

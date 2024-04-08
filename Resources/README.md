@@ -5,7 +5,7 @@ Every PNG except for "logo2" was made using photoshop by Prelude14.
 
 ## AI Art
 - "logo2" is from *BLANK*
-- All card art for website's versions of cards is from *BLANK* 
+- All card art for website's versions of cards is generated using BING AI
   (link to the images here: 
   https://drive.google.com/drive/folders/1oWb9yeu_acZSMlL7k2uHCkESPelldm2g?usp=sharing)
 - Made By HenryAugustiano
