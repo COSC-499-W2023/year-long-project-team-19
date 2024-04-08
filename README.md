@@ -3,19 +3,25 @@
 ## A turn-based non-collectable card game written in Unity, and run in a web browser on our own website.
 
 Color Break is a multiplayer custom card game that is built in Unity, and its a dynamic project that blends web technologies with game development to offer a unique experience. Here are the main components:
-* ### Complete Unity Project (found here: )
+* ### Complete Unity Project (found here: https://github.com/Prelude14/499UnityGameT19/tree/e4fbdb3adbae1bd93975854ed217951215662b8d/My%20project%20(4))
   * **Mainmenu.scene** (Players can log in or create accounts, track their stats, change settings, play the tutorial, and play matches)
-    * app folder (sqlconnect folder for Login/Create Account System's SQL table and PHP files)
+    * https://github.com/COSC-499-W2023/year-long-project-team-19/tree/271ce6689dc7bdf0bd72ed9a4f69d210012b7302/MainMenuScene
+    * also look into app folder mentioned below (Login/Create Account System's SQL table and PHP files)
   * **Samplescene.scene** (Actual card game scene, take turns playing cards and attacking the other player until one runs out of health)
+    * https://github.com/COSC-499-W2023/year-long-project-team-19/tree/271ce6689dc7bdf0bd72ed9a4f69d210012b7302/GameScene
   * **Tutorial.scene** (Walks the player through the basic mechanics of the game, using dummy version of game scene)
+    * https://github.com/COSC-499-W2023/year-long-project-team-19/tree/271ce6689dc7bdf0bd72ed9a4f69d210012b7302/TutorialScene
   * **Gameover.scene** (Scene triggered when a player runs out of health, it updates the user's stats, and returns to the mainmenu)
+    * https://github.com/COSC-499-W2023/year-long-project-team-19/tree/271ce6689dc7bdf0bd72ed9a4f69d210012b7302/GameOverScene
        
 * ### Custom Website (found here: )
-  * Can play a non-multiplayer version of the game, view the rules page, or the card information page
-  * Admins get special access to edit the other pages live in the browser, after logging in (found here: )
+  * Web folder (https://github.com/COSC-499-W2023/year-long-project-team-19/tree/271ce6689dc7bdf0bd72ed9a4f69d210012b7302/Web)
+    * Can play a non-multiplayer version of the game, view the rules page, or the card information page
+    * Admins get special access to edit the other pages live in the browser, after logging in (found here: )
     
-* ### User Accounts Server Files (found here: )
-  * Uses XAMPP to locally host an SQL table and PHP files. Unity uses said files to query the database and log players in, create new accounts, reset their password, or update their stats.
+* ### User Account Server Files
+  * app folder (https://github.com/COSC-499-W2023/year-long-project-team-19/tree/271ce6689dc7bdf0bd72ed9a4f69d210012b7302/app):
+    Uses XAMPP to locally host an SQL table and PHP files. Unity uses said files to query the database and log players in, create new accounts, reset their password, or update their stats.
 
 ## Technologies Used
 
