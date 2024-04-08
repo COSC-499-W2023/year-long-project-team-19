@@ -177,9 +177,12 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
   player's hands might start overflowing off the page. The cards are supposed to die naturally after attacking twice, and their are a couple cards with the ability to destroy
   all of the cards in the player's or opponent's play zones, so its a work in progress.
   
-## Asset Credit
-* View this README (https://github.com/COSC-499-W2023/year-long-project-team-19/tree/271ce6689dc7bdf0bd72ed9a4f69d210012b7302/Resources)
-  in the resources folder to see credits for any assests used.
+### Credit:
+     
+        1. Game Logo and Card Artwork made using BING AI `https://www.bing.com/images/create`
+        
+        2. View this README (https://github.com/COSC-499-W2023/year-long-project-team-19/tree/271ce6689dc7bdf0bd72ed9a4f69d210012b7302/Resources)
+           in the resources folder to see the other credits for any assests used.
   
 ## Team 19 Members: 
 <ul>
