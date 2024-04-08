@@ -5,6 +5,7 @@
 Color Break is a multiplayer custom card game that is built in Unity, and its a dynamic project that blends web technologies with game development to offer a unique experience. Here are the main components:
 * ### Complete Unity Project (found here: )
   * **Mainmenu.scene** (Players can log in or create accounts, track their stats, change settings, play the tutorial, and play matches)
+    * app folder (sqlconnect folder for Login/Create Account System's SQL table and PHP files)
   * **Samplescene.scene** (Actual card game scene, take turns playing cards and attacking the other player until one runs out of health)
   * **Tutorial.scene** (Walks the player through the basic mechanics of the game, using dummy version of game scene)
   * **Gameover.scene** (Scene triggered when a player runs out of health, it updates the user's stats, and returns to the mainmenu)
@@ -150,7 +151,26 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
          successfully use them to query the user account table when logging in, creating
          accounts, resetting passwords or managing an account's stats.
 
-
+### Known Issues: 
+* Website runs old build of the game, missing multiplayer features, because multiplayer needs dedicated server build that clients connect to and it was easier to just develop
+  multiplayer to work locally in 2 editors using ParallelSync, and it still demonstrates multiplayer functionality, just not deployed to the browser.
+ 
+* Connecting to a locally run XAMPP server to log in inside of the website version of the game requires changing the http.config file of your XAMPP server to allow connections
+  from all sources (see this file:), and it might still break if you are using a specific browser (Firefox and Google Chrome seem to be fine).
+ 
+* While running a multiplayer setup, the host build of the game will be able to see the game over scene and update the stat's of its user fine, but the client doesn't always
+  get sent to the game over scene properly, they might get stuck on the samplescene indefinitely.
+ 
+* Multiplayer Setup only works with a Host and Client build, it will not work quite right with a server build and two clients. This is due to how the server commands are called
+  in the PlayerManager and sharedVarManager scripts, the server has its own versions of the scripts that it will update when the commands are called, and the clients won't find
+  the values properly. When one build is running as a host, the server commands are run on that client's copy of the scripts, so the logic works as intended.
+  
+* Game doesn't quite have all card abilities fully functional yet, but all cards are able to be played and attacked with proerly.
+  
+* Cards don't naturally disappear off the screen, so to get to the end of a game, the majority of the 40 cards in the game deck will be dealt across both players, and the
+  player's hands might start overflowing off the page. The cards are supposed to die naturally after attacking twice, and their are a couple cards with the ability to destroy
+  all of the cards in the player's or opponent's play zones, so its a work in progress.
+  
 ## Team 19 Members: 
 <ul>
 <li>aditya39p</li>
