@@ -447,3 +447,25 @@ This week I finalized my portion of the game. I finished the majority of the abi
 
 <h3>Completed and In Progress: </h3> 
 <p>Finished all tasks. One more meeting to finalize the abilties and submit our reports. Targeting enemy objects is probably the last feature we have and bug fixing before we submit the game.</p>
+
+<h1>Date Range: 01-04-2024 to 07-03-2024</h1>
+<img src ="/log_imgs/Adrian_t2_wk13.png"/>
+
+<h2>Which features were yours in the project plan for this milestone?</h2>
+
+<p>
+This week we all bug fixed the game and finalized our individual reports. 
+</p>
+
+<h2> Which tasks from the project board are associated with these features? </h2>
+<ol>
+  <lI>
+  <li>"Final Deliverable Documentation": Documented scripts and wrote the readme and report. Submitted the document including the video.</li>
+  <li>"T2 W13 Individual Logs"</li>
+  </lI>
+
+</ol>
+<h2> Among these tasks, which have you completed/in progress in the last week? </h2>
+
+<h3>Completed and In Progress: </h3> 
+<p>Finished all tasks. One more meeting to finalize the abilties and submit our reports. Targeting enemy objects is probably the last feature we have and bug fixing before we submit the game.</p>
