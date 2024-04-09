@@ -908,3 +908,44 @@ The game is really coming together now and we are shifting focus to last minute 
 You can see the repo branch with the turn system below:
 
 Project (4) in repo (most up to date multiplayer): https://github.com/Prelude14/499UnityGameT19/tree/89c4d3054d87aed223dd3944be04ddca99fd25cf/My%20project%20(4)
+
+<!--====================================================================================================================               TERM 2 ************ W13-->
+# TERM 2 - Date Range: 31-03-2024 to 31-03-2024 - W12
+
+<img src = "log_imgs/brenner's_logT2W13.PNG?raw=true"/>
+
+## Which features were yours in the project plan for this milestone?
+
+Finish final report doc, and completing the weekly logs. 
+
+## Which tasks from the project board are associated with these features?
+
+<ol>
+  <li>"Tutorial"</li>
+  <li>"Final Deliverable Documentation"</li>
+  <li>"T2 W13 Team Log"</li>
+  <li>"T2 W13 Individual Logs"</li>
+</ol>
+
+## Among these tasks, which have you completed/in progress in the last week?
+
+### Completed:
+
+<ol>
+  <li>"Tutorial: Had to completely rebuild the tutorial scene and change all of the old scripts into copies for the tutorial to use. It was completely unplayable on the most up to date version of the multiplayer branch up until Wednesday when I got it working for Aditya by doing what I mentioned previously. Aditya still did all the animations and the tutorial sequences themselves, but it took me at least 10 hours to rework his work from an older branch and being intergrated into the regular game scene, into a whole separate scene, scripts and prefabs like we envisioned originally."</li>
+  <li>"Final Deliverable Documentation: We finished our shared list of system features and the README, and I submitted my report along with my video link."</li>
+  <li>"T2 W13 Team Log"</li>
+</ol>
+  
+### In Progress:
+<ol>
+  <li>"T2 W13 Individual Logs: I'm finishing this as I write this out."</li>
+</ol>
+
+#### Aditional Context:
+This week was brutal, there was just so much to do between these logs (which I didn't know we weree doing), the system features list, the README, the report itself, and the video, while also squahing any remaining bugs or finishing other people's features. Got most of it done in a way that I'm proud of however, but i also had to submit my video late (my report itself was in before 12am, just missing the video link), as well as these logs unfortunately. 
+
+You can see the repo branch with the complete project below:
+
+Project (4) in repo (now main branch project 4): https://github.com/Prelude14/499UnityGameT19/tree/e4fbdb3adbae1bd93975854ed217951215662b8d/My%20project%20(4)
+
