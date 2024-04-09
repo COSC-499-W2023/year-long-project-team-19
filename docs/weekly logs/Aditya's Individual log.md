@@ -253,3 +253,13 @@ I have finished building the tutorial screen for the game and it is fully functi
 ## Among these tasks, which have you completed/in progress in the last week?
 I am currently trying to fix this issue which I have encountered, so that the final copy of the game gets updated and we can work on the documentation of the game
 Note: I have been working on the tutorial screen for the past two weeks and i am committing my log entries for two weeks today as I had no progress in week 10 and starting days of week 11. My tutorial screen is pushed in a different branch. 
+
+<h1>Date Range: 01-04-2024 to 07-04-2024</h1>
+
+<img src = "log_imgs/Aditya_T2_Week13.png?raw=true"/>
+
+## Among these tasks, which have you completed/in progress in the last week?
+This week being the last week for our capstone term. I fixed some bugs in my tutorial screen and completed that. The tutorial screen works and is now attached to the main copy of the game. I have also made a video demo showcasing the product created and the final project report. I also reviewed other team members reports and provided feedback.
+
+## Among these tasks, which have you completed/in progress in the last week?
+The whole project is completed and submitted. The only thing left is to attend the client review panel and receive overall project feedback on the report and the product. 
