@@ -381,6 +381,14 @@ The Selenium testing is a bit tricky to set up, since each test runs on a differ
 3. Implemented the character images in the web's card page.
 
 -----
+# Date Range: 31-04-2024 to 07-04-2024
 
-![](log_imgs/henry_test_seleniumRules.png)
-![](log_imgs/henry_cardchar.png)
+![henrylog13](log_imgs/henry_t2_log13.png)
+
+
+### Completed
+1. Made video for final report
+2. Made final report
+3. Re-check Vercel deployment for the website
+
+-----
