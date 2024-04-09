@@ -380,7 +380,10 @@ The Selenium testing is a bit tricky to set up, since each test runs on a differ
 2. Used Bing AI to generate character images for web's card page and the unity game if possible.
 3. Implemented the character images in the web's card page.
 
+![](log_imgs/henry_test_seleniumRules.png)
+![](log_imgs/henry_cardchar.png)
 -----
+
 # Date Range: 31-04-2024 to 07-04-2024
 
 ![henrylog13](log_imgs/henry_t2_log13.png)
