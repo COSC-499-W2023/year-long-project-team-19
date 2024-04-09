@@ -36,6 +36,7 @@ CREATE TABLE `useracc` (
   `gamesplayed` int(10) NOT NULL DEFAULT 0 COMMENT 'Counter for the amount of games the user has played (maybe only count games that have finished completely). Starts at 0.',
   `gameswon` int(10) NOT NULL DEFAULT 0 COMMENT 'Counter for the amount of games the user has WON. Starts at 0. this combined with gamesplayed can be used to find the user''s W/L Ratio.',
   `damagedealt` int(50) NOT NULL DEFAULT 0 COMMENT 'Counter for the amount of damage the user has played done. Maybe only increment when the player turn changes? Starts at 0.'
+  `reset_token_hash` varchar(100),
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
