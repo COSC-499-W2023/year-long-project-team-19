@@ -18,9 +18,13 @@ Every PNG except for "logo2" was made using photoshop by Prelude14.
 - Made By HenryAugustiano
 
 ## Other Art
-- Audio is from *BLANK*
+- Audio is from Your Digital Footprint (Investigation Theme) - Composed by One Man Symphony - https://onemansymphony.bandcamp.com
+  hosted to Bandcamp under the CC BY 4.0 license. You can find more information about it here:
+  https://creativecommons.org/licenses/by/4.0/ 
+ 
 - Dotween animation package is from: https://dotween.demigiant.com/
-- !UIAssets is from a free asset website. The link is lost
+- !UIAssets is from a free asset website. The link is lost, but they are just black squares to cover parts of the screen while explaining
+  features during the tutorial, not real game art.
 
 
 ## Team 19 Members: 
