@@ -187,6 +187,9 @@ Color Break is a multiplayer custom card game that is built in Unity, and its a 
 ### Credit:
      
         1. Game Logo and Card Artwork made using BING AI `https://www.bing.com/images/create`
+
+        2. Main Menu Background Music: Your Digital Footprint (Investigation Theme) - Composed by One Man Symphony - https://onemansymphony.bandcamp.com
+           Covered by the CC BY 4.0 license. You can find more information about it here: https://creativecommons.org/licenses/by/4.0/ 
         
         2. View this README (https://github.com/COSC-499-W2023/year-long-project-team-19/tree/271ce6689dc7bdf0bd72ed9a4f69d210012b7302/Resources)
            in the resources folder to see the other credits for any assests used.
